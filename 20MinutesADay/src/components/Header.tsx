@@ -1,20 +1,35 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TextInput, TouchableOpacity, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-// 👉 Définition des props
 interface HeaderProps {
   title: string;
 }
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
   const navigation = useNavigation();
-  const [searchQuery, setSearchQuery] = useState<string>(''); // État pour gérer la recherche
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [isSearching, setIsSearching] = useState<boolean>(false);
+  const searchWidth = new Animated.Value(0); // Animation pour la largeur de la barre de recherche
 
-  // Fonction pour gérer la modification de la recherche
-  const handleSearchChange = (text: string) => {
-    setSearchQuery(text);
+  // Fonction pour gérer l'ouverture de la barre de recherche
+  const handleOpenSearch = () => {
+    setIsSearching(true);
+    Animated.timing(searchWidth, {
+      toValue: 200, // Largeur finale de la barre
+      duration: 300,
+      useNativeDriver: false,
+    }).start();
+  };
+
+  // Fonction pour gérer la fermeture de la barre de recherche
+  const handleCloseSearch = () => {
+    Animated.timing(searchWidth, {
+      toValue: 0, // Réduire la largeur à 0
+      duration: 300,
+      useNativeDriver: false,
+    }).start(() => setIsSearching(false));
   };
 
   return (
@@ -29,16 +44,26 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
       {/* Titre */}
       <Text style={styles.title}>{title}</Text>
 
-      {/* Barre de recherche */}
-      <View style={styles.searchContainer}>
-        <Ionicons name="search" size={20} color="#aaa" style={styles.searchIcon} />
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Rechercher..."
-          value={searchQuery}
-          onChangeText={handleSearchChange}
-        />
-      </View>
+      {/* Icône de recherche */}
+      {!isSearching ? (
+        <TouchableOpacity onPress={handleOpenSearch} style={styles.searchButton}>
+          <Ionicons name="search" size={24} color="#fff" />
+        </TouchableOpacity>
+      ) : (
+        <Animated.View style={[styles.searchContainer, { width: searchWidth }]}>
+          <Ionicons name="search" size={20} color="#aaa" style={styles.searchIcon} />
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Rechercher..."
+            value={searchQuery}
+            onChangeText={(text) => setSearchQuery(text)}
+            autoFocus // Pour ouvrir directement le clavier
+          />
+          <TouchableOpacity onPress={handleCloseSearch}>
+            <Ionicons name="close" size={20} color="#aaa" />
+          </TouchableOpacity>
+        </Animated.View>
+      )}
     </View>
   );
 };
@@ -58,23 +83,24 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     position: 'absolute',
-    marginBottom: 2,
     left: '50%',
     transform: [{ translateX: -50 }],
   },
   icon: {
     padding: 10,
   },
+  searchButton: {
+    marginLeft: 'auto',
+    padding: 10,
+  },
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: 'auto', // Positionner la barre de recherche à droite
-    marginRight: 10,
     backgroundColor: '#fff',
     borderRadius: 20,
     paddingHorizontal: 10,
     height: 35,
-    width: 200, // Largeur de la barre de recherche
+    overflow: 'hidden',
   },
   searchIcon: {
     marginRight: 5,

@@ -18,30 +18,9 @@ import AccentTrainingScreen from './src/screens/AccentTraining/AccentTrainingScr
 import PresentationScreen from './src/screens/Presentation/PresentationScreen';
 import VerbsScreen from './src/screens/Verbs/VerbsScreen';
 
-// Création des navigateurs
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// Stack Navigator pour les modules
-const ModulesStack = () => {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Vocabularies" component={VocabulariesScreen} options={{ title: 'Vocabularies' }} />
-      <Stack.Screen name="Daily Dialogues" component={DailyDialoguesScreen} options={{ title: 'Daily Dialogues' }} />
-      <Stack.Screen name="Grammar" component={GrammarScreen} options={{ title: 'Grammar' }} />
-      <Stack.Screen name="Debates" component={DebatesScreen} options={{ title: 'Debates' }} />
-      <Stack.Screen name="People" component={PeopleScreen} options={{ title: 'People' }} />
-
-      {/* 🚀 Nouveaux écrans */}
-      <Stack.Screen name="Proverbs" component={ProverbsScreen} options={{ title: 'Proverbs' }} />
-      <Stack.Screen name="Verbs" component={VerbsScreen} options={{ title: 'Verbs' }} />
-      <Stack.Screen name="Accent Training" component={AccentTrainingScreen} options={{ title: 'Accent Training' }} />
-      <Stack.Screen name="Presentation" component={PresentationScreen} options={{ title: 'Presentation' }} />
-    </Stack.Navigator>
-  );
-};
-
-// Bottom Tab Navigator
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
@@ -51,8 +30,6 @@ const BottomTabNavigator = () => {
 
           if (route.name === 'Accueil') {
             iconName = 'home';
-          } else if (route.name === 'Modules') {
-            iconName = 'apps';
           }
 
           return <Ionicons name={iconName as any} size={size} color={color} />;
@@ -62,7 +39,6 @@ const BottomTabNavigator = () => {
         headerShown: false,
       })}
     >
-      <Tab.Screen name="Modules" component={ModulesStack} />
       <Tab.Screen name="Accueil" component={HomeScreen} />
     </Tab.Navigator>
   );
@@ -75,6 +51,15 @@ export default function App() {
       <Stack.Navigator initialRouteName="GetStarted">
         <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={BottomTabNavigator} options={{ headerShown: false }} />
+        <Stack.Screen name="DailyDialogues" component={DailyDialoguesScreen} />
+        <Stack.Screen name="Grammar" component={GrammarScreen} />
+        <Stack.Screen name="Debates" component={DebatesScreen} />
+        <Stack.Screen name="People" component={PeopleScreen} />
+        <Stack.Screen name="Proverbs" component={ProverbsScreen} />
+        <Stack.Screen name="Verbs" component={VerbsScreen} />
+        <Stack.Screen name="AccentTraining" component={AccentTrainingScreen} />
+        <Stack.Screen name="Presentation" component={PresentationScreen} />
+        <Stack.Screen name="Vocabularies" component={VocabulariesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

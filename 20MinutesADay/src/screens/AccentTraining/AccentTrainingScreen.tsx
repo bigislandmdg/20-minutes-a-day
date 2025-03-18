@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button, TouchableOpacity, Alert } from 'react-native';
+import { ScrollView, View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { Card, List, Button } from 'react-native-paper';
 
 const AccentTrainingScreen = () => {
   const handleExercisePress = () => {
@@ -7,7 +8,7 @@ const AccentTrainingScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>Accent Training</Text>
       <Text style={styles.description}>
         Improve your pronunciation with our accent training exercises. Here, you can practice common words and phrases.
@@ -23,27 +24,59 @@ const AccentTrainingScreen = () => {
         <Text style={styles.buttonText}>Start Exercise</Text>
       </TouchableOpacity>
 
-      {/* Autres exercices */}
+      {/* Section avec d'autres exercices */}
       <Text style={styles.exerciseText}>
         You can practice with the following phrases:
       </Text>
-      <Text style={styles.phrases}>
-        - "Good morning, how are you?"
-        {'\n'}- "What is your name?"
-        {'\n'}- "Where are you from?"
-        {'\n'}- "Nice to meet you!"
-      </Text>
+
+      {/* Card pour exercices */}
+      <Card style={styles.card}>
+        <Card.Title title="Common Phrases" subtitle="Practice these common phrases" />
+        <Card.Content>
+          <List.Accordion
+            title="View Phrases"
+            left={(props) => <List.Icon {...props} icon="message" />}
+          >
+            <Text style={styles.phrases}>
+              - "Good morning, how are you?"
+              {'\n'}- "What is your name?"
+              {'\n'}- "Where are you from?"
+              {'\n'}- "Nice to meet you!"
+            </Text>
+          </List.Accordion>
+        </Card.Content>
+      </Card>
+
+      {/* Autres exercices sous forme de Card */}
+      <Card style={styles.card}>
+        <Card.Title title="Additional Practice" subtitle="More phrases to practice" />
+        <Card.Content>
+          <List.Accordion
+            title="More Phrases"
+            left={(props) => <List.Icon {...props} icon="message-processing" />}
+          >
+            <Text style={styles.phrases}>
+              - "Can you help me with this?"
+              {'\n'}- "Where do you live?"
+              {'\n'}- "How was your day?"
+              {'\n'}- "I’m learning English!"
+            </Text>
+          </List.Accordion>
+        </Card.Content>
+      </Card>
 
       {/* Bouton pour voir plus d'exercices */}
-      <Button title="View More Exercises" onPress={() => {}} />
-    </View>
+      <Button style={styles.viewMoreButton} mode="contained" onPress={() => {}}>
+        View More Exercises
+      </Button>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 16,
     backgroundColor: '#f8f8f8',
   },
   title: {
@@ -51,20 +84,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: '#2fa292',
   },
   description: {
     fontSize: 16,
     lineHeight: 24,
     marginBottom: 20,
+    color: '#333',
   },
   exerciseText: {
     fontSize: 18,
     fontWeight: '600',
     marginVertical: 10,
+    color: '#333',
   },
   phrases: {
     fontSize: 16,
     marginVertical: 10,
+    color: '#333',
   },
   button: {
     backgroundColor: '#2fa292',
@@ -77,6 +114,16 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  card: {
+    marginBottom: 16,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    elevation: 4,
+  },
+  viewMoreButton: {
+    marginTop: 20,
+    alignSelf: 'center',
   },
 });
 

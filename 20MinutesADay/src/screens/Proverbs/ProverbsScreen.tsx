@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button, TouchableOpacity, Alert } from 'react-native';
+import { ScrollView, StyleSheet, Alert } from 'react-native';
+import { Card, Button, List, Text } from 'react-native-paper';
 
 const ProverbsScreen = () => {
   const handleProverbPress = () => {
@@ -7,76 +8,148 @@ const ProverbsScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Proverb Practice</Text>
-      <Text style={styles.description}>
-        Improve your understanding of proverbs. Here are some common proverbs you can practice and reflect on.
-      </Text>
+    <ScrollView style={styles.container}>
+      {/* ---- Carte 1 ---- */}
+      <Card style={styles.card}>
+        <Card.Title title="Proverb Practice 1" />
+        <Card.Content>
+          <Text style={styles.description}>
+            Improve your understanding of proverbs. Here are some common proverbs you can practice and reflect on.
+          </Text>
 
-      {/* Exemple de Proverbe */}
-      <Text style={styles.proverbText}>
-        "A picture is worth a thousand words."
-      </Text>
+          <List.Accordion
+            title="Proverbs List 1"
+            left={props => <List.Icon {...props} icon="format-quote-close" />}
+            style={styles.accordion}
+          >
+            <List.Item title="A picture is worth a thousand words." />
+            <List.Item title="Actions speak louder than words." />
+            <List.Item title="The early bird catches the worm." />
+          </List.Accordion>
 
-      {/* Bouton pour démarrer l'exercice */}
-      <TouchableOpacity style={styles.button} onPress={handleProverbPress}>
-        <Text style={styles.buttonText}>Start Proverb Practice</Text>
-      </TouchableOpacity>
+          <Button
+            mode="contained"
+            onPress={handleProverbPress}
+            style={styles.button}
+          >
+            Start Proverb Practice
+          </Button>
 
-      {/* Autres proverbes */}
-      <Text style={styles.proverbText}>
-        You can practice with the following proverbs:
-      </Text>
-      <Text style={styles.proverbs}>
-        - "Actions speak louder than words."  
-        - "The early bird catches the worm."  
-        - "Don't count your chickens before they hatch."  
-        - "A journey of a thousand miles begins with a single step."  
-      </Text>
+          <Button
+            mode="outlined"
+            onPress={() => {}}
+            style={styles.moreButton}
+          >
+            View More Proverbs
+          </Button>
+        </Card.Content>
+      </Card>
 
-      {/* Bouton pour voir plus de proverbes */}
-      <Button title="View More Proverbs" onPress={() => {}} />
-    </View>
+      {/* ---- Carte 2 ---- */}
+      <Card style={styles.card}>
+        <Card.Title title="Proverb Practice 2" />
+        <Card.Content>
+          <Text style={styles.description}>
+            Here are some more proverbs to deepen your understanding.
+          </Text>
+
+          <List.Accordion
+            title="Proverbs List 2"
+            left={props => <List.Icon {...props} icon="format-quote-close" />}
+            style={styles.accordion}
+          >
+            <List.Item title="Don't count your chickens before they hatch." />
+            <List.Item title="A journey of a thousand miles begins with a single step." />
+            <List.Item title="When in Rome, do as the Romans do." />
+          </List.Accordion>
+
+          <Button
+            mode="contained"
+            onPress={handleProverbPress}
+            style={styles.button}
+          >
+            Start Proverb Practice
+          </Button>
+
+          <Button
+            mode="outlined"
+            onPress={() => {}}
+            style={styles.moreButton}
+          >
+            View More Proverbs
+          </Button>
+        </Card.Content>
+      </Card>
+
+      {/* ---- Carte 3 ---- */}
+      <Card style={styles.card}>
+        <Card.Title title="Proverb Practice 3" />
+        <Card.Content>
+          <Text style={styles.description}>
+            Keep practicing with these additional proverbs.
+          </Text>
+
+          <List.Accordion
+            title="Proverbs List 3"
+            left={props => <List.Icon {...props} icon="format-quote-close" />}
+            style={styles.accordion}
+          >
+            <List.Item title="Fortune favors the bold." />
+            <List.Item title="Honesty is the best policy." />
+            <List.Item title="You can't judge a book by its cover." />
+          </List.Accordion>
+
+          <Button
+            mode="contained"
+            onPress={handleProverbPress}
+            style={styles.button}
+          >
+            Start Proverb Practice
+          </Button>
+
+          <Button
+            mode="outlined"
+            onPress={() => {}}
+            style={styles.moreButton}
+          >
+            View More Proverbs
+          </Button>
+        </Card.Content>
+      </Card>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 16,
     backgroundColor: '#f8f8f8',
   },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
+  card: {
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    backgroundColor: '#ffffff',
     marginBottom: 20,
-    textAlign: 'center',
+    borderRadius: 8,
   },
   description: {
     fontSize: 16,
-    lineHeight: 24,
-    marginBottom: 20,
+    marginBottom: 12,
+    color: '#333',
   },
-  proverbText: {
-    fontSize: 18,
-    fontWeight: '600',
-    marginVertical: 10,
-  },
-  proverbs: {
-    fontSize: 16,
-    marginVertical: 10,
+  accordion: {
+    backgroundColor: '#e8f5e9',
+    marginBottom: 16,
+    borderRadius: 8,
   },
   button: {
+    marginVertical: 12,
     backgroundColor: '#2fa292',
-    padding: 12,
-    borderRadius: 8,
-    marginVertical: 20,
-    alignItems: 'center',
   },
-  buttonText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
+  moreButton: {
+    marginVertical: 4,
+    borderColor: '#2fa292',
   },
 });
 
