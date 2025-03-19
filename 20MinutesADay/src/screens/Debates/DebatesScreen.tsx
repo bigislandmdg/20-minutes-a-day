@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-import { Card, List, Text } from 'react-native-paper';
+import { Card, List, Text, IconButton } from 'react-native-paper';
+import * as Speech from 'expo-speech';
 
 const debateTopics = [
   {
@@ -56,6 +57,15 @@ const debateTopics = [
 const DebatesScreen = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
 
+  // ✅ Fonction pour lire le texte avec Expo Speech
+  const speak = (text: string) => {
+    Speech.speak(text, {
+      language: 'en',
+      pitch: 1.0,
+      rate: 1.0,
+    });
+  };
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Debates</Text>
@@ -77,7 +87,17 @@ const DebatesScreen = () => {
                 style={styles.accordion}
               >
                 {debate.arguments.map((argument, index) => (
-                  <List.Item key={index} title={argument} />
+                  <List.Item
+                    key={index}
+                    title={argument}
+                    right={() => (
+                      <IconButton
+                        icon="volume-high"
+                        size={24}
+                        onPress={() => speak(argument)}
+                      />
+                    )}
+                  />
                 ))}
               </List.Accordion>
             </List.Section>
@@ -97,6 +117,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    color: '#3a86ff',
+    textAlign: 'center',
   },
   content: {
     fontSize: 16,

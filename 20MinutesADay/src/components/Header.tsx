@@ -71,26 +71,24 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
 const styles = StyleSheet.create({
   header: {
     width: '100%',
-    height: 100,
-    backgroundColor: '#2fa292',
+    height: 60,
+    backgroundColor: '#3a86ff',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between', // ✅ Équilibre l'espace entre les éléments
     paddingHorizontal: 10,
-    marginBottom: 9,
   },
   title: {
     fontSize: 20,
     color: '#fff',
     fontWeight: 'bold',
-    position: 'absolute',
-    left: '50%',
-    transform: [{ translateX: -50 }],
+    textAlign: 'center', // ✅ Centre le texte
+    flex: 1, // ✅ Prend l'espace disponible pour permettre l'affichage des icônes
   },
   icon: {
     padding: 10,
   },
   searchButton: {
-    marginLeft: 'auto',
     padding: 10,
   },
   searchContainer: {
@@ -111,5 +109,6 @@ const styles = StyleSheet.create({
     color: '#333',
   },
 });
+
 
 export default Header;

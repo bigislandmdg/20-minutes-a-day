@@ -1,10 +1,19 @@
 import React from 'react';
-import { ScrollView, View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { ScrollView, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { Card, List, Button } from 'react-native-paper';
+import * as Speech from 'expo-speech';  // Importation de expo-speech
 
 const AccentTrainingScreen = () => {
   const handleExercisePress = () => {
     Alert.alert("Accent Training", "You can now start practicing pronunciation!");
+  };
+
+  // Fonction pour lire à haute voix une phrase avec l'anglais américain
+  const speak = (text: string) => {
+    Speech.speak(text, {
+      language: 'en-US', // Définir la langue sur l'anglais américain
+      rate: 1, // Définir la vitesse de lecture (1 est une vitesse normale)
+    });
   };
 
   return (
@@ -20,7 +29,7 @@ const AccentTrainingScreen = () => {
       </Text>
 
       {/* Bouton pour démarrer l'exercice */}
-      <TouchableOpacity style={styles.button} onPress={handleExercisePress}>
+      <TouchableOpacity style={styles.button} onPress={() => speak("How are you today?")}>
         <Text style={styles.buttonText}>Start Exercise</Text>
       </TouchableOpacity>
 
@@ -38,10 +47,25 @@ const AccentTrainingScreen = () => {
             left={(props) => <List.Icon {...props} icon="message" />}
           >
             <Text style={styles.phrases}>
-              - "Good morning, how are you?"
-              {'\n'}- "What is your name?"
-              {'\n'}- "Where are you from?"
-              {'\n'}- "Nice to meet you!"
+              - "Good morning, how are you?"{" "}
+              <TouchableOpacity onPress={() => speak("Good morning, how are you?")}>
+                <Text style={styles.speakText}>[Speak]</Text>
+              </TouchableOpacity>
+              {'\n'}
+              - "What is your name?"{" "}
+              <TouchableOpacity onPress={() => speak("What is your name?")}>
+                <Text style={styles.speakText}>[Speak]</Text>
+              </TouchableOpacity>
+              {'\n'}
+              - "Where are you from?"{" "}
+              <TouchableOpacity onPress={() => speak("Where are you from?")}>
+                <Text style={styles.speakText}>[Speak]</Text>
+              </TouchableOpacity>
+              {'\n'}
+              - "Nice to meet you!"{" "}
+              <TouchableOpacity onPress={() => speak("Nice to meet you!")}>
+                <Text style={styles.speakText}>[Speak]</Text>
+              </TouchableOpacity>
             </Text>
           </List.Accordion>
         </Card.Content>
@@ -56,10 +80,25 @@ const AccentTrainingScreen = () => {
             left={(props) => <List.Icon {...props} icon="message-processing" />}
           >
             <Text style={styles.phrases}>
-              - "Can you help me with this?"
-              {'\n'}- "Where do you live?"
-              {'\n'}- "How was your day?"
-              {'\n'}- "I’m learning English!"
+              - "Can you help me with this?"{" "}
+              <TouchableOpacity onPress={() => speak("Can you help me with this?")}>
+                <Text style={styles.speakText}>[Speak]</Text>
+              </TouchableOpacity>
+              {'\n'}
+              - "Where do you live?"{" "}
+              <TouchableOpacity onPress={() => speak("Where do you live?")}>
+                <Text style={styles.speakText}>[Speak]</Text>
+              </TouchableOpacity>
+              {'\n'}
+              - "How was your day?"{" "}
+              <TouchableOpacity onPress={() => speak("How was your day?")}>
+                <Text style={styles.speakText}>[Speak]</Text>
+              </TouchableOpacity>
+              {'\n'}
+              - "I’m learning English!"{" "}
+              <TouchableOpacity onPress={() => speak("I’m learning English!")}>
+                <Text style={styles.speakText}>[Speak]</Text>
+              </TouchableOpacity>
             </Text>
           </List.Accordion>
         </Card.Content>
@@ -84,7 +123,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-    color: '#2fa292',
+    color: '#3a86ff',
   },
   description: {
     fontSize: 16,
@@ -102,6 +141,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginVertical: 10,
     color: '#333',
+  },
+  speakText: {
+    color: '#007aff',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textDecorationLine: 'underline',
   },
   button: {
     backgroundColor: '#2fa292',

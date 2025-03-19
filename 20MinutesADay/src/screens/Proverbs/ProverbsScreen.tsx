@@ -1,8 +1,18 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Alert } from 'react-native';
 import { Card, Button, List, Text } from 'react-native-paper';
+import * as Speech from 'expo-speech'; // Import expo-speech
 
 const ProverbsScreen = () => {
+  // Function to handle proverb speech
+  const speakProverb = (proverb: string): void => {
+    Speech.speak(proverb, {
+      language: 'en-US',
+      pitch: 1,
+      rate: 1,
+    });
+  };
+
   const handleProverbPress = () => {
     Alert.alert("Proverb Practice", "You can now start practicing proverbs!");
   };
@@ -22,9 +32,18 @@ const ProverbsScreen = () => {
             left={props => <List.Icon {...props} icon="format-quote-close" />}
             style={styles.accordion}
           >
-            <List.Item title="A picture is worth a thousand words." />
-            <List.Item title="Actions speak louder than words." />
-            <List.Item title="The early bird catches the worm." />
+            <List.Item
+              title="A picture is worth a thousand words."
+              onPress={() => speakProverb("A picture is worth a thousand words.")}
+            />
+            <List.Item
+              title="Actions speak louder than words."
+              onPress={() => speakProverb("Actions speak louder than words.")}
+            />
+            <List.Item
+              title="The early bird catches the worm."
+              onPress={() => speakProverb("The early bird catches the worm.")}
+            />
           </List.Accordion>
 
           <Button
@@ -58,9 +77,18 @@ const ProverbsScreen = () => {
             left={props => <List.Icon {...props} icon="format-quote-close" />}
             style={styles.accordion}
           >
-            <List.Item title="Don't count your chickens before they hatch." />
-            <List.Item title="A journey of a thousand miles begins with a single step." />
-            <List.Item title="When in Rome, do as the Romans do." />
+            <List.Item
+              title="Don't count your chickens before they hatch."
+              onPress={() => speakProverb("Don't count your chickens before they hatch.")}
+            />
+            <List.Item
+              title="A journey of a thousand miles begins with a single step."
+              onPress={() => speakProverb("A journey of a thousand miles begins with a single step.")}
+            />
+            <List.Item
+              title="When in Rome, do as the Romans do."
+              onPress={() => speakProverb("When in Rome, do as the Romans do.")}
+            />
           </List.Accordion>
 
           <Button
@@ -94,9 +122,18 @@ const ProverbsScreen = () => {
             left={props => <List.Icon {...props} icon="format-quote-close" />}
             style={styles.accordion}
           >
-            <List.Item title="Fortune favors the bold." />
-            <List.Item title="Honesty is the best policy." />
-            <List.Item title="You can't judge a book by its cover." />
+            <List.Item
+              title="Fortune favors the bold."
+              onPress={() => speakProverb("Fortune favors the bold.")}
+            />
+            <List.Item
+              title="Honesty is the best policy."
+              onPress={() => speakProverb("Honesty is the best policy.")}
+            />
+            <List.Item
+              title="You can't judge a book by its cover."
+              onPress={() => speakProverb("You can't judge a book by its cover.")}
+            />
           </List.Accordion>
 
           <Button

@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 // Import des écrans
 import GetStartedScreen from './src/screens/GetStarted/GetStartedScreen';
@@ -17,40 +18,22 @@ import ProverbsScreen from './src/screens/Proverbs/ProverbsScreen';
 import AccentTrainingScreen from './src/screens/AccentTraining/AccentTrainingScreen';
 import PresentationScreen from './src/screens/Presentation/PresentationScreen';
 import VerbsScreen from './src/screens/Verbs/VerbsScreen';
+import Sidebar from './src/components/Sidebar';
 
-const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
 
-const BottomTabNavigator = () => {
-  return (
-    <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ color, size }) => {
-          let iconName: string = '';
-
-          if (route.name === 'Accueil') {
-            iconName = 'home';
-          }
-
-          return <Ionicons name={iconName as any} size={size} color={color} />;
-        },
-        tabBarActiveTintColor: '#4CAF50',
-        tabBarInactiveTintColor: '#777',
-        headerShown: false,
-      })}
-    >
-      <Tab.Screen name="Accueil" component={HomeScreen} />
-    </Tab.Navigator>
-  );
-};
 
 export default function App() {
   return (
+    
     <NavigationContainer>
+       
       <StatusBar style="auto" />
       <Stack.Navigator initialRouteName="GetStarted">
         <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Home" component={BottomTabNavigator} options={{ headerShown: false }} />
+        <Stack.Screen name="Home" component={Sidebar} options={{ headerShown: false }} />
         <Stack.Screen name="DailyDialogues" component={DailyDialoguesScreen} />
         <Stack.Screen name="Grammar" component={GrammarScreen} />
         <Stack.Screen name="Debates" component={DebatesScreen} />

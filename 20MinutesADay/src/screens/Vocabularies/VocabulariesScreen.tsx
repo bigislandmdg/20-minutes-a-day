@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { Card, List, Text } from 'react-native-paper';
+import * as Speech from 'expo-speech'; // Import the expo-speech library
 
 const VocabulariesScreen = () => {
   const [expanded1, setExpanded1] = useState(false);
@@ -9,7 +10,15 @@ const VocabulariesScreen = () => {
   const [expanded4, setExpanded4] = useState(false);
   const [expanded5, setExpanded5] = useState(false);
   const [expanded6, setExpanded6] = useState(false);
-  
+
+  interface HandleSpeechProps {
+    text: string;
+  }
+
+  const handleSpeech = (text: HandleSpeechProps['text']): void => {
+    // Use expo-speech to read the text aloud
+    Speech.speak(text, { language: 'en-US' });
+  };
 
   return (
     <ScrollView style={styles.container}>
@@ -29,12 +38,12 @@ const VocabulariesScreen = () => {
               onPress={() => setExpanded1(!expanded1)}
               style={styles.accordion}
             >
-              <List.Item title="Hello - Bonjour" />
-              <List.Item title="Goodbye - Au revoir" />
-              <List.Item title="Please - S'il vous plaît" />
-              <List.Item title="Thank you - Merci" />
-              <List.Item title="Yes - Oui" />
-              <List.Item title="No - Non" />
+              <List.Item title="Hello - Bonjour" onPress={() => handleSpeech("Hello - Bonjour")} />
+              <List.Item title="Goodbye - Au revoir" onPress={() => handleSpeech("Goodbye - Au revoir")} />
+              <List.Item title="Please - S'il vous plaît" onPress={() => handleSpeech("Please - S'il vous plaît")} />
+              <List.Item title="Thank you - Merci" onPress={() => handleSpeech("Thank you - Merci")} />
+              <List.Item title="Yes - Oui" onPress={() => handleSpeech("Yes - Oui")} />
+              <List.Item title="No - Non" onPress={() => handleSpeech("No - Non")} />
             </List.Accordion>
           </List.Section>
         </Card.Content>
@@ -51,12 +60,12 @@ const VocabulariesScreen = () => {
               onPress={() => setExpanded2(!expanded2)}
               style={styles.accordion}
             >
-              <List.Item title="Bread - Pain" />
-              <List.Item title="Cheese - Fromage" />
-              <List.Item title="Milk - Lait" />
-              <List.Item title="Egg - Œuf" />
-              <List.Item title="Meat - Viande" />
-              <List.Item title="Fish - Poisson" />
+              <List.Item title="Bread - Pain" onPress={() => handleSpeech("Bread - Pain")} />
+              <List.Item title="Cheese - Fromage" onPress={() => handleSpeech("Cheese - Fromage")} />
+              <List.Item title="Milk - Lait" onPress={() => handleSpeech("Milk - Lait")} />
+              <List.Item title="Egg - Œuf" onPress={() => handleSpeech("Egg - Œuf")} />
+              <List.Item title="Meat - Viande" onPress={() => handleSpeech("Meat - Viande")} />
+              <List.Item title="Fish - Poisson" onPress={() => handleSpeech("Fish - Poisson")} />
             </List.Accordion>
           </List.Section>
         </Card.Content>
@@ -73,18 +82,18 @@ const VocabulariesScreen = () => {
               onPress={() => setExpanded3(!expanded3)}
               style={styles.accordion}
             >
-              <List.Item title="Where is the bathroom? - Où sont les toilettes ?" />
-              <List.Item title="How much does it cost? - Combien ça coûte ?" />
-              <List.Item title="I need help - J'ai besoin d'aide" />
-              <List.Item title="I'm lost - Je suis perdu" />
-              <List.Item title="Can you help me? - Pouvez-vous m'aider ?" />
-              <List.Item title="I don't understand - Je ne comprends pas" />
+              <List.Item title="Where is the bathroom? - Où sont les toilettes ?" onPress={() => handleSpeech("Where is the bathroom? - Où sont les toilettes ?")} />
+              <List.Item title="How much does it cost? - Combien ça coûte ?" onPress={() => handleSpeech("How much does it cost? - Combien ça coûte ?")} />
+              <List.Item title="I need help - J'ai besoin d'aide" onPress={() => handleSpeech("I need help - J'ai besoin d'aide")} />
+              <List.Item title="I'm lost - Je suis perdu" onPress={() => handleSpeech("I'm lost - Je suis perdu")} />
+              <List.Item title="Can you help me? - Pouvez-vous m'aider ?" onPress={() => handleSpeech("Can you help me? - Pouvez-vous m'aider ?")} />
+              <List.Item title="I don't understand - Je ne comprends pas" onPress={() => handleSpeech("I don't understand - Je ne comprends pas")} />
             </List.Accordion>
           </List.Section>
         </Card.Content>
       </Card>
 
-        {/* Carte 4 */}
+      {/* Carte 4 */}
       <Card style={styles.card}>
         <Card.Title title="Colors Vocabulary" />
         <Card.Content>
@@ -95,19 +104,19 @@ const VocabulariesScreen = () => {
               onPress={() => setExpanded4(!expanded4)}
               style={styles.accordion}
             >
-              <List.Item title="Red - Rouge" />
-              <List.Item title="Blue - Bleu" />
-              <List.Item title="Green - Vert" />
-              <List.Item title="Yellow - Jaune" />
-              <List.Item title="White - Blanc" />
-              <List.Item title="Black - Noir" />
+              <List.Item title="Red - Rouge" onPress={() => handleSpeech("Red - Rouge")} />
+              <List.Item title="Blue - Bleu" onPress={() => handleSpeech("Blue - Bleu")} />
+              <List.Item title="Green - Vert" onPress={() => handleSpeech("Green - Vert")} />
+              <List.Item title="Yellow - Jaune" onPress={() => handleSpeech("Yellow - Jaune")} />
+              <List.Item title="White - Blanc" onPress={() => handleSpeech("White - Blanc")} />
+              <List.Item title="Black - Noir" onPress={() => handleSpeech("Black - Noir")} />
             </List.Accordion>
           </List.Section>
         </Card.Content>
       </Card>
 
-       {/* Carte 5 */}
-       <Card style={styles.card}>
+      {/* Carte 5 */}
+      <Card style={styles.card}>
         <Card.Title title="Numbers Vocabulary" />
         <Card.Content>
           <List.Section>
@@ -117,12 +126,12 @@ const VocabulariesScreen = () => {
               onPress={() => setExpanded5(!expanded5)}
               style={styles.accordion}
             >
-              <List.Item title="One - Un" />
-              <List.Item title="Two - Deux" />
-              <List.Item title="Three - Trois" />
-              <List.Item title="Four - Quatre" />
-              <List.Item title="Five - Cinq" />
-              <List.Item title="Six - Six" />
+              <List.Item title="One - Un" onPress={() => handleSpeech("One - Un")} />
+              <List.Item title="Two - Deux" onPress={() => handleSpeech("Two - Deux")} />
+              <List.Item title="Three - Trois" onPress={() => handleSpeech("Three - Trois")} />
+              <List.Item title="Four - Quatre" onPress={() => handleSpeech("Four - Quatre")} />
+              <List.Item title="Five - Cinq" onPress={() => handleSpeech("Five - Cinq")} />
+              <List.Item title="Six - Six" onPress={() => handleSpeech("Six - Six")} />
             </List.Accordion>
           </List.Section>
         </Card.Content>
@@ -139,12 +148,12 @@ const VocabulariesScreen = () => {
               onPress={() => setExpanded6(!expanded6)}
               style={styles.accordion}
             >
-              <List.Item title="Rain - Pluie" />
-              <List.Item title="Sun - Soleil" />
-              <List.Item title="Wind - Vent" />
-              <List.Item title="Snow - Neige" />
-              <List.Item title="Cloud - Nuage" />
-              <List.Item title="Storm - Orage" />
+              <List.Item title="Rain - Pluie" onPress={() => handleSpeech("Rain - Pluie")} />
+              <List.Item title="Sun - Soleil" onPress={() => handleSpeech("Sun - Soleil")} />
+              <List.Item title="Wind - Vent" onPress={() => handleSpeech("Wind - Vent")} />
+              <List.Item title="Snow - Neige" onPress={() => handleSpeech("Snow - Neige")} />
+              <List.Item title="Cloud - Nuage" onPress={() => handleSpeech("Cloud - Nuage")} />
+              <List.Item title="Storm - Orage" onPress={() => handleSpeech("Storm - Orage")} />
             </List.Accordion>
           </List.Section>
         </Card.Content>

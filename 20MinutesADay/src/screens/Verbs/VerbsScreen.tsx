@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Card, List, Text } from 'react-native-paper';
+import * as Speech from 'expo-speech';
+import { Ionicons } from '@expo/vector-icons';
 
 const verbList = [
   { id: '1', verb: 'To be', conjugation: ['am', 'is', 'are'] },
@@ -14,6 +16,15 @@ const verbList = [
 const VerbsScreen = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
 
+  // Fonction pour lire le texte avec expo-speech
+  const speak = (text: string) => {
+    Speech.speak(text, {
+      language: 'en',
+      pitch: 1.0, // Tonalité de la voix (1 = normal)
+      rate: 0.9, // Vitesse de lecture (1 = normal)
+    });
+  };
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Verbs</Text>
@@ -23,7 +34,14 @@ const VerbsScreen = () => {
 
       {verbList.map((verb) => (
         <Card key={verb.id} style={styles.card}>
-          <Card.Title title={verb.verb} />
+          <Card.Title
+            title={verb.verb}
+            right={() => (
+              <TouchableOpacity onPress={() => speak(verb.verb)} style={styles.speakerButton}>
+                <Ionicons name="volume-high" size={22} color="#3a86ff" />
+              </TouchableOpacity>
+            )}
+          />
           <Card.Content>
             <List.Section>
               <List.Accordion
@@ -35,7 +53,15 @@ const VerbsScreen = () => {
                 style={styles.accordion}
               >
                 {verb.conjugation.map((form, index) => (
-                  <List.Item key={index} title={form} />
+                  <List.Item
+                    key={index}
+                    title={form}
+                    right={() => (
+                      <TouchableOpacity onPress={() => speak(form)} style={styles.speakerButton}>
+                        <Ionicons name="volume-high" size={20} color="#3a86ff" />
+                      </TouchableOpacity>
+                    )}
+                  />
                 ))}
               </List.Accordion>
             </List.Section>
@@ -69,6 +95,9 @@ const styles = StyleSheet.create({
   accordion: {
     backgroundColor: '#f9f9f9',
     borderRadius: 4,
+  },
+  speakerButton: {
+    padding: 15,
   },
 });
 

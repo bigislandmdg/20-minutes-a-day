@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-import { Card, List, Text } from 'react-native-paper';
+import { Card, List, Text, IconButton } from 'react-native-paper';
+import * as Speech from 'expo-speech';
 
 const grammarRules = [
   {
@@ -89,6 +90,14 @@ const grammarRules = [
 const GrammarScreen = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
 
+  const speak = (text: string) => {
+     Speech.speak(text, {
+          language: 'en',
+          pitch: 1.0,
+          rate: 1.0,
+        });
+  };
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Grammar</Text>
@@ -98,7 +107,16 @@ const GrammarScreen = () => {
 
       {grammarRules.map((rule) => (
         <Card key={rule.id} style={styles.card}>
-          <Card.Title title={rule.title} />
+          <Card.Title
+            title={rule.title}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
           <Card.Content>
             <List.Section>
               <List.Accordion
@@ -110,7 +128,18 @@ const GrammarScreen = () => {
                 style={styles.accordion}
               >
                 {rule.examples.map((example, index) => (
-                  <List.Item key={index} title={example} />
+                  <List.Item
+                    key={index}
+                    title={example}
+                    onPress={() => speak(example)}
+                    left={(props) => (
+                      <IconButton
+                        {...props}
+                        icon="volume-high"
+                        onPress={() => speak(example)}
+                      />
+                    )}
+                  />
                 ))}
               </List.Accordion>
             </List.Section>
@@ -130,6 +159,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    textAlign: 'center',
+    color: '#3a86ff',
   },
   content: {
     fontSize: 16,
