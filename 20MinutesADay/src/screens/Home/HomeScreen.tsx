@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, ScrollView, Modal, TextInput, Animated } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, ScrollView, Modal, TextInput, Animated, Image } from 'react-native';
 import { Card, List, FAB } from 'react-native-paper';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import PayementScreen from '../Payement/PayementScreen';
@@ -52,33 +52,38 @@ export default function HomeScreen() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.contentContainer}
       >
-        
-        
-
+    
         {/* Ligne 1 */}
         <View style={styles.row}>
           <TouchableOpacity
-            style={styles.cardContainer}
-            onPress={() => navigation.navigate('DailyDialogues')}
-          >
-            <Card style={styles.card}>
-              <Card.Title
-                title={<Text style={styles.data}>Daily Dialogues</Text>}
-                left={(props) => <List.Icon {...props} icon="chat" color="#3a86ff" />}
-              />
-            </Card>
-          </TouchableOpacity>
+  style={styles.cardContainer}
+  onPress={() => navigation.navigate('DailyDialogues')}
+>
+  <Card style={styles.card}>
+    <Card.Content style={styles.cardContent}>
+      <Image 
+        source={require('../../../assets/images/dialogues.jpg')} 
+        style={styles.icon}
+      />
+      <Text style={styles.data}>Daily Dialogues</Text>
+    </Card.Content>
+  </Card>
+</TouchableOpacity>
+
 
           <TouchableOpacity
             style={styles.cardContainer}
             onPress={() => navigation.navigate('Grammar')}
           >
             <Card style={styles.card}>
-              <Card.Title
-                title={<Text style={styles.data}>Grammar</Text>}
-                left={(props) => <List.Icon {...props} icon="pencil" color="#3a86ff" />}
-              />
-            </Card>
+              <Card.Content style={styles.cardContent}>
+            <Image 
+               source={require('../../../assets/images/grammars.jpg')} 
+               style={styles.icon}
+             />
+           <Text style={styles.data}>Grammar</Text>
+           </Card.Content>
+          </Card>
           </TouchableOpacity>
         </View>
 
@@ -88,24 +93,30 @@ export default function HomeScreen() {
             style={styles.cardContainer}
             onPress={() => navigation.navigate('Debates')}
           >
-            <Card style={styles.card}>
-              <Card.Title
-                title={<Text style={styles.data}>Debates</Text>}
-                left={(props) => <List.Icon {...props} icon="forum" color="#3a86ff" />}
-              />
-            </Card>
+             <Card style={styles.card}>
+              <Card.Content style={styles.cardContent}>
+            <Image 
+               source={require('../../../assets/images/debates.jpg')} 
+               style={styles.icon}
+             />
+           <Text style={styles.data}>Debates</Text>
+           </Card.Content>
+          </Card>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.cardContainer}
             onPress={() => navigation.navigate('Proverbs')}
           >
-            <Card style={styles.card}>
-              <Card.Title
-                title={<Text style={styles.data}>Proverbs</Text>}
-                left={(props) => <List.Icon {...props} icon="format-quote-close" color="#3a86ff" />}
-              />
-            </Card>
+                <Card style={styles.card}>
+              <Card.Content style={styles.cardContent}>
+            <Image 
+               source={require('../../../assets/images/proverbs.jpg')} 
+               style={styles.icon}
+             />
+           <Text style={styles.data}>Proverbs</Text>
+           </Card.Content>
+          </Card>
           </TouchableOpacity>
         </View>
 
@@ -115,24 +126,32 @@ export default function HomeScreen() {
             style={styles.cardContainer}
             onPress={() => navigation.navigate('AccentTraining')}
           >
+          
             <Card style={styles.card}>
-              <Card.Title
-                title={<Text style={styles.data}>Accent Training</Text>}
-                left={(props) => <List.Icon {...props} icon="microphone" color="#3a86ff" />}
-              />
-            </Card>
+              <Card.Content style={styles.cardContent}>
+            <Image 
+               source={require('../../../assets/images/training.jpg')} 
+               style={styles.icon}
+             />
+           <Text style={styles.data}>American Accent Training</Text>
+           </Card.Content>
+          </Card>
+
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.cardContainer}
             onPress={() => navigation.navigate('People')}
           >
-            <Card style={styles.card}>
-              <Card.Title
-                title={<Text style={styles.data}>People</Text>}
-                left={(props) => <List.Icon {...props} icon="account-group" color="#3a86ff" />}
-              />
-            </Card>
+              <Card style={styles.card}>
+              <Card.Content style={styles.cardContent}>
+            <Image 
+               source={require('../../../assets/images/people.jpg')} 
+               style={styles.icon}
+             />
+           <Text style={styles.data}>People</Text>
+           </Card.Content>
+          </Card>
           </TouchableOpacity>
         </View>
 
@@ -142,12 +161,15 @@ export default function HomeScreen() {
             style={styles.cardContainer}
             onPress={() => navigation.navigate('Presentation')}
           >
-            <Card style={styles.card}>
-              <Card.Title
-                title={<Text style={styles.data}>Presentation</Text>}
-                left={(props) => <List.Icon {...props} icon="presentation" color="#3a86ff" />}
-              />
-            </Card>
+             <Card style={styles.card}>
+              <Card.Content style={styles.cardContent}>
+            <Image 
+               source={require('../../../assets/images/presentation.jpg')} 
+               style={styles.icon}
+             />
+           <Text style={styles.data}>Presentation</Text>
+           </Card.Content>
+          </Card>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -155,11 +177,14 @@ export default function HomeScreen() {
             onPress={() => navigation.navigate('Verbs')}
           >
             <Card style={styles.card}>
-              <Card.Title
-                title={<Text style={styles.data}>Verbs</Text>}
-                left={(props) => <List.Icon {...props} icon="format-list-bulleted" color="#3a86ff" />}
-              />
-            </Card>
+              <Card.Content style={styles.cardContent}>
+            <Image 
+               source={require('../../../assets/images/vocabularies.jpg')} 
+               style={styles.icon}
+             />
+           <Text style={styles.data}>Verbs</Text>
+           </Card.Content>
+          </Card>
           </TouchableOpacity>
         </View>
 
@@ -169,12 +194,15 @@ export default function HomeScreen() {
             style={styles.singleCardContainer}
             onPress={() => navigation.navigate('Vocabularies')}
           >
-            <Card style={styles.card}>
-              <Card.Title
-                title={<Text style={styles.data}>Vocabularies</Text>}
-                left={(props) => <List.Icon {...props} icon="book" color="#3a86ff" />}
-              />
-            </Card>
+                <Card style={styles.card}>
+              <Card.Content style={styles.cardContent}>
+            <Image 
+               source={require('../../../assets/images/verbs.jpg')} 
+               style={styles.icon}
+             />
+           <Text style={styles.data}>Vocabularies</Text>
+           </Card.Content>
+          </Card>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -208,6 +236,11 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#fff',
   },
+  icon: {
+    width: 140,
+    height: 80,
+    marginBottom: 3, // 
+  },
 
   contentContainer: {
     flexDirection: 'row',
@@ -224,24 +257,33 @@ const styles = StyleSheet.create({
   cardContainer: {
     width: windowWidth / 2 - 31,
     marginHorizontal: 4,
+    
+  },
+
+  cardContent: {
+    alignItems: 'center', // Centre l'image horizontalement
+    justifyContent: 'center', // Centre verticalement si nécessaire
   },
   card: {
     borderRadius: 10,
-    backgroundColor: '#fafafa',
-    height: 90, 
+    backgroundColor: '#ffffff',
+    borderColor: '#000000',
+    height: 140, 
   },
   data: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 
   singleCardRow: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop: 5,
+    marginTop: 4,
   },
   singleCardContainer: {
-    width: windowWidth - 50,
+    width: windowWidth - 55,
+    height: 138
   },
   fab: {
     position: 'absolute',
