@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, ScrollView, Modal, TextInput, Animated, Image } from 'react-native';
-import { Card, List, FAB } from 'react-native-paper';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, ScrollView, Animated, Image } from 'react-native';
+import { Card, FAB } from 'react-native-paper';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import PayementScreen from '../Payement/PayementScreen';
 
@@ -52,16 +52,31 @@ export default function HomeScreen() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.contentContainer}
       >
-    
+
+      {/* Ligne 1 (carte info) */}
+      <View style={styles.row}>
+          <TouchableOpacity
+            style={styles.infoCardContainer}
+          >
+                <Card style={styles.infocard}>
+              <Card.Content style={styles.cardContent}>
+               <Text style={styles.bold}>🎉 Welcome to 20 Minutes A Day 🚀</Text> 
+                  <Text>Track your progress and stay consistent! 💪</Text>
+           </Card.Content>
+          </Card>
+          </TouchableOpacity>
+        </View>
+   
+
         {/* Ligne 1 */}
         <View style={styles.row}>
           <TouchableOpacity
-  style={styles.cardContainer}
-  onPress={() => navigation.navigate('DailyDialogues')}
+           style={styles.cardContainer}
+           onPress={() => navigation.navigate('DailyDialogues')}
 >
-  <Card style={styles.card}>
-    <Card.Content style={styles.cardContent}>
-      <Image 
+        <Card style={styles.card}>
+         <Card.Content style={styles.cardContent}>
+         <Image 
         source={require('../../../assets/images/dialogues.jpg')} 
         style={styles.icon}
       />
@@ -234,7 +249,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: '#fff',
+    backgroundColor: '#f8f8f8',
   },
   icon: {
     width: 140,
@@ -247,15 +262,15 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     paddingHorizontal: 4,
-    paddingBottom: 20,
-    gap: 20,
+    paddingBottom: 30,
+    gap: 10,
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   cardContainer: {
-    width: windowWidth / 2 - 31,
+    width: windowWidth / 2 - 34,
     marginHorizontal: 4,
     
   },
@@ -264,11 +279,17 @@ const styles = StyleSheet.create({
     alignItems: 'center', // Centre l'image horizontalement
     justifyContent: 'center', // Centre verticalement si nécessaire
   },
+  
+  infocardContent: {
+    alignItems: 'center', // Centre l'image horizontalement
+    justifyContent: 'center', // Centre verticalement si nécessaire
+  },
+
   card: {
     borderRadius: 10,
     backgroundColor: '#ffffff',
     borderColor: '#000000',
-    height: 140, 
+    height: 152, 
   },
   data: {
     fontSize: 20,
@@ -279,41 +300,40 @@ const styles = StyleSheet.create({
   singleCardRow: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop: 4,
+    marginTop: 7,
   },
   singleCardContainer: {
-    width: windowWidth - 55,
-    height: 138
+    width: '99%',
+    height: 200,
+    paddingLeft: 3
   },
   fab: {
     position: 'absolute',
     bottom: 25,
     right: 25,
-    backgroundColor: '#3a86ff',
+    backgroundColor: '#bb3e03',
     marginTop: 12
   },
  
   infoCardContainer: {
-    margin: 10,
+    width: '99%',
+    height: 60,
+    paddingLeft: 2
   },
-  infoCard: {
-    elevation: 5,
+  infocard: {
+    width: '100%',
+    backgroundColor: '#edF2F4',
+    padding: 2,
+    height: 50,
     borderRadius: 10,
-  },
-  infoCardTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#000',
-  },
-  infoCardSubtitle: {
-    fontSize: 14,
-    color: '#555',
+    elevation: 4, // Shadow for Android
+     // Shadow for iOS
   },
   floatingButton: {
     position: 'absolute',
     bottom: 25,
     right: 25,
-    backgroundColor: '#3a86ff',
+    backgroundColor: '#bb3e03',
     padding: 5,
     borderRadius: 50,
     elevation: 5,
@@ -331,7 +351,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   button: {
-    backgroundColor: '#3a86ff',
+    backgroundColor: '#bb3e03',
     paddingVertical: 10,
     borderRadius: 5,
     marginBottom: 10,
@@ -351,5 +371,8 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     padding: 20,
     elevation: 5,
+  },
+  bold: {
+    fontWeight: 'bold', // Texte en gras
   },
 });

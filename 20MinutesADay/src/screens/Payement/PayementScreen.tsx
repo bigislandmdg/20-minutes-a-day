@@ -80,7 +80,10 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose }) => {
 
       {/* Action Buttons */}
       <View style={styles.paymentOption}>
-        <Button title="Effectuer le Paiement" onPress={handlePayment} />
+        <Button title="Make Payment" 
+            onPress={handlePayment}
+             color="#bb3e03"
+         />
       </View>
     </View>
   );
@@ -109,6 +112,7 @@ const styles = StyleSheet.create({
   paymentOption: {
     marginTop: 10,
     width: '100%',
+    color:'#bb3e03'
   },
   formContainer: {
     width: '97%',

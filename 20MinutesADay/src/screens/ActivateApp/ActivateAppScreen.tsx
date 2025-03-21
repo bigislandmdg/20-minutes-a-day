@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   submitButton: {
-    backgroundColor: '#3a86ff',
+    backgroundColor: '##8da9c4',
     paddingVertical: 15,
     borderRadius: 8,
     alignItems: 'center',
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   disabledButton: {
-    backgroundColor: '#3a86ff',
+    backgroundColor: '#8da9c4',
   },
   submitButtonText: {
     fontSize: 16,

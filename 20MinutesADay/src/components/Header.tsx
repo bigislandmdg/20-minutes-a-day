@@ -11,25 +11,28 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
   const navigation = useNavigation();
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [isSearching, setIsSearching] = useState<boolean>(false);
-  const searchWidth = new Animated.Value(0); // Animation pour la largeur de la barre de recherche
+  const searchWidth = new Animated.Value(0);
 
-  // Fonction pour gérer l'ouverture de la barre de recherche
+  // Ouvrir la barre de recherche
   const handleOpenSearch = () => {
     setIsSearching(true);
     Animated.timing(searchWidth, {
-      toValue: 200, // Largeur finale de la barre
+      toValue: 250, // Largeur finale de la barre
       duration: 300,
       useNativeDriver: false,
     }).start();
   };
 
-  // Fonction pour gérer la fermeture de la barre de recherche
+  // Fermer la barre de recherche
   const handleCloseSearch = () => {
     Animated.timing(searchWidth, {
-      toValue: 0, // Réduire la largeur à 0
+      toValue: 0,
       duration: 300,
       useNativeDriver: false,
-    }).start(() => setIsSearching(false));
+    }).start(() => {
+      setIsSearching(false);
+      setSearchQuery('');
+    });
   };
 
   return (
@@ -41,8 +44,10 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
         </TouchableOpacity>
       )}
 
-      {/* Titre */}
-      <Text style={styles.title}>{title}</Text>
+      {/* Titre (centré) */}
+      {!isSearching && (
+        <Text style={styles.title}>{title}</Text>
+      )}
 
       {/* Icône de recherche */}
       {!isSearching ? (
@@ -57,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             placeholder="Rechercher..."
             value={searchQuery}
             onChangeText={(text) => setSearchQuery(text)}
-            autoFocus // Pour ouvrir directement le clavier
+            autoFocus
           />
           <TouchableOpacity onPress={handleCloseSearch}>
             <Ionicons name="close" size={20} color="#aaa" />
@@ -75,21 +80,26 @@ const styles = StyleSheet.create({
     backgroundColor: '#3a86ff',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between', // ✅ Équilibre l'espace entre les éléments
+    justifyContent: 'space-between',
     paddingHorizontal: 10,
+    position: 'relative',
   },
   title: {
     fontSize: 20,
     color: '#fff',
     fontWeight: 'bold',
-    textAlign: 'center', // ✅ Centre le texte
-    flex: 1, // ✅ Prend l'espace disponible pour permettre l'affichage des icônes
+    position: 'absolute', // ✅ Fixe le titre pour le centrer indépendamment des autres éléments
+    left: 0,
+    right: 0,
+    textAlign: 'center',
   },
   icon: {
     padding: 10,
+    zIndex: 1, // ✅ Pour s'assurer que l'icône reste au-dessus du titre
   },
   searchButton: {
     padding: 10,
+    zIndex: 1,
   },
   searchContainer: {
     flexDirection: 'row',
@@ -98,7 +108,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingHorizontal: 10,
     height: 35,
-    overflow: 'hidden',
+    position: 'absolute',
+    right: 10, // ✅ Place la barre de recherche à droite
+    zIndex: 2, // ✅ Superpose la barre de recherche au-dessus du titre
   },
   searchIcon: {
     marginRight: 5,
@@ -109,6 +121,5 @@ const styles = StyleSheet.create({
     color: '#333',
   },
 });
-
 
 export default Header;

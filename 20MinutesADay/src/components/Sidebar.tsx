@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons';
+
+const appVersion = '1.1.0'; // Define the version here
 import HomeScreen from '../screens/Home/HomeScreen';
 import ActivateAppScreen from '../screens/ActivateApp/ActivateAppScreen'; 
+import AboutScreen from '../screens/About/AboutScreen'; // Import the AboutScreen component
 
 const Drawer = createDrawerNavigator();
 
 const CustomDrawerContent = (props: any) => {
-  const [searchText, setSearchText] = useState('');
+  
 
   const handleActivateApp = () => {
-    // Naviguer vers l'écran ActivateAppScreen
     props.navigation.navigate('ActivateApp');
+  };
+
+  const handleLogout = () => {
+    console.log('Déconnexion...');
+    // Ajouter ici la logique pour la déconnexion
   };
 
   return (
@@ -27,17 +34,20 @@ const CustomDrawerContent = (props: any) => {
         </View>
       </View>
 
-       
-
-      {/* Barre de recherche */}
-      
-
       {/* Contenu du Drawer */}
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
-
-        
       </DrawerContentScrollView>
+
+      {/* Footer */}
+      <View style={styles.footer}>
+        <TouchableOpacity>
+        <TouchableOpacity style={styles.versionContainer}>
+          <Text style={styles.versionText}>Version {appVersion}</Text>
+        </TouchableOpacity>
+        </TouchableOpacity>
+        
+      </View>
     </View>
   );
 };
@@ -48,23 +58,33 @@ const Sidebar = () => {
       initialRouteName="Home"
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
-      
       <Drawer.Screen 
         name="Home" 
         component={HomeScreen} 
         options={{
           drawerIcon: ({ color }) => (
-            <Ionicons name="home" size={22} color={color} />
+            <Ionicons name="home" size={24} color='#bb3e03' />
           ),
         }}
       />
+
+<Drawer.Screen 
+  name="About" 
+  component={AboutScreen} 
+  options={{
+    drawerIcon: ({ color }) => (
+      <Ionicons name="information-circle" size={25} color='#bb3e03' />
+    ),
+  }} 
+/>
+
       
       <Drawer.Screen 
-        name="Activer l'application" 
+        name="Activate application" 
         component={ActivateAppScreen} 
         options={{
           drawerIcon: ({ color }) => (
-            <Ionicons name="key" size={22} color={color} />
+            <Ionicons name="key" size={25} color='#bb3e03' />
           ),
         }} 
       />
@@ -75,8 +95,8 @@ const Sidebar = () => {
 // Styles
 const styles = StyleSheet.create({
   header: {
-    padding: 25,
-    backgroundColor: '#3a86ff',
+    padding: 29,
+    backgroundColor: '#8da9c4',
     alignItems: 'center',
   },
   appTitle: {
@@ -89,40 +109,36 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginTop: 5,
   },
-  searchContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 10,
-    backgroundColor: '#f4f4f4',
-  },
-  searchIcon: {
-    marginRight: 10,
-  },
-  searchInput: {
-    flex: 1,
-    padding: 10,
-    backgroundColor: '#fff',
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: '#ddd',
-  },
   titleContainer: {
     alignItems: 'center',
     marginTop: 10,
   },
+  footer: {
+    padding: 17,
+    borderTopWidth: 1,
+    borderColor: '#eee',
+    backgroundColor: '#f9f9f9',
+  },
   activateButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#8da9c4',
     paddingVertical: 10,
     paddingHorizontal: 20,
-    marginTop: 20,
+    marginBottom: 10,
     borderRadius: 25,
-    marginHorizontal: 20,
     alignItems: 'center',
   },
   activateButtonText: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#fff',
+  },
+  versionContainer: {
+    marginTop: 10,
+    alignItems: 'center',
+  },
+  versionText: {
+    fontSize: 14,
+    color: '#777',
   },
 });
 
