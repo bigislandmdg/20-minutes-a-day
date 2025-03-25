@@ -1,10 +1,61 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Alert } from 'react-native';
-import { Card, Button, List, Text } from 'react-native-paper';
+import { Card, List, Text } from 'react-native-paper';
 import * as Speech from 'expo-speech'; // Import expo-speech
 
+// Liste des proverbes
+const proverbs = [
+  {
+    id: 1,
+    title: 'Lesson 68: PROVERBS',
+    description: 'DAILY SPOKEN',
+    content1: [
+      {
+        proverb: 'Two Heads Are Better Than One',
+        description: `
+A: Hey, Jonathan. Come over here a minute.\n
+B: What’s happening?\n
+A: I’d like to pick your brain for this composition I have to hand it tomorrow. I’ve got a problem with
+the introduction, and I figure that two heads are better than one. I need some input on the wording.\n
+B: To be honest with you, I’m not that good with words, but I’m willing to help out if I can.\n
+A: Thanks buddy. My brain is all dried up. I’m sure the two of us working together will be able to
+solve this problem faster than I could do it alone.\n
+B: Well, I’ll give it my best shot. Let me look at what you’ve already written and we’ll take it from
+there.
+        `,
+      },
+      {
+        proverb: 'Do As I Say, Not As I Do',
+        description: `
+A: Why are you not following the rules?\n
+B: Well, you don’t follow them either!\n
+A: Do as I say, not as I do!
+        `,
+      },
+    ],
+    content2: [
+      {
+        proverb: 'Curiosity Killed the Cat',
+        description: `
+A: Why are you looking through my phone?\n
+B: I was just curious.\n
+A: Well, curiosity killed the cat!
+        `,
+      },
+      {
+        proverb: 'Don’t Bite the Hand That Feeds You',
+        description: `
+A: Why are you always arguing with your boss?\n
+B: I don’t know.\n
+A: Don’t bite the hand that feeds you!
+        `,
+      },
+    ],
+  },
+];
+
 const ProverbsScreen = () => {
-  // Function to handle proverb speech
+  // Fonction pour faire parler le proverbe
   const speakProverb = (proverb: string): void => {
     Speech.speak(proverb, {
       language: 'en-US',
@@ -13,146 +64,58 @@ const ProverbsScreen = () => {
     });
   };
 
-  const handleProverbPress = () => {
-    Alert.alert("Proverb Practice", "You can now start practicing proverbs!");
+  const handlePracticePress = () => {
+    Alert.alert('Proverb Practice', 'You can now start practicing proverbs!');
   };
 
   return (
     <ScrollView style={styles.container}>
-      {/* ---- Carte 1 ---- */}
-      <Card style={styles.card}>
-        <Card.Title title="Proverb Practice 1" />
-        <Card.Content>
-          <Text style={styles.description}>
-            Improve your understanding of proverbs. Here are some common proverbs you can practice and reflect on.
-          </Text>
+      {proverbs.map((section) => (
+        <Card key={section.id} style={styles.card}>
+          <Card.Title title={section.title} />
+          <Card.Content>
+            <Text style={styles.description}>{section.description}</Text>
 
-          <List.Accordion
-            title="Proverbs List 1"
-            left={props => <List.Icon {...props} icon="format-quote-close" />}
-            style={styles.accordion}
-          >
-            <List.Item
-              title="A picture is worth a thousand words."
-              onPress={() => speakProverb("A picture is worth a thousand words.")}
-            />
-            <List.Item
-              title="Actions speak louder than words."
-              onPress={() => speakProverb("Actions speak louder than words.")}
-            />
-            <List.Item
-              title="The early bird catches the worm."
-              onPress={() => speakProverb("The early bird catches the worm.")}
-            />
-          </List.Accordion>
+            {/* Liste des proverbes - Content 1 */}
+            {section.content1.length > 0 && (
+              <Text style={styles.sectionTitle}>Content 1</Text>
+            )}
+            {section.content1.map((item, index) => (
+              <List.Accordion
+                key={index}
+                title={`“${item.proverb}”`}
+                left={(props) => <List.Icon {...props} icon="format-quote-close" />}
+                style={styles.accordion}
+              >
+                <List.Item
+                  title={item.proverb}
+                  description={item.description}
+                  onPress={() => speakProverb(item.proverb)}
+                />
+              </List.Accordion>
+            ))}
 
-          <Button
-            mode="contained"
-            onPress={handleProverbPress}
-            style={styles.button}
-          >
-            Start Proverb Practice
-          </Button>
-
-          <Button
-            mode="outlined"
-            onPress={() => {}}
-            style={styles.moreButton}
-          >
-            View More Proverbs
-          </Button>
-        </Card.Content>
-      </Card>
-
-      {/* ---- Carte 2 ---- */}
-      <Card style={styles.card}>
-        <Card.Title title="Proverb Practice 2" />
-        <Card.Content>
-          <Text style={styles.description}>
-            Here are some more proverbs to deepen your understanding.
-          </Text>
-
-          <List.Accordion
-            title="Proverbs List 2"
-            left={props => <List.Icon {...props} icon="format-quote-close" />}
-            style={styles.accordion}
-          >
-            <List.Item
-              title="Don't count your chickens before they hatch."
-              onPress={() => speakProverb("Don't count your chickens before they hatch.")}
-            />
-            <List.Item
-              title="A journey of a thousand miles begins with a single step."
-              onPress={() => speakProverb("A journey of a thousand miles begins with a single step.")}
-            />
-            <List.Item
-              title="When in Rome, do as the Romans do."
-              onPress={() => speakProverb("When in Rome, do as the Romans do.")}
-            />
-          </List.Accordion>
-
-          <Button
-            mode="contained"
-            onPress={handleProverbPress}
-            style={styles.button}
-          >
-            Start Proverb Practice
-          </Button>
-
-          <Button
-            mode="outlined"
-            onPress={() => {}}
-            style={styles.moreButton}
-          >
-            View More Proverbs
-          </Button>
-        </Card.Content>
-      </Card>
-
-      {/* ---- Carte 3 ---- */}
-      <Card style={styles.card}>
-        <Card.Title title="Proverb Practice 3" />
-        <Card.Content>
-          <Text style={styles.description}>
-            Keep practicing with these additional proverbs.
-          </Text>
-
-          <List.Accordion
-            title="Proverbs List 3"
-            left={props => <List.Icon {...props} icon="format-quote-close" />}
-            style={styles.accordion}
-          >
-            <List.Item
-              title="Fortune favors the bold."
-              onPress={() => speakProverb("Fortune favors the bold.")}
-            />
-            <List.Item
-              title="Honesty is the best policy."
-              onPress={() => speakProverb("Honesty is the best policy.")}
-            />
-            <List.Item
-              title="You can't judge a book by its cover."
-              onPress={() => speakProverb("You can't judge a book by its cover.")}
-            />
-          </List.Accordion>
-
-          <Button
-            mode="contained"
-            onPress={handleProverbPress}
-            style={styles.button}
-          >
-            Start Proverb Practice
-          </Button>
-
-          <Button
-            mode="outlined"
-            onPress={() => {}}
-            style={styles.moreButton}
-          >
-            View More Proverbs
-          </Button>
-        </Card.Content>
-      </Card>
+            {/* Liste des proverbes - Content 2 */}
+            {section.content2.length > 0 && (
+              <Text style={styles.sectionTitle}>Content 2</Text>
+            )}
+            {section.content2.map((item, index) => (
+              <List.Accordion
+                key={index}
+                title={`“${item.proverb}”`}
+                left={(props) => <List.Icon {...props} icon="format-quote-close" />}
+                style={styles.accordion}
+              >
+                <List.Item
+                  title={item.proverb}
+                  description={item.description}
+                  onPress={() => speakProverb(item.proverb)}
+                />
+              </List.Accordion>
+            ))}
+          </Card.Content>
+        </Card>
+      ))}
     </ScrollView>
   );
 };
@@ -180,13 +143,11 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     borderRadius: 8,
   },
-  button: {
-    marginVertical: 12,
-    backgroundColor: '#2fa292',
-  },
-  moreButton: {
-    marginVertical: 4,
-    borderColor: '#2fa292',
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginVertical: 10,
+    color: '#333',
   },
 });
 

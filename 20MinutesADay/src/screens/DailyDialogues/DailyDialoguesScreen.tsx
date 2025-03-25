@@ -12,18 +12,26 @@ const dialogues1 = [
       {
         sentence: "A- Good morning/afternoon/evening",
         pronunciation: '[goud mo:nin/aft:noun/iv:nin]',
+        frenchTranslation: "A- Bonjour/bonsoir",
+        malagasyTranslation: "A- Manao ahoana/ Manao ahoana hariva"
       },
       {
         sentence: 'Hi, Hello!',
         pronunciation: '[hai], [hɛˈloʊ]',
+        frenchTranslation: "Salut, Bonjour!",
+        malagasyTranslation: "Salama, Manao ahoana!"
       },
       {
         sentence: 'How are you doing/ How’s it going?',
         pronunciation: '[Haoa you doin/ haozit…....goin]',
+        frenchTranslation: "Comment ça va ?",
+        malagasyTranslation: "Manao ahoana ianao?"
       },
       {
         sentence: 'Good morning!',
         pronunciation: '[goud mo:nin]',
+         frenchTranslation: "Bonjour !",
+        malagasyTranslation: "Manao ahoana!"
       },
     ],
     content2: [
@@ -460,27 +468,41 @@ const DailyDialoguesScreen = () => {
             subtitle={dialogue.description}
           />
           <Card.Content>
-            <List.Accordion
-              title="GREETING PHRASES"
-              left={(props) => <List.Icon {...props} icon="handshake" color='#8da9c4' />}
-            >
-              {dialogue.content1.map((line, index) => (
-                <List.Item
-                  key={index}
-                  title={line.sentence}
-                  description={line.pronunciation} // Add the pronunciation here
-                  descriptionStyle={styles.pronunciation} // Style for pronunciation text
-                  right={() => (
-                    <IconButton
-                      icon="volume-high"
-                      size={24}
-                      onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
-                    />
-                  )}
+          <List.Accordion
+        title="GREETING PHRASES"
+        left={(props) => <List.Icon {...props} icon="handshake" color='#8da9c4' />}
+      >
+        {dialogue.content1.map((line, index) => (
+          <React.Fragment key={index}>
+            <List.Item
+              key={`sentence-${index}`}  // Unique key for sentence item
+              title={line.sentence}
+              description={line.pronunciation} // Add the pronunciation here
+              descriptionStyle={styles.pronunciation} // Style for pronunciation text
+              right={() => (
+                <IconButton
+                  icon="volume-high"
+                  size={24}
+                  onPress={() => speak(line.sentence)}
+                  iconColor="#8da9c4"
                 />
-              ))}
-            </List.Accordion>
+              )}
+            />
+            <List.Item
+              key={`french-${index}`}  // Unique key for French translation
+              title={`French: ${line.frenchTranslation}`}
+              description="French Translation"
+              descriptionStyle={styles.translation}
+            />
+            <List.Item
+              key={`malagasy-${index}`}  // Unique key for Malagasy translation
+              title={`Malagasy: ${line.malagasyTranslation}`}
+              description="Malagasy Translation"
+              descriptionStyle={styles.translation}
+            />
+          </React.Fragment>
+        ))}
+      </List.Accordion>
 
             {/* Second Accordion */}
             <List.Accordion
@@ -951,6 +973,11 @@ const styles = StyleSheet.create({
   pronunciation: {
     fontStyle: 'italic', // Style for the pronunciation
     color: '#555',
+    marginTop: 4,
+  },
+  translation: {
+    fontStyle: 'italic', // Style for the translation
+    color: '#888',
     marginTop: 4,
   },
   cell: {
