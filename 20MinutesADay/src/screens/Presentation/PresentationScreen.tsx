@@ -1,162 +1,219 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { Card, List, Text } from 'react-native-paper';
-import * as Speech from 'expo-speech'; // Import expo-speech
+import * as Speech from 'expo-speech';
 
-const PresentationScreen = () => {
-  const [expanded1, setExpanded1] = useState(false);
-  const [expanded2, setExpanded2] = useState(false);
-  const [expanded3, setExpanded3] = useState(false);
-  const [expanded4, setExpanded4] = useState(false);
-
-  // Function to speak text
-  const speak = (text: string): void => {
-    Speech.speak(text, {
-      language: 'en', // You can change the language to 'fr' for French or any other supported language
-    });
-  };
-
-  return (
-    <ScrollView style={styles.container}>
-      {/* Première carte */}
-      <Card style={styles.card}>
-        <Card.Title title="Welcome to 20Minutes-a-Day!" />
-        <Card.Content>
-          <Text style={styles.subtitle}>Your daily language learning companion</Text>
-          <Text style={styles.content} onPress={() => speak("This app is designed to help you learn a new language in just 20 minutes a day.")}>
-            This app is designed to help you learn a new language in just 20 minutes a day.
-          </Text>
-          <Text style={styles.content} onPress={() => speak("Whether you're focusing on vocabulary, grammar, or daily conversations, our goal is to make language learning fun and easy.")}>
-            Whether you're focusing on vocabulary, grammar, or daily conversations, our goal is to make language learning fun and easy.
-          </Text>
-
-          <List.Section>
-            <List.Accordion
-              title="Features"
-              expanded={expanded1}
-              onPress={() => {
-                setExpanded1(!expanded1);
-                speak("Features");
-              }}
-              style={styles.accordion}
-            >
-              <List.Item title="Vocabulary: Learn new words every day" onPress={() => speak("Vocabulary: Learn new words every day")} />
-              <List.Item title="Grammar: Understand the structure of the language" onPress={() => speak("Grammar: Understand the structure of the language")} />
-              <List.Item title="Daily Dialogues: Practice common phrases used in daily conversations" onPress={() => speak("Daily Dialogues: Practice common phrases used in daily conversations")} />
-              <List.Item title="Verbs: Master verb conjugations in different tenses" onPress={() => speak("Verbs: Master verb conjugations in different tenses")} />
-              <List.Item title="People: Learn about different people and their roles in the language" onPress={() => speak("People: Learn about different people and their roles in the language")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
-
-      {/* Deuxième carte */}
-      <Card style={styles.card}>
-        <Card.Title title="Progress Tracking" />
-        <Card.Content>
-          <Text style={styles.subtitle}>Monitor Your Progress</Text>
-          <Text style={styles.content} onPress={() => speak("Keep track of your daily streak, completed lessons, and mastered vocabulary.")}>
-            Keep track of your daily streak, completed lessons, and mastered vocabulary.
-          </Text>
-
-          <List.Section>
-            <List.Accordion
-              title="Progress Details"
-              expanded={expanded2}
-              onPress={() => {
-                setExpanded2(!expanded2);
-                speak("Progress Details");
-              }}
-              style={styles.accordion}
-            >
-              <List.Item title="Daily Streak: Maintain your daily learning habit" onPress={() => speak("Daily Streak: Maintain your daily learning habit")} />
-              <List.Item title="Completed Lessons: Track the lessons you have finished" onPress={() => speak("Completed Lessons: Track the lessons you have finished")} />
-              <List.Item title="Mastered Vocabulary: See the words you have mastered" onPress={() => speak("Mastered Vocabulary: See the words you have mastered")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
-
-      {/* Troisième carte */}
-      <Card style={styles.card}>
-        <Card.Title title="Community and Support" />
-        <Card.Content>
-          <Text style={styles.subtitle}>Connect with Others</Text>
-          <Text style={styles.content} onPress={() => speak("Join our learning community and get help from other language learners.")}>
-            Join our learning community and get help from other language learners.
-          </Text>
-
-          <List.Section>
-            <List.Accordion
-              title="Community Features"
-              expanded={expanded3}
-              onPress={() => {
-                setExpanded3(!expanded3);
-                speak("Community Features");
-              }}
-              style={styles.accordion}
-            >
-              <List.Item title="Forums: Ask questions and share tips" onPress={() => speak("Forums: Ask questions and share tips")} />
-              <List.Item title="Support: Get help from our team" onPress={() => speak("Support: Get help from our team")} />
-              <List.Item title="Challenges: Participate in language challenges" onPress={() => speak("Challenges: Participate in language challenges")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
-
-      {/* Quatrième carte */}
-      <Card style={styles.card}>
-        <Card.Title title="Settings and Preferences" />
-        <Card.Content>
-          <Text style={styles.subtitle}>Customize Your Experience</Text>
-          <Text style={styles.content} onPress={() => speak("Adjust the app to fit your learning style and personal preferences.")}>
-            Adjust the app to fit your learning style and personal preferences.
-          </Text>
-
-          <List.Section>
-            <List.Accordion
-              title="Settings Options"
-              expanded={expanded4}
-              onPress={() => {
-                setExpanded4(!expanded4);
-                speak("Settings Options");
-              }}
-              style={styles.accordion}
-            >
-              <List.Item title="Notifications: Manage notification settings" onPress={() => speak("Notifications: Manage notification settings")} />
-              <List.Item title="Language: Choose your preferred learning language" onPress={() => speak("Language: Choose your preferred learning language")} />
-              <List.Item title="Dark Mode: Switch between light and dark themes" onPress={() => speak("Dark Mode: Switch between light and dark themes")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
-    </ScrollView>
-  );
+type Section = {
+  title: string;
+  items: string[];
 };
+
+type Presentation = {
+  id: number;
+  title: string;
+  subtitle: string;
+  content: Section[];
+};
+
+const presentations: Presentation[] = [
+  {
+    id: 1,
+    title: 'Lesson 61: ENGLISH FOR PRESENTATION',
+    subtitle: 'LADIES AND GENTLEMENT',
+    content: [
+      {
+        title: '1.1 Welcoming the audience',
+        items: [
+          '- Good morning/afternoon, ladies and gentlemen',
+          '- Hi/Hello, everyone.',
+          '- First of all, let me thank you all for coming here today.',
+          '- I’m happy/delighted that so many of you could make it today.',
+        ],
+      },
+      {
+        title: '1.2 Introducing yourself',
+        items: [
+          '- Let me introduce myself. I’m Dave Elwood from…',
+          '- For those of you who don’t know me, my name’s…',
+          '- As you probably know, I’m the new HR manager.',
+          '- I’m head of logistics here at……',
+          '- I’m here in my function as the Head of controlling.',
+        ],
+      },
+      {
+        title: '1.3 Saying what your topic is',
+        items: [
+          '- As you can see on the screen [ecran], our topic today is...',
+          '- Today’s topic is…',
+          '- What I’d like to present to you today is…',
+          '- The subject of my presentation is…',
+        ],
+      },
+      {
+        title: '1.4 Explaining why your topic relevant for your audience',
+        items: [
+          '- My talk is particularly relevant to those of you/us who…',
+          '- Today’s topic is of particular interest to those of you/us who..',
+          '- My/topic is very important for you because…',
+          '- By the end of this talk you will be familiar with...',
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Lesson 61: ENGLISH FOR PRESENTATION',
+    subtitle: 'STRUCTURING A PRESENTATION',
+    content: [
+      {
+        title: '→ Most formal and many informal presentations have three main parts and follow this simple formula:',
+        items: [
+          '1- Tell the audience what you are going to say! = Introduction',
+          '2- Say it! = Main part',
+          '3- Tell them what you said! = Conclusion',
+        ],
+      },
+      {
+        title: '→ There are several ways you can tell the audience what you are going to say.',
+        items: [
+          '→ Would like + infinitive\nEx: Today I’d like to tell about our new plans.',
+          '→ Going to + infinitive\n\nEx: I’m going to talk to you today about ….',
+          '→ Will + infinitive\n\nEx: I’ll begin by + v.ing',
+          '→ Will be + verb.Ing\n\nEx: I’ll be talking about our…',
+          '→ The purpose of the introduction is not only to tell the audience who you are, what the is about, and why it is relevant to them; you also want to tell the audience briefly how the talk is structured.',
+          '→ I’ve divided my presentation into three main parts: X, Y, and Z',
+          '→ In my presentation I’ll focus on three major issues=problem',
+          '→ First of all, I’ll be looking at…, second…, and third…',
+          '→ Then/Next/after that, I’ll go on to…',
+          '→ Finally, I’ll offer some solutions',
+        ],
+      },
+      {
+        title: 'REMARKS',
+        items: [
+          'ISSUE = Question/Probleme TO BE RELEVANT TO = Etre pertinent par rapport à ch PARTICULAR = Particulier; TO FOCUS ON = Se concentrer sur qlq chose; AUDIENCE = Audience',
+        ],
+      },
+    ],
+  },
+];
+
+// Fonction pour lire le texte avec la synthèse vocale
+const speak = (text: string) => {
+  Speech.speak(text, {
+    language: 'en',
+  });
+};
+
+// Composant réutilisable pour afficher une présentation
+const PresentationCard = ({ presentation }: { presentation: Presentation }) => (
+  <Card key={presentation.id} style={styles.card}>
+    <Card.Title title={presentation.title} />
+    <Card.Content>
+      <Text style={styles.subtitle} onPress={() => speak(presentation.subtitle)}>
+        {presentation.subtitle}
+      </Text>
+
+      {presentation.content.map((section, index) => (
+        <List.Accordion
+          key={index}
+          title={<Text style={styles.sectionTitle}>{section.title}</Text>}
+          style={styles.accordion}
+        >
+          {section.items.map((item, idx) => {
+            const parts = item.split('\n\n');
+            const mainText = parts[0];
+            const example = parts[1] || '';
+
+            return (
+              <List.Item
+                key={idx}
+                title={
+                  <>
+                    {/* Affichage du texte principal */}
+                    <Text style={styles.mainText}>{mainText}</Text>
+                    {/* Affichage de l'exemple s'il existe */}
+                    {example ? (
+                      <Text style={styles.exampleText}>{`\nEx: ${example}`}</Text>
+                    ) : null}
+                  </>
+                }
+                onPress={() => speak(item)}
+                style={styles.listItem}
+              />
+            );
+          })}
+        </List.Accordion>
+      ))}
+    </Card.Content>
+  </Card>
+);
+
+const PresentationScreen = () => (
+  <ScrollView style={styles.container}>
+    <Text style={styles.title}>English for Presentation</Text>
+    <Text style={styles.content}>
+      This screen contains English for Presentation.
+    </Text>
+
+    {presentations.map((presentation) => (
+      <PresentationCard key={presentation.id} presentation={presentation} />
+    ))}
+  </ScrollView>
+);
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+    backgroundColor: '#f8f8f8',
   },
   card: {
-    marginBottom: 16,
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    backgroundColor: '#ffffff',
+    marginBottom: 22,
     borderRadius: 8,
-    elevation: 4, // Shadow for the card (Android)
-    backgroundColor: '#fff',
   },
-  subtitle: {
-    fontSize: 20,
-    fontWeight: '600',
-    marginVertical: 10,
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
+    textAlign: 'center',
+    color: '#bb3e03',
   },
   content: {
+    fontSize: 14,
+    color: '#333',
+    marginTop: 10,
+    lineHeight: 22,
+    marginBottom: 16,
+  },
+  subtitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#8da9c4',
+    marginBottom: 8,
+  },
+  sectionTitle: {
+    fontWeight: 'bold',
     fontSize: 16,
-    lineHeight: 24,
   },
   accordion: {
-    backgroundColor: '#f9f9f9',
-    borderRadius: 4,
+    backgroundColor: '#f4f4f4',
+  },
+  listItem: {
+    paddingLeft: 16,
+  },
+  mainText: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#333',
+  },
+  exampleText: {
+    fontStyle: 'italic',
+    fontSize: 14,
+    color: '#555',
   },
 });
 

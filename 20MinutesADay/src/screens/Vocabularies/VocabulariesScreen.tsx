@@ -1,24 +1,827 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { Card, List, Text } from 'react-native-paper';
+import { ScrollView, StyleSheet, View, Text as RNText } from 'react-native';
+import { Card, IconButton, List, Text } from 'react-native-paper';
 import * as Speech from 'expo-speech'; // Import the expo-speech library
 
-const VocabulariesScreen = () => {
-  const [expanded1, setExpanded1] = useState(false);
-  const [expanded2, setExpanded2] = useState(false);
-  const [expanded3, setExpanded3] = useState(false);
-  const [expanded4, setExpanded4] = useState(false);
-  const [expanded5, setExpanded5] = useState(false);
-  const [expanded6, setExpanded6] = useState(false);
+const vocabsRules1 = [
+  {
+    id: 1,
+    title: 'Lesson 43: DAILY ENGLISH WORDS',
+    description: 'VOCABS',
+    
+    content1: [
+      {
+        vocabulary: "TO GET IN [gerin]",
+        frenchTranslation: "Entrer",
+        malagasyTranslation: "Miditra"
+      },
+      {
+        vocabulary: "TO GET ON [geron]", 
+        frenchTranslation: "Monter",
+        malagasyTranslation: "Miakatra"
+      },
+      {
+        vocabulary: "TO GET OFF [gerof]",
+        frenchTranslation: " Descendre",
+        malagasyTranslation: "Midina"
+      },
+      {
+        vocabulary: "TO RIDE[raid]",
+        frenchTranslation: "Monter a cheval/bicyclette",
+        malagasyTranslation: "Mitaingina"
+      },
+      {
+        vocabulary: " TO PULL[poul]",
+        frenchTranslation: "Tirer",
+        malagasyTranslation: "Mitarika"
+      },
+      {
+        vocabulary: "TO DRIVE[draiv]",
+        frenchTranslation: "Conduire",
+        malagasyTranslation: "Mitondra (fiara)"
+      },
+      {
+        vocabulary: "TO START[sta:t]",
+        frenchTranslation: "Demarrer",
+        malagasyTranslation: " Mamelona (fiara)"
+      },
+      {
+        vocabulary: "TO LEARN[ler n]",
+        frenchTranslation: "Apprendre",
+        malagasyTranslation: "Mianatra"
+      },
+      {
+        vocabulary: "TO STUDY[stadi]",
+        frenchTranslation: "Etudier[Universite/Lycee]",
+        malagasyTranslation: "Mianatra @ Oniverisitea/Lisea"
+      },
+      {
+        vocabulary: "TO REVISE MY LESSON",
+        frenchTranslation: "Reviser",
+        malagasyTranslation: "Mamerin-desona"
+      },
+      {
+        vocabulary: "TO SPEND TIME TO",
+        frenchTranslation: " Passer du temps",
+        malagasyTranslation: "Mandany fotoana"
+      },
+      {
+        vocabulary: "TO WORK HARD",
+        frenchTranslation: "Travailler dûr",
+        malagasyTranslation: "Miezaka/miasa mafy"
+      },
+      {
+        vocabulary: "TO SUCCEED[saksid]",
+        frenchTranslation: "Réussir",
+        malagasyTranslation: "Tafita"
+      },
+      {
+        vocabulary: "TO FAIL [feil]",
+        frenchTranslation: "Râter/Echouer",
+        malagasyTranslation: "Tsy tafita/"
+      },
+      {
+        vocabulary: "TO CLOSE[kloouz]",
+        frenchTranslation: "Fermer",
+        malagasyTranslation: "Manakatona/ manidy"
+      },
+      {
+        vocabulary: "TO SHUT[shat]",
+        frenchTranslation: "Fermer",
+        malagasyTranslation: "Manakatona/manidy"
+      },
+      {
+        vocabulary: "TO OPEN",
+        frenchTranslation: "Ouvrir",
+        malagasyTranslation: "Mamoha"
+      },
+      {
+        vocabulary: "TO PREPARE[pripar]",
+        frenchTranslation: "Préparer",
+        malagasyTranslation: "Manomana"
+      },
+      {
+        vocabulary: "TO SHAKE [sheik]",
+        frenchTranslation: "Secouer",
+        malagasyTranslation: "Mikotrana/Manotrana"
+      },
+      {
+        vocabulary: "TO SET THE TABLE",
+        frenchTranslation: " Mettre la table",
+        malagasyTranslation: "Manao couvert"
+      },
+      {
+        vocabulary: "TO CLEAR THE TABLE[klir de tebel]",
+        frenchTranslation: " Débarrasser la table",
+        malagasyTranslation: "  Mangoro vilia"
+      },
+      {
+        vocabulary: "TO GO TO BED",
+        frenchTranslation: "Se coucher",
+        malagasyTranslation: "Mandeha matory"
+      },
+      {
+        vocabulary: "TO SLEEP[slip]",
+        frenchTranslation: " Dormir",
+        malagasyTranslation: "Matory"
+      },
+      {
+        vocabulary: "TO SLEEP IN",
+        frenchTranslation: "Faire la grace matiné",
+        malagasyTranslation: "Tara vao mifoha"
+      },
+      {
+        vocabulary: "TO WAKE UP[weikap]",
+        frenchTranslation: "Se réveiller",
+        malagasyTranslation: "Mahatsiaro(tory)"
+      },
+      {
+        vocabulary: "TO LONG TO",
+        frenchTranslation: "Vouloir/avoir très envie de",
+        malagasyTranslation: "Te- na Maniry"
+      },
+      {
+        vocabulary: "TO INTEND TO",
+        frenchTranslation: "Avoir l’intention de",
+        malagasyTranslation: "Mieritreritra ny"
+      },
+      {
+        vocabulary: "TO TEND TO",
+        frenchTranslation: "Avoir tendance de",
+        malagasyTranslation: "Mirona/mankany@"
+      },
+      {
+        vocabulary: "TO FEEL LIKE TO+V.ING[fil laik]",
+        frenchTranslation: "Avoir envie de",
+        malagasyTranslation: "Te-na Maniry"
+      },
+      {
+        vocabulary: "TO DESIRE TO[dizair]",
+        frenchTranslation: "Désirer",
+        malagasyTranslation: "Maniry"
+      },
+      {
+        vocabulary: "I WOULD LIKE TO+V.INF",
+        frenchTranslation: "Je voudrais/j’aimerais de",
+        malagasyTranslation: "Maniry"
+      },
+      {
+        vocabulary: "YOU HAD/WOULD RATHER/BETTER+V.INF",
+        frenchTranslation: "Avoir intérêt à/Il vaut mieux/ferais mieux",
+        malagasyTranslation: "Aleo…"
+      },
+      {
+        vocabulary: "TO DETEST TO+V.INF[ditest]",
+        frenchTranslation: "Détester",
+        malagasyTranslation: "Mankahala"
+      },
+      {
+        vocabulary: " TO HATE+V.ING[heit]",
+        frenchTranslation: "Haîr",
+        malagasyTranslation: "Mankahala"
+      },
+      {
+        vocabulary: "TO EXCHANGE[ixtreinj]",
+        frenchTranslation: "Echanger",
+        malagasyTranslation: "Mifanakalo"
+      },
+      {
+        vocabulary: "TO BUY[bai]",
+        frenchTranslation: "Acheter",
+        malagasyTranslation: "Mividy"
+      },
+      {
+        vocabulary: "TO SELL",
+        frenchTranslation: "Vendre",
+        malagasyTranslation: "Mivarotra"
+      },
+      {
+        vocabulary: "TO FIND[faind]",
+        frenchTranslation: "Trouver",
+        malagasyTranslation: "Mahita"
+      },
+      {
+        vocabulary: "TO LOOK FOR",
+        frenchTranslation: "Chercher",
+        malagasyTranslation: "Mitady"
+      },
+      {
+        vocabulary: "TO BRING",
+        frenchTranslation: "Apporter",
+        malagasyTranslation: "Mitondra"
+      },
+      {
+        vocabulary: "TO TAKE[teik]",
+        frenchTranslation: "Prendre",
+        malagasyTranslation: "Maka/mandray"
+      },
+      {
+        vocabulary: "TO HOLD",
+        frenchTranslation: "Tenir",
+        malagasyTranslation: "Mitazona"
+      },
+      {
+        vocabulary: "TO GRAB",
+        frenchTranslation: "Saisir",
+        malagasyTranslation: "Mandray"
+      },
+      {
+        vocabulary: "TO RELEASE[rilis]",
+        frenchTranslation: "Relâcher",
+        malagasyTranslation: "Mamotsitra"
+      },
+      {
+        vocabulary: "TO DROP[drap]",
+        frenchTranslation: "Laisser tomber",
+        malagasyTranslation: "Mandatsaka"
+      },
+      {
+        vocabulary: "TO LEAK[lik]",
+        frenchTranslation: "Fuir",
+        malagasyTranslation: "Mitete"
+      },
+      {
+        vocabulary: "TO BREAK[brek]",
+        frenchTranslation: "Casser",
+        malagasyTranslation: "Mamaky"
+      },
+      {
+        vocabulary: "TO STICK STH",
+        frenchTranslation: "Coller",
+        malagasyTranslation: "Mametaka @ dity"
+      },
+      {
+        vocabulary: "TO ATTEMPT SB(TO+V.INF)",
+        frenchTranslation: " Tenter de",
+        malagasyTranslation: "Maka fanahy olona"
+      },
+      {
+        vocabulary: "TO BE IN DEBT[det]",
+        frenchTranslation: "Etre endetté",
+        malagasyTranslation: "Be trosa"
+      },
+      {
+        vocabulary: "TO OWE[ôou]SB",
+        frenchTranslation: "Devoir",
+        malagasyTranslation: "Ananan’olona vola"
+      },
+      
+    ],
+    
 
-  interface HandleSpeechProps {
-    text: string;
   }
+];
 
-  const handleSpeech = (text: HandleSpeechProps['text']): void => {
-    // Use expo-speech to read the text aloud
-    Speech.speak(text, { language: 'en-US' });
-  };
+
+const vocabsRules2 = [
+  {
+    id: 1,
+    title: 'Lesson 45: DAILY EXPRESSIONS',
+    description: 'VOCABS',
+    
+    content1: [
+      {
+        vocabulary: "TO GET IN [gerin]",
+        frenchTranslation: "Entrer",
+        malagasyTranslation: "Miditra"
+      },
+      {
+        vocabulary: "TO GET ON [geron]", 
+        frenchTranslation: "Monter",
+        malagasyTranslation: "Miakatra"
+      },
+      {
+        vocabulary: "TO GET OFF [gerof]",
+        frenchTranslation: " Descendre",
+        malagasyTranslation: "Midina"
+      },
+      {
+        vocabulary: "TO RIDE[raid]",
+        frenchTranslation: "Monter a cheval/bicyclette",
+        malagasyTranslation: "Mitaingina"
+      },
+      {
+        vocabulary: " TO PULL[poul]",
+        frenchTranslation: "Tirer",
+        malagasyTranslation: "Mitarika"
+      },
+      {
+        vocabulary: "TO DRIVE[draiv]",
+        frenchTranslation: "Conduire",
+        malagasyTranslation: "Mitondra (fiara)"
+      },
+      {
+        vocabulary: "TO START[sta:t]",
+        frenchTranslation: "Demarrer",
+        malagasyTranslation: " Mamelona (fiara)"
+      },
+      {
+        vocabulary: "TO LEARN[ler n]",
+        frenchTranslation: "Apprendre",
+        malagasyTranslation: "Mianatra"
+      },
+      {
+        vocabulary: "TO STUDY[stadi]",
+        frenchTranslation: "Etudier[Universite/Lycee]",
+        malagasyTranslation: "Mianatra @ Oniverisitea/Lisea"
+      },
+      {
+        vocabulary: "TO REVISE MY LESSON",
+        frenchTranslation: "Reviser",
+        malagasyTranslation: "Mamerin-desona"
+      },
+      {
+        vocabulary: "TO SPEND TIME TO",
+        frenchTranslation: " Passer du temps",
+        malagasyTranslation: "Mandany fotoana"
+      },
+      {
+        vocabulary: "TO WORK HARD",
+        frenchTranslation: "Travailler dûr",
+        malagasyTranslation: "Miezaka/miasa mafy"
+      },
+      {
+        vocabulary: "TO SUCCEED[saksid]",
+        frenchTranslation: "Réussir",
+        malagasyTranslation: "Tafita"
+      },
+      {
+        vocabulary: "TO FAIL [feil]",
+        frenchTranslation: "Râter/Echouer",
+        malagasyTranslation: "Tsy tafita/"
+      },
+      {
+        vocabulary: "TO CLOSE[kloouz]",
+        frenchTranslation: "Fermer",
+        malagasyTranslation: "Manakatona/ manidy"
+      },
+      {
+        vocabulary: "TO SHUT[shat]",
+        frenchTranslation: "Fermer",
+        malagasyTranslation: "Manakatona/manidy"
+      },
+      {
+        vocabulary: "TO OPEN",
+        frenchTranslation: "Ouvrir",
+        malagasyTranslation: "Mamoha"
+      },
+      {
+        vocabulary: "TO PREPARE[pripar]",
+        frenchTranslation: "Préparer",
+        malagasyTranslation: "Manomana"
+      },
+      {
+        vocabulary: "TO SHAKE [sheik]",
+        frenchTranslation: "Secouer",
+        malagasyTranslation: "Mikotrana/Manotrana"
+      },
+      {
+        vocabulary: "TO SET THE TABLE",
+        frenchTranslation: " Mettre la table",
+        malagasyTranslation: "Manao couvert"
+      },
+      {
+        vocabulary: "TO CLEAR THE TABLE[klir de tebel]",
+        frenchTranslation: " Débarrasser la table",
+        malagasyTranslation: "  Mangoro vilia"
+      },
+      {
+        vocabulary: "TO GO TO BED",
+        frenchTranslation: "Se coucher",
+        malagasyTranslation: "Mandeha matory"
+      },
+      {
+        vocabulary: "TO SLEEP[slip]",
+        frenchTranslation: " Dormir",
+        malagasyTranslation: "Matory"
+      },
+      {
+        vocabulary: "TO SLEEP IN",
+        frenchTranslation: "Faire la grace matiné",
+        malagasyTranslation: "Tara vao mifoha"
+      },
+      {
+        vocabulary: "TO WAKE UP[weikap]",
+        frenchTranslation: "Se réveiller",
+        malagasyTranslation: "Mahatsiaro(tory)"
+      },
+      {
+        vocabulary: "TO LONG TO",
+        frenchTranslation: "Vouloir/avoir très envie de",
+        malagasyTranslation: "Te- na Maniry"
+      },
+      {
+        vocabulary: "TO INTEND TO",
+        frenchTranslation: "Avoir l’intention de",
+        malagasyTranslation: "Mieritreritra ny"
+      },
+      {
+        vocabulary: "TO TEND TO",
+        frenchTranslation: "Avoir tendance de",
+        malagasyTranslation: "Mirona/mankany@"
+      },
+      {
+        vocabulary: "TO FEEL LIKE TO+V.ING[fil laik]",
+        frenchTranslation: "Avoir envie de",
+        malagasyTranslation: "Te-na Maniry"
+      },
+      {
+        vocabulary: "TO DESIRE TO[dizair]",
+        frenchTranslation: "Désirer",
+        malagasyTranslation: "Maniry"
+      },
+      {
+        vocabulary: "I WOULD LIKE TO+V.INF",
+        frenchTranslation: "Je voudrais/j’aimerais de",
+        malagasyTranslation: "Maniry"
+      },
+      {
+        vocabulary: "YOU HAD/WOULD RATHER/BETTER+V.INF",
+        frenchTranslation: "Avoir intérêt à/Il vaut mieux/ferais mieux",
+        malagasyTranslation: "Aleo…"
+      },
+      {
+        vocabulary: "TO DETEST TO+V.INF[ditest]",
+        frenchTranslation: "Détester",
+        malagasyTranslation: "Mankahala"
+      },
+      {
+        vocabulary: " TO HATE+V.ING[heit]",
+        frenchTranslation: "Haîr",
+        malagasyTranslation: "Mankahala"
+      },
+      {
+        vocabulary: "TO EXCHANGE[ixtreinj]",
+        frenchTranslation: "Echanger",
+        malagasyTranslation: "Mifanakalo"
+      },
+      {
+        vocabulary: "TO BUY[bai]",
+        frenchTranslation: "Acheter",
+        malagasyTranslation: "Mividy"
+      },
+      {
+        vocabulary: "TO SELL",
+        frenchTranslation: "Vendre",
+        malagasyTranslation: "Mivarotra"
+      },
+      {
+        vocabulary: "TO FIND[faind]",
+        frenchTranslation: "Trouver",
+        malagasyTranslation: "Mahita"
+      },
+      {
+        vocabulary: "TO LOOK FOR",
+        frenchTranslation: "Chercher",
+        malagasyTranslation: "Mitady"
+      },
+      {
+        vocabulary: "TO BRING",
+        frenchTranslation: "Apporter",
+        malagasyTranslation: "Mitondra"
+      },
+      {
+        vocabulary: "TO TAKE[teik]",
+        frenchTranslation: "Prendre",
+        malagasyTranslation: "Maka/mandray"
+      },
+      {
+        vocabulary: "TO HOLD",
+        frenchTranslation: "Tenir",
+        malagasyTranslation: "Mitazona"
+      },
+      {
+        vocabulary: "TO GRAB",
+        frenchTranslation: "Saisir",
+        malagasyTranslation: "Mandray"
+      },
+      {
+        vocabulary: "TO RELEASE[rilis]",
+        frenchTranslation: "Relâcher",
+        malagasyTranslation: "Mamotsitra"
+      },
+      {
+        vocabulary: "TO DROP[drap]",
+        frenchTranslation: "Laisser tomber",
+        malagasyTranslation: "Mandatsaka"
+      },
+      {
+        vocabulary: "TO LEAK[lik]",
+        frenchTranslation: "Fuir",
+        malagasyTranslation: "Mitete"
+      },
+      {
+        vocabulary: "TO BREAK[brek]",
+        frenchTranslation: "Casser",
+        malagasyTranslation: "Mamaky"
+      },
+      {
+        vocabulary: "TO STICK STH",
+        frenchTranslation: "Coller",
+        malagasyTranslation: "Mametaka @ dity"
+      },
+      {
+        vocabulary: "TO ATTEMPT SB(TO+V.INF)",
+        frenchTranslation: " Tenter de",
+        malagasyTranslation: "Maka fanahy olona"
+      },
+      {
+        vocabulary: "TO BE IN DEBT[det]",
+        frenchTranslation: "Etre endetté",
+        malagasyTranslation: "Be trosa"
+      },
+      {
+        vocabulary: "TO OWE[ôou]SB",
+        frenchTranslation: "Devoir",
+        malagasyTranslation: "Ananan’olona vola"
+      },
+      
+    ],
+    
+
+  }
+];
+
+const vocabsRules3 = [
+  {
+    id: 1,
+    title: 'Lesson 62: DAILY SPOKEN ENGLISH',
+    description: 'SLANG AND IDIOMS',
+    
+    content1: [
+      {
+        vocabulary: "TO GET IN [gerin]",
+        frenchTranslation: "Entrer",
+        malagasyTranslation: "Miditra"
+      },
+      {
+        vocabulary: "TO GET ON [geron]", 
+        frenchTranslation: "Monter",
+        malagasyTranslation: "Miakatra"
+      },
+      {
+        vocabulary: "TO GET OFF [gerof]",
+        frenchTranslation: " Descendre",
+        malagasyTranslation: "Midina"
+      },
+      {
+        vocabulary: "TO RIDE[raid]",
+        frenchTranslation: "Monter a cheval/bicyclette",
+        malagasyTranslation: "Mitaingina"
+      },
+      {
+        vocabulary: " TO PULL[poul]",
+        frenchTranslation: "Tirer",
+        malagasyTranslation: "Mitarika"
+      },
+      {
+        vocabulary: "TO DRIVE[draiv]",
+        frenchTranslation: "Conduire",
+        malagasyTranslation: "Mitondra (fiara)"
+      },
+      {
+        vocabulary: "TO START[sta:t]",
+        frenchTranslation: "Demarrer",
+        malagasyTranslation: " Mamelona (fiara)"
+      },
+      {
+        vocabulary: "TO LEARN[ler n]",
+        frenchTranslation: "Apprendre",
+        malagasyTranslation: "Mianatra"
+      },
+      {
+        vocabulary: "TO STUDY[stadi]",
+        frenchTranslation: "Etudier[Universite/Lycee]",
+        malagasyTranslation: "Mianatra @ Oniverisitea/Lisea"
+      },
+      {
+        vocabulary: "TO REVISE MY LESSON",
+        frenchTranslation: "Reviser",
+        malagasyTranslation: "Mamerin-desona"
+      },
+      {
+        vocabulary: "TO SPEND TIME TO",
+        frenchTranslation: " Passer du temps",
+        malagasyTranslation: "Mandany fotoana"
+      },
+      {
+        vocabulary: "TO WORK HARD",
+        frenchTranslation: "Travailler dûr",
+        malagasyTranslation: "Miezaka/miasa mafy"
+      },
+      {
+        vocabulary: "TO SUCCEED[saksid]",
+        frenchTranslation: "Réussir",
+        malagasyTranslation: "Tafita"
+      },
+      {
+        vocabulary: "TO FAIL [feil]",
+        frenchTranslation: "Râter/Echouer",
+        malagasyTranslation: "Tsy tafita/"
+      },
+      {
+        vocabulary: "TO CLOSE[kloouz]",
+        frenchTranslation: "Fermer",
+        malagasyTranslation: "Manakatona/ manidy"
+      },
+      {
+        vocabulary: "TO SHUT[shat]",
+        frenchTranslation: "Fermer",
+        malagasyTranslation: "Manakatona/manidy"
+      },
+      {
+        vocabulary: "TO OPEN",
+        frenchTranslation: "Ouvrir",
+        malagasyTranslation: "Mamoha"
+      },
+      {
+        vocabulary: "TO PREPARE[pripar]",
+        frenchTranslation: "Préparer",
+        malagasyTranslation: "Manomana"
+      },
+      {
+        vocabulary: "TO SHAKE [sheik]",
+        frenchTranslation: "Secouer",
+        malagasyTranslation: "Mikotrana/Manotrana"
+      },
+      {
+        vocabulary: "TO SET THE TABLE",
+        frenchTranslation: " Mettre la table",
+        malagasyTranslation: "Manao couvert"
+      },
+      {
+        vocabulary: "TO CLEAR THE TABLE[klir de tebel]",
+        frenchTranslation: " Débarrasser la table",
+        malagasyTranslation: "  Mangoro vilia"
+      },
+      {
+        vocabulary: "TO GO TO BED",
+        frenchTranslation: "Se coucher",
+        malagasyTranslation: "Mandeha matory"
+      },
+      {
+        vocabulary: "TO SLEEP[slip]",
+        frenchTranslation: " Dormir",
+        malagasyTranslation: "Matory"
+      },
+      {
+        vocabulary: "TO SLEEP IN",
+        frenchTranslation: "Faire la grace matiné",
+        malagasyTranslation: "Tara vao mifoha"
+      },
+      {
+        vocabulary: "TO WAKE UP[weikap]",
+        frenchTranslation: "Se réveiller",
+        malagasyTranslation: "Mahatsiaro(tory)"
+      },
+      {
+        vocabulary: "TO LONG TO",
+        frenchTranslation: "Vouloir/avoir très envie de",
+        malagasyTranslation: "Te- na Maniry"
+      },
+      {
+        vocabulary: "TO INTEND TO",
+        frenchTranslation: "Avoir l’intention de",
+        malagasyTranslation: "Mieritreritra ny"
+      },
+      {
+        vocabulary: "TO TEND TO",
+        frenchTranslation: "Avoir tendance de",
+        malagasyTranslation: "Mirona/mankany@"
+      },
+      {
+        vocabulary: "TO FEEL LIKE TO+V.ING[fil laik]",
+        frenchTranslation: "Avoir envie de",
+        malagasyTranslation: "Te-na Maniry"
+      },
+      {
+        vocabulary: "TO DESIRE TO[dizair]",
+        frenchTranslation: "Désirer",
+        malagasyTranslation: "Maniry"
+      },
+      {
+        vocabulary: "I WOULD LIKE TO+V.INF",
+        frenchTranslation: "Je voudrais/j’aimerais de",
+        malagasyTranslation: "Maniry"
+      },
+      {
+        vocabulary: "YOU HAD/WOULD RATHER/BETTER+V.INF",
+        frenchTranslation: "Avoir intérêt à/Il vaut mieux/ferais mieux",
+        malagasyTranslation: "Aleo…"
+      },
+      {
+        vocabulary: "TO DETEST TO+V.INF[ditest]",
+        frenchTranslation: "Détester",
+        malagasyTranslation: "Mankahala"
+      },
+      {
+        vocabulary: " TO HATE+V.ING[heit]",
+        frenchTranslation: "Haîr",
+        malagasyTranslation: "Mankahala"
+      },
+      {
+        vocabulary: "TO EXCHANGE[ixtreinj]",
+        frenchTranslation: "Echanger",
+        malagasyTranslation: "Mifanakalo"
+      },
+      {
+        vocabulary: "TO BUY[bai]",
+        frenchTranslation: "Acheter",
+        malagasyTranslation: "Mividy"
+      },
+      {
+        vocabulary: "TO SELL",
+        frenchTranslation: "Vendre",
+        malagasyTranslation: "Mivarotra"
+      },
+      {
+        vocabulary: "TO FIND[faind]",
+        frenchTranslation: "Trouver",
+        malagasyTranslation: "Mahita"
+      },
+      {
+        vocabulary: "TO LOOK FOR",
+        frenchTranslation: "Chercher",
+        malagasyTranslation: "Mitady"
+      },
+      {
+        vocabulary: "TO BRING",
+        frenchTranslation: "Apporter",
+        malagasyTranslation: "Mitondra"
+      },
+      {
+        vocabulary: "TO TAKE[teik]",
+        frenchTranslation: "Prendre",
+        malagasyTranslation: "Maka/mandray"
+      },
+      {
+        vocabulary: "TO HOLD",
+        frenchTranslation: "Tenir",
+        malagasyTranslation: "Mitazona"
+      },
+      {
+        vocabulary: "TO GRAB",
+        frenchTranslation: "Saisir",
+        malagasyTranslation: "Mandray"
+      },
+      {
+        vocabulary: "TO RELEASE[rilis]",
+        frenchTranslation: "Relâcher",
+        malagasyTranslation: "Mamotsitra"
+      },
+      {
+        vocabulary: "TO DROP[drap]",
+        frenchTranslation: "Laisser tomber",
+        malagasyTranslation: "Mandatsaka"
+      },
+      {
+        vocabulary: "TO LEAK[lik]",
+        frenchTranslation: "Fuir",
+        malagasyTranslation: "Mitete"
+      },
+      {
+        vocabulary: "TO BREAK[brek]",
+        frenchTranslation: "Casser",
+        malagasyTranslation: "Mamaky"
+      },
+      {
+        vocabulary: "TO STICK STH",
+        frenchTranslation: "Coller",
+        malagasyTranslation: "Mametaka @ dity"
+      },
+      {
+        vocabulary: "TO ATTEMPT SB(TO+V.INF)",
+        frenchTranslation: " Tenter de",
+        malagasyTranslation: "Maka fanahy olona"
+      },
+      {
+        vocabulary: "TO BE IN DEBT[det]",
+        frenchTranslation: "Etre endetté",
+        malagasyTranslation: "Be trosa"
+      },
+      {
+        vocabulary: "TO OWE[ôou]SB",
+        frenchTranslation: "Devoir",
+        malagasyTranslation: "Ananan’olona vola"
+      },
+      
+    ],
+    
+
+  }
+];
+
+const VocabulariesScreen = () => {
+  const [expanded, setExpanded] = useState(false);
+  
+   const speak = (text: string) => {
+       Speech.speak(text, {
+         language: 'en',
+         pitch: 1.0,
+         rate: 1.0,
+          });
+        };
+  
 
   return (
     <ScrollView style={styles.container}>
@@ -27,137 +830,134 @@ const VocabulariesScreen = () => {
         This screen displays a list of vocabularies.
       </Text>
 
-      {/* Carte 1 */}
-      <Card style={styles.card}>
-        <Card.Title title="Basic Vocabulary" />
-        <Card.Content>
-          <List.Section>
-            <List.Accordion
-              title="Common Words"
-              expanded={expanded1}
-              onPress={() => setExpanded1(!expanded1)}
-              style={styles.accordion}
-            >
-              <List.Item title="Hello - Bonjour" onPress={() => handleSpeech("Hello - Bonjour")} />
-              <List.Item title="Goodbye - Au revoir" onPress={() => handleSpeech("Goodbye - Au revoir")} />
-              <List.Item title="Please - S'il vous plaît" onPress={() => handleSpeech("Please - S'il vous plaît")} />
-              <List.Item title="Thank you - Merci" onPress={() => handleSpeech("Thank you - Merci")} />
-              <List.Item title="Yes - Oui" onPress={() => handleSpeech("Yes - Oui")} />
-              <List.Item title="No - Non" onPress={() => handleSpeech("No - Non")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
+      {vocabsRules1.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+              
+               <List.Accordion
+                              title="VOCABULARIES IN USE"
+                              left={(props) => (
+                                <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                              )}
+                            >
+                              <View style={styles.table}>
+                                <View style={styles.tableRow}>
+                                  <RNText style={styles.tableHeader}>Vocabulary</RNText>
+                                  <RNText style={styles.tableHeader}>French Translation</RNText>
+                                  <RNText style={styles.tableHeader}>Malagasy Translation</RNText>
+                                </View>
+                                {rule.content1.map((item, index) => (
+                                  <View key={index} style={styles.tableRow}>
+                                    <RNText style={styles.tableCell}>{item.vocabulary}</RNText>
+                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                    <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                                  </View>
+                                ))}
+                              </View>
+                            </List.Accordion>
+              
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
 
-      {/* Carte 2 */}
-      <Card style={styles.card}>
-        <Card.Title title="Food Vocabulary" />
-        <Card.Content>
-          <List.Section>
-            <List.Accordion
-              title="Common Foods"
-              expanded={expanded2}
-              onPress={() => setExpanded2(!expanded2)}
-              style={styles.accordion}
-            >
-              <List.Item title="Bread - Pain" onPress={() => handleSpeech("Bread - Pain")} />
-              <List.Item title="Cheese - Fromage" onPress={() => handleSpeech("Cheese - Fromage")} />
-              <List.Item title="Milk - Lait" onPress={() => handleSpeech("Milk - Lait")} />
-              <List.Item title="Egg - Œuf" onPress={() => handleSpeech("Egg - Œuf")} />
-              <List.Item title="Meat - Viande" onPress={() => handleSpeech("Meat - Viande")} />
-              <List.Item title="Fish - Poisson" onPress={() => handleSpeech("Fish - Poisson")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
+      {vocabsRules2.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+              
+               <List.Accordion
+                              title="VOCABULARIES IN USE"
+                              left={(props) => (
+                                <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                              )}
+                            >
+                              <View style={styles.table}>
+                                <View style={styles.tableRow}>
+                                  <RNText style={styles.tableHeader}>Vocabulary</RNText>
+                                  <RNText style={styles.tableHeader}>French Translation</RNText>
+                                  <RNText style={styles.tableHeader}>Malagasy Translation</RNText>
+                                </View>
+                                {rule.content1.map((item, index) => (
+                                  <View key={index} style={styles.tableRow}>
+                                    <RNText style={styles.tableCell}>{item.vocabulary}</RNText>
+                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                    <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                                  </View>
+                                ))}
+                              </View>
+                            </List.Accordion>
+              
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
 
-      {/* Carte 3 */}
-      <Card style={styles.card}>
-        <Card.Title title="Travel Vocabulary" />
-        <Card.Content>
-          <List.Section>
-            <List.Accordion
-              title="Travel Phrases"
-              expanded={expanded3}
-              onPress={() => setExpanded3(!expanded3)}
-              style={styles.accordion}
-            >
-              <List.Item title="Where is the bathroom? - Où sont les toilettes ?" onPress={() => handleSpeech("Where is the bathroom? - Où sont les toilettes ?")} />
-              <List.Item title="How much does it cost? - Combien ça coûte ?" onPress={() => handleSpeech("How much does it cost? - Combien ça coûte ?")} />
-              <List.Item title="I need help - J'ai besoin d'aide" onPress={() => handleSpeech("I need help - J'ai besoin d'aide")} />
-              <List.Item title="I'm lost - Je suis perdu" onPress={() => handleSpeech("I'm lost - Je suis perdu")} />
-              <List.Item title="Can you help me? - Pouvez-vous m'aider ?" onPress={() => handleSpeech("Can you help me? - Pouvez-vous m'aider ?")} />
-              <List.Item title="I don't understand - Je ne comprends pas" onPress={() => handleSpeech("I don't understand - Je ne comprends pas")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
-
-      {/* Carte 4 */}
-      <Card style={styles.card}>
-        <Card.Title title="Colors Vocabulary" />
-        <Card.Content>
-          <List.Section>
-            <List.Accordion
-              title="Colors"
-              expanded={expanded4}
-              onPress={() => setExpanded4(!expanded4)}
-              style={styles.accordion}
-            >
-              <List.Item title="Red - Rouge" onPress={() => handleSpeech("Red - Rouge")} />
-              <List.Item title="Blue - Bleu" onPress={() => handleSpeech("Blue - Bleu")} />
-              <List.Item title="Green - Vert" onPress={() => handleSpeech("Green - Vert")} />
-              <List.Item title="Yellow - Jaune" onPress={() => handleSpeech("Yellow - Jaune")} />
-              <List.Item title="White - Blanc" onPress={() => handleSpeech("White - Blanc")} />
-              <List.Item title="Black - Noir" onPress={() => handleSpeech("Black - Noir")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
-
-      {/* Carte 5 */}
-      <Card style={styles.card}>
-        <Card.Title title="Numbers Vocabulary" />
-        <Card.Content>
-          <List.Section>
-            <List.Accordion
-              title="Numbers"
-              expanded={expanded5}
-              onPress={() => setExpanded5(!expanded5)}
-              style={styles.accordion}
-            >
-              <List.Item title="One - Un" onPress={() => handleSpeech("One - Un")} />
-              <List.Item title="Two - Deux" onPress={() => handleSpeech("Two - Deux")} />
-              <List.Item title="Three - Trois" onPress={() => handleSpeech("Three - Trois")} />
-              <List.Item title="Four - Quatre" onPress={() => handleSpeech("Four - Quatre")} />
-              <List.Item title="Five - Cinq" onPress={() => handleSpeech("Five - Cinq")} />
-              <List.Item title="Six - Six" onPress={() => handleSpeech("Six - Six")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
-
-      {/* Carte 6 */}
-      <Card style={styles.card}>
-        <Card.Title title="Weather Vocabulary" />
-        <Card.Content>
-          <List.Section>
-            <List.Accordion
-              title="Weather Terms"
-              expanded={expanded6}
-              onPress={() => setExpanded6(!expanded6)}
-              style={styles.accordion}
-            >
-              <List.Item title="Rain - Pluie" onPress={() => handleSpeech("Rain - Pluie")} />
-              <List.Item title="Sun - Soleil" onPress={() => handleSpeech("Sun - Soleil")} />
-              <List.Item title="Wind - Vent" onPress={() => handleSpeech("Wind - Vent")} />
-              <List.Item title="Snow - Neige" onPress={() => handleSpeech("Snow - Neige")} />
-              <List.Item title="Cloud - Nuage" onPress={() => handleSpeech("Cloud - Nuage")} />
-              <List.Item title="Storm - Orage" onPress={() => handleSpeech("Storm - Orage")} />
-            </List.Accordion>
-          </List.Section>
-        </Card.Content>
-      </Card>
+{vocabsRules3.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+              
+               <List.Accordion
+                              title="VOCABULARIES IN USE"
+                              left={(props) => (
+                                <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                              )}
+                            >
+                              <View style={styles.table}>
+                                <View style={styles.tableRow}>
+                                  <RNText style={styles.tableHeader}>Vocabulary</RNText>
+                                  <RNText style={styles.tableHeader}>French Translation</RNText>
+                                  <RNText style={styles.tableHeader}>Malagasy Translation</RNText>
+                                </View>
+                                {rule.content1.map((item, index) => (
+                                  <View key={index} style={styles.tableRow}>
+                                    <RNText style={styles.tableCell}>{item.vocabulary}</RNText>
+                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                    <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                                  </View>
+                                ))}
+                              </View>
+                            </List.Accordion>
+              
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
 
     </ScrollView>
   );
@@ -172,6 +972,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    textAlign: 'center',
+    color: '#bb3e03',
   },
   content: {
     fontSize: 16,
@@ -183,9 +985,37 @@ const styles = StyleSheet.create({
     elevation: 4, // Ombre sous la carte (pour Android)
     backgroundColor: '#fff',
   },
+  pronunciation: {
+    fontStyle: 'italic',
+    color: '#8da9c4',
+  },
+  translation: {
+    fontStyle: 'italic',
+    color: '#3a86ff',
+  },
   accordion: {
     backgroundColor: '#f9f9f9',
     borderRadius: 4,
+  },
+
+  table: {
+    padding: 10,
+    marginTop: 6,
+  },
+  tableRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 6,
+  },
+  tableHeader: {
+    fontWeight: 'bold',
+    color: '#8da9c4',
+    flex: 1,
+  },
+  tableCell: {
+    flex: 1,
+    color: '#333',
+    fontSize: 16,
   },
 });
 

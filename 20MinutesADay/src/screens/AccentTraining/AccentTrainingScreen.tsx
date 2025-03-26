@@ -1,113 +1,299 @@
 import React from 'react';
-import { ScrollView, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
-import { Card, List, Button } from 'react-native-paper';
-import * as Speech from 'expo-speech';  // Importation de expo-speech
+import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import { Card, List, Text } from 'react-native-paper';
+import * as Speech from 'expo-speech';
+
+const trainings1 = [
+  {
+    id: 1,
+    title: 'Lesson 50: AMERICAN ACCENT TRAINING',
+    description: 'INTONATION PRACTICE',
+    content1: [
+      {
+        training: '→ Reading with Staircase Intonation',
+        subtitle: 'Practice clear intonation',
+        description: `Read the following with clear intonation where marked. Every time, you come to the
+underlined bold characters, you rise your voice up. Repeat after me, let’s begin!
+\n Hello, my name is_____________. I’m taking American Accent training. There’s a lot to learn,
+but I hope to make it as enjoyable as possible. I should pick up on the American
+intonation pattern pretty easily, although the only way to get it is to practice all of the
+time. I use the up and down, or peaks and valleys, intonation more than I used to. I’ve
+been paying attention to pitch, too. It’s like walking down a staircase. I’ve been talking to
+a lot of Americans lately, and they tell me that I’m easier to understand. Anyway, I could
+go on and on, but the important thing is to listen well and sound good. Well, what do you
+think? DoI?`,
+      },
+    ],
+    content2: [
+      {
+        training: 'SOME RULES TO BE REMEMBERED (LIAISON)',
+        subtitle: 'Practice liaison rules',
+        description: ` → CONSONNE + VOWEL doit être lié : American Accent = amerkenaksent
+        \n → Test lid faible, comme= I get it = I ged it
+        \n → T+Y= TR= comme= I got you= I gotrio
+        \n→ DID+Y= DJOU= comme= Did you come yesterday? = Djou come………..?
+        \n→ DO+YOU= DY= comme= What do you mean? = wa dy min?`,
+      },
+    ],
+   
+  },
+];
+
+const trainings2 = [
+  {
+    id: 1,
+    title: 'AMERICAN IDIOMS',
+    description: 'SPOKEN EXPRESSIONS',
+    content1: [
+      {
+        training: '→ TO PULL SB’S LEG → = blaguer =Mananiany',
+        subtitle: '',
+        description: `Ex: Don’t take it seriously; I’m just pulling your leg.`,
+      },
+    ],
+    content2: [
+      {
+        training: '→ TO BEAT AROUND THE BUSH → NOT STRAIGHT= Tourner autour du pôt= Tsy miteny izay tiana hotenenina',
+        subtitle: '',
+        description: ` 
+        \n →Ex: Stop beating around the bush, but tell me what you want?`,
+      },
+    ],
+    content3: [
+      {
+        training: '→ TO PLAY HARD TO GET → ACT SEEM MORE ATTRACTIVE= Mamilafila.Jouer les insaisissable.',
+        subtitle: '',
+        description: ` 
+        \n →Ex: You really play hard to get, who do you think you are? ..pour qui tu te prends?`,
+      },
+    ],
+    content4: [
+      {
+        training: '→ TO BE AT A LOSS → DISORIENTED= TSY MAHAFANTATRA NY ATAO=Désorienté/déconcerté.',
+        subtitle: '',
+        description: ` 
+        \n → Ex: Yesterday, when I met her I was at a loss.`,
+      },
+    ],
+    content5: [
+      {
+        training: '→ TO HAVE A BIGGER FISH TO FRY → BE TIED UP= TERY = Occupé',
+        subtitle: '',
+        description: `\nAvoir d'autres chats à fouetter.
+        Ex : Sorry for yesterday, I had a bigger fish to fry`,
+      },
+    ],
+    content6: [
+      {
+        training: '→ TO BE A WET BLANKET → A KILL JOY= RABBAT-JOIE= BE RESAKA SADY TSY MBA MINO HAHAVITA ZAVATRA.',
+        subtitle: '',
+        description: ` 
+        \nEx: James was not invited to go on the outing with the rest of the group as he’s such a
+         WET BLANKET.`,
+      },
+    ],
+    content7: [
+      {
+        training: '→ TO BE OUT OF THE WOODS → TIRÉ D’AFFAIRE= TSY MISY OLANA INTSONY',
+        subtitle: '',
+        description: ` 
+        \n →Ex: You are not out of the woods yet, so you need to be careful!
+        Vou n’êtes pasencore tiré d’affaire, alors faites attention !`,
+      },
+    ],
+    
+   
+  },
+];
 
 const AccentTrainingScreen = () => {
-  const handleExercisePress = () => {
-    Alert.alert("Accent Training", "You can now start practicing pronunciation!");
-  };
-
-  // Fonction pour lire à haute voix une phrase avec l'anglais américain
-  const speak = (text: string) => {
-    Speech.speak(text, {
-      language: 'en-US', // Définir la langue sur l'anglais américain
-      rate: 1, // Définir la vitesse de lecture (1 est une vitesse normale)
-    });
-  };
-
+   // Fonction pour faire parler le proverbe
+    const speakTraining = (training: string): void => {
+      Speech.speak(training, {
+        language: 'en-US',
+        pitch: 1,
+        rate: 1,
+      });
+    };
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Accent Training</Text>
       <Text style={styles.description}>
-        Improve your pronunciation with our accent training exercises. Here, you can practice common words and phrases.
+        Improve your pronunciation with our accent training exercises.
       </Text>
 
-      {/* Exemple de Phrase */}
-      <Text style={styles.exerciseText}>
-        Repeat after me: "How are you today?"
-      </Text>
+       {trainings1.map((section) => (
+              <Card key={section.id} style={styles.card}>
+                <Card.Title title={section.title}  />
+                <Card.Content>
+                  <Text style={styles.description}>{section.description}</Text>
+      
+                  {section.content1.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.training}
+                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      style={styles.accordion}
+                    >
+                      {/* Sous-titre */}
+                      <Text 
+                        style={styles.subtitle} 
+                        onPress={() => speakTraining(item.training)}
+                      >
+                        {item.subtitle || 'Subtitle Missing'}
+                      </Text>
+      
+                      {/* Description complète */}
+                      <Text style={styles.content}>
+                        {item.description}
+                      </Text>
+                    </List.Accordion>
+                  ))}
+      
+                  {section.content2.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.training}
+                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      style={styles.accordion}
+                    >
+                      {/* Sous-titre */}
+                      <Text 
+                        style={styles.subtitle} 
+                        onPress={() => speakTraining(item.training)}
+                      >
+                        {item.subtitle}
+                      </Text>
+      
+                      {/* Description complète */}
+                      <Text style={styles.content}>
+                        {item.description}
+                      </Text>
+                    </List.Accordion>
+                  ))}
+      
+                </Card.Content>
+              </Card>
+            ))}
 
-      {/* Bouton pour démarrer l'exercice */}
-      <TouchableOpacity style={styles.button} onPress={() => speak("How are you today?")}>
-        <Text style={styles.buttonText}>Start Exercise</Text>
-      </TouchableOpacity>
+          {trainings2.map((section) => (
+              <Card key={section.id} style={styles.card}>
+                <Card.Title title={section.title}  />
+                <Card.Content>
+                  <Text style={styles.description}>{section.description}</Text>
+      
+                  {section.content1.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.training}
+                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      style={styles.accordion}
+                      onPress={() => speakTraining(item.training)}
+                    >
+                    
+                      {/* Description complète */}
+                      <Text style={styles.content}>
+                        {item.description}
+                      </Text>
+                    </List.Accordion>
+                  ))}
+      
+                  {section.content2.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.training}
+                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      style={styles.accordion}
+                      onPress={() => speakTraining(item.training)}
+                    >
+                      {/* Description complète */}
+                      <Text style={styles.content}>
+                        {item.description}
+                      </Text>
+                    </List.Accordion>
+                  ))}
 
-      {/* Section avec d'autres exercices */}
-      <Text style={styles.exerciseText}>
-        You can practice with the following phrases:
-      </Text>
+                {section.content3.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.training}
+                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      style={styles.accordion}
+                      onPress={() => speakTraining(item.training)}
+                    >
+                      {/* Description complète */}
+                      <Text style={styles.content}>
+                        {item.description}
+                      </Text>
+                    </List.Accordion>
+                  ))}
 
-      {/* Card pour exercices */}
-      <Card style={styles.card}>
-        <Card.Title title="Common Phrases" subtitle="Practice these common phrases" />
-        <Card.Content>
-          <List.Accordion
-            title="View Phrases"
-            left={(props) => <List.Icon {...props} icon="message" />}
-          >
-            <Text style={styles.phrases}>
-              - "Good morning, how are you?"{" "}
-              <TouchableOpacity onPress={() => speak("Good morning, how are you?")}>
-                <Text style={styles.speakText}>[Speak]</Text>
-              </TouchableOpacity>
-              {'\n'}
-              - "What is your name?"{" "}
-              <TouchableOpacity onPress={() => speak("What is your name?")}>
-                <Text style={styles.speakText}>[Speak]</Text>
-              </TouchableOpacity>
-              {'\n'}
-              - "Where are you from?"{" "}
-              <TouchableOpacity onPress={() => speak("Where are you from?")}>
-                <Text style={styles.speakText}>[Speak]</Text>
-              </TouchableOpacity>
-              {'\n'}
-              - "Nice to meet you!"{" "}
-              <TouchableOpacity onPress={() => speak("Nice to meet you!")}>
-                <Text style={styles.speakText}>[Speak]</Text>
-              </TouchableOpacity>
-            </Text>
-          </List.Accordion>
-        </Card.Content>
-      </Card>
+                {section.content4.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.training}
+                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      style={styles.accordion}
+                      onPress={() => speakTraining(item.training)}
+                    >
+                      {/* Description complète */}
+                      <Text style={styles.content}>
+                        {item.description}
+                      </Text>
+                    </List.Accordion>
+                  ))}
 
-      {/* Autres exercices sous forme de Card */}
-      <Card style={styles.card}>
-        <Card.Title title="Additional Practice" subtitle="More phrases to practice" />
-        <Card.Content>
-          <List.Accordion
-            title="More Phrases"
-            left={(props) => <List.Icon {...props} icon="message-processing" />}
-          >
-            <Text style={styles.phrases}>
-              - "Can you help me with this?"{" "}
-              <TouchableOpacity onPress={() => speak("Can you help me with this?")}>
-                <Text style={styles.speakText}>[Speak]</Text>
-              </TouchableOpacity>
-              {'\n'}
-              - "Where do you live?"{" "}
-              <TouchableOpacity onPress={() => speak("Where do you live?")}>
-                <Text style={styles.speakText}>[Speak]</Text>
-              </TouchableOpacity>
-              {'\n'}
-              - "How was your day?"{" "}
-              <TouchableOpacity onPress={() => speak("How was your day?")}>
-                <Text style={styles.speakText}>[Speak]</Text>
-              </TouchableOpacity>
-              {'\n'}
-              - "I’m learning English!"{" "}
-              <TouchableOpacity onPress={() => speak("I’m learning English!")}>
-                <Text style={styles.speakText}>[Speak]</Text>
-              </TouchableOpacity>
-            </Text>
-          </List.Accordion>
-        </Card.Content>
-      </Card>
+                {section.content5.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.training}
+                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      style={styles.accordion}
+                      onPress={() => speakTraining(item.training)}
+                    >
+                      {/* Description complète */}
+                      <Text style={styles.content}>
+                        {item.description}
+                      </Text>
+                    </List.Accordion>
+                  ))}
 
-      {/* Bouton pour voir plus d'exercices */}
-      <Button style={styles.viewMoreButton} mode="contained" onPress={() => {}}>
-        View More Exercises
-      </Button>
+              {section.content6.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.training}
+                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      style={styles.accordion}
+                      onPress={() => speakTraining(item.training)}
+                    >
+                      {/* Description complète */}
+                      <Text style={styles.content}>
+                        {item.description}
+                      </Text>
+                    </List.Accordion>
+                  ))}
+
+             {section.content7.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.training}
+                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      style={styles.accordion}
+                      onPress={() => speakTraining(item.training)}
+                    >
+                      {/* Description complète */}
+                      <Text style={styles.content}>
+                        {item.description}
+                      </Text>
+                    </List.Accordion>
+                  ))}
+
+
+      
+                </Card.Content>
+              </Card>
+            ))}
+
     </ScrollView>
   );
 };
@@ -121,54 +307,62 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 16,
     textAlign: 'center',
-    color: '#3a86ff',
+    color: '#bb3e03',
   },
   description: {
     fontSize: 16,
     lineHeight: 24,
-    marginBottom: 20,
+    marginBottom: 16,
     color: '#333',
+    textAlign: 'center',
   },
-  exerciseText: {
-    fontSize: 18,
-    fontWeight: '600',
-    marginVertical: 10,
-    color: '#333',
+  card: {
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    backgroundColor: '#ffffff',
+    marginBottom: 22,
+    borderRadius: 8,
   },
-  phrases: {
+  accordion: {
+    backgroundColor: '#f0f0f0',
+    padding: 8,
+    borderRadius: 4,
+  },
+  phraseButton: {
+    paddingVertical: 12,
+    paddingHorizontal: 8,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderColor: '#f0f0f0',
+  },
+  subtitle: {
+    fontSize: 19,
+    fontWeight: 'bold',
+    color: '#8da9c4',
+    marginBottom: 8,
+  },
+  phraseText: {
     fontSize: 16,
-    marginVertical: 10,
+
     color: '#333',
   },
-  speakText: {
+  speakButton: {
     color: '#007aff',
-    fontSize: 16,
+
     fontWeight: 'bold',
     textDecorationLine: 'underline',
   },
-  button: {
-    backgroundColor: '#2fa292',
-    padding: 12,
-    borderRadius: 8,
-    marginVertical: 20,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  card: {
+  content: {
+    fontSize: 16,
+    color: '#333',
+    marginTop: 10,
+    lineHeight: 22,
     marginBottom: 16,
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    elevation: 4,
-  },
-  viewMoreButton: {
-    marginTop: 20,
-    alignSelf: 'center',
+
   },
 });
 
