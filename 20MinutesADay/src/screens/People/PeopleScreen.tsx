@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, ScrollView, Image, View } from 'react-native';
+import { StyleSheet, ScrollView, Image, View, TouchableOpacity } from 'react-native';
 import { Card, Text, List } from 'react-native-paper';
-import { MaterialCommunityIcons } from '@expo/vector-icons'; // Icône personnalisée pour chaque section
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import * as Speech from 'expo-speech';
 
-// Importation de l'image locale
-const headImage = require('../../../assets/images/humanbody.png'); // Exemple d'image pour le corps humain
-const faceImage = require('../../../assets/images/womanface.jpg'); // Exemple d'image pour le corps humain
+const headImage = require('../../../assets/images/humanbody.png');
+const faceImage = require('../../../assets/images/womanface.jpg');
 
 const people1 = [
   {
@@ -14,15 +14,96 @@ const people1 = [
     description: 'PEOPLE — LES GENS',
     content1: [
       {
-        part: 'Human Body', // Partie du corps humain
-        description: 'The head contains the brain, eyes, ears, mouth, etc.',
-        image: headImage, // Image spécifique pour cette partie du corps
-        arrowPositionHead: { top: 10, left: 100 }, // Position de la flèche pour la tête
-        arrowTitle: 'Head', // Titre pour la flèche "Head"
-        arrowPositionNeck: { top: 55, left: 255 }, // Position de la flèche pour le cou (à ajuster selon la position souhaitée)
-        arrowTitle1: 'Neck', // Titre pour la flèche "Neck"
-        arrowPositionChest: { top: 75, right: 65 }, // Position de la flèche pour le cou (à ajuster selon la position souhaitée)
-        arrowTitle2: 'Chest', // Titre pour la flèche "Neck"
+        part: 'Human Body',
+        description: 'The human body includes the head, neck, chest, arms, and legs, containing vital organs and structures necessary for life and movement.',
+        image: headImage,
+        arrowPositionHead: { top: 40, left: 115 },
+        arrowTitle: 'Head',
+        arrowTranslation: 'La Tête', // Traduction
+        arrowPositionNeck: { top: 60, left: 245 },
+        arrowTitle1: 'Neck',
+        arrowTranslation1: 'Le Cou', // Traduction
+        arrowPositionChest: { top: 77, right: 70 },
+        arrowTitle2: 'Chest',
+        arrowTranslation2: 'La Poitrine', // Traduction
+        arrowPositionAbdomen: { top: 110, right: 45 },
+        arrowTitle3: 'Abdomen',
+        arrowTranslation3: 'Le Ventre', // Traduction
+        arrowPositionBreasts: { top: 86, right: 214 },
+        arrowTitle4: 'Breasts',
+        arrowTranslation4: 'Les seins', // Traduction
+        arrowPositionWaist: { top: 125, right: 210 },
+        arrowTitle5: 'Waist',
+        arrowTranslation5: 'La taille', // Traduction
+        arrowPositionNavel: { top: 118, left: 90 },
+        arrowTitle6: 'Navel',
+        arrowTranslation6: 'Le Nombril', // Traduction
+        arrowPositionHip: { top: 150, left: 200 },
+        arrowTitle7: 'Hip',
+        arrowTranslation7: 'La Hanche', // Traduction
+        arrowPositionNipple: { top: 90, left: 105 },
+        arrowTitle8: 'Nipple',
+        arrowTranslation8: 'Les mamelons', // Traduction
+        arrowPositionGenitals: { top: 155, left: 233 },
+        arrowTitle9: 'Genitals',
+        arrowTranslation9: 'Les organes génitaux', // Traduction
+        arrowPositionTigh: { top: 170, left: 115 },
+        arrowTitle10: 'Tigh',
+        arrowTranslation10: 'Le Cuisse',
+        arrowPositionForearm: { top: 125, left: 275 },
+        arrowTitle11: 'Forearm',
+        arrowTranslation11: 'L’avant-bras',
+        arrowPositionKnee: { top: 200, left: 205 },
+        arrowTitle12: 'Knee',
+        arrowTranslation12: 'Le genou',
+        arrowPositionShin: { top: 210, left: 255 },
+        arrowTitle13: 'Shin',
+        arrowTranslation13: 'Le tibia',
+        arrowPositionLeg: { top: 220, left: 110 },
+        arrowTitle14: 'Leg',
+        arrowTranslation14: 'Le jambe',
+        arrowPositionFoot: { top: 262, left: 265 },
+        arrowTitle15: 'Foot',
+        arrowTranslation15: 'Le pied',
+        arrowPositionNape: { top: 315, left: 249 },
+        arrowTitle16: 'Nape of Neck',
+        arrowTranslation16: 'La nuque',
+        arrowPositionShoulder: { top: 345, left: 120 },
+        arrowTitle17: 'Shoulder',
+        arrowTranslation17: 'L’epaule',
+        arrowPositionBack: { top: 338, left: 219 },
+        arrowTitle18: 'Back',
+        arrowTranslation18: 'Le dos',
+        arrowPositionArmpit: { top: 358, left: 75 },
+        arrowTitle19: 'Armpit',
+        arrowTranslation19: 'L’aisselle',
+        arrowPositionArm: { top: 355, left: 195 },
+        arrowTitle20: 'Arm',
+        arrowTranslation20: 'Le bras',
+        arrowPositionElbow: { top: 365, left: 270 },
+        arrowTitle21: 'Elbow',
+        arrowTranslation21: 'Le coude',
+        arrowPositionWrist: { top: 414, left: 38 },
+        arrowTitle22: 'Wrist',
+        arrowTranslation22: 'Le poignet',
+        arrowPositionHand: { top: 425, left: 140 },
+        arrowTitle23: 'Hand',
+        arrowTranslation23: 'La main',
+        arrowPositionSmallback: { top: 389, left: 235 },
+        arrowTitle24: 'Small of Back',
+        arrowTranslation24: 'Le creux de reins',
+        arrowPositionButtock: { top: 427, left: 88 },
+        arrowTitle25: 'Buttock',
+        arrowTranslation25: 'La fesse',
+        arrowPositionCalf: { top: 495, left: 210 },
+        arrowTitle26: 'Calf',
+        arrowTranslation26: 'Le mollet',
+        arrowPositionAnkle: { top: 520, left: 109 },
+        arrowTitle27: 'Ankle',
+        arrowTranslation27: 'La cheville',
+        arrowPositionHeel: { top: 528, left: 255 },
+        arrowTitle28: 'Heel',
+        arrowTranslation28: 'Le talon',
       },
     ],
   },
@@ -30,19 +111,75 @@ const people1 = [
 
 const people2 = [
   {
-    id: 2,
+    id: 1,
     title: 'Lesson 54: FACE',
     description: 'PEOPLE — LES GENS',
     content1: [
       {
-        part: 'FACE', // Partie du corps humain
-        description: 'The head contains the brain, eyes, ears, mouth, etc.',
-        image: faceImage, // Image spécifique pour cette partie du corps
-        arrowPosition: { bottom: 40, left: 45 }, // Position de la flèche pour le visage
+        part: 'Face',
+        description: 'The face includes the eyes, nose, mouth, ears, and forehead, which are essential for communication, sensory perception, and expression.',
+        image: faceImage,
+        arrowPositionHair: { top: 5, left: 196 },
+        arrowTitle: 'Hair',
+        arrowTranslation: 'Les cheveux', // Traduction
+        arrowPositionSkin: { top: 55, left: 72 },
+        arrowTitle1: 'Skin',
+        arrowTranslation1: 'La peau', // Traduction
+        arrowPositionForehead: { top: 65, left: 125 },
+        arrowTitle2: 'Forehead',
+        arrowTranslation2: 'Le front', // Traduction
+        arrowPositionTemple: { top: 85, left: 199 },
+        arrowTitle3: 'Temple',
+        arrowTranslation3: 'La tempe', // Traduction
+        arrowPositionEyebrow: { top: 86, right: 145 },
+        arrowTitle4: 'Eyebrow',
+        arrowTranslation4: 'Le sourcil', // Traduction
+        arrowPositionWaist: { top: 125, right: 110 },
+        arrowTitle5: 'Waist',
+        arrowTranslation5: 'La taille', // Traduction
+        arrowPositionNavel: { top: 118, left: 90 },
+        arrowTitle6: 'Navel',
+        arrowTranslation6: 'Le Nombril', // Traduction
+        arrowPositionHip: { top: 150, left: 200 },
+        arrowTitle7: 'Hip',
+        arrowTranslation7: 'La Hanche', // Traduction
+        arrowPositionNipple: { top: 90, left: 105 },
+        arrowTitle8: 'Nipple',
+        arrowTranslation8: 'Les mamelons', // Traduction
+        arrowPositionGenitals: { top: 155, left: 233 },
+        arrowTitle9: 'Genitals',
+        arrowTranslation9: 'Les organes génitaux', // Traduction
+        arrowPositionTigh: { top: 170, left: 115 },
+        arrowTitle10: 'Tigh',
+        arrowTranslation10: 'Le Cuisse',
+        arrowPositionForearm: { top: 125, left: 275 },
+        arrowTitle11: 'Forearm',
+        arrowTranslation11: 'L’avant-bras',
+        arrowPositionKnee: { top: 200, left: 205 },
+        arrowTitle12: 'Knee',
+        arrowTranslation12: 'Le genou',
+        arrowPositionShin: { top: 210, left: 255 },
+        arrowTitle13: 'Shin',
+        arrowTranslation13: 'Le tibia',
+        arrowPositionLeg: { top: 220, left: 110 },
+        arrowTitle14: 'Leg',
+        arrowTranslation14: 'Le jambe',
+        arrowPositionFoot: { top: 262, left: 265 },
+        arrowTitle15: 'Foot',
+        arrowTranslation15: 'Le pied',
+        arrowPositionNape: { top: 315, left: 249 },
+        arrowTitle16: 'Nape of Neck',
+        arrowTranslation16: 'La nuque',
+       
       },
     ],
   },
 ];
+
+
+const speak = (text: string) => {
+  Speech.speak(text, { language: 'en' });
+};
 
 const PeopleScreen = () => {
   return (
@@ -68,24 +205,329 @@ const PeopleScreen = () => {
               >
                 <Text style={styles.subtitle}>{item.description}</Text>
 
-                {/* Vue avec la flèche superposée sur l'image */}
                 <View style={styles.imageContainer}>
                   <Image style={styles.image1} source={item.image} />
-                  {/* Flèche indiquant la tête */}
-                  <View style={[styles.arrow, { top: item.arrowPositionHead.top, left: item.arrowPositionHead.left }]} />
-                  <Text style={[styles.arrowTitle, { top: item.arrowPositionHead.top + 10, left: item.arrowPositionHead.left }]}>{item.arrowTitle}</Text> {/* Affiche le titre "Head" */}
-
-                  {/* Flèche indiquant le cou (flèche vers la droite) */}
-                  <View style={[styles.arrow, { top: item.arrowPositionNeck.top, left: item.arrowPositionNeck.left, transform: [{ rotate: '90deg' }] }]} /> {/* Flèche dirigée vers la droite */}
-                  <Text style={[styles.arrowTitle1, { top: item.arrowPositionNeck.top + 10, left: item.arrowPositionNeck.left }]}>{item.arrowTitle1}</Text> {/* Affiche le titre "Neck" */}
                   
-                  {/* Flèche indiquant le cou (flèche vers la droite) */}
-                  <View style={[styles.arrow, { top: item.arrowPositionChest.top, right: item.arrowPositionChest.right, transform: [{ rotate: '30deg' }] }]} /> {/* Flèche dirigée vers la droite */}
-                  <Text style={[styles.arrowTitle2, { top: item.arrowPositionChest.top + 10, right: item.arrowPositionChest.right }]}>{item.arrowTitle2}</Text> {/* Affiche le titre "Neck" */}
-                
-                     
-                   
+                  {/* Flèche pour la tête */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle)}
+                    style={[styles.arrow, { top: item.arrowPositionHead.top, left: item.arrowPositionHead.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionHead.top + 10, left: item.arrowPositionHead.left }]}>
+                    {item.arrowTitle}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionHead.top + 22, left: item.arrowPositionHead.left }]}>
+                    {item.arrowTranslation}
+                  </Text>
 
+                  {/* Flèche pour le cou */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle1)}
+                    style={[styles.arrow, { top: item.arrowPositionNeck.top, left: item.arrowPositionNeck.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionNeck.top + 10, left: item.arrowPositionNeck.left }]}>
+                    {item.arrowTitle1}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionNeck.top + 22, left: item.arrowPositionNeck.left }]}>
+                    {item.arrowTranslation1}
+                  </Text>
+
+                  {/* Flèche pour la poitrine */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle2)}
+                    style={[styles.arrow, { top: item.arrowPositionChest.top, right: item.arrowPositionChest.right, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionChest.top + 10, right: item.arrowPositionChest.right }]}>
+                    {item.arrowTitle2}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionChest.top + 22, right: item.arrowPositionChest.right }]}>
+                    {item.arrowTranslation2}
+                  </Text>
+                  {/* Flèche pour la ventre */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle3)}
+                    style={[styles.arrow, { top: item.arrowPositionAbdomen.top, right: item.arrowPositionAbdomen.right, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionAbdomen.top + 10, right: item.arrowPositionAbdomen.right }]}>
+                    {item.arrowTitle3}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionAbdomen.top + 22, right: item.arrowPositionAbdomen.right }]}>
+                    {item.arrowTranslation3}
+                  </Text>
+                  {/* Flèche pour les seins */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle4)}
+                    style={[styles.arrow, { top: item.arrowPositionBreasts.top, right: item.arrowPositionBreasts.right, transform: [{ rotate: '55deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionBreasts.top + 10, right: item.arrowPositionBreasts.right }]}>
+                    {item.arrowTitle4}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionBreasts.top + 22, right: item.arrowPositionBreasts.right }]}>
+                    {item.arrowTranslation4}
+                  </Text>
+                   {/* Flèche pour la taille */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle5)}
+                    style={[styles.arrow, { top: item.arrowPositionWaist.top, right: item.arrowPositionWaist.right, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionWaist.top + 10, right: item.arrowPositionWaist.right }]}>
+                    {item.arrowTitle5}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionWaist.top + 22, right: item.arrowPositionWaist.right }]}>
+                    {item.arrowTranslation5}
+                  </Text>
+                   {/* Flèche pour la taille */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle6)}
+                    style={[styles.arrow, { top: item.arrowPositionNavel.top, left: item.arrowPositionNavel.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionNavel.top + 10, left: item.arrowPositionNavel.left }]}>
+                    {item.arrowTitle6}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionNavel.top + 22, left: item.arrowPositionNavel.left }]}>
+                    {item.arrowTranslation6}
+                  </Text>
+                   {/* Flèche pour la hanche */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle7)}
+                    style={[styles.arrow, { top: item.arrowPositionHip.top, left: item.arrowPositionHip.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionHip.top + 10, left: item.arrowPositionHip.left }]}>
+                    {item.arrowTitle7}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionHip.top + 22, left: item.arrowPositionHip.left }]}>
+                    {item.arrowTranslation7}
+                  </Text>
+                  {/* Flèche pour les mamelons */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle8)}
+                    style={[styles.arrow, { top: item.arrowPositionNipple.top, left: item.arrowPositionNipple.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionNipple.top + 10, left: item.arrowPositionNipple.left }]}>
+                    {item.arrowTitle8}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionNipple.top + 22, left: item.arrowPositionNipple.left }]}>
+                    {item.arrowTranslation8}
+                  </Text>
+                   {/* Flèche pour les mamelons */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle9)}
+                    style={[styles.arrow, { top: item.arrowPositionGenitals.top, left: item.arrowPositionGenitals.left, transform: [{ rotate: '180deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionGenitals.top + 10, left: item.arrowPositionGenitals.left }]}>
+                    {item.arrowTitle9}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionGenitals.top + 22, left: item.arrowPositionGenitals.left }]}>
+                    {item.arrowTranslation9}
+                  </Text>
+                   {/* Flèche pour les cuisses */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle10)}
+                    style={[styles.arrow, { top: item.arrowPositionTigh.top, left: item.arrowPositionTigh.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionTigh.top + 10, left: item.arrowPositionTigh.left }]}>
+                    {item.arrowTitle10}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionTigh.top + 22, left: item.arrowPositionTigh.left }]}>
+                    {item.arrowTranslation10}
+                  </Text>
+                   {/* Flèche pour les cuisses */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle11)}
+                    style={[styles.arrow, { top: item.arrowPositionForearm.top, left: item.arrowPositionForearm.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionForearm.top + 10, left: item.arrowPositionForearm.left }]}>
+                    {item.arrowTitle11}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionForearm.top + 22, left: item.arrowPositionForearm.left }]}>
+                    {item.arrowTranslation11}
+                  </Text>
+                   {/* Flèche pour les cuisses */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle12)}
+                    style={[styles.arrow, { top: item.arrowPositionKnee.top, left: item.arrowPositionKnee.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionKnee.top + 10, left: item.arrowPositionKnee.left }]}>
+                    {item.arrowTitle12}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionKnee.top + 22, left: item.arrowPositionKnee.left }]}>
+                    {item.arrowTranslation12}
+                  </Text>
+                   {/* Flèche pour les cuisses */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle13)}
+                    style={[styles.arrow, { top: item.arrowPositionShin.top, left: item.arrowPositionShin.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionShin.top + 10, left: item.arrowPositionShin.left }]}>
+                    {item.arrowTitle13}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionShin.top + 22, left: item.arrowPositionShin.left }]}>
+                    {item.arrowTranslation13}
+                  </Text>
+                   {/* Flèche pour les jambes */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle14)}
+                    style={[styles.arrow, { top: item.arrowPositionLeg.top, left: item.arrowPositionLeg.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionLeg.top + 10, left: item.arrowPositionLeg.left }]}>
+                    {item.arrowTitle14}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionLeg.top + 22, left: item.arrowPositionLeg.left }]}>
+                    {item.arrowTranslation14}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle15)}
+                    style={[styles.arrow, { top: item.arrowPositionFoot.top, left: item.arrowPositionFoot.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionFoot.top + 10, left: item.arrowPositionFoot.left }]}>
+                    {item.arrowTitle15}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionFoot.top + 22, left: item.arrowPositionFoot.left }]}>
+                    {item.arrowTranslation15}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle16)}
+                    style={[styles.arrow, { top: item.arrowPositionNape.top, left: item.arrowPositionNape.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionNape.top + 10, left: item.arrowPositionNape.left }]}>
+                    {item.arrowTitle16}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionNape.top + 22, left: item.arrowPositionNape.left }]}>
+                    {item.arrowTranslation16}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle17)}
+                    style={[styles.arrow, { top: item.arrowPositionShoulder.top, left: item.arrowPositionShoulder.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionShoulder.top + 10, left: item.arrowPositionShoulder.left }]}>
+                    {item.arrowTitle17}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionShoulder.top + 22, left: item.arrowPositionShoulder.left }]}>
+                    {item.arrowTranslation17}
+                  </Text>
+                  {/* Flèche pour les pieds */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle18)}
+                    style={[styles.arrow, { top: item.arrowPositionBack.top, left: item.arrowPositionBack.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionBack.top + 10, left: item.arrowPositionBack.left }]}>
+                    {item.arrowTitle18}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionBack.top + 22, left: item.arrowPositionBack.left }]}>
+                    {item.arrowTranslation18}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle19)}
+                    style={[styles.arrow, { top: item.arrowPositionArmpit.top, left: item.arrowPositionArmpit.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionArmpit.top + 10, left: item.arrowPositionArmpit.left }]}>
+                    {item.arrowTitle19}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionArmpit.top + 22, left: item.arrowPositionArmpit.left }]}>
+                    {item.arrowTranslation19}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle20)}
+                    style={[styles.arrow, { top: item.arrowPositionArm.top, left: item.arrowPositionArm.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionArm.top + 10, left: item.arrowPositionArm.left }]}>
+                    {item.arrowTitle20}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionArm.top + 22, left: item.arrowPositionArm.left }]}>
+                    {item.arrowTranslation20}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle21)}
+                    style={[styles.arrow, { top: item.arrowPositionElbow.top, left: item.arrowPositionElbow.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionElbow.top + 10, left: item.arrowPositionElbow.left }]}>
+                    {item.arrowTitle21}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionElbow.top + 22, left: item.arrowPositionElbow.left }]}>
+                    {item.arrowTranslation21}
+                  </Text>
+                    {/* Flèche pour les pieds */}
+                    <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle22)}
+                    style={[styles.arrow, { top: item.arrowPositionWrist.top, left: item.arrowPositionWrist.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionWrist.top + 10, left: item.arrowPositionWrist.left }]}>
+                    {item.arrowTitle22}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionWrist.top + 22, left: item.arrowPositionWrist.left }]}>
+                    {item.arrowTranslation22}
+                  </Text>
+                   {/* Flèche pour les mains */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle23)}
+                    style={[styles.arrow, { top: item.arrowPositionHand.top, left: item.arrowPositionHand.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionHand.top + 10, left: item.arrowPositionHand.left }]}>
+                    {item.arrowTitle23}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionHand.top + 22, left: item.arrowPositionHand.left }]}>
+                    {item.arrowTranslation23}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle24)}
+                    style={[styles.arrow, { top: item.arrowPositionSmallback.top, left: item.arrowPositionSmallback.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionSmallback.top + 10, left: item.arrowPositionSmallback.left }]}>
+                    {item.arrowTitle24}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionSmallback.top + 22, left: item.arrowPositionSmallback.left }]}>
+                    {item.arrowTranslation24}
+                  </Text>
+                  {/* Flèche pour les mains */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle25)}
+                    style={[styles.arrow, { top: item.arrowPositionButtock.top, left: item.arrowPositionButtock.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionButtock.top + 10, left: item.arrowPositionButtock.left }]}>
+                    {item.arrowTitle25}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionButtock.top + 22, left: item.arrowPositionButtock.left }]}>
+                    {item.arrowTranslation25}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle26)}
+                    style={[styles.arrow, { top: item.arrowPositionCalf.top, left: item.arrowPositionCalf.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionCalf.top + 10, left: item.arrowPositionCalf.left }]}>
+                    {item.arrowTitle26}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionCalf.top + 22, left: item.arrowPositionCalf.left }]}>
+                    {item.arrowTranslation26}
+                  </Text>
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle27)}
+                    style={[styles.arrow, { top: item.arrowPositionAnkle.top, left: item.arrowPositionAnkle.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionAnkle.top + 10, left: item.arrowPositionAnkle.left }]}>
+                    {item.arrowTitle27}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionAnkle.top + 22, left: item.arrowPositionAnkle.left }]}>
+                    {item.arrowTranslation27}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle28)}
+                    style={[styles.arrow, { top: item.arrowPositionHeel.top, left: item.arrowPositionHeel.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionHeel.top + 10, left: item.arrowPositionHeel.left }]}>
+                    {item.arrowTitle28}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionHeel.top + 22, left: item.arrowPositionHeel.left }]}>
+                    {item.arrowTranslation28}
+                  </Text>
                 </View>
               </List.Accordion>
             ))}
@@ -93,7 +535,7 @@ const PeopleScreen = () => {
         </Card>
       ))}
 
-      {people2.map((person) => (
+    {people2.map((person) => (
         <Card key={person.id} style={styles.card}>
           <Card.Title
             title={<Text style={{ fontWeight: 'bold' }}>{person.title}</Text>}
@@ -104,16 +546,204 @@ const PeopleScreen = () => {
               <List.Accordion
                 key={index}
                 title={item.part}
-                left={(props) => <MaterialCommunityIcons {...props} name="emoticon-happy-outline" />}
+                left={(props) => <MaterialCommunityIcons {...props} name="human" />}
                 style={styles.accordion}
               >
                 <Text style={styles.subtitle}>{item.description}</Text>
 
-                {/* Vue avec la flèche superposée sur l'image */}
                 <View style={styles.imageContainer}>
                   <Image style={styles.image2} source={item.image} />
-                  {/* Flèche indiquant la tête */}
-                  <View style={[styles.arrow, { bottom: item.arrowPosition.bottom, left: item.arrowPosition.left }]} />
+                  
+                  {/* Flèche pour la tête */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle)}
+                    style={[styles.arrow, { top: item.arrowPositionHair.top, left: item.arrowPositionHair.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionHair.top + 10, left: item.arrowPositionHair.left }]}>
+                    {item.arrowTitle}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionHair.top + 22, left: item.arrowPositionHair.left }]}>
+                    {item.arrowTranslation}
+                  </Text>
+
+                  {/* Flèche pour le cou */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle1)}
+                    style={[styles.arrow, { top: item.arrowPositionSkin.top, left: item.arrowPositionSkin.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionSkin.top + 10, left: item.arrowPositionSkin.left }]}>
+                    {item.arrowTitle1}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionSkin.top + 22, left: item.arrowPositionSkin.left }]}>
+                    {item.arrowTranslation1}
+                  </Text>
+
+                  {/* Flèche pour la poitrine */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle2)}
+                    style={[styles.arrow, { top: item.arrowPositionForehead.top, left: item.arrowPositionForehead.left, transform: [{ rotate: '180deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionForehead.top + 10, left: item.arrowPositionForehead.left }]}>
+                    {item.arrowTitle2}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionForehead.top + 22, left: item.arrowPositionForehead.left }]}>
+                    {item.arrowTranslation2}
+                  </Text>
+                  {/* Flèche pour la ventre */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle3)}
+                    style={[styles.arrow, { top: item.arrowPositionTemple.top, left: item.arrowPositionTemple.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionTemple.top + 10, left: item.arrowPositionTemple.left }]}>
+                    {item.arrowTitle3}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionTemple.top + 22, left: item.arrowPositionTemple.left }]}>
+                    {item.arrowTranslation3}
+                  </Text>
+                  {/* Flèche pour les seins */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle4)}
+                    style={[styles.arrow, { top: item.arrowPositionEyebrow.top, right: item.arrowPositionEyebrow.right, transform: [{ rotate: '55deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionEyebrow.top + 10, right: item.arrowPositionEyebrow.right }]}>
+                    {item.arrowTitle4}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionEyebrow.top + 22, right: item.arrowPositionEyebrow.right }]}>
+                    {item.arrowTranslation4}
+                  </Text>
+                   {/* Flèche pour la taille */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle5)}
+                    style={[styles.arrow, { top: item.arrowPositionWaist.top, right: item.arrowPositionWaist.right, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionWaist.top + 10, right: item.arrowPositionWaist.right }]}>
+                    {item.arrowTitle5}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionWaist.top + 22, right: item.arrowPositionWaist.right }]}>
+                    {item.arrowTranslation5}
+                  </Text>
+                   {/* Flèche pour la taille */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle6)}
+                    style={[styles.arrow, { top: item.arrowPositionNavel.top, left: item.arrowPositionNavel.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionNavel.top + 10, left: item.arrowPositionNavel.left }]}>
+                    {item.arrowTitle6}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionNavel.top + 22, left: item.arrowPositionNavel.left }]}>
+                    {item.arrowTranslation6}
+                  </Text>
+                   {/* Flèche pour la hanche */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle7)}
+                    style={[styles.arrow, { top: item.arrowPositionHip.top, left: item.arrowPositionHip.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionHip.top + 10, left: item.arrowPositionHip.left }]}>
+                    {item.arrowTitle7}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionHip.top + 22, left: item.arrowPositionHip.left }]}>
+                    {item.arrowTranslation7}
+                  </Text>
+                  {/* Flèche pour les mamelons */}
+                  <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle8)}
+                    style={[styles.arrow, { top: item.arrowPositionNipple.top, left: item.arrowPositionNipple.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionNipple.top + 10, left: item.arrowPositionNipple.left }]}>
+                    {item.arrowTitle8}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionNipple.top + 22, left: item.arrowPositionNipple.left }]}>
+                    {item.arrowTranslation8}
+                  </Text>
+                   {/* Flèche pour les mamelons */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle9)}
+                    style={[styles.arrow, { top: item.arrowPositionGenitals.top, left: item.arrowPositionGenitals.left, transform: [{ rotate: '180deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionGenitals.top + 10, left: item.arrowPositionGenitals.left }]}>
+                    {item.arrowTitle9}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionGenitals.top + 22, left: item.arrowPositionGenitals.left }]}>
+                    {item.arrowTranslation9}
+                  </Text>
+                   {/* Flèche pour les cuisses */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle10)}
+                    style={[styles.arrow, { top: item.arrowPositionTigh.top, left: item.arrowPositionTigh.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionTigh.top + 10, left: item.arrowPositionTigh.left }]}>
+                    {item.arrowTitle10}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionTigh.top + 22, left: item.arrowPositionTigh.left }]}>
+                    {item.arrowTranslation10}
+                  </Text>
+                   {/* Flèche pour les cuisses */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle11)}
+                    style={[styles.arrow, { top: item.arrowPositionForearm.top, left: item.arrowPositionForearm.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionForearm.top + 10, left: item.arrowPositionForearm.left }]}>
+                    {item.arrowTitle11}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionForearm.top + 22, left: item.arrowPositionForearm.left }]}>
+                    {item.arrowTranslation11}
+                  </Text>
+                   {/* Flèche pour les cuisses */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle12)}
+                    style={[styles.arrow, { top: item.arrowPositionKnee.top, left: item.arrowPositionKnee.left, transform: [{ rotate: '30deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionKnee.top + 10, left: item.arrowPositionKnee.left }]}>
+                    {item.arrowTitle12}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionKnee.top + 22, left: item.arrowPositionKnee.left }]}>
+                    {item.arrowTranslation12}
+                  </Text>
+                   {/* Flèche pour les cuisses */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle13)}
+                    style={[styles.arrow, { top: item.arrowPositionShin.top, left: item.arrowPositionShin.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionShin.top + 10, left: item.arrowPositionShin.left }]}>
+                    {item.arrowTitle13}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionShin.top + 22, left: item.arrowPositionShin.left }]}>
+                    {item.arrowTranslation13}
+                  </Text>
+                   {/* Flèche pour les jambes */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle14)}
+                    style={[styles.arrow, { top: item.arrowPositionLeg.top, left: item.arrowPositionLeg.left, transform: [{ rotate: '60deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionLeg.top + 10, left: item.arrowPositionLeg.left }]}>
+                    {item.arrowTitle14}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionLeg.top + 22, left: item.arrowPositionLeg.left }]}>
+                    {item.arrowTranslation14}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle15)}
+                    style={[styles.arrow, { top: item.arrowPositionFoot.top, left: item.arrowPositionFoot.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionFoot.top + 10, left: item.arrowPositionFoot.left }]}>
+                    {item.arrowTitle15}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionFoot.top + 22, left: item.arrowPositionFoot.left }]}>
+                    {item.arrowTranslation15}
+                  </Text>
+                   {/* Flèche pour les pieds */}
+                   <TouchableOpacity
+                    onPress={() => speak(item.arrowTitle16)}
+                    style={[styles.arrow, { top: item.arrowPositionNape.top, left: item.arrowPositionNape.left, transform: [{ rotate: '90deg' }] }]}
+                  />
+                  <Text style={[styles.arrowTitle, { top: item.arrowPositionNape.top + 10, left: item.arrowPositionNape.left }]}>
+                    {item.arrowTitle16}
+                  </Text>
+                  <Text style={[styles.translation, { top: item.arrowPositionNape.top + 22, left: item.arrowPositionNape.left }]}>
+                    {item.arrowTranslation16}
+                  </Text>
+                  
                 </View>
               </List.Accordion>
             ))}
@@ -159,19 +789,19 @@ const styles = StyleSheet.create({
     marginVertical: 8,
   },
   imageContainer: {
-    position: 'relative', // Pour positionner la flèche sur l'image
+    position: 'relative',
     alignSelf: 'center',
   },
   image1: {
     width: 250,
-    height: 500,
+    height: 550,
     borderRadius: 8,
     alignSelf: 'center',
     marginVertical: 10,
   },
   image2: {
-    width: 180,
-    height: 180,
+    width: 200,
+    height: 300,
     borderRadius: 8,
     alignSelf: 'center',
     marginVertical: 10,
@@ -185,7 +815,7 @@ const styles = StyleSheet.create({
     borderRightWidth: 5,
     borderRightColor: 'transparent',
     borderTopWidth: 10,
-    borderTopColor: 'red', // Couleur de la flèche
+    borderTopColor: 'red',
   },
   arrowTitle: {
     position: 'absolute',
@@ -194,18 +824,11 @@ const styles = StyleSheet.create({
     color: '#8da9c4',
     textAlign: 'center',
   },
-  arrowTitle1: {
+  translation: {
     position: 'absolute',
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#8da9c4',
-    textAlign: 'center',
-  },
-  arrowTitle2: {
-    position: 'absolute',
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#8da9c4',
+    fontSize: 14,
+    fontStyle: 'italic',
+    color: '#333',
     textAlign: 'center',
   },
 });
