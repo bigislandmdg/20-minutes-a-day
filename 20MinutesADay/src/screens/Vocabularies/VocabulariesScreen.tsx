@@ -539,7 +539,7 @@ const vocabsRules2 = [
 const vocabsRules3 = [
   {
     id: 1,
-    title: 'Lesson 62: DAILY SPOKEN ENGLISH',
+    title: 'Lesson 61: DAILY SPOKEN ENGLISH',
     description: 'SLANG AND IDIOMS',
     
     content1: [

@@ -20,7 +20,7 @@ import PresentationScreen from './src/screens/Presentation/PresentationScreen';
 import VerbsScreen from './src/screens/Verbs/VerbsScreen';
 import Sidebar from './src/components/Sidebar';
 
-const Tab = createBottomTabNavigator();
+
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
