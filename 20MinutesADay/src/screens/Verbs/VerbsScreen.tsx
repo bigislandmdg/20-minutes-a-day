@@ -312,14 +312,1301 @@ const verbsRules2 = [
         frenchTranslation: " (se) réveiller ",
         malagasyTranslation: " Mifoha(torimaso)"
       },
-      
-     
+      {
+        infinitive: "to bear[ber]",
+        past: " bore",
+        pastParticiple: " borne",
+        frenchTranslation: " supporter ",
+        malagasyTranslation: " Miaritra"
+      },
+       {
+        infinitive: "to beat[bit]",
+        past: " beat",
+        pastParticiple: " beaten",
+        frenchTranslation: " battre ",
+        malagasyTranslation: " Miady/mamely"
+      },
+       {
+        infinitive: "to become[bikam]",
+        past: " became",
+        pastParticiple: " become",
+        frenchTranslation: " devenir ",
+        malagasyTranslation: " Lasa (tsara/ratsy)"
+      },
+       {
+        infinitive: "to begin[bigin]",
+        past: " began",
+        pastParticiple: " begun",
+        frenchTranslation: " commencer ",
+        malagasyTranslation: " Manomboka"
+      },
+       {
+        infinitive: "to bend",
+        past: " bent",
+        pastParticiple: " bent",
+        frenchTranslation: " (se) courber ",
+        malagasyTranslation: " Mamaingoka zvt"
+      },
+       {
+        infinitive: "to bet",
+        past: " bet",
+        pastParticiple: " bet",
+        frenchTranslation: " parier ",
+        malagasyTranslation: " Miloka"
+      },
+       {
+        infinitive: "to bid",
+        past: " bid",
+        pastParticiple: " bid",
+        frenchTranslation: " offrir (un prix) ",
+        malagasyTranslation: " Manome prix"
+      },
+       {
+        infinitive: "to bind[baind]",
+        past: " bound",
+        pastParticiple: " bound",
+        frenchTranslation: " lier, relier ",
+        malagasyTranslation: " Mampifandray"
+      },
+       {
+        infinitive: "to bite[bait]",
+        past: " bit",
+        pastParticiple: " bitten",
+        frenchTranslation: " mordre ",
+        malagasyTranslation: " Manaikitra"
+      },
+       {
+        infinitive: "to bleed[blid]",
+        past: " bled",
+        pastParticiple: " bled",
+        frenchTranslation: " saigner ",
+        malagasyTranslation: " Maratra"
+      },
+       {
+        infinitive: "to blow[blôou]",
+        past: " blew",
+        pastParticiple: " blown",
+        frenchTranslation: " souffler ",
+        malagasyTranslation: " Mitsoka"
+      },
+       {
+        infinitive: "to break[brek]",
+        past: " broke",
+        pastParticiple: " broken",
+        frenchTranslation: " casser ",
+        malagasyTranslation: " Mamaky(vera)"
+      },
+       {
+        infinitive: "to breed[brid]",
+        past: " bred",
+        pastParticiple: " bred",
+        frenchTranslation: " élever (du bétail) ",
+        malagasyTranslation: " Miompy"
+      },
+       {
+        infinitive: "to bring",
+        past: " brought",
+        pastParticiple: " brought",
+        frenchTranslation: " apporter ",
+        malagasyTranslation: " Mitondra"
+      },
+       {
+        infinitive: "to build[bild]",
+        past: " built",
+        pastParticiple: " built",
+        frenchTranslation: " construire ",
+        malagasyTranslation: " Manamboatra trano"
+      },
+       {
+        infinitive: "to burn[bern]",
+        past: " burnt",
+        pastParticiple: " burnt",
+        frenchTranslation: " brûler ",
+        malagasyTranslation: " Mandoro"
+      },
+       {
+        infinitive: "to burst[berst]",
+        past: " burst",
+        pastParticiple: " burst",
+        frenchTranslation: " éclater ",
+        malagasyTranslation: " Manapoaka"
+      },
+       {
+        infinitive: "to buy[bai]",
+        past: " bought",
+        pastParticiple: " bought",
+        frenchTranslation: " acheter ",
+        malagasyTranslation: " Mividy"
+      },
+       {
+        infinitive: "to cast",
+        past: " cast",
+        pastParticiple: " cast",
+        frenchTranslation: " jeter, distribuer les rôles de ",
+        malagasyTranslation: " Manipy/mitoraka"
+      },
+       {
+        infinitive: "to catch[katr]",
+        past: " caught",
+        pastParticiple: " caught",
+        frenchTranslation: " attraper  ",
+        malagasyTranslation: " Misambotra"
+      },
+       {
+        infinitive: "to choose[trouz]",
+        past: " chose",
+        pastParticiple: " chosen",
+        frenchTranslation: " choisir ",
+        malagasyTranslation: " Mifidy"
+      },
+       {
+        infinitive: "to cling",
+        past: " clung",
+        pastParticiple: " clung",
+        frenchTranslation: " s'accrocher ",
+        malagasyTranslation: " Miraikitra/mifihina"
+      },
+       {
+        infinitive: "to come[kam]",
+        past: " came",
+        pastParticiple: " come",
+        frenchTranslation: " venir ",
+        malagasyTranslation: " Tonga eto/any"
+      },
+       {
+        infinitive: "to cost[kast]",
+        past: " cost",
+        pastParticiple: " cost",
+        frenchTranslation: " coûter ",
+        malagasyTranslation: " Ny vidiny"
+      },
+       {
+        infinitive: "to creep[krip]",
+        past: " crept",
+        pastParticiple: " crept",
+        frenchTranslation: " ramper  ",
+        malagasyTranslation: " Mandeha moramora"
+      },
+       {
+        infinitive: "to cut[kat]",
+        past: " cut",
+        pastParticiple: " cut",
+        frenchTranslation: " couper ",
+        malagasyTranslation: " Manapaka"
+      },
+       {
+        infinitive: "to deal[dil]",
+        past: " dealt",
+        pastParticiple: " dealt",
+        frenchTranslation: " distribuer ",
+        malagasyTranslation: " Mizara[carte]"
+      },
+       {
+        infinitive: "to dig",
+        past: " dug",
+        pastParticiple: " dug",
+        frenchTranslation: " creuser ",
+        malagasyTranslation: " Mihady(mangady)"
+      },
+       {
+        infinitive: "to do",
+        past: " did",
+        pastParticiple: " done",
+        frenchTranslation: " faire ",
+        malagasyTranslation: " Manao zavatra"
+      },
+       {
+        infinitive: "to draw[drôou]",
+        past: " drew",
+        pastParticiple: " drawn",
+        frenchTranslation: " dessiner ",
+        malagasyTranslation: " Manamboatra sary"
+      },
+      {
+        infinitive: "to dream[drim]",
+        past: " dreamt",
+        pastParticiple: " dreamt",
+        frenchTranslation: " rêver ",
+        malagasyTranslation: " Manonofy"
+      },
+      {
+        infinitive: "to drink",
+        past: " drank",
+        pastParticiple: " drunk",
+        frenchTranslation: " boire ",
+        malagasyTranslation: " Misotro"
+      },
+      {
+        infinitive: "to drive[draiv]",
+        past: " drove",
+        pastParticiple: " driven",
+        frenchTranslation: " conduire ",
+        malagasyTranslation: " Mamily(fiara)"
+      },
+      {
+        infinitive: "to to dwell[doel]",
+        past: " dwelt",
+        pastParticiple: " dwelt",
+        frenchTranslation: " habiter ",
+        malagasyTranslation: " Mipetraka"
+      },
+      {
+        infinitive: "to eat[it]",
+        past: " ate",
+        pastParticiple: " eaten",
+        frenchTranslation: " manger ",
+        malagasyTranslation: " Mihinana"
+      },
+      {
+        infinitive: "to fall[fol]",
+        past: " fell",
+        pastParticiple: " fallen",
+        frenchTranslation: " tomber ",
+        malagasyTranslation: " Mianjera"
+      },
+      {
+        infinitive: "to feed[fid]",
+        past: " fed",
+        pastParticiple: " fed",
+        frenchTranslation: " nourrir ",
+        malagasyTranslation: " Mamahana"
+      },
+      {
+        infinitive: "to feel[fil] ",
+        past: " felt",
+        pastParticiple: " felt",
+        frenchTranslation: " sentir, éprouver ",
+        malagasyTranslation: " Mahatsapa"
+      },
+      {
+        infinitive: "to fight[fait]",
+        past: " fought",
+        pastParticiple: " fought",
+        frenchTranslation: " combattre ",
+        malagasyTranslation: " Miady"
+      },
     ],
     
 
   }
 ];
 
+const verbsRules3 = [
+  {
+    id: 1,
+    title: 'Lesson 64: DAILY SPOKEN ENGLISH',
+    description: 'IRREGULARS VERBS',
+    
+    content1: [
+      {
+        infinitive: "to abide[ebaid]",
+        past: " abode",
+        pastParticiple: " abode",
+        frenchTranslation: "demeurer",
+        malagasyTranslation: "Mipetraka"
+      },
+      {
+        infinitive: "to arise[araiz]",
+        past: " arose",
+        pastParticiple: " arisen",
+        frenchTranslation: " s'élever, survenir ",
+        malagasyTranslation: " Mitsangana/miakatra"
+      },
+      {
+        infinitive: "to awake[eweik]",
+        past: " awoke",
+        pastParticiple: " awoken",
+        frenchTranslation: " (se) réveiller ",
+        malagasyTranslation: " Mifoha(torimaso)"
+      },
+      {
+        infinitive: "to bear[ber]",
+        past: " bore",
+        pastParticiple: " borne",
+        frenchTranslation: " supporter ",
+        malagasyTranslation: " Miaritra"
+      },
+       {
+        infinitive: "to beat[bit]",
+        past: " beat",
+        pastParticiple: " beaten",
+        frenchTranslation: " battre ",
+        malagasyTranslation: " Miady/mamely"
+      },
+       {
+        infinitive: "to become[bikam]",
+        past: " became",
+        pastParticiple: " become",
+        frenchTranslation: " devenir ",
+        malagasyTranslation: " Lasa (tsara/ratsy)"
+      },
+       {
+        infinitive: "to begin[bigin]",
+        past: " began",
+        pastParticiple: " begun",
+        frenchTranslation: " commencer ",
+        malagasyTranslation: " Manomboka"
+      },
+       {
+        infinitive: "to bend",
+        past: " bent",
+        pastParticiple: " bent",
+        frenchTranslation: " (se) courber ",
+        malagasyTranslation: " Mamaingoka zvt"
+      },
+       {
+        infinitive: "to bet",
+        past: " bet",
+        pastParticiple: " bet",
+        frenchTranslation: " parier ",
+        malagasyTranslation: " Miloka"
+      },
+       {
+        infinitive: "to bid",
+        past: " bid",
+        pastParticiple: " bid",
+        frenchTranslation: " offrir (un prix) ",
+        malagasyTranslation: " Manome prix"
+      },
+       {
+        infinitive: "to bind[baind]",
+        past: " bound",
+        pastParticiple: " bound",
+        frenchTranslation: " lier, relier ",
+        malagasyTranslation: " Mampifandray"
+      },
+       {
+        infinitive: "to bite[bait]",
+        past: " bit",
+        pastParticiple: " bitten",
+        frenchTranslation: " mordre ",
+        malagasyTranslation: " Manaikitra"
+      },
+       {
+        infinitive: "to bleed[blid]",
+        past: " bled",
+        pastParticiple: " bled",
+        frenchTranslation: " saigner ",
+        malagasyTranslation: " Maratra"
+      },
+       {
+        infinitive: "to blow[blôou]",
+        past: " blew",
+        pastParticiple: " blown",
+        frenchTranslation: " souffler ",
+        malagasyTranslation: " Mitsoka"
+      },
+       {
+        infinitive: "to break[brek]",
+        past: " broke",
+        pastParticiple: " broken",
+        frenchTranslation: " casser ",
+        malagasyTranslation: " Mamaky(vera)"
+      },
+       {
+        infinitive: "to breed[brid]",
+        past: " bred",
+        pastParticiple: " bred",
+        frenchTranslation: " élever (du bétail) ",
+        malagasyTranslation: " Miompy"
+      },
+       {
+        infinitive: "to bring",
+        past: " brought",
+        pastParticiple: " brought",
+        frenchTranslation: " apporter ",
+        malagasyTranslation: " Mitondra"
+      },
+       {
+        infinitive: "to build[bild]",
+        past: " built",
+        pastParticiple: " built",
+        frenchTranslation: " construire ",
+        malagasyTranslation: " Manamboatra trano"
+      },
+       {
+        infinitive: "to burn[bern]",
+        past: " burnt",
+        pastParticiple: " burnt",
+        frenchTranslation: " brûler ",
+        malagasyTranslation: " Mandoro"
+      },
+       {
+        infinitive: "to burst[berst]",
+        past: " burst",
+        pastParticiple: " burst",
+        frenchTranslation: " éclater ",
+        malagasyTranslation: " Manapoaka"
+      },
+       {
+        infinitive: "to buy[bai]",
+        past: " bought",
+        pastParticiple: " bought",
+        frenchTranslation: " acheter ",
+        malagasyTranslation: " Mividy"
+      },
+       {
+        infinitive: "to cast",
+        past: " cast",
+        pastParticiple: " cast",
+        frenchTranslation: " jeter, distribuer les rôles de ",
+        malagasyTranslation: " Manipy/mitoraka"
+      },
+       {
+        infinitive: "to catch[katr]",
+        past: " caught",
+        pastParticiple: " caught",
+        frenchTranslation: " attraper  ",
+        malagasyTranslation: " Misambotra"
+      },
+       {
+        infinitive: "to choose[trouz]",
+        past: " chose",
+        pastParticiple: " chosen",
+        frenchTranslation: " choisir ",
+        malagasyTranslation: " Mifidy"
+      },
+       {
+        infinitive: "to cling",
+        past: " clung",
+        pastParticiple: " clung",
+        frenchTranslation: " s'accrocher ",
+        malagasyTranslation: " Miraikitra/mifihina"
+      },
+       {
+        infinitive: "to come[kam]",
+        past: " came",
+        pastParticiple: " come",
+        frenchTranslation: " venir ",
+        malagasyTranslation: " Tonga eto/any"
+      },
+       {
+        infinitive: "to cost[kast]",
+        past: " cost",
+        pastParticiple: " cost",
+        frenchTranslation: " coûter ",
+        malagasyTranslation: " Ny vidiny"
+      },
+       {
+        infinitive: "to creep[krip]",
+        past: " crept",
+        pastParticiple: " crept",
+        frenchTranslation: " ramper  ",
+        malagasyTranslation: " Mandeha moramora"
+      },
+       {
+        infinitive: "to cut[kat]",
+        past: " cut",
+        pastParticiple: " cut",
+        frenchTranslation: " couper ",
+        malagasyTranslation: " Manapaka"
+      },
+       {
+        infinitive: "to deal[dil]",
+        past: " dealt",
+        pastParticiple: " dealt",
+        frenchTranslation: " distribuer ",
+        malagasyTranslation: " Mizara[carte]"
+      },
+       {
+        infinitive: "to dig",
+        past: " dug",
+        pastParticiple: " dug",
+        frenchTranslation: " creuser ",
+        malagasyTranslation: " Mihady(mangady)"
+      },
+       {
+        infinitive: "to do",
+        past: " did",
+        pastParticiple: " done",
+        frenchTranslation: " faire ",
+        malagasyTranslation: " Manao zavatra"
+      },
+       {
+        infinitive: "to draw[drôou]",
+        past: " drew",
+        pastParticiple: " drawn",
+        frenchTranslation: " dessiner ",
+        malagasyTranslation: " Manamboatra sary"
+      },
+      {
+        infinitive: "to dream[drim]",
+        past: " dreamt",
+        pastParticiple: " dreamt",
+        frenchTranslation: " rêver ",
+        malagasyTranslation: " Manonofy"
+      },
+      {
+        infinitive: "to drink",
+        past: " drank",
+        pastParticiple: " drunk",
+        frenchTranslation: " boire ",
+        malagasyTranslation: " Misotro"
+      },
+      {
+        infinitive: "to drive[draiv]",
+        past: " drove",
+        pastParticiple: " driven",
+        frenchTranslation: " conduire ",
+        malagasyTranslation: " Mamily(fiara)"
+      },
+      {
+        infinitive: "to to dwell[doel]",
+        past: " dwelt",
+        pastParticiple: " dwelt",
+        frenchTranslation: " habiter ",
+        malagasyTranslation: " Mipetraka"
+      },
+      {
+        infinitive: "to eat[it]",
+        past: " ate",
+        pastParticiple: " eaten",
+        frenchTranslation: " manger ",
+        malagasyTranslation: " Mihinana"
+      },
+      {
+        infinitive: "to fall[fol]",
+        past: " fell",
+        pastParticiple: " fallen",
+        frenchTranslation: " tomber ",
+        malagasyTranslation: " Mianjera"
+      },
+      {
+        infinitive: "to feed[fid]",
+        past: " fed",
+        pastParticiple: " fed",
+        frenchTranslation: " nourrir ",
+        malagasyTranslation: " Mamahana"
+      },
+      {
+        infinitive: "to feel[fil] ",
+        past: " felt",
+        pastParticiple: " felt",
+        frenchTranslation: " sentir, éprouver ",
+        malagasyTranslation: " Mahatsapa"
+      },
+      {
+        infinitive: "to fight[fait]",
+        past: " fought",
+        pastParticiple: " fought",
+        frenchTranslation: " combattre ",
+        malagasyTranslation: " Miady"
+      },
+    ],
+  }
+];
+
+const verbsRules4 = [
+  {
+    id: 1,
+    title: 'Lesson 65: DAILY SPOKEN ENGLISH',
+    description: 'IRREGULARS VERBS',
+    
+    content1: [
+      {
+        infinitive: "to abide[ebaid]",
+        past: " abode",
+        pastParticiple: " abode",
+        frenchTranslation: "demeurer",
+        malagasyTranslation: "Mipetraka"
+      },
+      {
+        infinitive: "to arise[araiz]",
+        past: " arose",
+        pastParticiple: " arisen",
+        frenchTranslation: " s'élever, survenir ",
+        malagasyTranslation: " Mitsangana/miakatra"
+      },
+      {
+        infinitive: "to awake[eweik]",
+        past: " awoke",
+        pastParticiple: " awoken",
+        frenchTranslation: " (se) réveiller ",
+        malagasyTranslation: " Mifoha(torimaso)"
+      },
+      {
+        infinitive: "to bear[ber]",
+        past: " bore",
+        pastParticiple: " borne",
+        frenchTranslation: " supporter ",
+        malagasyTranslation: " Miaritra"
+      },
+       {
+        infinitive: "to beat[bit]",
+        past: " beat",
+        pastParticiple: " beaten",
+        frenchTranslation: " battre ",
+        malagasyTranslation: " Miady/mamely"
+      },
+       {
+        infinitive: "to become[bikam]",
+        past: " became",
+        pastParticiple: " become",
+        frenchTranslation: " devenir ",
+        malagasyTranslation: " Lasa (tsara/ratsy)"
+      },
+       {
+        infinitive: "to begin[bigin]",
+        past: " began",
+        pastParticiple: " begun",
+        frenchTranslation: " commencer ",
+        malagasyTranslation: " Manomboka"
+      },
+       {
+        infinitive: "to bend",
+        past: " bent",
+        pastParticiple: " bent",
+        frenchTranslation: " (se) courber ",
+        malagasyTranslation: " Mamaingoka zvt"
+      },
+       {
+        infinitive: "to bet",
+        past: " bet",
+        pastParticiple: " bet",
+        frenchTranslation: " parier ",
+        malagasyTranslation: " Miloka"
+      },
+       {
+        infinitive: "to bid",
+        past: " bid",
+        pastParticiple: " bid",
+        frenchTranslation: " offrir (un prix) ",
+        malagasyTranslation: " Manome prix"
+      },
+       {
+        infinitive: "to bind[baind]",
+        past: " bound",
+        pastParticiple: " bound",
+        frenchTranslation: " lier, relier ",
+        malagasyTranslation: " Mampifandray"
+      },
+       {
+        infinitive: "to bite[bait]",
+        past: " bit",
+        pastParticiple: " bitten",
+        frenchTranslation: " mordre ",
+        malagasyTranslation: " Manaikitra"
+      },
+       {
+        infinitive: "to bleed[blid]",
+        past: " bled",
+        pastParticiple: " bled",
+        frenchTranslation: " saigner ",
+        malagasyTranslation: " Maratra"
+      },
+       {
+        infinitive: "to blow[blôou]",
+        past: " blew",
+        pastParticiple: " blown",
+        frenchTranslation: " souffler ",
+        malagasyTranslation: " Mitsoka"
+      },
+       {
+        infinitive: "to break[brek]",
+        past: " broke",
+        pastParticiple: " broken",
+        frenchTranslation: " casser ",
+        malagasyTranslation: " Mamaky(vera)"
+      },
+       {
+        infinitive: "to breed[brid]",
+        past: " bred",
+        pastParticiple: " bred",
+        frenchTranslation: " élever (du bétail) ",
+        malagasyTranslation: " Miompy"
+      },
+       {
+        infinitive: "to bring",
+        past: " brought",
+        pastParticiple: " brought",
+        frenchTranslation: " apporter ",
+        malagasyTranslation: " Mitondra"
+      },
+       {
+        infinitive: "to build[bild]",
+        past: " built",
+        pastParticiple: " built",
+        frenchTranslation: " construire ",
+        malagasyTranslation: " Manamboatra trano"
+      },
+       {
+        infinitive: "to burn[bern]",
+        past: " burnt",
+        pastParticiple: " burnt",
+        frenchTranslation: " brûler ",
+        malagasyTranslation: " Mandoro"
+      },
+       {
+        infinitive: "to burst[berst]",
+        past: " burst",
+        pastParticiple: " burst",
+        frenchTranslation: " éclater ",
+        malagasyTranslation: " Manapoaka"
+      },
+       {
+        infinitive: "to buy[bai]",
+        past: " bought",
+        pastParticiple: " bought",
+        frenchTranslation: " acheter ",
+        malagasyTranslation: " Mividy"
+      },
+       {
+        infinitive: "to cast",
+        past: " cast",
+        pastParticiple: " cast",
+        frenchTranslation: " jeter, distribuer les rôles de ",
+        malagasyTranslation: " Manipy/mitoraka"
+      },
+       {
+        infinitive: "to catch[katr]",
+        past: " caught",
+        pastParticiple: " caught",
+        frenchTranslation: " attraper  ",
+        malagasyTranslation: " Misambotra"
+      },
+       {
+        infinitive: "to choose[trouz]",
+        past: " chose",
+        pastParticiple: " chosen",
+        frenchTranslation: " choisir ",
+        malagasyTranslation: " Mifidy"
+      },
+       {
+        infinitive: "to cling",
+        past: " clung",
+        pastParticiple: " clung",
+        frenchTranslation: " s'accrocher ",
+        malagasyTranslation: " Miraikitra/mifihina"
+      },
+       {
+        infinitive: "to come[kam]",
+        past: " came",
+        pastParticiple: " come",
+        frenchTranslation: " venir ",
+        malagasyTranslation: " Tonga eto/any"
+      },
+       {
+        infinitive: "to cost[kast]",
+        past: " cost",
+        pastParticiple: " cost",
+        frenchTranslation: " coûter ",
+        malagasyTranslation: " Ny vidiny"
+      },
+       {
+        infinitive: "to creep[krip]",
+        past: " crept",
+        pastParticiple: " crept",
+        frenchTranslation: " ramper  ",
+        malagasyTranslation: " Mandeha moramora"
+      },
+       {
+        infinitive: "to cut[kat]",
+        past: " cut",
+        pastParticiple: " cut",
+        frenchTranslation: " couper ",
+        malagasyTranslation: " Manapaka"
+      },
+       {
+        infinitive: "to deal[dil]",
+        past: " dealt",
+        pastParticiple: " dealt",
+        frenchTranslation: " distribuer ",
+        malagasyTranslation: " Mizara[carte]"
+      },
+       {
+        infinitive: "to dig",
+        past: " dug",
+        pastParticiple: " dug",
+        frenchTranslation: " creuser ",
+        malagasyTranslation: " Mihady(mangady)"
+      },
+       {
+        infinitive: "to do",
+        past: " did",
+        pastParticiple: " done",
+        frenchTranslation: " faire ",
+        malagasyTranslation: " Manao zavatra"
+      },
+       {
+        infinitive: "to draw[drôou]",
+        past: " drew",
+        pastParticiple: " drawn",
+        frenchTranslation: " dessiner ",
+        malagasyTranslation: " Manamboatra sary"
+      },
+      {
+        infinitive: "to dream[drim]",
+        past: " dreamt",
+        pastParticiple: " dreamt",
+        frenchTranslation: " rêver ",
+        malagasyTranslation: " Manonofy"
+      },
+      {
+        infinitive: "to drink",
+        past: " drank",
+        pastParticiple: " drunk",
+        frenchTranslation: " boire ",
+        malagasyTranslation: " Misotro"
+      },
+      {
+        infinitive: "to drive[draiv]",
+        past: " drove",
+        pastParticiple: " driven",
+        frenchTranslation: " conduire ",
+        malagasyTranslation: " Mamily(fiara)"
+      },
+      {
+        infinitive: "to to dwell[doel]",
+        past: " dwelt",
+        pastParticiple: " dwelt",
+        frenchTranslation: " habiter ",
+        malagasyTranslation: " Mipetraka"
+      },
+      {
+        infinitive: "to eat[it]",
+        past: " ate",
+        pastParticiple: " eaten",
+        frenchTranslation: " manger ",
+        malagasyTranslation: " Mihinana"
+      },
+      {
+        infinitive: "to fall[fol]",
+        past: " fell",
+        pastParticiple: " fallen",
+        frenchTranslation: " tomber ",
+        malagasyTranslation: " Mianjera"
+      },
+      {
+        infinitive: "to feed[fid]",
+        past: " fed",
+        pastParticiple: " fed",
+        frenchTranslation: " nourrir ",
+        malagasyTranslation: " Mamahana"
+      },
+      {
+        infinitive: "to feel[fil] ",
+        past: " felt",
+        pastParticiple: " felt",
+        frenchTranslation: " sentir, éprouver ",
+        malagasyTranslation: " Mahatsapa"
+      },
+      {
+        infinitive: "to fight[fait]",
+        past: " fought",
+        pastParticiple: " fought",
+        frenchTranslation: " combattre ",
+        malagasyTranslation: " Miady"
+      },
+    ],
+  }
+];
+
+const verbsRules5 = [
+  {
+    id: 1,
+    title: 'Lesson 66: DAILY SPOKEN ENGLISH',
+    description: 'IRREGULARS VERBS',
+    
+    content1: [
+      {
+        infinitive: "to abide[ebaid]",
+        past: " abode",
+        pastParticiple: " abode",
+        frenchTranslation: "demeurer",
+        malagasyTranslation: "Mipetraka"
+      },
+      {
+        infinitive: "to arise[araiz]",
+        past: " arose",
+        pastParticiple: " arisen",
+        frenchTranslation: " s'élever, survenir ",
+        malagasyTranslation: " Mitsangana/miakatra"
+      },
+      {
+        infinitive: "to awake[eweik]",
+        past: " awoke",
+        pastParticiple: " awoken",
+        frenchTranslation: " (se) réveiller ",
+        malagasyTranslation: " Mifoha(torimaso)"
+      },
+      {
+        infinitive: "to bear[ber]",
+        past: " bore",
+        pastParticiple: " borne",
+        frenchTranslation: " supporter ",
+        malagasyTranslation: " Miaritra"
+      },
+       {
+        infinitive: "to beat[bit]",
+        past: " beat",
+        pastParticiple: " beaten",
+        frenchTranslation: " battre ",
+        malagasyTranslation: " Miady/mamely"
+      },
+       {
+        infinitive: "to become[bikam]",
+        past: " became",
+        pastParticiple: " become",
+        frenchTranslation: " devenir ",
+        malagasyTranslation: " Lasa (tsara/ratsy)"
+      },
+       {
+        infinitive: "to begin[bigin]",
+        past: " began",
+        pastParticiple: " begun",
+        frenchTranslation: " commencer ",
+        malagasyTranslation: " Manomboka"
+      },
+       {
+        infinitive: "to bend",
+        past: " bent",
+        pastParticiple: " bent",
+        frenchTranslation: " (se) courber ",
+        malagasyTranslation: " Mamaingoka zvt"
+      },
+       {
+        infinitive: "to bet",
+        past: " bet",
+        pastParticiple: " bet",
+        frenchTranslation: " parier ",
+        malagasyTranslation: " Miloka"
+      },
+       {
+        infinitive: "to bid",
+        past: " bid",
+        pastParticiple: " bid",
+        frenchTranslation: " offrir (un prix) ",
+        malagasyTranslation: " Manome prix"
+      },
+       {
+        infinitive: "to bind[baind]",
+        past: " bound",
+        pastParticiple: " bound",
+        frenchTranslation: " lier, relier ",
+        malagasyTranslation: " Mampifandray"
+      },
+       {
+        infinitive: "to bite[bait]",
+        past: " bit",
+        pastParticiple: " bitten",
+        frenchTranslation: " mordre ",
+        malagasyTranslation: " Manaikitra"
+      },
+       {
+        infinitive: "to bleed[blid]",
+        past: " bled",
+        pastParticiple: " bled",
+        frenchTranslation: " saigner ",
+        malagasyTranslation: " Maratra"
+      },
+       {
+        infinitive: "to blow[blôou]",
+        past: " blew",
+        pastParticiple: " blown",
+        frenchTranslation: " souffler ",
+        malagasyTranslation: " Mitsoka"
+      },
+       {
+        infinitive: "to break[brek]",
+        past: " broke",
+        pastParticiple: " broken",
+        frenchTranslation: " casser ",
+        malagasyTranslation: " Mamaky(vera)"
+      },
+       {
+        infinitive: "to breed[brid]",
+        past: " bred",
+        pastParticiple: " bred",
+        frenchTranslation: " élever (du bétail) ",
+        malagasyTranslation: " Miompy"
+      },
+       {
+        infinitive: "to bring",
+        past: " brought",
+        pastParticiple: " brought",
+        frenchTranslation: " apporter ",
+        malagasyTranslation: " Mitondra"
+      },
+       {
+        infinitive: "to build[bild]",
+        past: " built",
+        pastParticiple: " built",
+        frenchTranslation: " construire ",
+        malagasyTranslation: " Manamboatra trano"
+      },
+       {
+        infinitive: "to burn[bern]",
+        past: " burnt",
+        pastParticiple: " burnt",
+        frenchTranslation: " brûler ",
+        malagasyTranslation: " Mandoro"
+      },
+       {
+        infinitive: "to burst[berst]",
+        past: " burst",
+        pastParticiple: " burst",
+        frenchTranslation: " éclater ",
+        malagasyTranslation: " Manapoaka"
+      },
+       {
+        infinitive: "to buy[bai]",
+        past: " bought",
+        pastParticiple: " bought",
+        frenchTranslation: " acheter ",
+        malagasyTranslation: " Mividy"
+      },
+       {
+        infinitive: "to cast",
+        past: " cast",
+        pastParticiple: " cast",
+        frenchTranslation: " jeter, distribuer les rôles de ",
+        malagasyTranslation: " Manipy/mitoraka"
+      },
+       {
+        infinitive: "to catch[katr]",
+        past: " caught",
+        pastParticiple: " caught",
+        frenchTranslation: " attraper  ",
+        malagasyTranslation: " Misambotra"
+      },
+       {
+        infinitive: "to choose[trouz]",
+        past: " chose",
+        pastParticiple: " chosen",
+        frenchTranslation: " choisir ",
+        malagasyTranslation: " Mifidy"
+      },
+       {
+        infinitive: "to cling",
+        past: " clung",
+        pastParticiple: " clung",
+        frenchTranslation: " s'accrocher ",
+        malagasyTranslation: " Miraikitra/mifihina"
+      },
+       {
+        infinitive: "to come[kam]",
+        past: " came",
+        pastParticiple: " come",
+        frenchTranslation: " venir ",
+        malagasyTranslation: " Tonga eto/any"
+      },
+       {
+        infinitive: "to cost[kast]",
+        past: " cost",
+        pastParticiple: " cost",
+        frenchTranslation: " coûter ",
+        malagasyTranslation: " Ny vidiny"
+      },
+       {
+        infinitive: "to creep[krip]",
+        past: " crept",
+        pastParticiple: " crept",
+        frenchTranslation: " ramper  ",
+        malagasyTranslation: " Mandeha moramora"
+      },
+       {
+        infinitive: "to cut[kat]",
+        past: " cut",
+        pastParticiple: " cut",
+        frenchTranslation: " couper ",
+        malagasyTranslation: " Manapaka"
+      },
+       {
+        infinitive: "to deal[dil]",
+        past: " dealt",
+        pastParticiple: " dealt",
+        frenchTranslation: " distribuer ",
+        malagasyTranslation: " Mizara[carte]"
+      },
+       {
+        infinitive: "to dig",
+        past: " dug",
+        pastParticiple: " dug",
+        frenchTranslation: " creuser ",
+        malagasyTranslation: " Mihady(mangady)"
+      },
+       {
+        infinitive: "to do",
+        past: " did",
+        pastParticiple: " done",
+        frenchTranslation: " faire ",
+        malagasyTranslation: " Manao zavatra"
+      },
+       {
+        infinitive: "to draw[drôou]",
+        past: " drew",
+        pastParticiple: " drawn",
+        frenchTranslation: " dessiner ",
+        malagasyTranslation: " Manamboatra sary"
+      },
+      {
+        infinitive: "to dream[drim]",
+        past: " dreamt",
+        pastParticiple: " dreamt",
+        frenchTranslation: " rêver ",
+        malagasyTranslation: " Manonofy"
+      },
+      {
+        infinitive: "to drink",
+        past: " drank",
+        pastParticiple: " drunk",
+        frenchTranslation: " boire ",
+        malagasyTranslation: " Misotro"
+      },
+      {
+        infinitive: "to drive[draiv]",
+        past: " drove",
+        pastParticiple: " driven",
+        frenchTranslation: " conduire ",
+        malagasyTranslation: " Mamily(fiara)"
+      },
+      {
+        infinitive: "to to dwell[doel]",
+        past: " dwelt",
+        pastParticiple: " dwelt",
+        frenchTranslation: " habiter ",
+        malagasyTranslation: " Mipetraka"
+      },
+      {
+        infinitive: "to eat[it]",
+        past: " ate",
+        pastParticiple: " eaten",
+        frenchTranslation: " manger ",
+        malagasyTranslation: " Mihinana"
+      },
+      {
+        infinitive: "to fall[fol]",
+        past: " fell",
+        pastParticiple: " fallen",
+        frenchTranslation: " tomber ",
+        malagasyTranslation: " Mianjera"
+      },
+      {
+        infinitive: "to feed[fid]",
+        past: " fed",
+        pastParticiple: " fed",
+        frenchTranslation: " nourrir ",
+        malagasyTranslation: " Mamahana"
+      },
+      {
+        infinitive: "to feel[fil] ",
+        past: " felt",
+        pastParticiple: " felt",
+        frenchTranslation: " sentir, éprouver ",
+        malagasyTranslation: " Mahatsapa"
+      },
+      {
+        infinitive: "to fight[fait]",
+        past: " fought",
+        pastParticiple: " fought",
+        frenchTranslation: " combattre ",
+        malagasyTranslation: " Miady"
+      },
+    ],
+    content2: [
+      {
+        verb: "TO BE QUITS/EVEN[iven]",
+        frenchTranslation: "Etre quitte",
+        malagasyTranslation: " Tsy misy trosa intsony"
+      },
+      {
+        verb: "IT IS NOT FAIR[feir]",
+        frenchTranslation: "Ce n’est pas juste",
+        malagasyTranslation: " Tsy rariny"
+      },
+      {
+        verb: "KNOCK ON WOOD[nakon woud]",
+        frenchTranslation: "Touchons du bois",
+        malagasyTranslation: " Sanatria!"
+      },
+      {
+        verb: "IF GOD’S WILL! ",
+        frenchTranslation: "Si Dieu le veut",
+        malagasyTranslation: " Raha sitrampon’Atra"
+      },
+      {
+        verb: "NO WAY![no wei]",
+        frenchTranslation: "Il n’y a pas question.",
+        malagasyTranslation: " Tsiisy hevitra"
+      },
+      {
+        verb: "ZIP IT/CUT IT OUT",
+        frenchTranslation: "Ferme-la",
+        malagasyTranslation: " Mangina ianao"
+      },
+      {
+        verb: "CALM DOWN[kam daon]",
+        frenchTranslation: "Du calme",
+        malagasyTranslation: " Aoka hitony ianao!/Calme!"
+      },
+      {
+        verb: "WHATSAMACALLIT[watsmakolit]",
+        frenchTranslation: "Truc/ machin",
+        malagasyTranslation: " Le zavatra iny"
+      },
+      {
+        verb: "PARDON MY FRENCH",
+        frenchTranslation: "Désolé",
+        malagasyTranslation: " Azafady"
+      },
+      {
+        verb: "TO GIVE SB A PIGGYBACK",
+        frenchTranslation: "Porter qn sur son dos",
+        malagasyTranslation: " Mibaby"
+      },
+      {
+        verb: "TO BE (A) MOOCH[moutr]",
+        frenchTranslation: "Traîner/vivre au crochet des autres",
+        malagasyTranslation: " Tsy mahavelo-tena"
+      },
+      {
+        verb: "TO BE A PATSY",
+        frenchTranslation: "Bouc-émissaire",
+        malagasyTranslation: " Olona mora fitahina"
+      },
+      {
+        verb: "TO BE A COWARD/CHICKEN",
+        frenchTranslation: "Etre un lâche",
+        malagasyTranslation: " Sarotahotra/kanosa"
+      },
+      {
+        verb: "TO BULLY SB[bouli]",
+        frenchTranslation: "Maltraiter",
+        malagasyTranslation: " Mampijaly(olona)"
+      },
+      {
+        verb: "LET IT BE!",
+        frenchTranslation: "Qu’il soit ainsi",
+        malagasyTranslation: " Enga anie"
+      },
+      {
+        verb: "A BOOT LICKER[liker]",
+        frenchTranslation: "Lèche-bottes",
+        malagasyTranslation: " Miandry zavatra@olona"
+      },
+    ],
+  }
+];
+
+const verbsRules6 = [
+  {
+    id: 1,
+    title: 'Lesson 67: DAILY SPOKEN ENGLISH',
+    description: 'MIXED VOCABULARIES',
+    content1: [
+      {
+        verb: "TO BEAT AROUND THE BUSH",
+        frenchTranslation: "Tourner autour du pot",
+        malagasyTranslation: " Manodikodin-dresaka"
+      },
+      {
+        verb: "TO BEAT AROUND THE BUSH",
+        frenchTranslation: "Tourner autour du pot",
+        malagasyTranslation: " Manodikodin-dresaka"
+      },
+    ],
+  }
+];
 
 const VerbsScreen = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
@@ -415,6 +1702,205 @@ const VerbsScreen = () => {
                                                    <RNText style={styles.tableCell}>{item.infinitive}</RNText>
                                                    <RNText style={styles.tableCell}>{item.past}</RNText>
                                                    <RNText style={styles.tableCell}>{item.pastParticiple}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                        </View>
+                      ))}
+                    </View>
+                </List.Accordion>
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+
+{verbsRules3.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+               <List.Accordion
+                    title="IRREGULARS VERBS"
+                    left={(props) => (
+                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                        )}
+                    >
+                    <View style={styles.table}>
+                      <View style={styles.tableRow}>
+                          <RNText style={styles.tableHeader}>INFINITIVE</RNText>
+                          <RNText style={styles.tableHeader}>PAST</RNText>
+                          <RNText style={styles.tableHeader}>PAST PARTICIPLE</RNText>
+                            <RNText style={styles.tableHeader}>TRANSLATION</RNText>
+                                                 <RNText style={styles.tableHeader}>DIKATENY</RNText>
+                                               </View>
+                                               {rule.content1.map((item, index) => (
+                                                 <View key={index} style={styles.tableRow}>
+                                                   <RNText style={styles.tableCell}>{item.infinitive}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.past}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.pastParticiple}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                        </View>
+                      ))}
+                    </View>
+                </List.Accordion>
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+{verbsRules4.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+               <List.Accordion
+                    title="IRREGULARS VERBS"
+                    left={(props) => (
+                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                        )}
+                    >
+                    <View style={styles.table}>
+                      <View style={styles.tableRow}>
+                          <RNText style={styles.tableHeader}>INFINITIVE</RNText>
+                          <RNText style={styles.tableHeader}>PAST</RNText>
+                          <RNText style={styles.tableHeader}>PAST PARTICIPLE</RNText>
+                            <RNText style={styles.tableHeader}>TRANSLATION</RNText>
+                                                 <RNText style={styles.tableHeader}>DIKATENY</RNText>
+                                               </View>
+                                               {rule.content1.map((item, index) => (
+                                                 <View key={index} style={styles.tableRow}>
+                                                   <RNText style={styles.tableCell}>{item.infinitive}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.past}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.pastParticiple}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                        </View>
+                      ))}
+                    </View>
+                </List.Accordion>
+                
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+{verbsRules5.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+               <List.Accordion
+                    title="IRREGULARS VERBS"
+                    left={(props) => (
+                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                        )}
+                    >
+                    <View style={styles.table}>
+                      <View style={styles.tableRow}>
+                          <RNText style={styles.tableHeader}>INFINITIVE</RNText>
+                          <RNText style={styles.tableHeader}>PAST</RNText>
+                          <RNText style={styles.tableHeader}>PAST PARTICIPLE</RNText>
+                            <RNText style={styles.tableHeader}>TRANSLATION</RNText>
+                                                 <RNText style={styles.tableHeader}>DIKATENY</RNText>
+                                               </View>
+                                               {rule.content1.map((item, index) => (
+                                                 <View key={index} style={styles.tableRow}>
+                                                   <RNText style={styles.tableCell}>{item.infinitive}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.past}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.pastParticiple}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                        </View>
+                      ))}
+                    </View>
+                </List.Accordion>
+                <List.Accordion
+                    title="IRREGULAR AND IDIOMS"
+                    left={(props) => (
+                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                        )}
+                    >
+                    <View style={styles.table}>
+                      <View style={styles.tableRow}>
+                          <RNText style={styles.tableHeader}>English</RNText>
+                            <RNText style={styles.tableHeader}>French</RNText>
+                                                 <RNText style={styles.tableHeader}>Malagasy</RNText>
+                                               </View>
+                                               {rule.content2.map((item, index) => (
+                                                 <View key={index} style={styles.tableRow}>
+                                                   <RNText style={styles.tableCell}>{item.verb}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                   <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                        </View>
+                      ))}
+                    </View>
+                </List.Accordion>
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+{verbsRules6.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+                <List.Accordion
+                    title="MIXED VOCABULARIES"
+                    left={(props) => (
+                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                        )}
+                    >
+                    <View style={styles.table}>
+                      <View style={styles.tableRow}>
+                          <RNText style={styles.tableHeader}>English</RNText>
+                            <RNText style={styles.tableHeader}>French</RNText>
+                                                 <RNText style={styles.tableHeader}>Malagasy</RNText>
+                                               </View>
+                                               {rule.content1.map((item, index) => (
+                                                 <View key={index} style={styles.tableRow}>
+                                                   <RNText style={styles.tableCell}>{item.verb}</RNText>
                                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                                    <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                         </View>
