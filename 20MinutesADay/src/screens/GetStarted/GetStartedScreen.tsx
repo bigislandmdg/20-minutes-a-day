@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../types/navigation';
@@ -13,7 +13,7 @@ type GetStartedScreenNavigationProp = StackNavigationProp<
 export default function GetStartedScreen() {
   const navigation = useNavigation<GetStartedScreenNavigationProp>();
 
-  // 👉 Redirection automatique après 3 secondes
+  // 👉 Redirection automatique après 2 secondes
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.navigate('Home');
@@ -25,10 +25,13 @@ export default function GetStartedScreen() {
   return (
     <View style={styles.container}>
       {/* 👉 Illustration */}
-      {/* <Image source={require('../../../assets/started.jpg')} style={styles.illustration} /> */}
+      <Image
+        source={require('../../../assets/images/getstarted.png')} // Assurez-vous que le chemin est correct
+        style={styles.illustration}
+      />
 
       {/* 👉 Texte principal */}
-      <Text style={styles.title}>Welcome to 20Minutes-a-Day!</Text>
+      <Text style={styles.title}>Welcome to 20 Minutes-a-Day!</Text>
 
       {/* 👉 Sous-titre */}
       <Text style={styles.description}>
@@ -47,10 +50,10 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   illustration: {
-    width: '100%',
-    height: 400,
-    resizeMode: 'cover',
-    marginBottom: 40,
+    width: '90%', // L'image prend toute la largeur
+    height: 400,   // La hauteur de l'image
+    resizeMode: 'cover', // L'image s'adapte pour couvrir l'espace sans déformation
+    marginBottom: 50,  // Marge en bas pour espacer le texte
   },
   title: {
     fontSize: 28,
