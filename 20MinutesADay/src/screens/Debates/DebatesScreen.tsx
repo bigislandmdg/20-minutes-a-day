@@ -742,244 +742,1122 @@ const debateTopics5 = [
         malagasyTranslation: " Manome tsiny tena "
       },
       {
-        debate: "TO INCREASE/RISE[inkriz/raiz]",
-        frenchTranslation: " Augmenter ",
-        malagasyTranslation: " Miakatra"
+        debate:"TO BE GUILTY[gilti]",
+        frenchTranslation: " Etre coupable ",
+        malagasyTranslation: " Meloka"
       },
       {
-        debate: "TO DECREASE[dikriz]",
-        frenchTranslation: " Diminuer",
-        malagasyTranslation: " Midina"
+        debate: "TO CONDEMN/SENTENCE",
+        frenchTranslation: " Condamner qlq1",
+        malagasyTranslation: " Manameloka olona"
       },
       {
-        debate: "TO AFFORD/TO HAVE THE MEANS TO[eford]",
-        frenchTranslation: " Avoir le moyen de ",
-        malagasyTranslation: " Manana fahafahana"
+        debate: "TO SUE SB/FILE A SUIT AGAINST SB",
+        frenchTranslation: " Poursuivre qlq1 en justice ",
+        malagasyTranslation: " Mitory olona"
       },
       {
-        debate: "TO HAVE AN OPPORTUNITY TO ",
-        frenchTranslation: " Avoir une opportunité de ",
-        malagasyTranslation: " Manana fahafahana"
+        debate: "TO LODGE A COMPLAINT AGAINST SB ",
+        frenchTranslation: " Porter plainte contre qlq1 ",
+        malagasyTranslation: " Mametraka fitarainana"
       },
       {
-        debate: "TO HAVE A CHANCE TO",
-        frenchTranslation: " Avoir une occasion de ",
-        malagasyTranslation: " Manana fahafahana"
+        debate: "TO ARREST SB/BE UNDER ARREST",
+        frenchTranslation: "Etre en état d’arrestation/arrêter",
+        malagasyTranslation: " Voasambotra/Misambotra"
       },
       {
-        debate: "TO TAKE A CHANCE TO [trens]",
-        frenchTranslation: " Saisir une occasion de ",
-        malagasyTranslation: " Manararaotra @"
+        debate: "TO DETAIN",
+        frenchTranslation: "Retenir ",
+        malagasyTranslation: " Mitazona"
       },
       {
-        debate: "TO FACE/ASSUME[feis/asiom]",
-        frenchTranslation: " Faire face à/confronter ",
-        malagasyTranslation: " Miatrika ny zava-misy "
+        debate: "TO JAIL/ TO BE BEHIND BAR",
+        frenchTranslation: " Mettre qlq1 en prison ",
+        malagasyTranslation: " Mampiditra am-ponja "
       },
       {
-        debate: "TO GET RID OF SB/STH",
-        frenchTranslation: " Se débarrasser de qlq1/qlqch ",
-        malagasyTranslation: " Miala "
+        debate: "TO TO FINE SB",
+        frenchTranslation: " Infliger une amende à",
+        malagasyTranslation: " Mampandoa sazy "
       },
       {
-        debate: "TO AVOID+V.ING ",
-        frenchTranslation: "Éviter de ",
-        malagasyTranslation: " Misoroka "
+        debate: "TO INFRINGE/VIOLATE  ",
+        frenchTranslation: "Violer/enfreindre la loi ",
+        malagasyTranslation: " Mandika lalàna "
       },
       {
-        debate: "TO UNDERESTIMATE [anderestimeit] ",
-        frenchTranslation: "Sous-estimer ",
-        malagasyTranslation: " Manambanimbany"
+        debate: "TO OBEY/ACCEPT ",
+        frenchTranslation: "Accepter/ obéir ",
+        malagasyTranslation: " Manaiky"
       },
       {
-        debate: "TO FOUND[faond]ESTABLISH/CREATE",
-        frenchTranslation: "Fonder/créer/établir  ",
-        malagasyTranslation: " Manangana/mamorona"
+        debate: "TO BRIBE/CORRUPT[kerapt]",
+        frenchTranslation: " Corrompre qlq1  ",
+        malagasyTranslation: " Manao kolikoly"
       },
       {
-        debate: "TO SEND YOUR CHILDREN TO SCHOOL ",
-        frenchTranslation: "Envoyer qlq1 à l’école",
-        malagasyTranslation: " Mandefa olona hianatra "
+        debate: "TO TAKE A KICK-BACK/BRIBERY ",
+        frenchTranslation: "Prendre de pot-de-vin ",
+        malagasyTranslation: " Mandray kolikoly "
       },
       {
-        debate: "TO EDUCATE[ejoukeit]",
-        frenchTranslation: "Éduquer/instruire",
-        malagasyTranslation: " Mampianatra "
+        debate: "TO RELEASE/SET SB FREE",
+        frenchTranslation: " Rélâcher",
+        malagasyTranslation: " Manafaka/Mamotsitra "
       },
       {
-        debate: "TO UNLOCK[anlak] YOUR POTENTIAL  ",
-        frenchTranslation: "Déverrouiller votre potentiel ",
-        malagasyTranslation: "Mamantatra ny tsara @ olona "
+        debate: "TO HANDCUFF[henkaf]/TIE SB UP ",
+        frenchTranslation: " Passer le menotte/attacher ",
+        malagasyTranslation: " Mamatotra olona"
       },
       {
-        debate: "TO DEVELOP[divelop]",
-        frenchTranslation: " Développer ",
-        malagasyTranslation: " Mivoatra "
+        debate: "TO CATCH[catr] SB REDHANDED ",
+        frenchTranslation: " Prendre qlq1 au flagrant delit ",
+        malagasyTranslation: " Tratra ambody omby "
       },
       {
-        debate: "TO ENRICH[inritr]",
-        frenchTranslation: " Enrichir ",
-        malagasyTranslation: " Mampitombo "
+        debate: "TO BE CONVICTED/CONVICT",
+        frenchTranslation: " Reconnu coupable ",
+        malagasyTranslation: " Voaheloka "
       },
       {
-        debate: "THE ADVANTAGE OF+V.ING[advantidj] ",
-        frenchTranslation: " L’avantage de ",
-        malagasyTranslation: " Ny tombotsoan’ny "
+        debate: "TO WITNESS ON BEHALF OF SB ",
+        frenchTranslation: " Temoigner en faveur de ",
+        malagasyTranslation: "  Mijoro vavolombelona"
       },
       {
-        debate: "THE DISADVANTAGE OF+V.ING[disadvantidj]  ",
-        frenchTranslation: " L’inconvénient/désavantage de ",
-        malagasyTranslation: " Ny lafi-ratsin’ny "
+        debate: "TO BE OR GO ON TRIAL FOR STH ",
+        frenchTranslation: " Passer en justice ",
+        malagasyTranslation: " Tsaraina amin’ny fitsarana "
       },
       {
-        debate: "TO ALLOW/LET[elao] ",
-        frenchTranslation: " Permettre qlq1 ",
-        malagasyTranslation: " Mamela"
+        debate: "TO LIE TO SB[lai] ",
+        frenchTranslation: " Mentir ",
+        malagasyTranslation: " Mandainga"
       },
       {
-        debate: "TO FACILITATE[fasiliteit]  ",
-        frenchTranslation: "Faciliter ",
-        malagasyTranslation: " Manamora "
+        debate: " TO KEEP STH SECRET ",
+        frenchTranslation: " Garder qlqchose en secret ",
+        malagasyTranslation: " Tsy miteny ny ambara3 "
       },
       {
-        debate: "TO DISCOVER[diskaver] ",
-        frenchTranslation: "Découvrir ",
-        malagasyTranslation: " Mahita "
+        debate: "TO MURDER[merder]/KILL ",
+        frenchTranslation: " Tuer ",
+        malagasyTranslation: " Mamono "
       },
       {
-        debate: "TO PREPARE YOUR FUTURE[pripar]  ",
-        frenchTranslation: " Préparer votre futur ",
-        malagasyTranslation: " Mandrafitra ny hoavinao "
+        debate: "TO PASS AWAY/KICK THE BUCKET  ",
+        frenchTranslation: " Mourir ",
+        malagasyTranslation: " Maty "
       },
       {
-        debate: "TO PUT STH IN PLACE[pleis] ",
-        frenchTranslation: " Mettre qlqch en place ",
-        malagasyTranslation: " Mametraka/mandamina"
+        debate: "TO POINT A GUN ON SB ",
+        frenchTranslation: " Pointer un arme ",
+        malagasyTranslation: " Manondro basy olona"
       },
       {
-        debate: "TO IMPROVE[improuv]",
-        frenchTranslation: " Améliorer ",
-        malagasyTranslation: " Manatsara "
+        debate: "TO RAPE[reip]",
+        frenchTranslation: " Violer ",
+        malagasyTranslation: " Manolana "
       },
       {
-        debate: "TO BRIGHTEN[braiten]",
-        frenchTranslation: " S'ameliorer ",
-        malagasyTranslation: " Mihatsara "
+        debate: "A CHILD MOLESTER[tsaid …] ",
+        frenchTranslation: " Pedophile  ",
+        malagasyTranslation: " Mpanola zaza "
       },
       {
-        debate: "TO GET RICH#POOR [ritr]",
-        frenchTranslation: " Devenir riche/pauvre ",
-        malagasyTranslation: " Miha-manankarena/mahantra "
+        debate: "TO HARASS(sexual harassment)",
+        frenchTranslation: " Harceler(Harcelement sexuel) ",
+        malagasyTranslation: " Mitsiriritra "
       },
       {
-        debate: "TO BE WEALTHY[welfi] ",
-        frenchTranslation: " Etre riche ",
-        malagasyTranslation: "Mpanefoefo "
+        debate: "TO LAUNDER[laonder]  ",
+        frenchTranslation: " Blanchir ",
+        malagasyTranslation: " Mandany vola@tsy izy "
       },
       {
-        debate: "TO EXPLOIT[ixploit]",
-        frenchTranslation: "Exploiter ",
-        malagasyTranslation: " Mitrandraka "
+        debate: "TO FORBID/PROHIBIT",
+        frenchTranslation: " Interdire ",
+        malagasyTranslation: " Misakana "
       },
       {
-        debate: "TO PLAY HOOKEY/TRUANT[houki ] ",
-        frenchTranslation: "Faire l'ecole buissonnière ",
-        malagasyTranslation: " Manao kilavaka"
+        debate: "TO ALLOW SB TO ",
+        frenchTranslation: "Permettre qlq1 ",
+        malagasyTranslation: " Mamela olona"
       },
       {
-        debate: "To be poor/ A poverty ",
-        frenchTranslation: "Etre pauvre/ Pauvreté",
-        malagasyTranslation: " Mahantra/ Fahantrana"
+        debate: "TO BE ILLEGAL/LEGAL ",
+        frenchTranslation: "Etre illégal/Légal",
+        malagasyTranslation: " Tsy ara-dalàna/ara-dalàna"
       },
       {
-        debate: "TO DROP OUT OF SCHOOL[draop aotov]",
-        frenchTranslation: "Arreter l'ecole",
-        malagasyTranslation: "Mijanona ny fianarana"
+        debate: "TO DO BAD/WRONG THINGS",
+        frenchTranslation: " Faire une mauvaise chose",
+        malagasyTranslation: " Manao zvt tsy mety"
       },
       {
-        debate: "TO BE STUBBORN[staborn]",
-        frenchTranslation: "Etre têtu ",
-        malagasyTranslation: " Maditra"
+        debate: "A WRONG DOER",
+        frenchTranslation: " Malfaiteur ",
+        malagasyTranslation: " Mpanao meloka"
       },
       {
-        debate: "TO BE INTELLIGENT/SMART",
-        frenchTranslation: "Etre intelligent ",
-        malagasyTranslation: " Mahay/Kinga saina"
+        debate: "TO POISON SB[poizen]",
+        frenchTranslation: " Empoisonner ",
+        malagasyTranslation: " Manapoizina olona"
       },
       {
-        debate: "TO IGNORE/NEGLECT[ignor]",
-        frenchTranslation: "Ignorer ",
-        malagasyTranslation: " Tsy miraharaha"
+        debate: " A STEALER/A THIEF[fif]",
+        frenchTranslation: " Voleur ",
+        malagasyTranslation: " Mpangalatra"
       },
       {
-        debate: "TO BUCKLE DOWN[bakel daon] ",
-        frenchTranslation: " Travailler serieusement ",
-        malagasyTranslation: " Miasa tsara"
+        debate: "TO SURRENDER ONESELF TO SB ",
+        frenchTranslation: " Se rendre à la police ",
+        malagasyTranslation: " Manolotena @ polisy"
       },
       {
-        debate: "TO TAKE AN EXAM[teiken igzam] ",
-        frenchTranslation: "Passer un examen ",
-        malagasyTranslation: " Manao fanadinana "
+        debate: "TO BE CAUGHT [kot]  ",
+        frenchTranslation: " Etre arrêté  ",
+        malagasyTranslation: " Voasambotra "
       },
       {
-        debate: "TO TAKE A TEST/COMPETITIVE EXAM",
-        frenchTranslation: "Passer un test/concours ",
-        malagasyTranslation: " Manao fifaninanana/ fitsapana"
+        debate: "TO INVESTIGATE [investigeit]",
+        frenchTranslation: " Enquêter ",
+        malagasyTranslation: " Manao fanadiadihana"
       },
       {
-        debate: "TO REACH[ritr]YOUR GOAL",
-        frenchTranslation: " Atteindre votre but",
-        malagasyTranslation: " Mahatratra ny tanjona",
+        debate: "TO DISCOVER THE TRUTH[trouf]",
+        frenchTranslation: " Découvrir la verité ",
+        malagasyTranslation: " Mamantatra ny marina",
       },
       {
-        debate: "TO SIT (FOR) AN EXAM[igzem]",
-        frenchTranslation: " Passer un examen ",
-        malagasyTranslation: " Manao fanadinana "
+        debate: "TO CONVICT[kanvikt]",
+        frenchTranslation: " Reconnaître coupable de ",
+        malagasyTranslation: " Voaheloka "
       },
       {
-        debate: "TO FAIL[feil]",
-        frenchTranslation: " Echouer/ Rater",
-        malagasyTranslation: " Tsy tafita/ Resy "
+        debate: "TO BE ON BAIL[bel]",
+        frenchTranslation: " Libérer Sous caution",
+        malagasyTranslation: " Vototra satria nandoa sazy "
       },
       {
-        debate: "TO SUCCEED[saksid]",
-        frenchTranslation: " Réussir",
-        malagasyTranslation: " Tafita "
+        debate: "TO POST BAIL FOR SB",
+        frenchTranslation: " Payer la caution de qn",
+        malagasyTranslation: " Mandoa dina "
       },
       {
-        debate: " TO DISCOURAGE[diskaridge]",
-        frenchTranslation: " Décourager ",
-        malagasyTranslation: " Manakivy"
+        debate: "TO BE (IL)LEGITIMATE[lijitimait]",
+        frenchTranslation: " Etre légitime/illigitime ",
+        malagasyTranslation: " Ara-dalàna"
       },
       {
-        debate: "TO HAVE HIGH[hai] HOPES OF STH ",
-        frenchTranslation: " Fonder de grands espoirs sur ",
-        malagasyTranslation: " Manana fanantenana"
+        debate: "TO BE ELIGIBLE[ilijibel] ",
+        frenchTranslation: " Etre en droit de/avoir le droit de ",
+        malagasyTranslation: " Mahafeno zvt takiana/manana zo"
       },
       {
-        debate: "TO HAVE A GLIMMER OF HOPE ",
-        frenchTranslation: " Avoir un petit espoir ",
-        malagasyTranslation: "Manana fanantenana kely"
+        debate: "TO EXPIRE[ixpair]/TO BE EXPIRED ",
+        frenchTranslation: " Etre périmé ",
+        malagasyTranslation: " Lany daty"
       },
       {
-        debate: " TO HAVE A DASHED[dasht]",
-        frenchTranslation: " Avoir un espoir aneanti sur ",
-        malagasyTranslation: " Tsy misy fanantenana"
+        debate: "TO BE -OUT-OF-DATED",
+        frenchTranslation: " Démodé/périmé ",
+        malagasyTranslation: " Tsy malaza/lany daty"
       },
       {
-        debate: "TO BE DESPARATE",
-        frenchTranslation: " Etre désespéré ",
-        malagasyTranslation: " Kivy "
+        debate: "TO INCARCERATE [inkarsereit]",
+        frenchTranslation: " Incarcérer ",
+        malagasyTranslation: " Mampiditra olona am-ponja "
       },
       {
-        debate: "TO KEEP/PUT STH IN MIND",
-        frenchTranslation: " Garder qlqch à l'esprit ",
-        malagasyTranslation: " Mitadidy zvt "
+        debate: "TO HOLD A GRUGDE AGAINST SB",
+        frenchTranslation: " Etre rancunier(e)  ",
+        malagasyTranslation: " Manana lolom-po"
       },
     ],
   },
  
 ];
+
+const debateTopics6 = [
+  {
+    id: 1,
+    topic: 'Lesson 55: DEBATE--RELIGION',
+    description: 'WHY DO YOU GO TO CHURCH? ',
+    arguments1: [
+      {
+        debate: "TO BE A CHRISTIAN ",
+        frenchTranslation: " Etre un chrétien",
+        malagasyTranslation: " Kristianina"
+      },
+      {
+        debate: "TO BE A MUSLIM",
+        frenchTranslation: " Etre un musulman  ",
+        malagasyTranslation: " Silamo"
+      },
+      {
+        debate: "TO BE ATHEIST [eifiest]",
+        frenchTranslation: " Etre un athée",
+        malagasyTranslation: " Olona tsy mino"
+      },
+      {
+        debate: "TO BE NON BELIEVER/UNBELIEVER ",
+        frenchTranslation: " Incroyant  ",
+        malagasyTranslation: " Olona tsy mino "
+      },
+      {
+        debate:" TO GO TO CHURCH[trertr]",
+        frenchTranslation: " Aller a l’église  ",
+        malagasyTranslation: " Mandeha mivavaka"
+      },
+      {
+        debate: "TO PRAY[prei]",
+        frenchTranslation: " Prier",
+        malagasyTranslation: " Mivavaka"
+      },
+      {
+        debate: "TO KNEEL[nil] DOWN",
+        frenchTranslation: " S’agénouiller",
+        malagasyTranslation: " Mandohalika"
+      },
+      {
+        debate: "TO BOW[bao] YOUR HEAD",
+        frenchTranslation: " Incliner la tête  ",
+        malagasyTranslation: " Manondrika ny loha"
+      },
+      {
+        debate: "TO LIFT UP YOUR HAND  ",
+        frenchTranslation: " Lever votre main ",
+        malagasyTranslation: " Manandra-tananao"
+      },
+      {
+        debate: "TO CLAP HANDS",
+        frenchTranslation: " Applaudir (les mains)",
+        malagasyTranslation: " Mitehafa tanana"
+      },
+      {
+        debate: "TO GLORIFY[glorifai] THE LORD",
+        frenchTranslation: " Glorifier ",
+        malagasyTranslation: " Manome voninahitra"
+      },
+      {
+        debate: "TO WORSHIP",
+        frenchTranslation: " Adorer ",
+        malagasyTranslation: " Manompo "
+      },
+      {
+        debate: "TO REPENT[ripent]",
+        frenchTranslation: " Repentir",
+        malagasyTranslation: " Mibebaka "
+      },
+      {
+        debate: " TO CONFESS[kanfes] ",
+        frenchTranslation: " Confesser ",
+        malagasyTranslation: " Mitsotra "
+      },
+      {
+        debate: " TO SIN/COMMIT A SIN ",
+        frenchTranslation: " Pécher ",
+        malagasyTranslation: " Manota"
+      },
+      {
+        debate: "TO FORGIVE",
+        frenchTranslation: " Pardonner",
+        malagasyTranslation: " Mamela heloka"
+      },
+      {
+        debate: " TO LISTEN TO THE WORD OF GOD ",
+        frenchTranslation: "Ecouter la parole de Dieu ",
+        malagasyTranslation: " Mihaino ny Tenin’Atra "
+      },
+      {
+        debate: "TO SING FOR THE LORD",
+        frenchTranslation: " Chanter pour le Seigneur",
+        malagasyTranslation: " Mihira hoan’I Tompo "
+      },
+      {
+        debate: "TO PREACH[pritr]THE SERMON ",
+        frenchTranslation: " Prêcher le sermon ",
+        malagasyTranslation: " Mitory Teny"
+      },
+      {
+        debate: " TO ATTEND A BIBLE STUDY ",
+        frenchTranslation: " Assister l’école biblique ",
+        malagasyTranslation: " Mianatra Baiboly "
+      },
+      {
+        debate: "TO BAPTISE[baptaiz]/TO BE BAPTIZED",
+        frenchTranslation: " Baptiser ",
+        malagasyTranslation: " Vita batisa/manao batisa "
+      },
+      {
+        debate: "TO BE CONVERTED[converted] ",
+        frenchTranslation: " Etre convertis ",
+        malagasyTranslation: " Voavonjy/novaina vaoavao"
+      },
+      {
+        debate: "TO CHANGE YOUR LIFE ",
+        frenchTranslation: " Changer votre vie ",
+        malagasyTranslation: " Manova ny fiainanao "
+      },
+      {
+        debate: "TO SAVE SB/TO BE SAVED[seivt] ",
+        frenchTranslation: " Sauver/Etre Sauvé  ",
+        malagasyTranslation: " Mamonjy/Voavonjy"
+      },
+      {
+        debate: "TO CRUCIFY[krousifai]/TO BE CRUCIFIED ",
+        frenchTranslation: " Crucifier/Etre crucifie",
+        malagasyTranslation: " Nomboana/voaombo "
+      },
+      {
+        debate: "TO RAISE FROM THE DEAD ",
+        frenchTranslation: " Ressusciter  ",
+        malagasyTranslation: " Mitsangana @ maty "
+      },
+      {
+        debate: " TO RESURRECT[rezerekt]",
+        frenchTranslation: "  Ressusciter",
+        malagasyTranslation: " Mitsangana @ maty "
+      },
+      {
+        debate: "TO SUFFER[safer] ",
+        frenchTranslation: " Souffrir ",
+        malagasyTranslation: " Mijaly"
+      },
+      {
+        debate: "TO WOUND",
+        frenchTranslation: " Blesser ",
+        malagasyTranslation: " Maratra "
+      },
+      {
+        debate: "TO SURRENDER[serender]TO GIVE UP ",
+        frenchTranslation: " Se rendre/s’abandoner ",
+        malagasyTranslation: " Manolo-tena/mahafoy tena "
+      },
+      {
+        debate: "TO BELIEVE/TO HAVE FAITH IN GOD",
+        frenchTranslation: " Croire/avoir la foi en ",
+        malagasyTranslation: " Mino "
+      },
+      {
+        debate: " TO ACCEPT/OBEY[obei]",
+        frenchTranslation: "  Accepter/obéir ",
+        malagasyTranslation: " Manaiky "
+      },
+      {
+        debate: "THE SAVIOR/HEALER[hiler]",
+        frenchTranslation: " Le sauveur/guerisseur  ",
+        malagasyTranslation: " Mpamonjy/Mpanasitrana "
+      },
+      {
+        debate: "TO BE RIGHTEOUS[raitres] ",
+        frenchTranslation: "Etre juste ",
+        malagasyTranslation: " Olona marina"
+      },
+      {
+        debate: "A WRONGDOER ",
+        frenchTranslation: " Mailfaiteur",
+        malagasyTranslation: " Mpanao ratsy"
+      },
+      {
+        debate: "TO ADMIT YOUR SIN",
+        frenchTranslation: " Admettre votre peché",
+        malagasyTranslation: " Miaiky ny otanao"
+      },
+      {
+        debate: "TO FAST AND PRAY",
+        frenchTranslation: " Prier et jeuner  ",
+        malagasyTranslation: " Mivavaka sy mifady hanina"
+      },
+      {
+        debate: "TO GET THE HOLY SPIRIT",
+        frenchTranslation: " Recevoir le Saint Esprit  ",
+        malagasyTranslation: " Mandray ny Fanahy Masina"
+      },
+      {
+        debate: "TO LAY YOUR HANDS ON SB",
+        frenchTranslation: " Poser les mains sur",
+        malagasyTranslation: " Mametra tanana @"
+      },
+      {
+        debate: "TO CAST OUT THE DEVIL[devel] ",
+        frenchTranslation: " Chasser le demon ",
+        malagasyTranslation: " Mandroaka demony"
+      },
+      {
+        debate: "THE END TIMES/DOOMSDAY[doumzdei]",
+        frenchTranslation: " La fin de temps",
+        malagasyTranslation: " Far’andro "
+      },
+      {
+        debate: "TO ELECT/SELECT/CHOOSE",
+        frenchTranslation: " Elir/selectionner/ choisir ",
+        malagasyTranslation: " Mifidy"
+      },
+      {
+        debate: "TO SPEAK IN TONGUES[tangues]",
+        frenchTranslation: " Parler en langue ",
+        malagasyTranslation: " Miteny @ teny tsy fantatra",
+      },
+      {
+        debate: "TO ORDAIN SB",
+        frenchTranslation: " Ordonner ",
+        malagasyTranslation: " Mifidy(religion) "
+      },
+      {
+        debate: "TO ANOINT SB",
+        frenchTranslation: " Oindre/consacrer",
+        malagasyTranslation: " Manosotra(diloilo)Mpanjaka "
+      },
+      
+    ],
+  },
+ 
+];
+
+
+
+const debateTopics7 = [
+  {
+    id: 1,
+    topic: 'Lesson 56: DEBATE--RELIGION',
+    description: 'WHY DO YOU GO TO CHURCH? ',
+    arguments1: [
+      {
+        debate:`   Well, thanks for your question, to begin with, let me introduce myself, I’m Rene
+Fulgence, I’m from Tulear and I live in 67Ha. And, I’m glad to tell you about my religion
+background, I’m a Christian, and I’ve been raised in Christianity by my parents, and first,
+the reason why I go to church just because I believe in God and He has loved me before I
+did, and I love Him too, according to me, church is the place of worship where you can
+praise and sing for Him, what I mean is that, I like to praise the Lord. God is my Savior,
+because I was a sinner and He has forgiven my sin, so, I’m grateful to Him for all things. I
+also go to church because I believe that if I want to meet Him, I think the first place where I
+should see Him is in church, and I like listening to the Word of God which is preached by
+the pastor. 
+        Moreover, I was already baptized and I take communion every month, and also,
+I’d like to tell you that after my baptism, I had received the Holy Spirit, I believe in speaking
+in tongues, the divine healing and casting out the devil. I think that seeing the fact that God
+is merciful and has given us the opportunity to be His children by sending His only child to
+us who is Jesus Christ makes me confident and happy. Don’t forget that He was crucified
+and raised from the dead to fulfillthe scriptures. So, to finish with, I love the the Lord Jesus
+because He has loved me before I did. I think that’s I can tell me about that.
+
+
+    → To judge = Juger/mitsara
+        \n → To fulfill= accomplir /completer/mananteraka
+        \n → To prophecise= prophétiser /maminany
+        \n → THE TITHE[taid]= dime=Fahafolonkarena; 
+        \n → TO GIVE OFFERING = Donner l’offrande= Manao rakitra/sorona
+        \n → TO DEVOTE/CONSACRATE YOUR TIME= Consacrer votre temps= Manokam-potoana
+        \n → TO SACRIFICE = Sacrifier= Manolotra fanatitra`,
+      },
+    ],
+    arguments2: [
+      
+      {
+        debate: "TO BE A POLITICIAN ",
+        frenchTranslation: " Etre un politicien ",
+        malagasyTranslation: " Mpanao Politika"
+      },
+      {
+        debate: "POLITICAL[politikol] PARTY",
+        frenchTranslation: " Partie/groupe politique  ",
+        malagasyTranslation: " Vondrona politika"
+      },
+      {
+        debate: "TO JOIN THE POLITICAL PARTY",
+        frenchTranslation: " Joindre un groupe politique",
+        malagasyTranslation: " Miditra mpikambana"
+      },
+      {
+        debate: "POLITICAL CRISIS[kraisiz]",
+        frenchTranslation: " Crise politique ",
+        malagasyTranslation: " Krizy politika"
+      },
+      {
+        debate: "TO VOTE FOR SB/CAST A BALLOT ",
+        frenchTranslation: " Voter pour qlq1 ",
+        malagasyTranslation: " Mifidy"
+      },
+      {
+        debate: "FIRST/SECOND BALLOT",
+        frenchTranslation: " Première/deuxième tour",
+        malagasyTranslation: " Fiodinana voalohany/faha2"
+      },
+      {
+        debate: "TO ELECT[ilekt]",
+        frenchTranslation: " Elire ",
+        malagasyTranslation: " Mifidy"
+      },
+      {
+        debate: "TO RUN FOR PRESIDENT",
+        frenchTranslation: " Etre candidat a la présidence ",
+        malagasyTranslation: " Milatsaka ho prezida"
+      },
+      {
+        debate: "TO CAMPAIGN",
+        frenchTranslation: " Mener une campaigne",
+        malagasyTranslation: " Manao fampielezan-kevitra"
+      },
+      {
+        debate: "TO BE A CANDIDATE",
+        frenchTranslation: " Etre un candidat",
+        malagasyTranslation: " Milatsaka hofidina "
+      },
+      {
+        debate: "A BALLOT BOX",
+        frenchTranslation: " Urne",
+        malagasyTranslation: " Vata fandatsaham-bato"
+      },
+      {
+        debate: "STRAW [stro] BALLOT",
+        frenchTranslation: " Sondage",
+        malagasyTranslation: " Fitsapana"
+      },
+      {
+        debate: "A BALLOT/POLL",
+        frenchTranslation: "Scrutin/vote ",
+        malagasyTranslation: " Latsa-bato "
+      },
+      {
+        debate: "BALLOT PAPER",
+        frenchTranslation: "Bulletin de vote",
+        malagasyTranslation: "Vato "
+      },
+      {
+        debate: "TO REGISTER[rejester]",
+        frenchTranslation: " S’inscrire",
+        malagasyTranslation: " Manoratra anarana"
+      },
+      {
+        debate: "TO OUST[aost] ",
+        frenchTranslation: "Forcer qn a démissioner",
+        malagasyTranslation: " Manongana olona @ asany"
+      },
+      {
+        debate: "TO FIRE/RELIEVE SB FROM HIS DUTY",
+        frenchTranslation: " Déstituer",
+        malagasyTranslation: " Manala olona @ asany"
+      },
+      {
+        debate: "TO DICTATE[dikteit]",
+        frenchTranslation: " Donner des ordres",
+        malagasyTranslation: " Manao didy jadona/mandidy"
+      },
+      {
+        debate: "DICTATOR/DICTATORSHIP",
+        frenchTranslation: "  Dictacteur/dictature ",
+        malagasyTranslation: " Didy jadona"
+      },
+      {
+        debate: "TO BAN",
+        frenchTranslation: " Censurer ",
+        malagasyTranslation: " Misakana"
+      },
+    ],
+  },
+];
+
+
+const debateTopics8 = [
+  {
+    id: 1,
+    topic: 'Lesson 57: DEBATE--POLITICAL TERMS',
+    description: 'WHAT DO YOU THINK ABOUT THE GOVERNMENT? ',
+    arguments1: [
+      {
+        debate: "TO APPLY THE ROADMAP",
+        frenchTranslation: " Appliquer la feuille de route",
+        malagasyTranslation: " Mampiatra ny tondro zotra"
+      },
+      {
+        debate: "A COUP",
+        frenchTranslation: " Coup d’Etat",
+        malagasyTranslation: " Fanonganam-panjakana"
+      },
+      {
+        debate: "TO GO ON STRIKE[straik]",
+        frenchTranslation: " Faire une grève",
+        malagasyTranslation: " Manankorotana"
+      },
+      {
+        debate: "TO BE ON STRIKE ",
+        frenchTranslation: " Etre en grève",
+        malagasyTranslation: " Mitoko(manao fitokononana) "
+      },
+      {
+        debate:"TO DEMAND, CLAIM",
+        frenchTranslation: " Révendiquer",
+        malagasyTranslation: " Mitaky"
+      },
+      {
+        debate: "TO WAR/GO TO WAR WITH SB",
+        frenchTranslation: " Entrer en guerre avec ",
+        malagasyTranslation: " Miady"
+      },
+      {
+        debate: "TO WAGE TO WAR AGAINST",
+        frenchTranslation: " Faire la guerre",
+        malagasyTranslation: " Miady"
+      },
+      {
+        debate: "TO ALLY [elai]",
+        frenchTranslation: " Allier",
+        malagasyTranslation: " Miray/mifandray"
+      },
+      {
+        debate: "ALLIED COUNTRY",
+        frenchTranslation: " Pays allié",
+        malagasyTranslation: " Firenena akaiky"
+      },
+      {
+        debate: "TO CONSERVE[kanserv]",
+        frenchTranslation: " Consérver",
+        malagasyTranslation: " Mitahiry"
+      },
+      {
+        debate: "TO GOVERN[gavern] ",
+        frenchTranslation: " Gouverner ",
+        malagasyTranslation: " Mitondra"
+      },
+      {
+        debate: "TO LEAD[lid]",
+        frenchTranslation: "  Mener",
+        malagasyTranslation: " Mitantana "
+      },
+      {
+        debate: "TO PROMISE[pramis]",
+        frenchTranslation: " Promettre",
+        malagasyTranslation: " Mampanantena "
+      },
+      {
+        debate: "TO FAIL TO FULFILL[foulfil]",
+        frenchTranslation: " Echouer (d’accomplir) ",
+        malagasyTranslation: " Tsy mahatanteraka "
+      },
+      {
+        debate: "TO CHANGE[treinje]",
+        frenchTranslation: " Changer ",
+        malagasyTranslation: " Manova"
+      },
+      {
+        debate: "TO REHABILITATE/RE-ESTABLISH",
+        frenchTranslation: " Réhabiliter",
+        malagasyTranslation: " Manamboatra indray"
+      },
+      {
+        debate: " TO RENEW[rinio]",
+        frenchTranslation: " Rénouveller ",
+        malagasyTranslation: " Manova/Manavao "
+      },
+      {
+        debate: "TO CREATE[kriet]",
+        frenchTranslation: "  Créer",
+        malagasyTranslation: " Mamorona"
+      },
+      {
+        debate: "TO ELIMINATE[ilimineit] ",
+        frenchTranslation: " Eliminer",
+        malagasyTranslation: " Manala"
+      },
+      {
+        debate: "TO REDUCE[redios] ",
+        frenchTranslation: " Réduire ",
+        malagasyTranslation: " Mampidina"
+      },
+      {
+        debate: "TO SHELL/BOMBARD",
+        frenchTranslation: " Bombarder",
+        malagasyTranslation: " Manjera baomba "
+      },
+      {
+        debate: "TO EXPLOID/BLAST ",
+        frenchTranslation: " Exploser/faire sauter ",
+        malagasyTranslation: " Mampipoaka"
+      },
+      {
+        debate: "TO SHOOT/FIRE[fair]",
+        frenchTranslation: " Tirer",
+        malagasyTranslation: " Mitifitra"
+      },
+      {
+        debate: "TO SUPPLY[saplai]PROVIDE[provaid]",
+        frenchTranslation: " Fournir",
+        malagasyTranslation: " Mamatsy"
+      },
+      {
+        debate: "A WEAPON[wepen] ",
+        frenchTranslation: " Arme",
+        malagasyTranslation: " Fitaova-piadiana "
+      },
+      {
+        debate: "TO HUNT[hant]",
+        frenchTranslation: " Chasser",
+        malagasyTranslation: " Manenjika/mihaza "
+      },
+      {
+        debate: " TO EXILE[igzail]/BE IN EXILE",
+        frenchTranslation: " Exiler/ être en éxil ",
+        malagasyTranslation: " Sesitany politika"
+      },
+      {
+        debate: "REFUGEE[refioj] ",
+        frenchTranslation: " Réfugie ",
+        malagasyTranslation: " Mpifindra toerana"
+      },
+      {
+        debate: "TO IMMIGRATE[imigreit]",
+        frenchTranslation: " Immigrer ",
+        malagasyTranslation: " Mifindra monina "
+      },
+      {
+        debate: "TO MASSACRE[masaker]",
+        frenchTranslation: " Massacrer ",
+        malagasyTranslation: " Mamono olona "
+      },
+      {
+        debate: "TO SLAUGHTER[sloter]",
+        frenchTranslation: " Abattre/tuer ",
+        malagasyTranslation: " Mamono biby/olona "
+      },
+      {
+        debate: " TO FACE/ENCOUNTER[inkaonter]",
+        frenchTranslation: " Faire face à",
+        malagasyTranslation: " Miatrika"
+      },
+      {
+        debate: "TO RECONCILE[rekonsail]",
+        frenchTranslation: " Réconcilier",
+        malagasyTranslation: " Mampihavana"
+      },
+      {
+        debate: "TO GRANT AN AMNISTY",
+        frenchTranslation: " Donner une amnistie",
+        malagasyTranslation: " Manome famelana(politika)"
+      },
+      {
+        debate: "THE ACT OF GRACE ",
+        frenchTranslation: " La loi d’amnistie",
+        malagasyTranslation: " Lalàna ny famelan-kelona"
+      },
+      {
+        debate: "TO OPPOSE TO SB",
+        frenchTranslation: " S’opposer",
+        malagasyTranslation: " Manohitra"
+      },
+      {
+        debate: "TO ARGUE[argio]",
+        frenchTranslation: " Argumenter",
+        malagasyTranslation: " Maneho hevitra"
+      },
+      {
+        debate: "TO BE IN CONFLICT WITH SB",
+        frenchTranslation: " Etre en conflit",
+        malagasyTranslation: " Mifamaly"
+      },
+      {
+        debate: "A CAR BOMB[kar bam]",
+        frenchTranslation: " Voiture piégée",
+        malagasyTranslation: " Fiara voasesika baomba"
+      },
+      {
+        debate: "TO DEFUSE[difioz] a situation/crisis",
+        frenchTranslation: " Désarmorcer (bombe) ",
+        malagasyTranslation: " Mampitsahatra baomba"
+      },
+      {
+        debate: "FIRST/SECOND[seken] TERM",
+        frenchTranslation: " 1 /2 eme MANDAT",
+        malagasyTranslation: " ½ ème mandat "
+      },
+      {
+        debate: "A GUNMAN[ganman]",
+        frenchTranslation: " Bandit armé ",
+        malagasyTranslation: " Olona mirongo basy"
+      },
+      {
+        debate: "A LETTER BOMB",
+        frenchTranslation: " Lettre piégée",
+        malagasyTranslation: " Baomba voafono",
+      },
+      {
+        debate: "TO MINE[main]",
+        frenchTranslation: " Minier ",
+        malagasyTranslation: " Mandevina baomba"
+      },
+      {
+        debate: "TO APPOINT SB ",
+        frenchTranslation: " Nominer",
+        malagasyTranslation: " Mifidy olona "
+      },
+      {
+        debate: "TO CONSPIRE/PLOT TO DO STH ",
+        frenchTranslation: " Conspirer/comploter",
+        malagasyTranslation: " Mikonokonona "
+      },
+      {
+        debate: "A MILITANT(activist)/SEPARATIST ",
+        frenchTranslation: " Militant/Separatiste",
+        malagasyTranslation: " Mpanohana/mpandray anjara"
+      },
+      
+    ],
+  },
+ 
+];
+
+
+const debateTopics9 = [
+  {
+    id: 1,
+    topic: 'Lesson 58: DEBATE--MEDICAL TERMS',
+    description: 'ARE YOU AGAINST OR FOR ABORTION? ',
+    arguments1: [
+      {
+        debate: "TO GO TO THE HOSPITAL",
+        frenchTranslation: " Aller à l’hôpital",
+        malagasyTranslation: " Mandeha any @ hopitaly"
+      },
+      {
+        debate: "TO EXAMINE[igzamin]YOUR HEALTH",
+        frenchTranslation: " Examiner votre santé",
+        malagasyTranslation: " Mijery ny fahasalamanao"
+      },
+      {
+        debate: "TO CONSULT[kensalt]A DOCTOR",
+        frenchTranslation: " Consulter un docteur",
+        malagasyTranslation: " Manontany dokotera ny @"
+      },
+      {
+        debate: "TO GO TO THE DOCTOR ",
+        frenchTranslation: " Consulter un docteur",
+        malagasyTranslation: " Mijery dokotera"
+      },
+      {
+        debate:"TO PRESCRIBE ANTIBIOTIC FOR SB",
+        frenchTranslation: " Préscrire des antibiotiques",
+        malagasyTranslation: " Manome ordonnance"
+      },
+      {
+        debate: "TO GIVE SB A PRESCRIPTION",
+        frenchTranslation: " Faire une ordonnance",
+        malagasyTranslation: " Manome ordonnance"
+      },
+      {
+        debate: "TO GULP[galp]/TO SWALLOW[soalôou] ",
+        frenchTranslation: " Avaler",
+        malagasyTranslation: " Mitelina"
+      },
+      {
+        debate: "TO TAKE A TABLET",
+        frenchTranslation: " Prendre son comprimé",
+        malagasyTranslation: " Mihinana fanafody"
+      },
+      {
+        debate: "TO TAKE A REST",
+        frenchTranslation: " Se reposer",
+        malagasyTranslation: " Manka aina/miala sasatra"
+      },
+      {
+        debate: "TO FOLLOW THE INSTRUCTION",
+        frenchTranslation: " Suivre l’instruction",
+        malagasyTranslation: " Manaraka torolalana "
+      },
+      {
+        debate: "TO RESPECT THE DOSE[dôuz] ",
+        frenchTranslation: " Respecter le dose ",
+        malagasyTranslation: " Manaja ny herim-panafody"
+      },
+      {
+        debate: "TO BE SUSPICIOUS[saspises]",
+        frenchTranslation: "  Etre méfiant",
+        malagasyTranslation: " Mampiahiahy "
+      },
+      {
+        debate: "TO PROMISE[pramis]",
+        frenchTranslation: " Promettre",
+        malagasyTranslation: " Mampanantena "
+      },
+      {
+        debate: "TO FAIL TO FULFILL[foulfil]",
+        frenchTranslation: " Echouer (d’accomplir) ",
+        malagasyTranslation: " Tsy mahatanteraka "
+      },
+      {
+        debate: "TO CHANGE[treinje]",
+        frenchTranslation: " Changer ",
+        malagasyTranslation: " Manova"
+      },
+      {
+        debate: "TO REHABILITATE/RE-ESTABLISH",
+        frenchTranslation: " Réhabiliter",
+        malagasyTranslation: " Manamboatra indray"
+      },
+      {
+        debate: " TO RENEW[rinio]",
+        frenchTranslation: " Rénouveller ",
+        malagasyTranslation: " Manova/Manavao "
+      },
+      {
+        debate: "TO CREATE[kriet]",
+        frenchTranslation: "  Créer",
+        malagasyTranslation: " Mamorona"
+      },
+      {
+        debate: "TO ELIMINATE[ilimineit] ",
+        frenchTranslation: " Eliminer",
+        malagasyTranslation: " Manala"
+      },
+      {
+        debate: "TO REDUCE[redios] ",
+        frenchTranslation: " Réduire ",
+        malagasyTranslation: " Mampidina"
+      },
+      {
+        debate: "TO SHELL/BOMBARD",
+        frenchTranslation: " Bombarder",
+        malagasyTranslation: " Manjera baomba "
+      },
+      {
+        debate: "TO EXPLOID/BLAST ",
+        frenchTranslation: " Exploser/faire sauter ",
+        malagasyTranslation: " Mampipoaka"
+      },
+      {
+        debate: "TO SHOOT/FIRE[fair]",
+        frenchTranslation: " Tirer",
+        malagasyTranslation: " Mitifitra"
+      },
+      {
+        debate: "TO SUPPLY[saplai]PROVIDE[provaid]",
+        frenchTranslation: " Fournir",
+        malagasyTranslation: " Mamatsy"
+      },
+      {
+        debate: "A WEAPON[wepen] ",
+        frenchTranslation: " Arme",
+        malagasyTranslation: " Fitaova-piadiana "
+      },
+      {
+        debate: "TO HUNT[hant]",
+        frenchTranslation: " Chasser",
+        malagasyTranslation: " Manenjika/mihaza "
+      },
+      {
+        debate: " TO EXILE[igzail]/BE IN EXILE",
+        frenchTranslation: " Exiler/ être en éxil ",
+        malagasyTranslation: " Sesitany politika"
+      },
+      {
+        debate: "REFUGEE[refioj] ",
+        frenchTranslation: " Réfugie ",
+        malagasyTranslation: " Mpifindra toerana"
+      },
+      {
+        debate: "TO IMMIGRATE[imigreit]",
+        frenchTranslation: " Immigrer ",
+        malagasyTranslation: " Mifindra monina "
+      },
+      {
+        debate: "TO MASSACRE[masaker]",
+        frenchTranslation: " Massacrer ",
+        malagasyTranslation: " Mamono olona "
+      },
+      {
+        debate: "TO SLAUGHTER[sloter]",
+        frenchTranslation: " Abattre/tuer ",
+        malagasyTranslation: " Mamono biby/olona "
+      },
+      {
+        debate: " TO FACE/ENCOUNTER[inkaonter]",
+        frenchTranslation: " Faire face à",
+        malagasyTranslation: " Miatrika"
+      },
+      {
+        debate: "TO RECONCILE[rekonsail]",
+        frenchTranslation: " Réconcilier",
+        malagasyTranslation: " Mampihavana"
+      },
+      {
+        debate: "TO GRANT AN AMNISTY",
+        frenchTranslation: " Donner une amnistie",
+        malagasyTranslation: " Manome famelana(politika)"
+      },
+      {
+        debate: "THE ACT OF GRACE ",
+        frenchTranslation: " La loi d’amnistie",
+        malagasyTranslation: " Lalàna ny famelan-kelona"
+      },
+      {
+        debate: "TO OPPOSE TO SB",
+        frenchTranslation: " S’opposer",
+        malagasyTranslation: " Manohitra"
+      },
+      {
+        debate: "TO ARGUE[argio]",
+        frenchTranslation: " Argumenter",
+        malagasyTranslation: " Maneho hevitra"
+      },
+      {
+        debate: "TO BE IN CONFLICT WITH SB",
+        frenchTranslation: " Etre en conflit",
+        malagasyTranslation: " Mifamaly"
+      },
+      {
+        debate: "A CAR BOMB[kar bam]",
+        frenchTranslation: " Voiture piégée",
+        malagasyTranslation: " Fiara voasesika baomba"
+      },
+      {
+        debate: "TO DEFUSE[difioz] a situation/crisis",
+        frenchTranslation: " Désarmorcer (bombe) ",
+        malagasyTranslation: " Mampitsahatra baomba"
+      },
+      {
+        debate: "FIRST/SECOND[seken] TERM",
+        frenchTranslation: " 1 /2 eme MANDAT",
+        malagasyTranslation: " ½ ème mandat "
+      },
+      {
+        debate: "A GUNMAN[ganman]",
+        frenchTranslation: " Bandit armé ",
+        malagasyTranslation: " Olona mirongo basy"
+      },
+      {
+        debate: "A LETTER BOMB",
+        frenchTranslation: " Lettre piégée",
+        malagasyTranslation: " Baomba voafono",
+      },
+      {
+        debate: "TO MINE[main]",
+        frenchTranslation: " Minier ",
+        malagasyTranslation: " Mandevina baomba"
+      },
+      {
+        debate: "TO APPOINT SB ",
+        frenchTranslation: " Nominer",
+        malagasyTranslation: " Mifidy olona "
+      },
+      {
+        debate: "TO CONSPIRE/PLOT TO DO STH ",
+        frenchTranslation: " Conspirer/comploter",
+        malagasyTranslation: " Mikonokonona "
+      },
+      {
+        debate: "A MILITANT(activist)/SEPARATIST ",
+        frenchTranslation: " Militant/Separatiste",
+        malagasyTranslation: " Mpanohana/mpandray anjara"
+      },
+      
+    ],
+  },
+ 
+];
+
+
 
 const DebatesScreen = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
@@ -1306,7 +2184,217 @@ const DebatesScreen = () => {
                   </List.Section>
                 </Card.Content>
               </Card>
-            ))}      
+            ))} 
+
+      {debateTopics6.map((debate) => (
+              <Card key={debate.id} style={styles.card}>
+                <Card.Title
+                  title={<Text style={{ fontWeight: 'bold' }}>{debate.topic}</Text>}
+                  subtitle={debate.description}
+                  right={(props) => (
+                    <IconButton
+                      {...props}
+                      icon="volume-high"
+                      onPress={() => speak(debate.topic)}
+                    />
+                  )}
+                />
+                <Card.Content>
+                  <List.Section>
+                     <List.Accordion
+                          title="WHY DO YOU GO TO CHURCH?? "
+                          left={(props) => (
+                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                              )}
+                          >
+                          <View style={styles.table}>
+                            <View style={styles.tableRow}>
+                                <RNText style={styles.tableHeader}>English</RNText>
+                                  <RNText style={styles.tableHeader}>French</RNText>
+                                                       <RNText style={styles.tableHeader}>Malagasy</RNText>
+                                                     </View>
+                                                     {debate.arguments1.map((item, index) => (
+                                                       <View key={index} style={styles.tableRow}>
+                                                         <RNText style={styles.tableCell}>{item.debate}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                              </View>
+                            ))}
+                          </View>
+                      </List.Accordion>
+                  </List.Section>
+                </Card.Content>
+              </Card>
+            ))}       
+
+        {debateTopics7.map((debate) => (
+              <Card key={debate.id} style={styles.card}>
+                <Card.Title
+                  title={<Text style={{ fontWeight: 'bold' }}>{debate.topic}</Text>}
+                  subtitle={debate.description}
+                  right={(props) => (
+                    <IconButton
+                      {...props}
+                      icon="volume-high"
+                      onPress={() => speak(debate.topic)}
+                    />
+                  )}
+                />
+                <Card.Content>
+                  <List.Section>
+
+                  <List.Accordion
+          title="WHY DO YOU GO TO CHURCH?"
+          left={(props) => (
+            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+          )}
+        >
+          {debate.arguments1.map((arg, index) => {
+            const boldPhrases = [
+              "I'm grateful to",
+              "fullfill",
+            ];
+
+            const regex = new RegExp(`(${boldPhrases.join('|')})`, 'gi');
+            const parts = arg.debate.split(regex);
+
+            return (
+              <List.Item
+                key={index}
+                title={() => (
+                  <Text>
+                    {parts.map((part, i) => {
+                      const isBold = boldPhrases.some(
+                        (phrase) =>
+                          phrase.toLowerCase() === part.trim().toLowerCase()
+                      );
+                      return (
+                        <Text key={i} style={isBold ? { fontWeight: 'bold' } : {}}>
+                          {part}
+                        </Text>
+                      );
+                    })}
+                  </Text>
+                )}
+
+              />
+            );
+          })}
+        </List.Accordion>
+
+                     <List.Accordion
+                          title="DEBATE—POLITICAL TERMS 
+                           WHAT DO YOU THINK ABOUT THE GOVERNMENT ?"
+                           
+                          left={(props) => (
+                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                              )}
+                          >
+                          <View style={styles.table}>
+                            <View style={styles.tableRow}>
+                                <RNText style={styles.tableHeader}>English</RNText>
+                                  <RNText style={styles.tableHeader}>French</RNText>
+                                                       <RNText style={styles.tableHeader}>Malagasy</RNText>
+                                                     </View>
+                                                     {debate.arguments2.map((item, index) => (
+                                                       <View key={index} style={styles.tableRow}>
+                                                         <RNText style={styles.tableCell}>{item.debate}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                              </View>
+                            ))}
+                          </View>
+                      </List.Accordion>       
+                  </List.Section>
+                </Card.Content>
+              </Card>
+            ))}
+
+          {debateTopics8.map((debate) => (
+              <Card key={debate.id} style={styles.card}>
+                <Card.Title
+                  title={<Text style={{ fontWeight: 'bold' }}>{debate.topic}</Text>}
+                  subtitle={debate.description}
+                  right={(props) => (
+                    <IconButton
+                      {...props}
+                      icon="volume-high"
+                      onPress={() => speak(debate.topic)}
+                    />
+                  )}
+                />
+                <Card.Content>
+                  <List.Section>
+                     <List.Accordion
+                          title="WHAT DO YOU THINK ABOUT THE GOVERNMENT ? "
+                          left={(props) => (
+                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                              )}
+                          >
+                          <View style={styles.table}>
+                            <View style={styles.tableRow}>
+                                <RNText style={styles.tableHeader}>English</RNText>
+                                  <RNText style={styles.tableHeader}>French</RNText>
+                                                       <RNText style={styles.tableHeader}>Malagasy</RNText>
+                                                     </View>
+                                                     {debate.arguments1.map((item, index) => (
+                                                       <View key={index} style={styles.tableRow}>
+                                                         <RNText style={styles.tableCell}>{item.debate}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                              </View>
+                            ))}
+                          </View>
+                      </List.Accordion>
+                  </List.Section>
+                </Card.Content>
+              </Card>
+            ))} 
+
+          {debateTopics9.map((debate) => (
+              <Card key={debate.id} style={styles.card}>
+                <Card.Title
+                  title={<Text style={{ fontWeight: 'bold' }}>{debate.topic}</Text>}
+                  subtitle={debate.description}
+                  right={(props) => (
+                    <IconButton
+                      {...props}
+                      icon="volume-high"
+                      onPress={() => speak(debate.topic)}
+                    />
+                  )}
+                />
+                <Card.Content>
+                  <List.Section>
+                     <List.Accordion
+                          title="ARE YOU AGAINST OR FOR ABORTION?"
+                          left={(props) => (
+                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                              )}
+                          >
+                          <View style={styles.table}>
+                            <View style={styles.tableRow}>
+                                <RNText style={styles.tableHeader}>English</RNText>
+                                  <RNText style={styles.tableHeader}>French</RNText>
+                                                       <RNText style={styles.tableHeader}>Malagasy</RNText>
+                                                     </View>
+                                                     {debate.arguments1.map((item, index) => (
+                                                       <View key={index} style={styles.tableRow}>
+                                                         <RNText style={styles.tableCell}>{item.debate}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                              </View>
+                            ))}
+                          </View>
+                      </List.Accordion>
+                  </List.Section>
+                </Card.Content>
+              </Card>
+            ))} 
+
+
+
+           
 
     </ScrollView>
   );
