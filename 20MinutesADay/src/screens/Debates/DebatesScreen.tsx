@@ -1677,179 +1677,174 @@ const debateTopics9 = [
         malagasyTranslation: " Mampiahiahy "
       },
       {
-        debate: "TO PROMISE[pramis]",
-        frenchTranslation: " Promettre",
-        malagasyTranslation: " Mampanantena "
+        debate: "TO SUSPECT[saspekt]",
+        frenchTranslation: " Soupçonner",
+        malagasyTranslation: " Miahiahy ny zavatra "
       },
       {
-        debate: "TO FAIL TO FULFILL[foulfil]",
-        frenchTranslation: " Echouer (d’accomplir) ",
-        malagasyTranslation: " Tsy mahatanteraka "
+        debate: "TO GIVE SB A CALL/RING",
+        frenchTranslation: " Passer un coup de fil à ",
+        malagasyTranslation: " Miantso antariby "
       },
       {
-        debate: "TO CHANGE[treinje]",
-        frenchTranslation: " Changer ",
-        malagasyTranslation: " Manova"
+        debate: "TO MAKE AN EMERGENCY CALL",
+        frenchTranslation: " Passer un Appel d’urgence",
+        malagasyTranslation: " Antso maika"
       },
       {
-        debate: "TO REHABILITATE/RE-ESTABLISH",
-        frenchTranslation: " Réhabiliter",
-        malagasyTranslation: " Manamboatra indray"
+        debate: "TO EVACUATE[ivakioeit]",
+        frenchTranslation: " Evacuer",
+        malagasyTranslation: " Mamindra toerana olona"
       },
       {
-        debate: " TO RENEW[rinio]",
-        frenchTranslation: " Rénouveller ",
-        malagasyTranslation: " Manova/Manavao "
+        debate: "BY AN AMBULANCE[embiolense]",
+        frenchTranslation: " Par une ambulance ",
+        malagasyTranslation: " Par une ambulance"
       },
       {
-        debate: "TO CREATE[kriet]",
-        frenchTranslation: "  Créer",
-        malagasyTranslation: " Mamorona"
+        debate: "TO HOSPITALIZE[hospitalaiz]",
+        frenchTranslation: "  Faire hospitalisé qlqn",
+        malagasyTranslation: " Mandefa olona any @ hopitaly"
       },
       {
-        debate: "TO ELIMINATE[ilimineit] ",
-        frenchTranslation: " Eliminer",
-        malagasyTranslation: " Manala"
+        debate: "TO BE ON DUTY DOCTOR ",
+        frenchTranslation: " Etre en garde",
+        malagasyTranslation: " Manao garda any @ hopitaly"
       },
       {
-        debate: "TO REDUCE[redios] ",
-        frenchTranslation: " Réduire ",
-        malagasyTranslation: " Mampidina"
+        debate: "VACCINATION[vaksineisen]",
+        frenchTranslation: " vaccin",
+        malagasyTranslation: " Vaksiny"
       },
       {
-        debate: "TO SHELL/BOMBARD",
-        frenchTranslation: " Bombarder",
-        malagasyTranslation: " Manjera baomba "
+        debate: "TO GIVE AN INJECTION TO SB",
+        frenchTranslation: " Faire une piqûre à qn",
+        malagasyTranslation: " Mitsindrona "
       },
       {
-        debate: "TO EXPLOID/BLAST ",
-        frenchTranslation: " Exploser/faire sauter ",
-        malagasyTranslation: " Mampipoaka"
+        debate: "TO HAVE HIGH/LOW BLOOD PRESSURE",
+        frenchTranslation: " Avoir une hypertension ",
+        malagasyTranslation: " Misytension(midina)"
       },
       {
-        debate: "TO SHOOT/FIRE[fair]",
-        frenchTranslation: " Tirer",
-        malagasyTranslation: " Mitifitra"
+        debate: "TO RESUSCITATE[risasiteit]",
+        frenchTranslation: " Réanimer",
+        malagasyTranslation: " Mamelo indray"
       },
       {
-        debate: "TO SUPPLY[saplai]PROVIDE[provaid]",
-        frenchTranslation: " Fournir",
-        malagasyTranslation: " Mamatsy"
+        debate: "THE RESUSCITATION",
+        frenchTranslation: " La réanimation",
+        malagasyTranslation: " Famelomana"
       },
       {
-        debate: "A WEAPON[wepen] ",
-        frenchTranslation: " Arme",
-        malagasyTranslation: " Fitaova-piadiana "
+        debate: "TO PUT A DRESSING",
+        frenchTranslation: " Faire une pansement",
+        malagasyTranslation: " Manao pansement "
       },
       {
-        debate: "TO HUNT[hant]",
-        frenchTranslation: " Chasser",
-        malagasyTranslation: " Manenjika/mihaza "
+        debate: "TO SEND SB HOME/TO BE DISCHARGED",
+        frenchTranslation: " Renvoyer/renvoyé",
+        malagasyTranslation: " Mandefa olona mody "
       },
       {
-        debate: " TO EXILE[igzail]/BE IN EXILE",
-        frenchTranslation: " Exiler/ être en éxil ",
-        malagasyTranslation: " Sesitany politika"
+        debate: "TO FEEL DIZZY",
+        frenchTranslation: " Avoir le vertige  ",
+        malagasyTranslation: " Fanina"
       },
       {
-        debate: "REFUGEE[refioj] ",
-        frenchTranslation: " Réfugie ",
-        malagasyTranslation: " Mpifindra toerana"
+        debate: "TO BE FAINT[feint]",
+        frenchTranslation: "S’évanouir",
+        malagasyTranslation: " Torana"
       },
       {
-        debate: "TO IMMIGRATE[imigreit]",
-        frenchTranslation: " Immigrer ",
-        malagasyTranslation: " Mifindra monina "
+        debate: "TO WOUND",
+        frenchTranslation: " Blesser",
+        malagasyTranslation: " Maratra "
       },
       {
-        debate: "TO MASSACRE[masaker]",
-        frenchTranslation: " Massacrer ",
-        malagasyTranslation: " Mamono olona "
+        debate: "TO HURT[hert]",
+        frenchTranslation: " Blesser",
+        malagasyTranslation: "Mandratra olona/maratra"
       },
       {
-        debate: "TO SLAUGHTER[sloter]",
-        frenchTranslation: " Abattre/tuer ",
-        malagasyTranslation: " Mamono biby/olona "
+        debate: "TO HAVE A HEART[hart]ATTACK",
+        frenchTranslation: " Avoir une crise cardiaque ",
+        malagasyTranslation: " Marary fo"
       },
       {
-        debate: " TO FACE/ENCOUNTER[inkaonter]",
-        frenchTranslation: " Faire face à",
-        malagasyTranslation: " Miatrika"
+        debate: "TO HAVE A HEART FAILURE[felir]",
+        frenchTranslation: " Avoir arrêt du Coeur",
+        malagasyTranslation: " Mijanona tampoka ny fo"
       },
       {
-        debate: "TO RECONCILE[rekonsail]",
-        frenchTranslation: " Réconcilier",
-        malagasyTranslation: " Mampihavana"
+        debate: "TO ABORT[ebort]",
+        frenchTranslation: " Avorter",
+        malagasyTranslation: " Manala zaza"
       },
       {
-        debate: "TO GRANT AN AMNISTY",
-        frenchTranslation: " Donner une amnistie",
-        malagasyTranslation: " Manome famelana(politika)"
+        debate: "TO HAVE AN ABORTION",
+        frenchTranslation: " Se faire avorter",
+        malagasyTranslation: " Manala zaza"
       },
       {
-        debate: "THE ACT OF GRACE ",
-        frenchTranslation: " La loi d’amnistie",
-        malagasyTranslation: " Lalàna ny famelan-kelona"
+        debate: "ABORTION LAW[lôou]",
+        frenchTranslation: " La loi d’avortement",
+        malagasyTranslation: " Lalàna mikasika ny fanalana zaza"
       },
       {
-        debate: "TO OPPOSE TO SB",
-        frenchTranslation: " S’opposer",
-        malagasyTranslation: " Manohitra"
+        debate: "ABORTION PILL",
+        frenchTranslation: " Pillule abortive",
+        malagasyTranslation: " Fanafody fanalana zaza"
       },
       {
-        debate: "TO ARGUE[argio]",
-        frenchTranslation: " Argumenter",
-        malagasyTranslation: " Maneho hevitra"
+        debate: "TO MISCARRY[miskeri]",
+        frenchTranslation: " Faire une fausse couche ",
+        malagasyTranslation: " Afa-jaza"
       },
       {
-        debate: "TO BE IN CONFLICT WITH SB",
-        frenchTranslation: " Etre en conflit",
-        malagasyTranslation: " Mifamaly"
+        debate: "A MISCARRIAGE[miskeridze]",
+        frenchTranslation: " Une fausse couche",
+        malagasyTranslation: " Fahafan-jaza"
       },
       {
-        debate: "A CAR BOMB[kar bam]",
-        frenchTranslation: " Voiture piégée",
-        malagasyTranslation: " Fiara voasesika baomba"
+        debate: "TO BE PREMATURE[primatrer]",
+        frenchTranslation: " Etre prématuré",
+        malagasyTranslation: " Zaza tsy tonga volana"
       },
       {
-        debate: "TO DEFUSE[difioz] a situation/crisis",
-        frenchTranslation: " Désarmorcer (bombe) ",
-        malagasyTranslation: " Mampitsahatra baomba"
+        debate: "TO BE PREGNANT[prignent]",
+        frenchTranslation: " Etre enceinte",
+        malagasyTranslation: " Bevohoka"
       },
       {
-        debate: "FIRST/SECOND[seken] TERM",
-        frenchTranslation: " 1 /2 eme MANDAT",
-        malagasyTranslation: " ½ ème mandat "
+        debate: "TO EXPECT A BABY",
+        frenchTranslation: " Attendre un enfant",
+        malagasyTranslation: " Mitondra vohoka"
       },
       {
-        debate: "A GUNMAN[ganman]",
-        frenchTranslation: " Bandit armé ",
-        malagasyTranslation: " Olona mirongo basy"
+        debate: "PREGNANCY[prignensi]",
+        frenchTranslation: " Grossesse ",
+        malagasyTranslation: " Vohoka"
       },
       {
-        debate: "A LETTER BOMB",
-        frenchTranslation: " Lettre piégée",
-        malagasyTranslation: " Baomba voafono",
+        debate: "TO GIVE A BIRTH[berf",
+        frenchTranslation: " Accoucher",
+        malagasyTranslation: " Miteraka",
       },
       {
-        debate: "TO MINE[main]",
-        frenchTranslation: " Minier ",
-        malagasyTranslation: " Mandevina baomba"
+        debate: "TO BE BORN BY CAESAREAN[siserien]",
+        frenchTranslation: " Naître par césarienne",
+        malagasyTranslation: " Didina(vehivavy)"
       },
       {
-        debate: "TO APPOINT SB ",
-        frenchTranslation: " Nominer",
-        malagasyTranslation: " Mifidy olona "
+        debate: "TO BEAR(to be born)",
+        frenchTranslation: " Naître/Etre né",
+        malagasyTranslation: " Miteraka/teraka "
       },
       {
-        debate: "TO CONSPIRE/PLOT TO DO STH ",
-        frenchTranslation: " Conspirer/comploter",
-        malagasyTranslation: " Mikonokonona "
-      },
-      {
-        debate: "A MILITANT(activist)/SEPARATIST ",
-        frenchTranslation: " Militant/Separatiste",
-        malagasyTranslation: " Mpanohana/mpandray anjara"
+        debate: "TO LOOK FORWARD TO+V.ING ",
+        frenchTranslation: " Avoit hâte de",
+        malagasyTranslation: " Tsy mahahandry ny… "
       },
       
     ],
@@ -1857,6 +1852,489 @@ const debateTopics9 = [
  
 ];
 
+
+const debateTopics10 = [
+  {
+    id: 1,
+    topic: 'Lesson 59: DEBATE--MEDICAL TERMS',
+    description: 'ARE YOU AGAINST OR FOR ABORTION? ',
+    arguments1: [
+      {
+        debate: "TO BE BARREN/STERILE[sterail] ",
+        frenchTranslation: " Etre stérile",
+        malagasyTranslation: " Momba"
+      },
+      {
+        debate: "TO MENSTRUATE[menstrouet]",
+        frenchTranslation: " Avoir ses règles ",
+        malagasyTranslation: " Tonga fotoana"
+      },
+      {
+        debate: "TO BE IN ONE’S PERIOD",
+        frenchTranslation: " Avoir ses règles ",
+        malagasyTranslation: " ………//……….."
+      },
+      {
+        debate: "MENSTRUAL PERIOD",
+        frenchTranslation: " Cycle menstruel ",
+        malagasyTranslation: " Fotoan’ny regle"
+      },
+      {
+        debate: "TO CONCEIVE[kansiv]BABY",
+        frenchTranslation: " Concevoir un bebé",
+        malagasyTranslation: " Manamboatra zaza/ miteraka"
+      },
+      {
+        debate: "TO HAVE A SCAN/AN ULTRA-SOUND ",
+        frenchTranslation: " Se faire faire une échographie",
+        malagasyTranslation: " Manao echo"
+      },
+      {
+        debate: "TO PUT A BABY IN AN INCUBATOR",
+        frenchTranslation: " Mettre un bébé dans une couveuse",
+        malagasyTranslation: " Atao anaty kovezy"
+      },
+      {
+        debate: " TO WEIGH[wei]",
+        frenchTranslation: " Pèser ",
+        malagasyTranslation: " Mandanja"
+      },
+      {
+        debate: "BIRTH WEIGHT",
+        frenchTranslation: " Le poids de naissance ",
+        malagasyTranslation: " Lanjan’ny zaza vao teraka"
+      },
+      {
+        debate: "TO GET A WOMAN PREGNANT",
+        frenchTranslation: " Mettre une femme enceinte",
+        malagasyTranslation: " Maha-bevoka vehivavy "
+      },
+      {
+        debate: "TO HAVE SEX WITH SB",
+        frenchTranslation: " Faire l’amour ",
+        malagasyTranslation: " Manao firaisana aran’ofo "
+      },
+      {
+        debate: "TO MAKE LOVE WITH SB",
+        frenchTranslation: " Faire l’amour ",
+        malagasyTranslation: " Manao firaisana aran’ofo"
+      },
+      {
+        debate: "TO HAVE A SIDE EFFECT ON SB[said ifekt]",
+        frenchTranslation: " Avoir un effet secondaire ",
+        malagasyTranslation: " Misy voka-dratsy "
+      },
+      {
+        debate: "TO CAUSE/PROVOKE[provouk] ",
+        frenchTranslation: " Causer/provoquer ",
+        malagasyTranslation: " Mahatonga "
+      },
+      {
+        debate: "TO ABSTAIN FROM STH",
+        frenchTranslation: " S’abstenir ",
+        malagasyTranslation: " Mionona tsy hanao zavatra iray"
+      },
+      {
+        debate: "TO BE VIRGIN[virdjin]",
+        frenchTranslation: " Etre vierge",
+        malagasyTranslation: " Virijiny"
+      },
+      {
+        debate: "TO USE CONDOM[kandom]",
+        frenchTranslation: " Utiliser un préservatif",
+        malagasyTranslation: " Mampiasa fimailo/kapoty "
+      },
+      {
+        debate: "TO BE DISABLED/HANDICAPED",
+        frenchTranslation: " Etre handicapé(e)",
+        malagasyTranslation: " Sembana"
+      },
+      {
+        debate: "TO DO PROTECTED SEX",
+        frenchTranslation: "  Faire un rapport sexuel protegé ",
+        malagasyTranslation: " Firaisana ara-nofo voa aro"
+      },
+      {
+        debate: "THE WOMB[om]",
+        frenchTranslation: " L’utérus ",
+        malagasyTranslation: " Tranon-jaza "
+      },
+      {
+        debate: "A FOETUS",
+        frenchTranslation: "  Le foetus ",
+        malagasyTranslation: "  Zaza ao an-kibo"
+      },
+      {
+        debate: " TO TAKE CARE OF SB ",
+        frenchTranslation: "  Prendre soin de qlq1 ",
+        malagasyTranslation: " Mikarakara olona"
+      },
+      {
+        debate: "TO BRING UP THE BABY ",
+        frenchTranslation: " Elever un enfant ",
+        malagasyTranslation: " Mitaiza olona "
+      },
+      {
+        debate: "TO ABANDON/GIVE UP ",
+        frenchTranslation: "Abandonner ",
+        malagasyTranslation: " Mamela zavatra "
+      },
+      {
+        debate: "TO PASS AWAY/TO DIE[dai] ",
+        frenchTranslation: " Mourir ",
+        malagasyTranslation: " Maty "
+      },
+      {
+        debate: "TO KILL/MURDER[merder] ",
+        frenchTranslation: " Tuer",
+        malagasyTranslation: " Mamono "
+      },
+      {
+        debate: "IT IS THE WAY TO+V.INF/OF+V.ING",
+        frenchTranslation: " C’est une façon de ",
+        malagasyTranslation: " Anisan’ny Fomba iray… "
+      },
+      {
+        debate: "TO SUICIDE[soisaid] ",
+        frenchTranslation: "  Suicider",
+        malagasyTranslation: " Mamono-tena "
+      },
+      {
+        debate: "TO TAKE SB’S LIFE[teik]",
+        frenchTranslation: "Oter la vie de qlq1 ",
+        malagasyTranslation: " Mamono olona "
+      },
+      {
+        debate: "TO PROHIBIT[prohibit]/FORBID ",
+        frenchTranslation: " Interdire ",
+        malagasyTranslation: " Misakana "
+      },
+      {
+        debate: " TO BE ILLEGAL[iligol]",
+        frenchTranslation: " Illégal",
+        malagasyTranslation: " Voarara ny lalàna"
+      },
+      {
+        debate: "TO BE LEGAL[legal] ",
+        frenchTranslation: " Légal ",
+        malagasyTranslation: " Manara-dalana "
+      },
+      {
+        debate: "TO VIOLATE[vaioleit]THE LAW ",
+        frenchTranslation: " Enfreindre la loi",
+        malagasyTranslation: " Mandika lalàna "
+      },
+      {
+        debate: " TO RUIN[rouin]/TO DESTROY/MESS UP ",
+        frenchTranslation: " Ruiner/détruire/gâcher",
+        malagasyTranslation: "  Mamotika/manimba "
+      },
+      {
+        debate: " TO MAKE A MISTAKE[misteik] ",
+        frenchTranslation: " Faire une erreur",
+        malagasyTranslation: " Manao hadisoana "
+      },
+      {
+        debate: "TO WASTE YOUR LIFE [weist] ",
+        frenchTranslation: " Gâcher sa vie",
+        malagasyTranslation: "  Manimba fiainana/ ny hoavy"
+      },
+      {
+        debate: "TO SPOIL YOUR CHANCES[trensiz] ",
+        frenchTranslation: " Gâcher ses chances de succès ",
+        malagasyTranslation: " Manimba ny vintanao "
+      },
+      {
+        debate: "TO CIRCUMCISE[serkamsaiz] ",
+        frenchTranslation: " Circoncire ",
+        malagasyTranslation: " Didi-potra/famorana "
+      },
+      
+    ],
+    arguments2: [
+      {
+        debate:`     Well, thanks, I think that I’m gonna directly answer the question, to me, personally, as a Christian I’m absolutely against the abortion as it is a way to kill someone indirectly. And I think that we also have a law which forbids the practice of abortion by any girls and women. But we need to know why many young girls as well as the couple have an abortion, to me, they do that, because they are not yet ready for taking care of a child, they are not mature, not only that, but also they are afraid of their parents, because, no parents accept to be the grandparents of an illegimate child, it would slander them amongst the society. And for the couple, I think their problem is that they may have enough children, and they want to limit it, even if it happens sometimes, but that’s life. Abortion is bad for any future mother as it can provoke desease in the woman, it means, she may become barren, I
+mean, fertile at any time and that’s the problem. Having an abortion has a lot of side effects, like a
+cancer of the womb and so on. However, I agree with the abortion, when it`,
+      },
+
+    ],
+
+  },
+ 
+];
+
+
+const debateTopics11 = [
+  {
+    id: 1,
+    topic: 'Lesson 60: DEBATE--AGRICULTURE',
+    description: 'WHAT IF THE PEASANT MOVES TO THE TOWN? ',
+    arguments1: [
+      {
+        debate:`  
+          WHAT IF………SI………..AHOANA RAHA……….
+        \n 
+        \n IF EVER……….SI JAMAIS……..RAHA SANATRIA………..
+        \n`,
+      },
+    ],
+    arguments2: [
+      
+      {
+        debate: "THE RICEFIELD[raisfild]/RICE PADDY ",
+        frenchTranslation: " Rizière ",
+        malagasyTranslation: " Tanimbary"
+      },
+      {
+        debate: "THE FIELD",
+        frenchTranslation: " Champ ",
+        malagasyTranslation: " Tanimboly"
+      },
+      {
+        debate: "THE PEASANT[pizent]/FARMER",
+        frenchTranslation: " Paysan/Cultivateur",
+        malagasyTranslation: " Mpamboly"
+      },
+      {
+        debate: "TO GROW[grôou]/PLANT",
+        frenchTranslation: " Planter/cultiver ",
+        malagasyTranslation: "  Mamboly"
+      },
+      {
+        debate: "TO PLUCK[plak]/UPROOT[aprout] ",
+        frenchTranslation: " Arracher/extirper ",
+        malagasyTranslation: " Manongotra(mangahazo)"
+      },
+      {
+        debate: "TO SPROUT[spraot]",
+        frenchTranslation: " Pousser",
+        malagasyTranslation: " Mitsimoka"
+      },
+      {
+        debate: "TO BREED[brid] CATTLE[ketel]",
+        frenchTranslation: " Elever de bétail ",
+        malagasyTranslation: " Miompy"
+      },
+      {
+        debate: "TO WEED[wid]",
+        frenchTranslation: " Désherber ",
+        malagasyTranslation: " Miava"
+      },
+      {
+        debate: "TO RAKE[reik]",
+        frenchTranslation: " Ratisser",
+        malagasyTranslation: " Mampiasa râteau"
+      },
+      {
+        debate: "TO SOW[sôou]",
+        frenchTranslation: " Semer",
+        malagasyTranslation: " Mamafy "
+      },
+      {
+        debate: "TO REAP[rip]/HARVERST",
+        frenchTranslation: " Récolter",
+        malagasyTranslation: " Mijinja"
+      },
+      {
+        debate: "TO GRAFT[greft]",
+        frenchTranslation: " Greffer",
+        malagasyTranslation: " Manao grefy"
+      },
+      {
+        debate: "TO TRANSPLANT",
+        frenchTranslation: " Transplanter",
+        malagasyTranslation: " Mamboly "
+      },
+      {
+        debate: " TO FERTILIZE[fertilaiz]",
+        frenchTranslation: " Fertiliser",
+        malagasyTranslation: " Mandonaka/mampiasa zezika "
+      },
+      {
+        debate: "FERTILIZER",
+        frenchTranslation: " L’engrais",
+        malagasyTranslation: " Zezika"
+      },
+      {
+        debate: "TO TRIM ",
+        frenchTranslation: " Tailler ",
+        malagasyTranslation: " Manapaka ahitra mba hitovy tsara"
+      },
+      {
+        debate: "TO SOD[sad]",
+        frenchTranslation: " Gazonner",
+        malagasyTranslation: " Mametraka gazon"
+      },
+      {
+        debate: "TO GATHER[gader]",
+        frenchTranslation: " Rassembler ",
+        malagasyTranslation: " Mamory"
+      },
+      {
+        debate: "TO COLLECT [kalekt]",
+        frenchTranslation: "  Collecter ",
+        malagasyTranslation: " Manangona"
+      },
+      {
+        debate: "SEED[sid]",
+        frenchTranslation: " Graine/céréale /semence ",
+        malagasyTranslation: " Voa"
+      },
+     
+      {
+        debate: "CROP[krap]",
+        frenchTranslation: " Récolte/moisson ",
+        malagasyTranslation: " Vokatra"
+      },
+      {
+        debate: "TO CHOP[trap]/CUT[kat]",
+        frenchTranslation: " Couper/ ",
+        malagasyTranslation: " Manapaka zvt"
+      },
+      {
+        debate: "TO CLEAR[klir]by an AX",
+        frenchTranslation: " Défricher par une hâche ",
+        malagasyTranslation: " Manapaka amin’ny famaky"
+      },
+      {
+        debate: "TO BURN[bern]",
+        frenchTranslation: " Briller ",
+        malagasyTranslation: " Mandoro"
+      },
+      {
+        debate: "THE BUSHFIRE[boush fair]/WILDFIRE",
+        frenchTranslation: " Feux de brousse ",
+        malagasyTranslation: " Doro tanety"
+      },
+      {
+        debate: "TO PLOW/PLOUGH[plao]",
+        frenchTranslation: " Labourer",
+        malagasyTranslation: " Miasa amin’ny angadinomby"
+      },
+      {
+        debate: "A PLOW[plao]",
+        frenchTranslation: " Charrue ",
+        malagasyTranslation: " Angadinomby"
+      },
+      {
+        debate: "TO WATER",
+        frenchTranslation: " Arroser",
+        malagasyTranslation: " Manondraka rano"
+      },
+      {
+        debate: "CHANEL/DRAINAGE[drenidje]CANAL",
+        frenchTranslation: " Canal de drainage ",
+        malagasyTranslation: " Kanalin-drano"
+      },
+      {
+        debate: "TO BE RIPE[raip]",
+        frenchTranslation: " Mûr ",
+        malagasyTranslation: " Masaka"
+      },
+      {
+        debate: "TO BE RAW[ro]",
+        frenchTranslation: " Cru ",
+        malagasyTranslation: " Manta"
+      },
+      {
+        debate: "TO HAUL[hol]/TRANSPORT",
+        frenchTranslation: " Transporter ",
+        malagasyTranslation: " Mitatitra"
+      },
+      {
+        debate: "TO SIEVE[siv]",
+        frenchTranslation: " Tamiser ",
+        malagasyTranslation: " Misivana"
+      },
+      {
+        debate: "TO GRIND[graind]",
+        frenchTranslation: " Moudre ",
+        malagasyTranslation: " Mitoto"
+      },
+      {
+        debate: "GRINDER[grainder]",
+        frenchTranslation: " Moulin/broyeur ",
+        malagasyTranslation: " Fitotoana zavatra"
+      },
+      {
+        debate: "THE SHUCK[shak]",
+        frenchTranslation: " Ecale ",
+        malagasyTranslation: " Ampombo"
+      },
+      {
+        debate: "TO SUPPLY[saplai]/PROVIDE[provaid]",
+        frenchTranslation: " Fournir ",
+        malagasyTranslation: " Mamatsy"
+      },
+      {
+        debate: "THE DROUGHT[drot]",
+        frenchTranslation: " Sécheresse ",
+        malagasyTranslation: " Haintany[maina]"
+      },
+      {
+        debate: "TO BE DRIED[draid]",
+        frenchTranslation: " Etre sec ",
+        malagasyTranslation: " Maina"
+      },
+      {
+        debate: "CLIMATE CHANGE[klaimet]",
+        frenchTranslation: " Changement climatique ",
+        malagasyTranslation: " Fiovan’ny toe-trandro"
+      },
+      {
+        debate: "GLOBAL WARMING[globol wormin]",
+        frenchTranslation: " Réchauffement planétaire ",
+        malagasyTranslation: " Hafanana maneran-tana"
+      },
+      {
+        debate: "FAMINE/HUNGER[hanger]",
+        frenchTranslation: " Famine/faim ",
+        malagasyTranslation: " Anoanana"
+      },
+      {
+        debate: "TO HAVE THE MEANS TO",
+        frenchTranslation: " Avoir le moyen de ",
+        malagasyTranslation: " Manana fahafahana"
+      },
+      {
+        debate: "THE MEANS OF TRANSPORT",
+        frenchTranslation: " Moyen de transport ",
+        malagasyTranslation: " Fomba fitaterana"
+      },
+      {
+        debate: "TO HAVE PROPER[praper] EQUIPMENT",
+        frenchTranslation: " Avoir des matériels apropriés ",
+        malagasyTranslation: " Fitaovana mifandraika amin’ny"
+      },
+      {
+        debate: "THE VILLAGER/COUNTRY SIDE",
+        frenchTranslation: " Villageois/village ",
+        malagasyTranslation: " Tambanivohitra/ambanivohitra"
+      },
+      {
+        debate: "TO MOVE IN/OUT",
+        frenchTranslation: " Déplacer ",
+        malagasyTranslation: " Mifindra"
+      },
+      {
+        debate: "A TOWNEE[taoni]",
+        frenchTranslation: " Citadin(e) ",
+        malagasyTranslation: " Olona andrenivohitra"
+      },
+      {
+        debate: "(UNDER)-DEVELOPING COUNTRY[kantri]",
+        frenchTranslation: " Pays en voie de développement ",
+        malagasyTranslation: " Firenena an-dalanam-pandrosoana"
+      },
+      {
+        debate: "RURAL EXODUS [roral iksedes]",
+        frenchTranslation: " Exode rurale ",
+        malagasyTranslation: " Fifindrana"
+      },
+    ],
+  },
+];
 
 
 const DebatesScreen = () => {
@@ -2393,8 +2871,170 @@ const DebatesScreen = () => {
             ))} 
 
 
+        {debateTopics10.map((debate) => (
+              <Card key={debate.id} style={styles.card}>
+                <Card.Title
+                  title={<Text style={{ fontWeight: 'bold' }}>{debate.topic}</Text>}
+                  subtitle={debate.description}
+                  right={(props) => (
+                    <IconButton
+                      {...props}
+                      icon="volume-high"
+                      onPress={() => speak(debate.topic)}
+                    />
+                  )}
+                />
+                <Card.Content>
+                  <List.Section>
+                     <List.Accordion
+                          title="ARE YOU AGAINST OR FOR ABORTION? "
+                          left={(props) => (
+                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                              )}
+                          >
+                          <View style={styles.table}>
+                            <View style={styles.tableRow}>
+                                <RNText style={styles.tableHeader}>English</RNText>
+                                  <RNText style={styles.tableHeader}>French</RNText>
+                                                       <RNText style={styles.tableHeader}>Malagasy</RNText>
+                                                     </View>
+                                                     {debate.arguments1.map((item, index) => (
+                                                       <View key={index} style={styles.tableRow}>
+                                                         <RNText style={styles.tableCell}>{item.debate}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                              </View>
+                            ))}
+                          </View>
+                      </List.Accordion>
 
+                      <List.Accordion
+          title="  Are you against or for the abortion?"
+          left={(props) => (
+            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+          )}
+        >
+          {debate.arguments2.map((arg, index) => {
+            const boldPhrases = [
+              "imparting",
+              "mature",
+              "lives",
+            ];
+
+            const regex = new RegExp(`(${boldPhrases.join('|')})`, 'gi');
+            const parts = arg.debate.split(regex);
+
+            return (
+              <List.Item
+                key={index}
+                title={() => (
+                  <Text>
+                    {parts.map((part, i) => {
+                      const isBold = boldPhrases.some(
+                        (phrase) =>
+                          phrase.toLowerCase() === part.trim().toLowerCase()
+                      );
+                      return (
+                        <Text key={i} style={isBold ? { fontWeight: 'bold' } : {}}>
+                          {part}
+                        </Text>
+                      );
+                    })}
+                  </Text>
+                )}
+
+              />
+            );
+          })}
+        </List.Accordion>
+
+
+                  </List.Section>
+                </Card.Content>
+              </Card>
+            ))}
            
+
+           {debateTopics11.map((debate) => (
+              <Card key={debate.id} style={styles.card}>
+                <Card.Title
+                  title={<Text style={{ fontWeight: 'bold' }}>{debate.topic}</Text>}
+                  subtitle={debate.description}
+                  right={(props) => (
+                    <IconButton
+                      {...props}
+                      icon="volume-high"
+                      onPress={() => speak(debate.topic)}
+                    />
+                  )}
+                />
+                <Card.Content>
+                  <List.Section>
+
+                  <List.Accordion
+          title="WHAT IF THE PEASANT MOVES TO THE TOWN?"
+          left={(props) => (
+            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+          )}
+        >
+          {debate.arguments1.map((arg, index) => {
+            const boldPhrases = [
+              "I'm grateful to",
+              "fullfill",
+            ];
+
+            const regex = new RegExp(`(${boldPhrases.join('|')})`, 'gi');
+            const parts = arg.debate.split(regex);
+
+            return (
+              <List.Item
+                key={index}
+                title={() => (
+                  <Text>
+                    {parts.map((part, i) => {
+                      const isBold = boldPhrases.some(
+                        (phrase) =>
+                          phrase.toLowerCase() === part.trim().toLowerCase()
+                      );
+                      return (
+                        <Text key={i} style={isBold ? { fontWeight: 'bold' } : {}}>
+                          {part}
+                        </Text>
+                      );
+                    })}
+                  </Text>
+                )}
+
+              />
+            );
+          })}
+        </List.Accordion>
+
+                     <List.Accordion
+                          title="WHAT IF THE PEASANT MOVES TO THE TOWN?"
+                          left={(props) => (
+                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                              )}
+                          >
+                          <View style={styles.table}>
+                            <View style={styles.tableRow}>
+                                <RNText style={styles.tableHeader}>English</RNText>
+                                  <RNText style={styles.tableHeader}>French</RNText>
+                                                       <RNText style={styles.tableHeader}>Malagasy</RNText>
+                                                     </View>
+                                                     {debate.arguments2.map((item, index) => (
+                                                       <View key={index} style={styles.tableRow}>
+                                                         <RNText style={styles.tableCell}>{item.debate}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                                                         <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                              </View>
+                            ))}
+                          </View>
+                      </List.Accordion>       
+                  </List.Section>
+                </Card.Content>
+              </Card>
+            ))}    
 
     </ScrollView>
   );

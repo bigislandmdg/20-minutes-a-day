@@ -445,6 +445,172 @@ const dialogues3 = [
 ];
 
 
+const dialogues5 = [
+  {
+    id: 1,
+    title: 'Lesson 5: ASKING SB’S JOB',
+    description: 'BASIC SOCIAL ENCOUNTERS',
+    content1: [
+      {
+        sentence: " A- What’s your job/ what do you do for a living?",
+        pronunciation: '[watsior…dzab / wat do io do for e livin]',
+        translationFr: "Quel est votre métier ? / Que faites-vous dans la vie ?",
+        translationMg: "Inona no asanao ? / Inona no ataonao amin’ny fiainana andavanandro ?",
+      },
+      {
+        sentence: '→  What’s your profession',
+        pronunciation: '[prafeshen]',
+        translationFr: "Quelle est votre profession ?",
+        translationMg: "Inona ny asanao manokana ?",
+      },
+      {
+        sentence: 'B- Well, I’m doctor',
+        pronunciation: '[oel aim daktor]',
+        translationFr: "Eh bien, je suis médecin",
+        translationMg: "Eny, dokotera aho",
+      },
+      {
+        sentence: '→ I’m a dentist   I’m a student',
+        pronunciation: '[aim e student]',
+        translationFr: "Je suis dentiste / Je suis étudiant",
+        translationMg: "Dentista aho / Mpianatra aho",
+      },
+      {
+        sentence: 'I’m a teacher',
+        pronunciation: '[aim e titrer]',
+        translationFr: "Je suis enseignant",
+        translationMg: "Mpampianatra aho",
+      },
+      {
+        sentence: '- I’m a businessman ',
+        pronunciation: '',
+        translationFr: "Je suis un homme d’affaires",
+        translationMg: "Mpandraharaha aho",
+      },
+      {
+        sentence: 'I’m a housewife',
+        pronunciation: '[aim e haoswaif]',
+        translationFr: "Je suis femme au foyer",
+        translationMg: "Vehivavy mpikarakara tokantrano aho",
+      },
+      {
+        sentence: '-I’m a housekeeper',
+        pronunciation: '[aim e haoskiper]',
+        translationFr: "Je suis  femme de ménage",
+        translationMg: "Vehivavy mpikarakara tokantrano aho",
+      },
+      {
+        sentence: '- I’m a salesperson',
+        pronunciation: '[aim e seilsperson]',
+        translationFr: "Je suis Commerçant",
+        translationMg: "Mpivarotra",
+      },
+      {
+        sentence: '- I’m an accountant',
+        pronunciation: '[aim an akaontant]',
+        translationFr: "Je suis comptable",
+        translationMg: "Mpanao kaonty aho",
+      },      
+      {
+        sentence: 'A- Well, I’m now jobless / out of work',
+        pronunciation: '[wel, aim nao djoblès / aut ov werk]',
+        translationFr: "Eh bien, je suis actuellement sans emploi",
+        translationMg: "Eny, tsy an’asa aho amin’izao fotoana izao",
+      },
+      {
+        sentence: 'B- Yeah, good luck!',
+        pronunciation: '[ié, goud lak!]',
+        translationFr: "Oui, bonne chance !",
+        translationMg: "Eny, mirary soa!",
+      },
+      {
+        sentence: 'A- But, what’s your marital status/ Are you married?',
+        pronunciation: '[bʌt, wats yor marital steɪtəs / ar yu mɛrɪd?]',
+        translationFr: "Mais, quelle est votre situation matrimoniale ? / Êtes-vous marié ?",
+        translationMg: "Fa maninona, inona ny sata ara-piarahamonina  / Manambady ve ianao?",
+      },
+      {
+        sentence: 'B- Well, I’m married/single/divorced/a widower',
+        pronunciation: '[wɛl, aɪm mɛrɪd/ˈsɪŋɡl/ˈdɪvɔrst/ə wɪdoʊər]',
+        translationFr: "Eh bien, je suis marié/célibataire/divorcé/fianceé",
+        translationMg: "Eny, manambady/tsy manambady/misarabady/ fofom-bady aho",
+      }
+          
+    ],
+    content2: [
+      {
+        sentence: "A- So, what grade are you in? (for High school student)",
+        pronunciation: "[so, wʌt greɪd ɑr ju ɪn]",
+        translationFr: "Alors, en quelle classe es-tu ? (pour un élève de lycée)",
+        translationMg: "Kilasy faha-firy ianao izao? (ho an'ny mpianatra ambaratonga faharoa)",
+      },
+      
+      {
+        sentence: "Well, I’m in tenth/eleventh/twelfth grade",
+        pronunciation: "",
+        translationFr: "Eh bien, je suis en classe de seconde",
+        translationMg: "",
+      },
+      {
+        sentence: "A- What year are you in? (for University student)",
+        pronunciation: "[watier………ario……in]",
+        translationFr: "→ En quelle année êtes-vous à l’université ?",
+        translationMg: "",
+      },
+      {
+        sentence: "A- Um, I’m in my first/second year (freshman)",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+
+      {
+        sentence: ` Types of jobs: Full-time job Part-time Self-employed man Permanent Job Temporary job `,
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: ` Day/night shift  Flextime: des horaires à la carte. Clock on/off (in/out) pointer `,
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+     
+
+    ],
+    content3: [
+      {
+        sentence: "A- What’s the date today? What’s today’s date?",
+        pronunciation: "[wʌts ðə deɪt təˈdeɪ? wʌts təˈdeɪz deɪt?]",
+        translationFr: "Quelle est la date aujourd'hui ?",
+        translationMg: "Inona ny daty androany?",
+      },      
+      {
+        sentence: " Today is the 1st of September, 2012 (British)",
+        pronunciation: "[tə'deɪ ɪz ðə fɜrst ʌv sɪpˈtɛmbər, tuː θaʊzənd twɛlv]",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: " It is September 1st, 2012(US)",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: "→ On+day+monthIn+Month+Year",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      
+    ],
+   
+   
+  },
+
+];
 
 const DailyDialoguesScreen = () => {
   const speak = (text: string) => {
@@ -657,6 +823,7 @@ const DailyDialoguesScreen = () => {
                       iconColor="#8da9c4"
                     />
                   )}
+                  
                 />
               ))}
             </List.Accordion>
@@ -937,6 +1104,99 @@ const DailyDialoguesScreen = () => {
 
 
 
+          </Card.Content>
+        </Card>
+      ))}
+
+{dialogues5.map((dialogue) => (
+        <Card key={dialogue.id} style={styles.card}>
+          <Card.Title
+            
+            title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
+            subtitle={dialogue.description}
+          />
+          <Card.Content>
+            <List.Accordion
+              title=" ASKING SB’S JOB"
+              left={(props) => <List.Icon {...props} icon="home-city" color='#8da9c4' />}
+            >
+              {dialogue.content1.map((line, index) => (
+                <List.Item
+                  key={index}
+                  title={<Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>}
+                  description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                    <IconButton
+                      icon="volume-high"
+                      size={24}
+                      onPress={() => speak(line.sentence)}
+                      iconColor="#8da9c4"
+                    />
+                  )}
+                />
+              ))}
+            </List.Accordion>
+
+            {/* Second Accordion */}
+            <List.Accordion
+              title="SCHOOLING"
+              left={(props) => <List.Icon {...props} icon="school" color='#8da9c4' />}
+            >
+               {dialogue.content2.map((line, index) => (
+  <List.Item
+    key={index}
+    title={
+      <Text style={{ fontWeight: 'bold' }}>
+        {line.sentence} {'\n'}
+         Types of jobs: Full-time job {'\n'}
+        Part-time {'\n'}
+        Self-employed man {'\n'}
+        Permanent Job {'\n'}
+        Temporary job {'\n'}
+        Day/night shift {'\n'}
+        Flextime: des horaires à la carte. {'\n'}
+        Clock on/off (in/out) pointer
+      </Text>
+    }
+    description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+    descriptionStyle={styles.pronunciation}
+    right={() => (
+      <IconButton
+        icon="volume-high"
+        size={24}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    )}
+  />
+))}
+
+            </List.Accordion>
+
+            {/* Third Accordion */}
+            <List.Accordion
+              title="GENERAL QUESTION"
+              left={(props) => <List.Icon {...props} icon="information" color='#8da9c4' />}
+            >
+              {dialogue.content3.map((line, index) => (
+                <List.Item
+                  key={index}
+                  title={<Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>}
+                  description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                    <IconButton
+                      icon="volume-high"
+                      size={24}
+                      onPress={() => speak(line.sentence)}
+                      iconColor="#8da9c4"
+                    />
+                  )}
+                />
+              ))}
+            </List.Accordion>
+ 
           </Card.Content>
         </Card>
       ))}
