@@ -593,7 +593,7 @@ const dialogues5 = [
         translationMg: "",
       },
       {
-        sentence: " It is September 1st, 2012(US)",
+        sentence: "→ It is September 1st, 2012(US)",
         pronunciation: "",
         translationFr: "",
         translationMg: "",
@@ -608,6 +608,783 @@ const dialogues5 = [
     ],
    
    
+  },
+
+];
+
+
+const dialogues6 = [
+  {
+    id: 1,
+    title: 'Lesson 6: INTRODUCTION',
+    description: 'BASIC SOCIAL ENCOUNTERS',
+    content1: [
+      {
+        sentence: "A- Can you make yourself known please?",
+        pronunciation: "[kæn juː meɪk jɔːˈsɛlf nəʊn pliːz]",
+        translationFr: "Pouvez-vous vous faire connaître, s'il vous plaît ?",
+        translationMg: "Azonao ve ampahafantarina ny tenanao azafady ?"
+      },
+      {
+        sentence: '→ Can you please introduce yourself?',
+        pronunciation: "[kæn juː pliːz ˌɪntrəˈdjuːs jɔːˈsɛlf]",
+        translationFr: "Pouvez-vous vous présenter, s'il vous plaît ?",
+        translationMg: "Afaka mampahafantatra ny tenanao azafady ve ianao ?"
+      },      
+      {
+        sentence: '→ Can you talk a little bit about yourself?',
+        pronunciation: "[kæn juː tɔːk ə ˈlɪtl bɪt əˈbaʊt jɔːˈsɛlf]",
+        translationFr: "Pouvez-vous parler un peu de vous ?",
+        translationMg: "Azonao hazavaina kely ve ny momba anao ?"
+      },      
+      {
+        sentence: 'B-Yes, I can, well, I’m Randy',
+        pronunciation: "[jɛs aɪ kæn wɛl aɪm ˈrændi]",
+        translationFr: "Oui, bien sûr, je suis….",
+        translationMg: ""
+      },
+      {
+        sentence: '→ I’m from Tulear but I live here in…………..',
+        pronunciation: '[aim from………barai liv hirin……]',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ I’m a …..doctor ',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ I’m single/married with two kids, one boy and one girl.',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ I have two brothers and no sister/ I’m an only child [aimen onli traid] ',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: 'Well, what else can I tell you?',
+        pronunciation: '[wharelseknaitelio]',
+        translationFr: "Quoi d’autre puis-je vous dire?",
+        translationMg: "Inona koa no azoko lazaina ankoatr’izay ?",
+      },
+      {
+        sentence: '→ Yeah, I like to speak languages, like French and English.',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },      
+      {
+        sentence: '→ I think that’s all!',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+     
+          
+    ],
+    content2: [
+      {
+        sentence: "A- You know Jenny?",
+        pronunciation: "",
+        translationFr: "→ Tu connais Jenny?",
+        translationMg: "",
+      },
+      
+      {
+        sentence: "→ Excuse me, let me introduce you to my pal Jenny.",
+        pronunciation: "[ixkioz mi, lemi….jast…introdous io to mai……]",
+        translationFr: "→ Excuse-moi, laissez-moi présenter mon ",
+        translationMg: "→ Mamela ahy ianareo hampahafantatra ny namako.",
+      },
+      {
+        sentence: "→ (Informal) Jenny→Patrick→Patrick→Jenny",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: "→ I’d like youto meet my friend",
+        pronunciation: "[aid laik io to mit mai frend …..]",
+        translationFr: "J’aimerais présenter mon amie Jenny.",
+        translationMg: "",
+      },
+
+      {
+        sentence: `Do you know each other`,
+        pronunciation: "[itr ader]",
+        translationFr: "→ Vous vous-connaissez déjà ?",
+        translationMg: "Efa mifankafantra ve ianareo ?",
+      },
+      
+    ],
+    content3: [
+      {
+        sentence: "A- Where were you yesterday?",
+        pronunciation: "[wer weerio……ieste:dei]",
+        translationFr: "- Où étais-tu passé hier ?",
+        translationMg: "- Fa t’aiza ianao omaly ?",
+      },      
+      {
+        sentence: "B- Well, I was just at home all day to watch TV",
+        pronunciation: "",
+        translationFr: "Eh bien j’étais à la maison toute la journé pour regarder la Télé.",
+        translationMg: "",
+      },
+      {
+        sentence: "→ I went for a walk with my buddies yesterday.",
+        pronunciation: "",
+        translationFr: "- Je me suis promené avec mes amies.",
+        translationMg: "",
+      },
+      {
+        sentence: "→  Where have you been?",
+        pronunciation: "[Wer havio bin]",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: "→ Long time no see you?",
+        pronunciation: "",
+        translationFr: "- Ça fait longtemps qu’on ne s’est pas vu.",
+        translationMg: "- Efa ela izay isika tsy nifankahita ",
+      },
+      {
+        sentence: "→ I haven’t seen you in years?",
+        pronunciation: "[aɪ ˈhævənt siːn juː ɪn jɪəz]",
+        translationFr: "- Ça fait longtemps qu’on ne s’est pas vu.",
+        translationMg: "- Efa ela be izay no tsy nahitako anao."
+      },
+      {
+        sentence: "→ I haven’t seen you in a month of Sundays!",
+        pronunciation: "[ai haven’t sin io in e mant of sandeiz]",
+        translationFr: "",
+        translationMg: "",
+      },
+     
+      
+    ],
+   
+   
+  },
+
+];
+
+const dialogues7 = [
+  {
+    id: 1,
+    title: 'Lesson 7: FAMILY RELATIONSHIP ',
+    description: 'BASIC SOCIAL ENCOUNTERS',
+    content1: [
+      {
+        sentence: "A- Excuse me, what relation are you with Jessy?",
+        pronunciation: "",
+        translationFr: "Excuse-moi, quel est votre lien parenté avec Jessy?",
+        translationMg: "Mpifaninona ianao sy Jessy ? ?"
+      },
+      {
+        sentence: '→ What’s your relationship with him/her?',
+        pronunciation: "",
+        translationFr: "",
+        translationMg: ""
+      },      
+      {
+        sentence: '→ Have you met each other?',
+        pronunciation: "",
+        translationFr: "→ Vous vous connaissez?",
+        translationMg: ""
+      },      
+      {
+        sentence: 'B- Well, he/she is my brother/sister/in law',
+        pronunciation: "",
+        translationFr: "(Beau/belle) frère/ sœur",
+        translationMg: "Zaodahy/Zaobavy"
+      },
+      {
+        sentence: '→ Half brother/sister',
+        pronunciation: '',
+        translationFr: "Demi-frère/sœur",
+        translationMg: "---//-------",
+      },
+      {
+        sentence: '→ Cousin [kazin] ',
+        pronunciation: '',
+        translationFr: "Cousin(e) ",
+        translationMg: "Cousin(e)",
+      },
+      {
+        sentence: '→ Nephew[nifio]/ niece [nis]',
+        pronunciation: '',
+        translationFr: "Neveu/nièce",
+        translationMg: " Zana-drahalahy/bavy",
+      },
+      {
+        sentence: '→ Father/mother/ in law ',
+        pronunciation: '',
+        translationFr: "(Beau/belle) père/mère",
+        translationMg: "Rafozanan-dahy/mbavy",
+      },
+      {
+        sentence: '→ Uncle/ aunt[ankel/ont]',
+        pronunciation: '',
+        translationFr: "Oncle/tante",
+        translationMg: "Dadatoa/nenitoa",
+      },
+      {
+        sentence: '→ Husband/ wife[hazband/waif]',
+        pronunciation: '',
+        translationFr: "Mari/femme",
+        translationMg: "Vavy=wife/lahy=husband)",
+      },      
+      {
+        sentence: '→ Son[san]/daughter[doter]/in law',
+        pronunciation: '',
+        translationFr: "(Beau/belle) fils/fille",
+        translationMg: "Zanaka/vinanto/lahy/vavy",
+      },
+      {
+        sentence: '→ Grandson/daughter ',
+        pronunciation: '',
+        translationFr: "Petit fils/fille",
+        translationMg: "Zafy",
+      },
+      {
+        sentence: '→ → Step son/daughter',
+        pronunciation: '',
+        translationFr: "(Beau/belle) fils/fille",
+        translationMg: "Zana-bady",
+      },
+      {
+        sentence: '→ Step father/mother',
+        pronunciation: '',
+        translationFr: "(Beau/belle) père/mère",
+        translationMg: "Rai/reny-kely",
+      },
+      {
+        sentence: '→ Friend[frend] pal/ buddy[badi]',
+        pronunciation: '',
+        translationFr: "Ami(e)",
+        translationMg: "Namako",
+      },
+      {
+        sentence: '→ Workmate[workmeit]/ classmate/neighbor[nibor]',
+        pronunciation: '',
+        translationFr: "Collégue à l’école /voisin",
+        translationMg: "Mpiara-miasa/mianatra Mpifanolo-bodorindrina",
+      },
+      {
+        sentence: '→ → Boy/girlfriend/boo',
+        pronunciation: '',
+        translationFr: "Petit(e) ami(e)",
+        translationMg: "Sipa",
+      },
+     
+          
+    ],
+    content2: [
+      {
+        sentence: "A- Oh really,you are brother and sister/friends.",
+        pronunciation: "",
+        translationFr: "→ Ah, vous êtes frère et sœurs/ des amies.",
+        translationMg: "",
+      },
+      
+      {
+        sentence: "→ You reallylook like her/him.",
+        pronunciation: "",
+        translationFr: "→ Vous ressemblez vraiment à elle ",
+        translationMg: "→ Ay, mpiralahy ianareo/mitovy aminy be ianao",
+      },
+      {
+        sentence: "→ TO BE BEAUTIFUL/PRETTY/CUTE [biorf0l]",
+        pronunciation: "",
+        translationFr: "Etre belle/jolie/charmante",
+        translationMg: "TSARA TAREHY",
+      },
+      {
+        sentence: "→ TO BE HANDSOME/GOODLOOKING [hensam]",
+        pronunciation: "",
+        translationFr: "Etre beau",
+        translationMg: "TSARA TAREHY (LAHY)",
+      },
+
+      {
+        sentence: `→ TO BE UGLY/UNATTRACTIVE [agli]`,
+        pronunciation: "",
+        translationFr: "→ Etre moche/laid(e)",
+        translationMg: "RATSY TAREHY",
+      },
+      {
+        sentence: `→ TO BE COOL / KIND / EASY GOING`,
+        pronunciation: "",
+        translationFr: "→ Etre gentil(le)",
+        translationMg: "TSOTRA",
+      },
+      {
+        sentence: `→TO BE STRICT/MEAN/NAUGHTY[noti]`,
+        pronunciation: "",
+        translationFr: "→ Etre strict(e)/difficil(e)",
+        translationMg: "SAROTINY",
+      },
+      
+    ],
+    content3: [
+      {
+        sentence: "A Polygamist",
+        pronunciation: "",
+        translationFr: "→ Polygamme",
+        translationMg: "Maro vady",
+      },      
+      {
+        sentence: "A womanizer (man)/ to be promiscuous",
+        pronunciation: "[omanaizer]",
+        translationFr: "Un Coureur de jupons / dragueur invétéré",
+        translationMg: "",
+      },
+      {
+        sentence: "→ A slut (woman)/ to be promiscuous",
+        pronunciation: "",
+        translationFr: "→Une salope(argo)/aux mœurs légères",
+        translationMg: "",
+      },
+      {
+        sentence: "→ To jilt sb",
+        pronunciation: "[Wer havio bin]",
+        translationFr: "→ Plaquer / qlq1",
+        translationMg: "/misaraka@olona",
+      },
+      {
+        sentence: "→  To break up with sb",
+        pronunciation: "",
+        translationFr: "\n→ Se séparer de qlq1",
+        translationMg: "\n- Efa ela izay isika tsy nifankahita ",
+      },
+      {
+        sentence: "→ To split up with sb",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: ""
+      },
+      {
+        sentence: "→ Ex: He’s a womanizer for your information / I’m sad now, because he jilted me.",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      
+    ],
+   
+   
+  },
+
+];
+
+const dialogues8 = [
+  {
+    id: 1,
+    title: 'Lesson 8: TELLING THE TIME',
+    description: 'BASIC SOCIAL ENCOUNTERS',
+    content1: [
+      {
+        sentence: "A- What time is it, please?",
+        pronunciation: "[wataimiz it, pliz]",
+        translationFr: "\n→ Quelle heure est-il?",
+        translationMg: ""
+      },
+      {
+        sentence: '→ Can you tell me what time it is?',
+        pronunciation: "[knio……tel mi..wat taim it iz]",
+        translationFr: "\n Peux-tu me dire quelle heure il est ?",
+        translationMg: "\n → Amin’ny firy izao azafady? "
+      },      
+      {
+        sentence: '→ You got a watch on you? ',
+        pronunciation: "",
+        translationFr: "[io gar e wotr on io]",
+        translationMg: ""
+      },      
+      {
+        sentence: ' Well, it’s now one o’clock pm ',
+        pronunciation: "",
+        translationFr: "",
+        translationMg: ""
+      },
+      {
+        sentence: '→ It is five past/after one p.m. 01:05',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ It is one o five 01:05 (standard)',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ It is quarter past/after one p.m. 01:15 ',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→  It is one fifteen p.m. 01:15 (standard) ',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ It is half past/after one p.m. 01:30 ',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ It is one thirty p.m. 01:30(standard)',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },      
+      {
+        sentence: '→ It is a quarter to/of two p.m. 1:45',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ It is one forty five p.m. 1:45',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: `→ @ teny Anglisy, ny minitra no tenenina 
+        voalohany izay vao ny ora.`,
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ PAST/AFTER = PLUS',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "MAHERY",
+      },
+      {
+        sentence: '→ TO/OF= MOINS',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "LATSAKA/TARA",
+      },
+      {
+        sentence: '→ Sorry, my watch is ten minutes slow/fast',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ My watch is broken',
+        pronunciation: '',
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: '→ My watch doesn’t work well',
+        pronunciation: '[mai wotr dazn workoel]',
+        translationFr: "",
+        translationMg: "",
+      },
+     
+          
+    ],
+    content2: [
+      {
+        sentence: "A- Thank you very much/ thanks a lot/ a million/a bunch",
+        pronunciation: "[tenk io veri..matr/ tenks e lat/e milen/e bantr]",
+        translationFr: "\nA- Merci beaucoup/infiniment.\n",
+        translationMg: "\nMisaotra betsaka tompoko",
+      },
+      
+      {
+        sentence: "→ Thanks in advance/thanks beforehand",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: "→ Thanks anyway.\n\nB- Don’t (no) mention it/ you’re welcome it!\n\n",
+        pronunciation: "",
+        translationFr: "B- Merci d’avance : Misaotra mialoha\n→ Merci quand même !",
+        translationMg: "Misaotra ihany",
+      },
+      {
+        sentence: "- It was nothing/ No problem!",
+        pronunciation: "",
+        translationFr: "→ Il n’y a pas de quoi/ de rien",
+        translationMg: "Tsy misy fisaorana",
+      },
+
+      {
+        sentence: `- The pleasure is mine, sir`,
+        pronunciation: "[de pleizer iz main ser]",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: `A- What are you doing now?`,
+        pronunciation: "[wat io doin nao]",
+        translationFr: "→ Qu’est-ce que tu fais maintenant?",
+        translationMg: "Inona no ataonao izao?",
+      },
+      {
+        sentence: `B- Well, I’m just relaxing and watching TV`,
+        pronunciation: "[oel…aim jast rilaksin en wotrin tivi]",
+        translationFr: "→ Je me repose et regarde la Télé.",
+        translationMg: "Mijery TELE sy maka aina fotsiny aho?",
+      },
+      
+      {
+        sentence: `→ I’m just waiting for a friend of mine here`,
+        pronunciation: "",
+        translationFr: "→J’attends un ami à moi",
+        translationMg: "Miandry namana eto fotsiny aho.",
+      },
+      {
+        sentence: `A- Hey Rob, can you accompany me to the market/bank?`,
+        pronunciation: "[...Knio ekampni mi to de ...]\n",
+        translationFr: "→ Salut Robert, peux-tu m’accompagner au marché\n",
+        translationMg: "Mna, mba afakamiaraka amiko mian-tsena ve ianao?",
+      },
+      {
+        sentence: `B- Yes/No, I can(’t), I really don’t wanna go out`,
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+    ],
+    
+  },
+
+];
+
+const dialogues9 = [
+  {
+    id: 1,
+    title: 'Lesson 9: MINOR SICKNESS',
+    description: 'BASIC SOCIAL ENCOUNTERS',
+    content1: [
+      {
+        sentence: "A- What’s the matter with you?",
+        pronunciation: "[wats de marer …]\n",
+        translationFr: "- Qu’est ce-que tu as?",
+        translationMg: ""
+      },
+      {
+        sentence: '→ What’s wrong[ron]with you?',
+        pronunciation: "",
+        translationFr: "Qu’est ce qu’il ya ?",
+        translationMg: "Fa inona no mahazo anao ? "
+      },      
+      {
+        sentence: '→ Are you alright/ok? ',
+        pronunciation: "",
+        translationFr: "",
+        translationMg: ""
+      },      
+      {
+        sentence: 'B- I have a toothache[toufeik]',
+        pronunciation: "",
+        translationFr: "J’ai mal aux dents",
+        translationMg: "Marary nify aho"
+      },
+      {
+        sentence: '- I have a sore throat',
+        pronunciation: '',
+        translationFr: "J’ai mal a la gorge",
+        translationMg: "Marary tenda aho",
+      },
+      {
+        sentence: '- I have a backache[bakeik]',
+        pronunciation: '',
+        translationFr: "J’ai mal au dos",
+        translationMg: "Marary lamosina aho",
+      },
+      {
+        sentence: '- I have a bellyache[beliek]/diarrhoea ',
+        pronunciation: '',
+        translationFr: "J’ai mal au ventre",
+        translationMg: "Marary kibo",
+      },
+      {
+        sentence: '- I have a pain in my chest [trest] ',
+        pronunciation: '',
+        translationFr: "J’ai mal à la poitrine",
+        translationMg: "Marary tratra",
+      },
+      {
+        sentence: '- I got a bump [ai gar e bamp] ',
+        pronunciation: '',
+        translationFr: "Je me suis coigné ",
+        translationMg: "Nidona t@ zvt (dia mivonto)",
+      },
+      {
+        sentence: '- I sprained [sprend] my ankle [enkel]',
+        pronunciation: '',
+        translationFr: "Je me suis foulé le cheville",
+        translationMg: "Folaka ny kitroko",
+      },      
+      {
+        sentence: '- I broke my arm',
+        pronunciation: '',
+        translationFr: "Je me suis cassé le bras",
+        translationMg: "Folaka ny tanako",
+      },
+      {
+        sentence: '- I have a nose blocked [noouz blakt]',
+        pronunciation: '',
+        translationFr: "J’ai le nez bouché ",
+        translationMg: "Voan’ny sery aho",
+      },
+      {
+        sentence: `- I have the flu[flou]`,
+        pronunciation: '',
+        translationFr: "J’ai la grippe ",
+        translationMg: "Mikoaka",
+      },
+      {
+        sentence: '- I have a cough[kaf]/fever ',
+        pronunciation: '',
+        translationFr: "Je tousse/j’ai de la fièvre",
+        translationMg: "Mikoaka aho /mafanafana",
+      },
+      {
+        sentence: '- I have malaria',
+        pronunciation: '',
+        translationFr: "J’ai la paludisme ",
+        translationMg: "Voan’ny tazo aho",
+      },
+      {
+        sentence: 'I have a headache[hedeik]',
+        pronunciation: '',
+        translationFr: "J’ai mal à la tête",
+        translationMg: "Marary loha aho",
+      },
+      {
+        sentence: '- I have a sore eye',
+        pronunciation: '',
+        translationFr: "J’ai mal aux yeux",
+        translationMg: "Marary ny masoko",
+      },
+      {
+        sentence: '- I have a rash ',
+        pronunciation: '',
+        translationFr: "J’ai une éruption/rougeur",
+        translationMg: "Voan’ny tandimerina",
+      },
+      {
+        sentence: '- I have a stomachache[stamakei] ',
+        pronunciation: '',
+        translationFr: "J’ai mal à l’estomac",
+        translationMg: "Marary vavony",
+      },
+      {
+        sentence: '- I have a nosebleed[nôuz blid]',
+        pronunciation: '',
+        translationFr: "J’ai le nez qui saigne",
+        translationMg: "Tonto/voan’ny tefidoha",
+      },
+       {
+        sentence: 'A- What are you allergic to? I’m allergic to shrimp?',
+        pronunciation: '',
+        translationFr: "À quoi es-tu allérgique ? Je suis allérgique aux crévettes",
+        translationMg: "",
+      },
+       {
+        sentence: '→ How long have you been in this condition?',
+        pronunciation: '',
+        translationFr: "Dépuis quand êtes-vous dans cet état ?",
+        translationMg: "Efa misy hafiriana ianao no hoatr’izao?",
+      },
+       {
+        sentence: 'I think you should go to see a doctor.',
+        pronunciation: '[ai fink io shoud go to si e daktor]',
+        translationFr: "Je pense que tu devrais aller voir un docteur",
+        translationMg: "",
+      },
+     
+          
+    ],
+    content2: [
+      {
+        sentence: "A- Thank you very much/ thanks a lot/ a million/a bunch",
+        pronunciation: "[tenk io veri..matr/ tenks e lat/e milen/e bantr]",
+        translationFr: "\nA- Merci beaucoup/infiniment.\n",
+        translationMg: "\nMisaotra betsaka tompoko",
+      },
+      
+      {
+        sentence: "→ Thanks in advance/thanks beforehand",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: "→ Thanks anyway.\n\nB- Don’t (no) mention it/ you’re welcome it!\n\n",
+        pronunciation: "",
+        translationFr: "B- Merci d’avance : Misaotra mialoha\n→ Merci quand même !",
+        translationMg: "Misaotra ihany",
+      },
+      {
+        sentence: "- It was nothing/ No problem!",
+        pronunciation: "",
+        translationFr: "→ Il n’y a pas de quoi/ de rien",
+        translationMg: "Tsy misy fisaorana",
+      },
+
+      {
+        sentence: `- The pleasure is mine, sir`,
+        pronunciation: "[de pleizer iz main ser]",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: `A- What are you doing now?`,
+        pronunciation: "[wat io doin nao]",
+        translationFr: "→ Qu’est-ce que tu fais maintenant?",
+        translationMg: "Inona no ataonao izao?",
+      },
+      {
+        sentence: `B- Well, I’m just relaxing and watching TV`,
+        pronunciation: "[oel…aim jast rilaksin en wotrin tivi]",
+        translationFr: "→ Je me repose et regarde la Télé.",
+        translationMg: "Mijery TELE sy maka aina fotsiny aho?",
+      },
+      
+      {
+        sentence: `→ I’m just waiting for a friend of mine here`,
+        pronunciation: "",
+        translationFr: "→J’attends un ami à moi",
+        translationMg: "Miandry namana eto fotsiny aho.",
+      },
+      {
+        sentence: `A- Hey Rob, can you accompany me to the market/bank?`,
+        pronunciation: "[...Knio ekampni mi to de ...]\n",
+        translationFr: "→ Salut Robert, peux-tu m’accompagner au marché\n",
+        translationMg: "Mna, mba afakamiaraka amiko mian-tsena ve ianao?",
+      },
+      {
+        sentence: `B- Yes/No, I can(’t), I really don’t wanna go out`,
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+    ],
+    
   },
 
 ];
@@ -976,7 +1753,7 @@ const DailyDialoguesScreen = () => {
 </Card>
 ))}
 
-{dialogues4.map((dialogue) => (
+    {dialogues4.map((dialogue) => (
         <Card key={dialogue.id} style={styles.card}>
           <Card.Title
             
@@ -1099,16 +1876,11 @@ const DailyDialoguesScreen = () => {
               ))}
             </List.Accordion>
 
-
-
-
-
-
           </Card.Content>
         </Card>
       ))}
 
-{dialogues5.map((dialogue) => (
+    {dialogues5.map((dialogue) => (
         <Card key={dialogue.id} style={styles.card}>
           <Card.Title
             
@@ -1202,6 +1974,318 @@ const DailyDialoguesScreen = () => {
       ))}
 
 
+    {dialogues6.map((dialogue) => (
+        <Card key={dialogue.id} style={styles.card}>
+          <Card.Title
+            
+            title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
+            subtitle={dialogue.description}
+          />
+          <Card.Content>
+            <List.Accordion
+              title="PRESENTATION"
+              left={(props) => <List.Icon {...props} icon="account" color='#8da9c4' />}
+            >
+              {dialogue.content1.map((line, index) => (
+                <List.Item
+                  key={index}
+                  title={<Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>}
+                  description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                    <IconButton
+                      icon="volume-high"
+                      size={24}
+                      onPress={() => speak(line.sentence)}
+                      iconColor="#8da9c4"
+                    />
+                  )}
+                />
+              ))}
+            </List.Accordion>
+
+            {/* Second Accordion */}
+            <List.Accordion
+              title="INTRODUCING PEOPLE"
+              left={(props) => <List.Icon {...props} icon="account" color='#8da9c4' />}
+            >
+               {dialogue.content2.map((line, index) => (
+  <List.Item
+    key={index}
+    title={
+      <Text style={{ fontWeight: 'bold' }}>
+        {line.sentence} {'\n'}
+         Types of jobs: Full-time job {'\n'}
+        Part-time {'\n'}
+        Self-employed man {'\n'}
+        Permanent Job {'\n'}
+        Temporary job {'\n'}
+        Day/night shift {'\n'}
+        Flextime: des horaires à la carte. {'\n'}
+        Clock on/off (in/out) pointer
+      </Text>
+    }
+    description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+    descriptionStyle={styles.pronunciation}
+    right={() => (
+      <IconButton
+        icon="volume-high"
+        size={24}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    )}
+  />
+))}
+
+            </List.Accordion>
+
+            {/* Third Accordion */}
+            <List.Accordion
+              title="ASKING SB WHERE HE WAS"
+              left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+            >
+              {dialogue.content3.map((line, index) => (
+                <List.Item
+                  key={index}
+                  title={<Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>}
+                  description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                    <IconButton
+                      icon="volume-high"
+                      size={24}
+                      onPress={() => speak(line.sentence)}
+                      iconColor="#8da9c4"
+                    />
+                  )}
+                />
+              ))}
+            </List.Accordion>
+ 
+          </Card.Content>
+        </Card>
+      ))}
+
+     
+    {dialogues7.map((dialogue) => (
+        <Card key={dialogue.id} style={styles.card}>
+          <Card.Title
+            
+            title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
+            subtitle={dialogue.description}
+          />
+          <Card.Content>
+            <List.Accordion
+              title="FAMILY RELATIONSHIP"
+              left={(props) => <List.Icon {...props} icon="account-group" color='#8da9c4' />}
+            >
+              {dialogue.content1.map((line, index) => (
+                <List.Item
+                  key={index}
+                  title={<Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>}
+                  description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                    <IconButton
+                      icon="volume-high"
+                      size={24}
+                      onPress={() => speak(line.sentence)}
+                      iconColor="#8da9c4"
+                    />
+                  )}
+                />
+              ))}
+            </List.Accordion>
+
+            {/* Second Accordion */}
+            <List.Accordion
+              title="COMPLIMENT"
+              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#8da9c4' />}
+            >
+               {dialogue.content2.map((line, index) => (
+  <List.Item
+    key={index}
+    title={
+      <Text style={{ fontWeight: 'bold' }}>
+        {line.sentence} {'\n'}
+         Types of jobs: Full-time job {'\n'}
+        Part-time {'\n'}
+        Self-employed man {'\n'}
+        Permanent Job {'\n'}
+        Temporary job {'\n'}
+        Day/night shift {'\n'}
+        Flextime: des horaires à la carte. {'\n'}
+        Clock on/off (in/out) pointer
+      </Text>
+    }
+    description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+    descriptionStyle={styles.pronunciation}
+    right={() => (
+      <IconButton
+        icon="volume-high"
+        size={24}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    )}
+  />
+))}
+
+            </List.Accordion>
+
+            {/* Third Accordion */}
+            <List.Accordion
+              title="EXPRESSIONS"
+              left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+            >
+              {dialogue.content3.map((line, index) => (
+                <List.Item
+                  key={index}
+                  title={<Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>}
+                  description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                    <IconButton
+                      icon="volume-high"
+                      size={24}
+                      onPress={() => speak(line.sentence)}
+                      iconColor="#8da9c4"
+                    />
+                  )}
+                />
+              ))}
+            </List.Accordion>
+ 
+          </Card.Content>
+        </Card>
+      ))}
+
+    {dialogues8.map((dialogue) => (
+        <Card key={dialogue.id} style={styles.card}>
+          <Card.Title
+            
+            title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
+            subtitle={dialogue.description}
+          />
+          <Card.Content>
+            <List.Accordion
+              title="TELLING THE TIME"
+              left={(props) => <List.Icon {...props} icon="clock" color='#8da9c4' />}
+            >
+              {dialogue.content1.map((line, index) => (
+                <List.Item
+                  key={index}
+                  title={<Text style={{ fontWeight: 'bold',flexWrap: 'nowrap' }}>
+                    {line.sentence}</Text>}
+                  description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                    <IconButton
+                      icon="volume-high"
+                      size={24}
+                      onPress={() => speak(line.sentence)}
+                      iconColor="#8da9c4"
+                    />
+                  )}
+                />
+              ))}
+            </List.Accordion>
+
+            {/* Second Accordion */}
+            <List.Accordion
+              title="SAYING THANK YOU"
+              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#8da9c4' />}
+            >
+               {dialogue.content2.map((line, index) => (
+                <List.Item
+                key={index}
+                title={() => (
+                  <Text style={{ fontWeight: 'bold' }}>
+                    {line.sentence}
+                  </Text>
+                )}
+                description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                descriptionStyle={styles.pronunciation}
+                right={() => (
+                  <IconButton
+                    icon="volume-high"
+                    size={24}
+                    onPress={() => speak(line.sentence)}
+                    iconColor="#8da9c4"
+                  />
+                )}
+              />              
+             ))}
+
+            </List.Accordion>
+          </Card.Content>
+        </Card>
+      ))}
+
+
+{dialogues9.map((dialogue) => (
+        <Card key={dialogue.id} style={styles.card}>
+          <Card.Title
+            
+            title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
+            subtitle={dialogue.description}
+          />
+          <Card.Content>
+            <List.Accordion
+              title="MINOR SICKNESS"
+              left={(props) => <List.Icon {...props} icon="hospital" color='#8da9c4' />}
+            >
+              {dialogue.content1.map((line, index) => (
+                <List.Item
+                  key={index}
+                  title={<Text style={{ fontWeight: 'bold',flexWrap: 'nowrap' }}>
+                    {line.sentence}</Text>}
+                  description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                    <IconButton
+                      icon="volume-high"
+                      size={24}
+                      onPress={() => speak(line.sentence)}
+                      iconColor="#8da9c4"
+                    />
+                  )}
+                />
+              ))}
+            </List.Accordion>
+
+            {/* Second Accordion */}
+            <List.Accordion
+              title="SAYING THANK YOU"
+              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#8da9c4' />}
+            >
+               {dialogue.content2.map((line, index) => (
+                <List.Item
+                key={index}
+                title={() => (
+                  <Text style={{ fontWeight: 'bold' }}>
+                    {line.sentence}
+                  </Text>
+                )}
+                description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                descriptionStyle={styles.pronunciation}
+                right={() => (
+                  <IconButton
+                    icon="volume-high"
+                    size={24}
+                    onPress={() => speak(line.sentence)}
+                    iconColor="#8da9c4"
+                  />
+                )}
+              />              
+             ))}
+
+            </List.Accordion>
+          </Card.Content>
+        </Card>
+      ))}
+
     </ScrollView>
   );
 };
@@ -1221,8 +2305,9 @@ const styles = StyleSheet.create({
   },
   content: {
     fontSize: 16,
-    marginBottom: 16,
+    marginBottom: 10,
     color: '#333',
+    marginTop: 1,
   },
   card: {
     marginBottom: 16,
@@ -1233,12 +2318,12 @@ const styles = StyleSheet.create({
   pronunciation: {
     fontStyle: 'italic', // Style for the pronunciation
     color: '#555',
-    marginTop: 4,
+    marginTop: 1,
   },
   translation: {
     fontStyle: 'italic', // Style for the translation
     color: '#888',
-    marginTop: 4,
+    marginTop: 2,
   },
   cell: {
     padding: 7,
