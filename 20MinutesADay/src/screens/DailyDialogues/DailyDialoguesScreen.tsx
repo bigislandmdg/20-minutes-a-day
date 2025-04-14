@@ -1389,6 +1389,560 @@ const dialogues9 = [
 
 ];
 
+const dialogues10 = [
+  {
+    id: 1,
+    title: 'Lesson 10: UNDERSTANDING AND NOT UNDERSTANDING',
+    description: 'BASIC SOCIAL ENCOUNTERS',
+    content1: [
+      {
+        sentence: "- This is true.",
+        pronunciation: "",
+        translationFr: "C’est vrai, vous avez raison.",
+        translationMg: " Marina izany"
+      },
+      {
+        sentence: '- That’s true.',
+        pronunciation: "",
+        translationFr: "C’est vrai, vous avez raison.",
+        translationMg: "Marina izany"
+      },           
+      {
+        sentence: '- You’re right.',
+        pronunciation: "",
+        translationFr: "- Tu as raison.",
+        translationMg: "- Marina ianao."
+      },          
+      {
+        sentence: '- That’s for sure',
+        pronunciation: "",
+        translationFr: "C’est certain.",
+        translationMg: "Tsy azo lavina izany."
+      },      
+      {
+        sentence: '- That’s for darn sure.',
+        pronunciation: "",
+        translationFr: "Ça, c’est sûr et certain.",
+        translationMg: "Tena marina mihitsy izany."
+      },      
+      {
+        sentence: '- I agree with you 100 percent.',
+        pronunciation: '',
+        translationFr: "Je suis d’accord avec toi à 100%",
+        translationMg: "Manaiky an’izany 100% aho",
+      },
+      {
+        sentence: "- Ain’t that the truth?",
+        pronunciation: "",
+        translationFr: "Ça, c’est complètement vrai.",
+        translationMg: "Tena marina izany, sa ahoana?",
+      },      
+    ],
+    content2: [
+      {
+        sentence: "- Do you understand/know what I’m saying?",
+        pronunciation: "",
+        translationFr: "Tu comprends / sais ce que je dis ?",
+        translationMg: "Azonao / fantatrao ve izay lazainy aminao ?",
+      },      
+      {
+        sentence: "Do you grasp/get/gather me?",
+        pronunciation: "",
+        translationFr: "Tu me saisis / comprends / captes ?",
+        translationMg: "Azonao ve ny tian-kambara / ny hevitro ?",
+      },      
+      {
+        sentence: "- I hear what you are saying.",
+        pronunciation: "[ai hir watior sain…]",
+        translationFr: "Je t’entends bien",
+        translationMg: "Henoko tsara ianao",
+      },
+      {
+        sentence: "- I know what you mean",
+        pronunciation: "",
+        translationFr: "- J’entends ce que t’es entrain de dire.",
+        translationMg: "Azoko tsara izany zavatra lazainao izany.",
+      },
+
+      {
+        sentence: `- I see where you’re coming from.`,
+        pronunciation: "",
+        translationFr: "Je comprends ton point de vue.",
+        translationMg: "Takatro ny fomba fijerinao.",
+      },      
+      {
+        sentence: `- Point well taken.`,
+        pronunciation: "",
+        translationFr: "Remarque bien reçue.",
+        translationMg: "Voaray tsara ny hevitrao.",
+      },      
+      {
+        sentence: `I know what you’re talking about.`,
+        pronunciation: "[ai no wat yoor to-king uh-bawt]",
+        translationFr: "Je vois de quoi tu parles.",
+        translationMg: "Fantatro izay resahinao.",
+      },      
+      {
+        sentence: `- I dig it.`,
+        pronunciation: "[ai dig it]",
+        translationFr: "J'aime bien." ,// ou "J'aime bien." pour une version plus neutre
+        translationMg: "Tiako be izany.", // ou "Mahafinaritra ahy izany."
+      },      
+      {
+        sentence: `I got you/Gotchya/I’m with you.`,
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      
+    ],
+
+    content3: [
+      {
+        sentence: "- I don’t know what you are talking about.",
+        pronunciation: "[ai don’t no wat yoor to-king uh-bawt]",
+        translationFr: "Je ne sais pas ce que tu es entrain de dire.",
+        translationMg: "Tsy fantatro izay resahinao.",
+      },          
+      {
+        sentence: "- I don’t know what you are driving at.",
+        pronunciation: "[ai dont no wat yoor draï-ving at]",
+        translationFr: "Je ne comprends pas où tu veux en venir.",
+        translationMg: "Tsy fantatro mihitsy ny tianao holazaina",
+      },           
+      {
+        sentence: "- I don’t see what you mean",
+        pronunciation: "[ai don’t si wat you miin]",
+        translationFr: "Je ne vois pas ce que tu veux dire.",
+        translationMg: "Tsy azoko izay tianao holazaina.",
+      },      
+      {
+        sentence: "→ Pardon me/excuse me/sorry?",
+        pronunciation: "[parden mi/ixkioz mi….]",
+        translationFr: "Pardon ? / Excuse-moi ? / Désolé ?",
+        translationMg: "Azafady? / Miala tsiny?",
+      },
+      {
+        sentence: `→ Come again/say again please?`,
+        pronunciation: "[kam uh-gen / sey uh-gen pliz]",
+        translationFr: "Tu peux répéter, s'il te plaît ?",
+        translationMg: "Azonao averina azafady?",
+      },           
+      {
+        sentence: `→ Can you say that again please?`,
+        pronunciation: "[knio…..sei..dad egen…pliz]",
+        translationFr: "",
+        translationMg: "",
+      },      
+      {
+        sentence: `→ Can you run that by me again?`,
+        pronunciation: "[knio……ran dat bai mi..egen]",
+        translationFr: "",
+        translationMg: "",
+      },      
+      
+    ],
+    content4: [
+      {
+        isIntro: true,
+        sentence: "→ Il y a des expressions qu’on utilise tous les jours en Anglais Américain, ce qu’on appelle *Slang* et *Colloquial*, ce qui signifie ‘ARGOT ET FAMILIER’ en français.",
+      },
+      {
+        sentence: "- Roger doger / I can dig it / Gotchya / I see the light / I get the picture : J’ai compris",
+      },
+      {
+        sentence: "- That’s a lot of crap / that’s hooey / that’s a lot of baloney : C’est du n’importe quoi !!",
+      }
+    ]    
+  },
+];
+
+
+const dialogues11 = [
+  {
+    id: 1,
+    title: 'Lesson 11: AGREEING AND DISAGREEING',
+    description: 'BASIC SOCIAL ENCOUNTERS',
+    content1: [
+      {
+        sentence: "-  Yep ",
+        pronunciation: "",
+        translationFr: "Oui",
+        translationMg: "Eny"
+      },
+      {
+        sentence: '- Yup',
+        pronunciation: "",
+        translationFr: "Bien-Sur",
+        translationMg: "Mazava ho azy"
+      },           
+      {
+        sentence: '- Sure thing',
+        pronunciation: "",
+        translationFr: "- ÇA, C’EST VRAI",
+        translationMg: ""
+      },          
+      {
+        sentence: '- This is true.',
+        pronunciation: "",
+        translationFr: "C’est vrai.",
+        translationMg: "Marina izany.",
+      },      
+      {
+        sentence: '- That’s true.',
+        pronunciation: "",
+        translationFr: "Vous avez raison",
+        translationMg: "Marina ny anao"
+      },      
+      {
+        sentence: '- You’re right',
+        pronunciation: '',
+        translationFr: "Vous avez raison",
+        translationMg: "Marina ny anao",
+      },
+      {
+        sentence: "- That’s for sure.",
+        pronunciation: "",
+        translationFr: "Je suis d'accord avec toi",
+        translationMg: "",
+      }, 
+      {
+        sentence: "- That’s for darn sure.",
+        pronunciation: "",
+        translationFr: "Ça, c’est sûr et certain.",
+        translationMg: "Tsy misy isalasalana mihitsy izany.",
+      }, 
+      {
+        sentence: "- I agree [eigri] with you 100 percent.",
+        pronunciation: "",
+        translationFr: "Je suis entièrement d’accord avec toi.",
+        translationMg: "Manaiky tanteraka aminao aho.",
+      }, 
+      {
+        sentence: "-Ain’t that the truth?",
+        pronunciation: "",
+        translationFr: "N’est-ce pas la vérité ?",
+        translationMg: "",
+      },
+      {
+        sentence: "- I think it’s great",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "Tsy marina ve izany ?",
+      },  
+
+    ],
+    content2: [
+      {
+        sentence: "- No ",
+        pronunciation: "",
+        translationFr: "Non",
+        translationMg: "Tsia",
+      },      
+      {
+        sentence: "- Nope",
+        pronunciation: "",
+        translationFr: "Non",
+        translationMg: "Tsia",
+      },      
+      {
+        sentence: "- No way",
+        pronunciation: "",
+        translationFr: "Il n'est pas question",
+        translationMg: "Tsy mety izany",
+      },
+      {
+        sentence: "- Not a chance",
+        pronunciation: "",
+        translationFr: "- Aucune chance",
+        translationMg: "Tsisy hevitra izany.",
+      },
+
+      {
+        sentence: `- Not (slang)`,
+        pronunciation: "",
+        translationFr: "Je pense que non.",
+        translationMg: "",
+      },      
+      {
+        sentence: `- - I don’t think so.`,
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "Tsy izany ny fijeriko azy",
+      },      
+      {
+        sentence: `- That’s not true`,
+        pronunciation: "",
+        translationFr: "Vous avez tort",
+        translationMg: "Diso ianao",
+      },      
+      {
+        sentence: `- You’ve got that wrong`,
+        pronunciation: "[iov gadat rong]",
+        translationFr: "Vous avez tort" ,// ou "J'aime bien." pour une version plus neutre
+        translationMg: "Diso ianao", // ou "Mahafinaritra ahy izany."
+      },      
+      {
+        sentence: `Wrong!`,
+        pronunciation: "",
+        translationFr: "Vous avez tort",
+        translationMg: "Diso ianao",
+      },
+      {
+        sentence: `You missed the boat`,
+        pronunciation: "",
+        translationFr: "Vous avez tort",
+        translationMg: "Diso ianao",
+      },
+      {
+        sentence: `You’re off`,
+        pronunciation: "",
+        translationFr: "Vous avez tort",
+        translationMg: "Diso ianao",
+      },
+      
+    ],
+
+    content3: [
+      {
+        sentence: "- - I disagree completely.",
+        pronunciation: "[ai disagri kamplitli]",
+        translationFr: "Je ne suis absolument pas d'accord",
+        translationMg: "Tena tsy manaiky aho",
+      },          
+      {
+        sentence: "- I couldn’t disagree with you more",
+        pronunciation: "",
+        translationFr: "Je ne pourrais pas être plus en désaccord avec toi.",
+        translationMg: "Tsy afaka mifanohitra aminao bebe kokoa aho.",
+      },           
+      {
+        sentence: "- Bullshit.(taboo)",
+        pronunciation: "",
+        translationFr: "N'importe quoi. (vulgaire)",
+        translationMg: "Tsy marina izany",
+      },      
+      {
+        sentence: "- That’s BS.(mildly vulgar)",
+        pronunciation: "",
+        translationFr: "C'est du n'importe quoi",
+        translationMg: "Tsy marina izany",
+      },
+      {
+        sentence: `- Bull (mildly vulgar)`,
+        pronunciation: "",
+        translationFr: "Connerie (légèrement vulgaire)",
+        translationMg: "Tsy marina izany",
+      },           
+      {
+        sentence: `-  Baloney (slang)`,
+        pronunciation: "",
+        translationFr: "Des bêtises, des idioties (familier)",
+        translationMg: "Tsy marina izany, fitaka (fiteny tsy ofisialy)",
+      },      
+      {
+        sentence: `- That’s out of the question`,
+        pronunciation: "[dats aotov de kwestren]",
+        translationFr: "C'est hors de question",
+        translationMg: "Tsisy fika izany",
+      },
+      {
+        sentence: `- You are lying through your teeth`,
+        pronunciation: "[io ar lain…..frou……ior tif] ",
+        translationFr: "Vouz mentez sur vos dents",
+        translationMg: "Mandainga mihitsy ianao",
+      },
+      {
+        sentence: `-It sucks[saks]/reeks[riks]`,
+        pronunciation: "",
+        translationFr: "C'est nul / Ça pue",
+        translationMg: "Tsy misy dikany",
+      },
+      {
+        sentence: `- - That’s a lot of baloney!`,
+        pronunciation: "",
+        translationFr: "Ça, C’est nul ! ",
+        translationMg: "",
+      },      
+    ],  
+  },
+];
+
+const dialogues12 = [
+  {
+    id: 1,
+    title: 'Lesson 12: FOCUSING ATTENTION',
+    description: 'BASIC SOCIAL ENCOUNTERS',
+    content1: [
+      {
+        sentence: "- Pardon me.(formal) ",
+        pronunciation: "[parden mi]",
+        translationFr: "Excuse-moi",
+        translationMg: "Mba azafady tompoko"
+      },
+      {
+        sentence: '- Excuse me.',
+        pronunciation: "",
+        translationFr: "Excuse-moi",
+        translationMg: "Mba azafady tompoko"
+      },           
+      {
+        sentence: '- Hey!(informal)',
+        pronunciation: "",
+        translationFr: "- Hey!",
+        translationMg: ""
+      },          
+      {
+        sentence: '- Hey, you!(informal)',
+        pronunciation: "",
+        translationFr: "- Hey, vous!.",
+        translationMg: "",
+      },      
+      {
+        sentence: '- You!.',
+        pronunciation: "",
+        translationFr: "Vous!",
+        translationMg: ""
+      },      
+      {
+        sentence: '- Look here.(informal)',
+        pronunciation: '',
+        translationFr: " Regardez ça ! / Regarde ici !!",
+        translationMg: "Jereo ity!",
+      },
+      {
+        sentence: "- Listen up.(informal)",
+        pronunciation: "",
+        translationFr: "Ecoutez, s'il vous plait",
+        translationMg: "Mba henoy kely",
+      }, 
+      {
+        sentence: "- Get a load of this.",
+        pronunciation: "[gere lôoud of dis]",
+        translationFr: "Regarde ça ! / T'as vu ça !",
+        translationMg: "Jereo ity!",
+      }, 
+      {
+        sentence: "- Are you ready for this?",
+        pronunciation: "",
+        translationFr: "Tu es prêt pour ça ?",
+        translationMg: "Vonona ve ianao amin'ity?",
+      }, 
+      {
+        sentence: " Do you have your ear[ir]?(idiomatic)",
+        pronunciation: "",
+        translationFr: "pouvez-vous ecouter ça ?",
+        translationMg: "",
+      },
+      {
+        sentence: "- Can I bend your ear a minute?",
+        pronunciation: "[knai bendior ir e min]",
+        translationFr: "Je peux te parler une minute ?",
+        translationMg: "Afaka miresaka kely aminao ve aho?",
+      },
+      {
+        sentence: "- Take a gander at that",
+        pronunciation: "",
+        translationFr: "Jette un coup d'œil à ça",
+        translationMg: "Topazo maso io",
+      }, 
+      {
+        sentence: " Lookie here.",
+        pronunciation: "",
+        translationFr: "Regarde-moi ça !",
+        translationMg: "Topazo maso ity!",
+      }, 
+      {
+        sentence: "- Can you believe your eyes?",
+        pronunciation: "",
+        translationFr: "Pouvez-vous croire ça?",
+        translationMg: "Mba mino an'izao ve anareo?",
+      }, 
+      {
+        sentence: "- Do my eyes deceive me?",
+        pronunciation: "",
+        translationFr: "Mes yeux me trompent ou quoi ?",
+        translationMg: "",
+      }, 
+    ],
+    content2: [
+      {
+        sentence: "- I hear you. ",
+        pronunciation: "",
+        translationFr: "Je vous entends",
+        translationMg: "Henoko tsara ka",
+      },      
+      {
+        sentence: "- I heard you.",
+        pronunciation: "",
+        translationFr: "Je t'ai entendu.",
+        translationMg: "Henoko tsara ka",
+      },      
+      {
+        sentence: "- I’m listening.",
+        pronunciation: "",
+        translationFr: "Je vous ai entendu",
+        translationMg: "Henoko tsara ka",
+      },
+      {
+        sentence: "- I’m still here.",
+        pronunciation: "",
+        translationFr: "- Je suis toujours là.",
+        translationMg: "Henoko tsara izy teo.",
+      },
+
+      {
+        sentence: `- I’m all ears.`,
+        pronunciation: "",
+        translationFr: "Je vous écoute.",
+        translationMg: "",
+      },            
+    ],
+
+    content3: [
+      {
+        sentence: "-  Guess what?.",
+        pronunciation: "[ges wat]",
+        translationFr: "Tu sais quoi?",
+        translationMg: "Hitanao?",
+      },          
+      {
+        sentence: "- Have you heard the latest?",
+        pronunciation: "- [havio…..jerd…de leitest]",
+        translationFr: "Est-ce que tu connais la derniere?.",
+        translationMg: "Efa henonao ny vaovao farany?.",
+      },           
+      {
+        sentence: "- - Did you get the scoop? Recent news?",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },          
+    ],  
+    content4: [
+      {
+        sentence: "- (You) got a minute?.",
+        pronunciation: "[io gare minit]",
+        translationFr: "Est-ce que tu as une minute",
+        translationMg: "Manana iray minitra kely ve ianao?",
+      },          
+      {
+        sentence: "- - Let’s chew the fat(slang)",
+        pronunciation: "",
+        translationFr: "On va parler un peu.",
+        translationMg: "Ndao hiresaka kely aloha",
+      },           
+      {
+        sentence: "- May I have word with you?",
+        pronunciation: "[me ai have ……..widio]",
+        translationFr: "Puis-je parle avec toi",
+        translationMg: "",
+      },      
+           
+    ],  
+  },
+];
+
 const DailyDialoguesScreen = () => {
   const speak = (text: string) => {
     Speech.speak(text, {
@@ -2285,6 +2839,514 @@ const DailyDialoguesScreen = () => {
           </Card.Content>
         </Card>
       ))}
+
+
+{dialogues10.map((dialogue) => (
+        <Card key={dialogue.id} style={styles.card}>
+          <Card.Title
+            
+            title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
+            subtitle={dialogue.description}
+          />
+          <Card.Content>
+          <List.Accordion
+  title="STATING YOUR CONCURRENCE"
+  left={(props) => (
+    <List.Icon {...props} icon="handshake" color="#8da9c4" />
+  )}
+>
+  {dialogue.content1.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+
+            {/* Second Accordion */}
+            <List.Accordion
+  title="STATING THAT YOU UNDERSTAND"
+  left={(props) => (
+    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+  )}
+>
+  {dialogue.content2.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+        <Text style={{ color: '#555' }}>{line.pronunciation}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+          {/* Third Accordion */}
+          <List.Accordion
+  title="STATING THAT YOU DON'T UNDERSTAND"
+  left={(props) => (
+    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+  )}
+>
+  {dialogue.content3.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+        <Text style={{ color: '#555' }}>{line.pronunciation}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+      {/* Fourth Accordion */}
+<List.Accordion
+  title="Conversational Tips"
+  left={(props) => (
+    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+  )}
+>
+  {dialogue.content4.map((line, index) => (
+    line.isIntro ? (
+      <View key={index} style={{ padding: 12 }}>
+        <Text style={{ fontStyle: 'italic', color: '#444' }}>{line.sentence}</Text>
+      </View>
+    ) : (
+      <View
+        key={index}
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          paddingVertical: 8,
+          paddingHorizontal: 12,
+          borderBottomWidth: 1,
+          borderBottomColor: '#ccc',
+        }}
+      >
+        {/* Phrase en anglais à gauche */}
+        <View style={{ flex: 1, paddingRight: 8 }}>
+          <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+        </View>
+
+        {/* Bouton audio */}
+        <IconButton
+          icon="volume-high"
+          size={20}
+          onPress={() => speak(line.sentence)}
+          iconColor="#8da9c4"
+        />
+      </View>
+    )
+  ))}
+</List.Accordion>
+          </Card.Content>
+        </Card>
+      ))}
+
+    
+{dialogues11.map((dialogue) => (
+        <Card key={dialogue.id} style={styles.card}>
+          <Card.Title
+            
+            title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
+            subtitle={dialogue.description}
+          />
+          <Card.Content>
+          <List.Accordion
+  title="STATING YOUR ACCEPTANCE"
+  left={(props) => (
+    <List.Icon {...props} icon="handshake" color="#8da9c4" />
+  )}
+>
+  {dialogue.content1.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+
+            {/* Second Accordion */}
+            <List.Accordion
+  title="STATING THAT YOU DISAGREE"
+  left={(props) => (
+    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+  )}
+>
+  {dialogue.content2.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+        <Text style={{ color: '#555' }}>{line.pronunciation}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+          {/* Third Accordion */}
+          <List.Accordion
+  title="STATING STRONG DISAGREEMENT"
+  left={(props) => (
+    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+  )}
+>
+  {dialogue.content3.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+        <Text style={{ color: '#555' }}>{line.pronunciation}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+          </Card.Content>
+        </Card>
+      ))}
+
+
+{dialogues12.map((dialogue) => (
+        <Card key={dialogue.id} style={styles.card}>
+          <Card.Title
+            
+            title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
+            subtitle={dialogue.description}
+          />
+          <Card.Content>
+          <List.Accordion
+  title="GETTING SB’S ATTENTION/TO LISTEN"
+  left={(props) => (
+    <List.Icon {...props} icon="handshake" color="#8da9c4" />
+  )}
+>
+  {dialogue.content1.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+
+            {/* Second Accordion */}
+            <List.Accordion
+  title="CONFERMING THAT YOU ARE PAYING ATT"
+  left={(props) => (
+    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+  )}
+>
+  {dialogue.content2.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+        <Text style={{ color: '#555' }}>{line.pronunciation}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+          {/* Third Accordion */}
+          <List.Accordion
+  title="LAUNCHING THE CONVERSATION"
+  left={(props) => (
+    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+  )}
+>
+  {dialogue.content3.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+        <Text style={{ color: '#555' }}>{line.pronunciation}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+{/* Fourth Accordion */}
+<List.Accordion
+  title="INVITING SB TO TALK"
+  left={(props) => (
+    <List.Icon {...props} icon="comment" color="#8da9c4" />
+  )}
+>
+  {dialogue.content4.map((line, index) => (
+    <View
+      key={index}
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc',
+      }}
+    >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+        <Text style={{ color: '#555' }}>{line.pronunciation}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
+
+          </Card.Content>
+        </Card>
+      ))}
+
 
     </ScrollView>
   );
