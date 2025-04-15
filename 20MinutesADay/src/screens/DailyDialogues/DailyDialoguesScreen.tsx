@@ -2788,26 +2788,44 @@ const DailyDialoguesScreen = () => {
           <Card.Content>
             <List.Accordion
               title="MINOR SICKNESS"
-              left={(props) => <List.Icon {...props} icon="hospital" color='#8da9c4' />}
-            >
-              {dialogue.content1.map((line, index) => (
-                <List.Item
-                  key={index}
-                  title={<Text style={{ fontWeight: 'bold',flexWrap: 'nowrap' }}>
-                    {line.sentence}</Text>}
-                  description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
-                  descriptionStyle={styles.pronunciation}
-                  right={() => (
-                    <IconButton
-                      icon="volume-high"
-                      size={24}
-                      onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
-                    />
-                  )}
-                />
-              ))}
-            </List.Accordion>
+               left={(props) => (
+               <List.Icon {...props} icon="hospital" color="#8da9c4" />
+               )}
+              >
+             {dialogue.content1.map((line, index) => (
+          <View
+              key={index}
+              style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
+              paddingVertical: 8,
+              paddingHorizontal: 12,
+              borderBottomWidth: 1,
+              borderBottomColor: '#ccc',
+            }}
+        >
+      {/* Phrase en anglais à gauche */}
+      <View style={{ flex: 1, paddingRight: 8 }}>
+        <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+      </View>
+
+      {/* Traductions à droite */}
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+        <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+      </View>
+
+      {/* Bouton audio à droite (en haut aligné) */}
+      <IconButton
+        icon="volume-high"
+        size={20}
+        onPress={() => speak(line.sentence)}
+        iconColor="#8da9c4"
+      />
+    </View>
+  ))}
+</List.Accordion>
 
             {/* Second Accordion */}
             <List.Accordion

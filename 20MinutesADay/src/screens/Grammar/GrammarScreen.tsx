@@ -236,16 +236,438 @@ const grammarRules3 = [
           { verbs: "To get ready to go out", frenchTranslation: "S’apprêter", },
           { verbs: "To put my shoes on", frenchTranslation: "Mettre les chaussures", },
           { verbs: "To leave home for school", frenchTranslation: "Sortir de la maison", },
-          
-          
-          
-          
+
+
+
+
+        
         ],
        
       }
     ],
+    
+    content3: [
+      { sentence: "→ ANSWER – REPONSE – VALINY" },
+      { sentence: "Every morning, I get up at 5:30 and then I go to the bathroom to take a shower, to brush my teeth, and comb my hair." },
+      { sentence: "I sometimes prepare breakfast for my family, and before getting dressed I eat breakfast, after that I put my shoes [souz] on and then I get everything ready and leave home for school at around 6:15." },
+      { sentence: "I gotta leave home early, just because of the traffic jam, if not, I’m late, but I actually start at 8:30 am." },
+      { sentence: "I think that’s all." },
+      { sentence: "→ HOW OFTEN [hao ofen] DO YOU LEARN ENGLISH?" },
+      { sentence: "I learn English once/twice [towais] a week." },
+      { sentence: "I learn English three/four times a week." }
+    ],
+    content4: [
+      {
+        title: "EXERCISES - FILL IN THE BLANKS",
+        instructions: "FILL IN THE BLANKS WITH THE CORRECT FORM OF THE WORDS GIVEN",
+        questions: [
+          "1. Joanne __________ (work) eight hours a day.",
+          "2. Tonight we __________ (see) a play at the theatre.",
+          "3. Who __________ you __________ (speak) on the phone every day?",
+          "4. He __________ (not know) him very well.",
+          "5. What will you do if she __________ (come) late?",
+          "6. My wife __________ (like) coffee for breakfast.",
+          "7. What __________ Tom usually __________ (have) for breakfast?",
+          "8. Your train __________ (leave) at 17.25 from platform 3."
+        ]
+      }
+    ]
+        
   }
 ];
+
+const grammarRules4 = [
+  {
+    id: 1,
+    title: 'Lesson 16: EXPRESSING OPINIONS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        sentence: "A- WHAT DO YOU THINK ABOUT ENGLISH?",
+        pronunciation: "[wat do io fink ebaot eninglish]",
+        translationFr: "\n→ Que pensez-vous de la langue Anglaise?",
+        translationMg: ""
+      },
+      {
+        sentence: 'B- Well, I think that English language is very important and I like it.',
+        pronunciation: "",
+        translationFr: "",
+        translationMg: ""
+      },           
+    ],
+    
+    content2: [
+      {
+        sentence: "→ I THINK THAT… ",
+        pronunciation: "",
+        translationFr: "Je pense que...",
+        translationMg: "Raha ny hevitro dia",
+      },      
+      {
+        sentence: "→ I RECKON[reken] THAT…",
+        pronunciation: "",
+        translationFr: "En ce qui me concerne de",
+        translationMg: "",
+      },      
+      {
+        sentence: "→ AS FAR AS I’M CONCERNED…",
+        pronunciation: "[az faraz aim kansernd]",
+        translationFr: "Quant à moi/pour moi...",
+        translationMg: "Raha ny amiko",
+      },
+      {
+        sentence: "→ TO ME/AS FOR ME, I CAN SAY THAT",
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: `→ IN MY POINT OF VIEW….`,
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },
+      {
+        sentence: `→ IN MY OPINION….`,
+        pronunciation: "",
+        translationFr: "Au Sujet de..",
+        translationMg: "",
+      },
+      {
+        sentence: `→ WITH REGARDS TO...`,
+        pronunciation: "",
+        translationFr: "",
+        translationMg: "",
+      },            
+    ],
+    
+    content3: [
+      {
+        sentence: "→ TO BE GOOD FOR SB / AT STH (TO + INF.v)",
+        translation: "Être bon pour quelqu’un / bon en quelque chose / mahay",
+        examples: [
+          { 
+            sentence: "Ex: English is good for me.",
+            translation: ""
+          },
+          {
+            sentence: "Ex: I’m not good at English.",
+            translation: ""
+          }
+        ]
+      },
+      {
+        sentence: "→ TO BE BAD FOR SB / AT / IN STH (TO + INF.v)",
+        translation: "Être mauvais pour quelqu’un / nul en quelque chose / tsy mahay",
+        examples: [
+          {
+            sentence: "Ex: I’m so bad in English, that’s why I learn it.",
+            translation: ""
+          }
+        ]
+      },
+      {
+        sentence: "→ TO BE DIFFICULT FOR SB / TO + INF.v",
+        translation: "Être difficile pour / de + verbe à l’infinitif = Sarotra",
+        examples: [
+          {
+            sentence: "Ex: It is difficult to master English fastly.",
+            translation: ""
+          }
+        ]
+      },
+      {
+        sentence: "→ TO BE EASY FOR SB / TO + INF.v",
+        translation: "Être facile pour quelqu’un / de = Mora",
+        examples: [
+          {
+            sentence: "EX: Do you think it is easy to speak English in two months?",
+            translation: ""
+          }
+        ]
+      },
+      {
+        sentence: "→ TO BE IMPORTANT FOR SB / TO + INF.v",
+        translation: "Être important pour quelqu’un / de = Zava-dehibe",
+        examples: [
+          {
+            sentence: "Ex: As for me, it is important to know English.",
+            translation: ""
+          }
+        ]
+      },
+      {
+        sentence: "→ TO BE USEFUL FOR SB / TO + INF.v",
+        translation: "Être utile pour quelqu’un / Ilaina",
+        examples: [
+          {
+            sentence: "Ex: Of course, it is useful for everybody to speak English.",
+            translation: ""
+          }
+        ]
+      },
+      {
+        sentence: "→ TO BE USELESS[iozles]FOR SB/TO +INF.v",
+        translation: "Etre inutile pour qlq1/Tsy ILAINA",
+        examples: [
+          {
+            sentence: "Ex: It is useless to do things which you don’t like.",
+            translation: ""
+          }
+        ]
+      }
+    ],         
+  }
+];
+
+const grammarRules5 = [
+  {
+    id: 1,
+    title: 'Lesson 17: LINKING WORDS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        sentence: "→ First, firstly, first of all, in the first place,",
+        pronunciation: "",
+        translationFr: "\n→ Premièrement/D’abord",
+        translationMg: ""
+      },
+      {
+        sentence: '→ First and foremost,',
+        pronunciation: "",
+        translationFr: "",
+        translationMg: ""
+      },
+      {
+        sentence: '→ To begin / start with..',
+        pronunciation: "",
+        translationFr: "",
+        translationMg: ""
+      },            
+    ],
+    
+    content2: [
+      {
+        linking: "→ Firstly, Secondly, thirdly, then, next",
+        frenchTranslation: "   Prémierement/Deuxiément",
+        malagasyTranslation: ""
+      },
+      {
+        linking: "→ As a matter of fact, in fact",
+        frenchTranslation: "→ (en fait) ",
+        malagasyTranslation: "Raha tena marina"
+      },
+      {
+        linking: "→ Actually [aktrouali]",
+        frenchTranslation: "→ effectivement/vraiment ",
+        malagasyTranslation: "Raha tena marina"
+      },
+      {
+        linking: "→ Anyway",
+        frenchTranslation: "→ de toute façon ",
+        malagasyTranslation: "Na dia izany aza"
+      },
+      {
+        linking: "→ Even if/even though",
+        frenchTranslation: "→  Même si… ",
+        malagasyTranslation: "Na dia…"
+      },
+      {
+        linking: "→ In spite of that/ despite of that",
+        frenchTranslation: "→ Malgré tout ça… ",
+        malagasyTranslation: "Na dia eo aza izany..."
+      },
+      {
+        linking: "→ No matter what/whatever ",
+        frenchTranslation: "→ Quoi que…  ",
+        malagasyTranslation: "Na inona na inona"
+      },
+      {
+        linking: "→ Unless/except/ Apart from",
+        frenchTranslation: "→ Sauf/ excépter ",
+        malagasyTranslation: "Afa tsy/Raha tsyhoe.."
+      },
+      {
+        linking: "→ If not",
+        frenchTranslation: "→ Sinon",
+        malagasyTranslation: "Raha tsy izany"
+      },
+      {
+        linking: "→ Apart from that/in addition/besides",
+        frenchTranslation: "→ à part ça",
+        malagasyTranslation: "Ho fanampin’izay"
+      },
+      {
+        linking: "→ On the one hand",
+        frenchTranslation: "→ D’une part",
+        malagasyTranslation: "@ lafiny voalohany"
+      },
+      {
+        linking: "→ On the other hand",
+        frenchTranslation: "→ D’autre part",
+        malagasyTranslation: "@ lafiny hafa koa dia.."
+      },
+      {
+        linking: "→ But/however/although",
+        frenchTranslation: "→ mais/cependant",
+        malagasyTranslation: "Nefa/Kanefa"
+      },
+      {
+        linking: "→ Not only…..but also",
+        frenchTranslation: "→ Pas seulement…mais aussi",
+        malagasyTranslation: "Tsy vitan’ny hoe….fa"
+      },
+      {
+        linking: "→ That’s why, that’s the reason why",
+        frenchTranslation: "→ C’est pour cela",
+        malagasyTranslation: "Ka izany indrindra"
+      },
+      {
+        linking: "→ So/Especially[espesli]",
+        frenchTranslation: "→ Alors/ Surtout",
+        malagasyTranslation: "Ka noho izany/Indrindra2"
+      },
+      {
+        linking: "→ Because of",
+        frenchTranslation: "→ A cause de",
+        malagasyTranslation: "Noho ny"
+      },
+      {
+        linking: "→ Thanks to",
+        frenchTranslation: "→ Grâce à",
+        malagasyTranslation: "Isaorana an’ny…"
+      },
+      {
+        linking: "→ To, in order to, so as to",
+        frenchTranslation: "→ A fin de ",
+        malagasyTranslation: "Mba"
+      },
+      {
+        linking: "→ For + nom/ pronom + TO + v",
+        frenchTranslation: "→ Pour que… ",
+        malagasyTranslation: "Mba"
+      },
+      {
+        linking: "→ Provided/providing that",
+        frenchTranslation: "→ A condition que ",
+        malagasyTranslation: "Raha ohatra ka"
+      },
+      {
+        linking: "→ On condition that",
+        frenchTranslation: "→ A condition que ",
+        malagasyTranslation: "Raha ohatra ka"
+      },
+      {
+        linking: "→ So long as / as long as",
+        frenchTranslation: "→ En tant que/ tant que  ",
+        malagasyTranslation: "Raha ohatra ka/@ maha"
+      },
+      {
+        linking: "→ As soon as/once",
+        frenchTranslation: "→ Dès que /une fois ",
+        malagasyTranslation: "Raha vatany…"
+      },
+      {
+        linking: "→ Suddenly/all of a sudden[saden]",
+        frenchTranslation: "→ Soudainement",
+        malagasyTranslation: "Tampotampoka teo"
+      },
+
+    ],
+    
+    content3: [
+      {
+        sentence:`  
+        A- What do you think about English?
+        → Well, to begin with, I’ve been learning English for at least three weeks now, and I think
+that English is very important, and I like it a lot, why? Because, I need it for my future life.
+Not onlyis it important but also it is an international language, and I reckon that nobody
+can avoid this language anymore; everybody has to learn it if they want to communicate
+with the outside world. Yeah, to me, English is difficult, in terms of pronounciation, and it
+is easy to forget. However, I’m gonna do best to master it, because I think I have an
+apportunity to speak quickly, hopefully by this Book and CD. Um, I think that’s all.
+        `,
+      },
+    ],         
+  }
+];
+
+
+const grammarRules6 = [
+  {
+    id: 1,
+    title: 'Lesson 18: PRESENT PROGRESSIVE TENSE',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "PRESENT PROGRESSIVE TENSE",
+        description: `                          [TO BE + V(ING) +C].
+
+        → Le Présent Progressif (ou PresentContinuous) s'emploie pour parler de: 
+         Ce qui se passe maintenant: 
+        → Ampiasaina ny PRESENT CONTINUOUS amin’ny zavatra mitranga amin’ny fotoana
+        anaovana an’ilay zavatra.
+          Ex: " I'm reading a page on the Internet at the moment/I’m now eating and watching TV".
+        - Je suis en train de lire une page sur Internet en ce moment/ je mange et regarde la TELE.`
+        
+      }      
+    ],
+    content2: [
+      {
+        type: "adverbs",
+        table: [
+          { adverbs: "→ Right now", frenchTranslation1: "→ Maintenant/tout de suite" },
+          { adverbs: "→ Now", frenchTranslation1: "→ Maintenant" },
+          { adverbs: "→ Presently", frenchTranslation1: "→ À présent" },
+          { adverbs: "→ At the moment", frenchTranslation1: "→ En ce moment" },
+          { adverbs: "→ At this time", frenchTranslation1: "→ À cette heure-ci" },
+        ],
+      },
+      {
+        type: "sentenceForms",
+        table: [
+          {
+            affirmative: "I’m eating.",
+            interrogative: "Am I eating?",
+            negative: " I’m not eating."
+          },
+          {
+            affirmative: "You are eating.",
+            interrogative: "Are you eating?",
+            negative: " You are not eating."
+          },
+          {
+            affirmative: "He/she/it is eating",
+            interrogative: "Is he/she/it eating?",
+            negative: " He/she/it is not eating"
+          },
+          {
+            affirmative: "We/they are eating",
+            interrogative: "Are we/they eating?",
+            negative: " We/they are not eating"
+          }
+        ]
+      }
+    ],    
+    
+    content3: [
+      {
+        title: "EXERCISES - FILL IN THE BLANKS",
+        instructions: "I) Exercise: Put the verb in brackets in the correct form to make different form of the Present Continuous Tense",
+        questions: [
+          "1. Joanne __________ (work) at her office now",
+          "2. What __________ (you do) at this moment.",
+          "3. Who __________ you __________ (speak) with?",
+          "4. Maria __________ (sit) next to Paul.",
+          "5. What __________ (you think about)?",
+          "6. My wife __________ (sleep) presently",
+          "7.The phone __________ (not ring)",
+        ]
+      }
+    ],         
+  }
+];
+
 
 const GrammarScreen = () => {
   const [expanded, setExpanded] = useState<string | number | null>(null);
@@ -621,7 +1043,7 @@ const GrammarScreen = () => {
                   {rule.content2?.map((content, contentIndex) =>
                     content.table?.map((item: { verbs: string; frenchTranslation: string; }, index: number) => (
                     <View key={index} style={styles.tableRow}>
-                      <RNText style={styles.tableCell}>{item.verbs}</RNText>
+                       <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.verbs}</RNText>
                       <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                      
                     </View>
@@ -630,11 +1052,417 @@ const GrammarScreen = () => {
                 
               </List.Accordion>
 
+              <List.Accordion
+  title="DAILY DIALOGUES"
+  left={(props) => (
+    <List.Icon {...props} icon="handshake" color="#8da9c4" />
+  )}
+>
+  {rule.content3.map((line, index) => (
+    <List.Item
+      key={index}
+      title={line.sentence}
+      titleStyle={[
+        { fontSize: 14 },
+        line.sentence.startsWith("→") && { fontWeight: "bold", color: "#4a4a4a" }
+      ]}
+      right={() => (
+        <IconButton
+          icon="volume-high"
+          size={24}
+          onPress={() => speak(line.sentence)}
+          iconColor="#8da9c4"
+        />
+      )}
+    />
+  ))}
+</List.Accordion>
+
+<List.Accordion
+  title="EXERCISES"
+  left={(props) => (
+    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
+  )}
+>
+  {rule.content4.map((exercise, index) => (
+    <View key={index} style={{ paddingHorizontal: 3 }}>
+      <Text style={{ fontWeight: 'bold', marginBottom: 20 }}>{exercise.instructions}</Text>
+      {exercise.questions.map((q, i) => (
+        <List.Item
+        key={i}
+        title={() => (
+          <Text style={{ flex: 2, flexWrap: 'wrap' }}>
+            {q}
+          </Text>
+        )}
+        right={() => (
+          <IconButton
+            icon="volume-high"
+            size={20}
+            onPress={() => speak(q)}
+            iconColor="#8da9c4"
+          />
+        )}
+      />      
+      ))}
+    </View>
+  ))}
+</List.Accordion>
+
+
             </List.Section>
           </Card.Content>
         </Card>
       ))}
 
+
+{grammarRules4.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+               <List.Accordion
+                  title="EXPRESSING OPINIONS"
+                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+                >
+                {rule.content1.map((line, index) => (
+                               <List.Item
+                                 key={index}
+                                 title={<Text style={{ fontWeight: 'bold',flexWrap: 'nowrap' }}>
+                                   {line.sentence}</Text>}
+                                 description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                                 descriptionStyle={styles.pronunciation}
+                                 right={() => (
+                                   <IconButton
+                                     icon="volume-high"
+                                     size={24}
+                                     onPress={() => speak(line.sentence)}
+                                     iconColor="#8da9c4"
+                                   />
+                                 )}
+                               />
+                             ))}
+                           </List.Accordion>
+              
+                      {/* Second Accordion */}
+                                 <List.Accordion
+                       title="EXPRESSING OPINIONS"
+                       left={(props) => (
+                         <List.Icon {...props} icon="comment" color="#8da9c4" />
+                       )}
+                     >
+                       {rule.content2.map((line, index) => (
+                         <View
+                           key={index}
+                           style={{
+                             flexDirection: 'row',
+                             justifyContent: 'space-between',
+                             alignItems: 'flex-start',
+                             paddingVertical: 8,
+                             paddingHorizontal: 12,
+                             borderBottomWidth: 1,
+                             borderBottomColor: '#ccc',
+                           }}
+                         >
+                           {/* Phrase en anglais à gauche */}
+                           <View style={{ flex: 1, paddingRight: 8 }}>
+                             <Text style={{ fontWeight: 'bold' }}>{line.sentence}</Text>
+                             <Text style={{ color: '#555' }}>{line.pronunciation}</Text>
+                           </View>
+                     
+                           {/* Traductions à droite */}
+                           <View style={{ flex: 1 }}>
+                             <Text style={{ color: '#555' }}>{line.translationFr}</Text>
+                             <Text style={{ color: '#555' }}>{line.translationMg}</Text>
+                           </View>
+                     
+                           {/* Bouton audio à droite (en haut aligné) */}
+                           <IconButton
+                             icon="volume-high"
+                             size={20}
+                             onPress={() => speak(line.sentence)}
+                             iconColor="#8da9c4"
+                           />
+                         </View>
+                       ))}
+                     </List.Accordion>
+                    
+                     <List.Accordion
+  title="ADJECTIVES"
+  left={(props) => (
+    <List.Icon {...props} icon="brain" color="#8da9c4" />
+  )}
+>
+  {rule.content3.map((item, index) => (
+    <View key={index} style={{ paddingHorizontal: 16, paddingVertical: 8 }}>
+      <Text style={{ fontWeight: "bold", color: "#4a4a4a", fontSize: 14 }}>
+        {item.sentence}
+      </Text>
+      <Text style={{ fontStyle: "italic", marginBottom: 8 }}>{item.translation}</Text>
+
+      {item.examples.map((ex, exIndex) => (
+        <View
+          key={exIndex}
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            marginBottom: 4
+          }}
+        >
+          <View style={{ flex: 1 }}>
+            <Text style={{ fontSize: 14 }}>{ex.sentence}</Text>
+            <Text style={{ fontSize: 12, color: "#666" }}>{ex.translation}</Text>
+          </View>
+          <IconButton
+            icon="volume-high"
+            size={20}
+            onPress={() => speak(ex.sentence)}
+            iconColor="#8DA9C4"
+          />
+        </View>
+      ))}
+    </View>
+  ))}
+</List.Accordion>
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+
+{grammarRules5.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+               <List.Accordion
+                  title="POUR COMMENCER"
+                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+                >
+                {rule.content1.map((line, index) => (
+                               <List.Item
+                                 key={index}
+                                 title={<Text style={{ fontWeight: 'bold',flexWrap: 'nowrap' }}>
+                                   {line.sentence}</Text>}
+                                 description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
+                                 descriptionStyle={styles.pronunciation}
+                                 right={() => (
+                                   <IconButton
+                                     icon="volume-high"
+                                     size={24}
+                                     onPress={() => speak(line.sentence)}
+                                     iconColor="#8da9c4"
+                                   />
+                                 )}
+                               />
+                             ))}
+                           </List.Accordion>
+              
+                      {/* Second Accordion */}
+                      <List.Accordion
+                title="POUR DEVELOPPER UN SUJET"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.table}>
+                  <View style={styles.tableRow}>
+                    <RNText style={styles.tableHeader}>Linking words</RNText>
+                    <RNText style={styles.tableHeader}>French Translation</RNText>
+                    <RNText style={styles.tableHeader}>Malagasy Translation</RNText>
+                  </View>
+                  {rule.content2.map((item, index) => (
+                    <View key={index} style={styles.tableRow}>
+                      <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>{item.linking}</RNText>
+                      <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                      <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                    </View>
+                  ))}
+                </View>
+              </List.Accordion>
+                    
+                 <List.Accordion
+                           title="PRACTICE"
+                           left={(props) => (
+                             <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+                           )}
+                         >
+                           {rule.content3.map((arg, index) => {
+                             const boldPhrases = [
+                               "A- What do you think about English?",
+                               "to begin with",
+                               "Not only",
+                               "but also",
+                               "I reckon that",
+                               "to me",
+                               "However",
+                               "hopefully",
+                             ];
+                 
+                             const regex = new RegExp(`(${boldPhrases.join('|')})`, 'gi');
+                             const parts = arg.sentence.split(regex);
+                 
+                             return (
+                               <List.Item
+                                 key={index}
+                                 title={() => (
+                                   <Text>
+                                     {parts.map((part, i) => {
+                                       const isBold = boldPhrases.some(
+                                         (phrase) =>
+                                           phrase.toLowerCase() === part.trim().toLowerCase()
+                                       );
+                                       return (
+                                         <Text key={i} style={isBold ? { fontWeight: 'bold' } : {}}>
+                                           {part}
+                                         </Text>
+                                       );
+                                     })}
+                                   </Text>
+                                 )}
+                 
+                               />
+                             );
+                           })}
+                         </List.Accordion>
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+{grammarRules6.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+            <List.Accordion
+                title="PRESENT PROGRESSIVE TENSE"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.content3Container}>
+                  <Text style={styles.title}>{rule.content1[0].title}</Text>
+                  <Text style={styles.content}>{rule.content1[0].description}</Text>
+                </View>
+              </List.Accordion>
+              
+              {/* Second Accordion */}
+              <List.Accordion
+  title="ADVERBS"
+  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+>
+  {/* Tableau 1 : Adverbs */}
+  <View style={styles.table}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>ADVERBS OF TIME</RNText>
+      <RNText style={styles.tableHeader}>ADVERBES DE TEMPS</RNText>
+    </View>
+    {rule.content2
+      ?.find((c) => c.type === "adverbs")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>
+            {'adverbs' in item ? item.adverbs : ''}
+          </RNText>
+          {'frenchTranslation1' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation1}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+
+  {/* Tableau 2 : Affirmative / Interrogative / Negative */}
+  <View style={[styles.table, { marginTop: 24 }]}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>Affirmative</RNText>
+      <RNText style={styles.tableHeader}>Interrogative</RNText>
+      <RNText style={styles.tableHeader}>Negative</RNText>
+    </View>
+    {rule.content2
+      ?.find((c) => c.type === "sentenceForms")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          {'affirmative' in item && (
+            <RNText style={styles.tableCell}>{item.affirmative}</RNText>
+          )}
+          {'interrogative' in item && (
+            <RNText style={styles.tableCell}>{item.interrogative}</RNText>
+          )}
+          {'negative' in item && (
+            <RNText style={styles.tableCell}>{item.negative}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+</List.Accordion>
+
+<List.Accordion
+  title="EXERCISES"
+  left={(props) => (
+    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
+  )}
+>
+  {rule.content3.map((exercise, index) => (
+    <View key={index} style={{ paddingHorizontal: 3 }}>
+      <Text style={{ fontWeight: 'bold', marginBottom: 20 }}>{exercise.instructions}</Text>
+      {exercise.questions.map((q, i) => (
+        <List.Item
+        key={i}
+        title={() => (
+          <Text style={{ flex: 2, flexWrap: 'wrap' }}>
+            {q}
+          </Text>
+        )}
+        right={() => (
+          <IconButton
+            icon="volume-high"
+            size={20}
+            onPress={() => speak(q)}
+            iconColor="#8da9c4"
+          />
+        )}
+      />      
+      ))}
+    </View>
+  ))}
+</List.Accordion>
+
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
 
     </ScrollView>
   );
@@ -664,7 +1492,8 @@ const styles = StyleSheet.create({
   },
   pronunciation: {
     fontStyle: 'italic',
-    color: '#8da9c4',
+    color: '#000000',
+    fontSize: 14
   },
   translation: {
     fontStyle: 'italic',
@@ -704,6 +1533,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end', // Aligner en bas de la cellule
     alignItems: 'flex-start', // Aligner le texte à gauche
     paddingHorizontal: 5,
+    fontWeight: 'bold'
   },
   cellText: {
     fontSize: 14,
