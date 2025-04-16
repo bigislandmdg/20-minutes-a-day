@@ -668,6 +668,52 @@ const grammarRules6 = [
   }
 ];
 
+const grammarRules7 = [
+  {
+    id: 1,
+    title: 'Lesson 19: INFINITIVE VERBS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        type: "ETAT MENTAUX",
+        table: [
+          { infinitive: "→ TO DOUBT SB/STH", frenchTranslation2: "- Douter de", malagasyTranslation1:"- Manahy" },
+          { infinitive: "→ TO KNOW (ABOUT STH) ", frenchTranslation2: "- Savoir/connaître", malagasyTranslation1:"- Mahalala" },
+          { infinitive: "→  TO THINK OF/ABOUT SB", frenchTranslation2: "- Penser à/de", malagasyTranslation1:" - Mieritreritra" },
+          { infinitive: "→ TO UNDERSTAND SB", frenchTranslation2: "- Comprendre", malagasyTranslation1:" - Mahazo" },
+        ],
+      },
+      {
+        type: "ETATS EMOTIONS",
+        table: [
+          { infinitive1: "→ TO LIKE (TO) STH/SB", frenchTranslation3: "- Aimer qlq1",malagasyTranslation2: " Tia" },
+          { infinitive1: "→ TO LOVE (TO) STH/SB", frenchTranslation3: "- Aimer ",malagasyTranslation2: " Tia" },
+          { infinitive1: "→ TO NEED (TO) STH/SB", frenchTranslation3: "- Avoir besoin de ",malagasyTranslation2: " Mila" },
+          { infinitive1: "→ TO PREFER (TO)", frenchTranslation3: "- Préférer de ",malagasyTranslation2: " Aleo" },
+          { infinitive1: "→ TO WANT (TO) STH/SB", frenchTranslation3: "- Vouloir ",malagasyTranslation2: " - Maniry/te" },
+          { infinitive1: "→ TO WISH (TO)", frenchTranslation3: "- Souhaiter",malagasyTranslation2: " - Mirary/te" },
+        ]
+      }
+    ],    
+    
+    content3: [
+      {
+        title: "EXERCISES - FILL IN THE BLANKS",
+        instructions: "I) Exercise: Put the verb in brackets in the correct form to make different form of the Present Continuous Tense",
+        questions: [
+          "1. Joanne __________ (work) at her office now",
+          "2. What __________ (you do) at this moment.",
+          "3. Who __________ you __________ (speak) with?",
+          "4. Maria __________ (sit) next to Paul.",
+          "5. What __________ (you think about)?",
+          "6. My wife __________ (sleep) presently",
+          "7.The phone __________ (not ring)",
+        ]
+      }
+    ],         
+  }
+];
+
 
 const GrammarScreen = () => {
   const [expanded, setExpanded] = useState<string | number | null>(null);
@@ -1415,7 +1461,7 @@ const GrammarScreen = () => {
       ?.table.map((item, index) => (
         <View key={index} style={styles.tableRow}>
           {'affirmative' in item && (
-            <RNText style={styles.tableCell}>{item.affirmative}</RNText>
+            <RNText style={styles.tableCell}>{String(item.affirmative)}</RNText>
           )}
           {'interrogative' in item && (
             <RNText style={styles.tableCell}>{item.interrogative}</RNText>
@@ -1463,6 +1509,112 @@ const GrammarScreen = () => {
           </Card.Content>
         </Card>
       ))}
+
+{grammarRules7.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+              
+              {/* Second Accordion */}
+              <List.Accordion
+  title="INFINITIVE VERBS"
+  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+>
+  {/* Tableau 1 : Adverbs */}
+  <View style={styles.table}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>ETAT MENTAUX</RNText>
+      <RNText style={styles.tableHeader}>ETATS EMOTIONS</RNText>
+    </View>
+    {rule.content1
+      ?.find((c) => c.type === "ETAT MENTAUX")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>
+            {'infinitive' in item ? item.infinitive : ''}
+          </RNText>
+          {'frenchTranslation2' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation2}</RNText>
+          )}
+           {'malagasyTranslation1' in item && (
+            <RNText style={styles.tableCell}>{item.malagasyTranslation1}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+
+  {/* Tableau 2 : Affirmative / Interrogative / Negative */}
+  <View style={[styles.table, { marginTop: 24 }]}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}></RNText>
+      <RNText style={styles.tableHeader}></RNText>
+      <RNText style={styles.tableHeader}></RNText>
+    </View>
+    {rule.content1
+      ?.find((c) => c.type === "ETATS EMOTIONS")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          {'infinitive1' in item && (
+            <RNText style={styles.tableCell}>{item.infinitive1}</RNText>
+          )}
+          {'frenchTranslation3' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation3}</RNText>
+          )}
+          {'malagasyTranslation2' in item && (
+            <RNText style={styles.tableCell}>{item.malagasyTranslation2}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+</List.Accordion>
+
+<List.Accordion
+  title="EXERCISES"
+  left={(props) => (
+    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
+  )}
+>
+  {rule.content3.map((exercise, index) => (
+    <View key={index} style={{ paddingHorizontal: 3 }}>
+      <Text style={{ fontWeight: 'bold', marginBottom: 20 }}>{exercise.instructions}</Text>
+      {exercise.questions.map((q, i) => (
+        <List.Item
+        key={i}
+        title={() => (
+          <Text style={{ flex: 2, flexWrap: 'wrap' }}>
+            {q}
+          </Text>
+        )}
+        right={() => (
+          <IconButton
+            icon="volume-high"
+            size={20}
+            onPress={() => speak(q)}
+            iconColor="#8da9c4"
+          />
+        )}
+      />      
+      ))}
+    </View>
+  ))}
+</List.Accordion>
+
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
 
     </ScrollView>
   );

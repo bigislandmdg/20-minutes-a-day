@@ -289,10 +289,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: '#ffffff',
     borderColor: '#000000',
-    height: 152, 
+    height: 155, 
   },
   data: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
   },
