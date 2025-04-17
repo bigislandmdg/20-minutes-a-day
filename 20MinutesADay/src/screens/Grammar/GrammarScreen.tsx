@@ -686,30 +686,524 @@ const grammarRules7 = [
       {
         type: "ETATS EMOTIONS",
         table: [
-          { infinitive1: "→ TO LIKE (TO) STH/SB", frenchTranslation3: "- Aimer qlq1",malagasyTranslation2: " Tia" },
-          { infinitive1: "→ TO LOVE (TO) STH/SB", frenchTranslation3: "- Aimer ",malagasyTranslation2: " Tia" },
-          { infinitive1: "→ TO NEED (TO) STH/SB", frenchTranslation3: "- Avoir besoin de ",malagasyTranslation2: " Mila" },
-          { infinitive1: "→ TO PREFER (TO)", frenchTranslation3: "- Préférer de ",malagasyTranslation2: " Aleo" },
-          { infinitive1: "→ TO WANT (TO) STH/SB", frenchTranslation3: "- Vouloir ",malagasyTranslation2: " - Maniry/te" },
-          { infinitive1: "→ TO WISH (TO)", frenchTranslation3: "- Souhaiter",malagasyTranslation2: " - Mirary/te" },
+          { infinitive1: "→ TO LIKE (TO) STH/SB", frenchTranslation3: " - Aimer qlq1",malagasyTranslation2: " - Tia" },
+          { infinitive1: "→ TO LOVE (TO) STH/SB", frenchTranslation3: " - Aimer ",malagasyTranslation2: " - Tia" },
+          { infinitive1: "→ TO NEED (TO) STH/SB", frenchTranslation3: " - Avoir besoin de ",malagasyTranslation2: " Mila" },
+          { infinitive1: "→ TO PREFER (TO)", frenchTranslation3: " - Préférer de ",malagasyTranslation2: " - Aleo" },
+          { infinitive1: "→ TO WANT (TO) STH/SB", frenchTranslation3: " - Vouloir ",malagasyTranslation2: " - Maniry/te" },
+          { infinitive1: "→ TO WISH (TO)", frenchTranslation3: " - Souhaiter",malagasyTranslation2: " - Mirary/te" },
         ]
-      }
+      },
+      {
+        type: "PERCEPTIONS",
+        table: [
+          { infinitive2: "→ TO FEEL STH/SB", frenchTranslation4: " - Sentir/Se sentir",malagasyTranslation3: "- Mahatsapa" },
+          { infinitive2: "→ TO HEAR STH/SB", frenchTranslation4: " - Entendre ",malagasyTranslation3: "- Maheno" },
+          { infinitive2: "→ TO SEE STH/SB", frenchTranslation4: " - Voir ",malagasyTranslation3: "- Mahita" },
+          { infinitive2: "→ TO SMELL STH", frenchTranslation4: " - Sentir(odeur) ",malagasyTranslation3: "- Manimbolo " },
+          { infinitive2: "→ TO TASTE STH", frenchTranslation4: " - Goutter ",malagasyTranslation3: " - Manandrana" },
+  
+        ]
+      },
+      {
+        type: "APPARENCES",
+        table: [
+          { infinitive3: "→ TO LOOK+ADJ", frenchTranslation5: "- Avoir l’air",malagasyTranslation4: "- Hoatran’ny" },
+          { infinitive3: "→ TO SEEM +ADJ", frenchTranslation5: " - Avoir l’air ",malagasyTranslation4: "-  ---//---" },
+          { infinitive3: "→ IT LOOKS THAT+SUJET", frenchTranslation5: "- Il semble que.. ",malagasyTranslation4: "- ---//---" },
+          { infinitive3: "→ IT SEEMS THAT+SUJET", frenchTranslation5: " - Il semble que.. ",malagasyTranslation4: "- ---//--- " },
+          { infinitive3: "→ IT APPEARS THAT", frenchTranslation5: " - Il parait que.. ",malagasyTranslation4: " - ---//--- " },
+          { infinitive3: "→ → TO PRETEND (NOT)TO", frenchTranslation5: " - Prétendre de",malagasyTranslation4: " - Mody " },
+          { infinitive3: "→ TO SEEM (NOT) TO", frenchTranslation5: " - Faire semblant ",malagasyTranslation4: " - ---//--- " },
+          { infinitive3: "→ TO ACT AS IF….", frenchTranslation5: "- Faire comme si.. ",malagasyTranslation4: " - ---//--- " },
+        ]
+      },
+      {
+        type: "(IR)REGULAR VERBS",
+        table: [
+          { irregular: "→ TO SPEAK WITH/TO/ABOUT SB", frenchTranslation6: " - Parler",malagasyTranslation5: " - Miteny" },
+          { irregular: "→ TO TALK WITH/TO/ABOUT SB", frenchTranslation6: " - Parler",malagasyTranslation5: " - Miteny" },
+          { irregular: "→ TO TELL STH TO SB", frenchTranslation6: " - Raconter ",malagasyTranslation5: "- Mitantara" },
+          { irregular: "→ TO SAY[sei] STH TO SB", frenchTranslation6: " - Dire",malagasyTranslation5: "- Miteny" },
+          { irregular: "→ TO LISTEN TO SB", frenchTranslation6: " - Ecouter",malagasyTranslation5: "- Mihaino" },
+          { irregular: "→ TO LOOK AT SB/STH", frenchTranslation6: " - Regarder",malagasyTranslation5: "- Mijery olona" },
+          { irregular: "→ TO WATCH TV", frenchTranslation6: " - Regarder ",malagasyTranslation5: "- Mijery tele" },
+          { irregular: "→ TO FORGET STH/SB", frenchTranslation6: " - Oublier",malagasyTranslation5: "- Manadino" },
+          { irregular: "→ TO REMEMBER STH/SB", frenchTranslation6: " - Se souvenir",malagasyTranslation5: "- Mahatadidy" },
+          { irregular: "→ TO TRUST IN SB", frenchTranslation6: " - Faire confiance",malagasyTranslation5: "- Mahatoky" },
+          { irregular: "→ TO DEPEND ON SB/STH", frenchTranslation6: " - Dépendre de",malagasyTranslation5: "- Miankina" },
+          { irregular: "→ TO BETRAY SB", frenchTranslation6: " - Trahir",malagasyTranslation5: " - Mamadika" },
+          { irregular: "→ TO DECEIVE SB", frenchTranslation6: " - Tromper",malagasyTranslation5: "- Mamitaka" },
+          { irregular: "→ TO CHEAT [trit] ON SB", frenchTranslation6: " - Tricher",malagasyTranslation5: "- " },
+          { irregular: "→ TO STEAL STH FROM SB", frenchTranslation6: " - Voler",malagasyTranslation5: "- Mangalatra" },
+          { irregular: "→ TO BORROW STH FROM SB", frenchTranslation6: " - Emprunter",malagasyTranslation5: "- Mindrana" },
+          { irregular: "→ TO LEND STH TO SB", frenchTranslation6: " -Prêter ",malagasyTranslation5: "- Mampindrana" },  
+        ]
+      },
+      {
+        type: "expressions",
+        table: [
+          { expressions: "To be used to + v.ing", frenchTranslation7: " Avoir l'habitude de" },
+          { expressions: "To be accustomed to + v.ing", frenchTranslation7: " Zatra" },
+          { expressions: "To used to + v.ing", frenchTranslation7: " Avoir l'habitude de (au passe)" },
+        ],
+        examples: [
+          {
+            en: "He doubted that her story was true.",
+            fr: "Il doutait que son histoire soit vraie.",
+            mg: "Manahy ny fahamarinan’ny tantaran’ilay zazavavy izy.",
+          },
+          {
+            en: "I prefer staying here.",
+            fr: "Je préfère rester ici.",
+            mg: "Aleoko mijanona eto.",
+          },
+          {
+            en: "I don’t hear you, can you speak up please?",
+            fr: "Je t’entends pas, peux-tu parler plus fort stp ?",
+            mg: "Tsy mandre anao aho, afaka miteny mafy ve azafady ?",
+          },
+        ],  
+      },
+      {
+        type: "expressions",
+        table: [
+          { expressions1: "From now on/today", frenchTranslation7: "=A partir de maintenant", 
+            malagasyTranslation6: " Manombok'izao/androany" },
+        ],        
+      },
+      
     ],    
     
+   
+  }
+];
+
+const grammarRules8 = [
+  {
+    id: 1,
+    title: 'Lesson 20: THE ARTICLES',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        type: 'definition',
+        text: [
+          "→ Il sert à désigner un objet (ou une classe d'objet) qui a une existence propre en dehors du locuteur.",
+          "→ Ampiasaina ny ARTICLE DEFINIS entina anondroana zavatra iray.",
+          "                                            [Voyelles: A, E, I, O, et Y]"
+        ],
+      },
+      {
+        type: 'prononciation',
+        text: [
+          "▪ Prononciation :  ",
+          "▪ THE se prononce [ðə] devant une consonne y compris U prononcé [j]",
+          "   Ex: the cat, the university",
+          "   → le chat, l'université",
+          "▪ THE se prononce [ði:] ou [ði] devant une voyelle et devant le h muet de hour, heir, honest, honour et leurs dérivés.",
+          "   Ex: the art, the heir apparent",
+        ],
+      },
+    ],
+    content2: [
+      {
+        type: 'definition',
+        text: [
+          "→ Ny Article indéfinis dia ampiasaina @ zavatra IRAY tokana ihany.",
+        ],
+      },
+      {
+        type: 'prononciation',
+        text: [
+          "→ A s'emploie devant une consonne phonétique",
+          "▪ a cat, a unit ['ju:nit], a euro ['juərəu]",
+          "   → un chat, une unité, un euro",
+          "                                    [Voyelles: A, E, I, O, et Y]",
+          "→ AN s'emploie devant une voyelle phonétique   ",
+          "▪ an arm ['a:m]",
+          "   → un bras",
+          "▪ an apple [eiple:]",
+          "   → une pomme",
+          "N.B. : le son [ j ] est, en effet, une consonne.",
+          "De même, devant H muet :",
+          "▪ hour, heir, honest,",
+          "▪ an heir : un héritier",
+          "▪ an hour",
+          "▪ honor et leurs dérivés.",
+        ],
+      },
+    ],
     content3: [
       {
-        title: "EXERCISES - FILL IN THE BLANKS",
-        instructions: "I) Exercise: Put the verb in brackets in the correct form to make different form of the Present Continuous Tense",
-        questions: [
-          "1. Joanne __________ (work) at her office now",
-          "2. What __________ (you do) at this moment.",
-          "3. Who __________ you __________ (speak) with?",
-          "4. Maria __________ (sit) next to Paul.",
-          "5. What __________ (you think about)?",
-          "6. My wife __________ (sleep) presently",
-          "7.The phone __________ (not ring)",
+        type: 'demonstratives_pair',
+        pairs: [
+          {
+            left: {
+              label: 'THIS/ ITY — CE/CET(TE)',
+              description: 'Utilisé pour les noms singuliers près du parleur.',
+              example: 'This one is yours / What is this?',
+              translation: 'Celui-ci est le tien. / Qu’est-ce que c’est ?',
+            },
+            right: {
+              label: 'THAT/ IRY — CE/CET(TE)',
+              description: 'Utilisé pour les noms singuliers loin du parleur.',
+              example: 'Can you give me that umbrella, please?',
+              translation: 'Peux-tu me passer ce parapluie, s’il te plaît ?',
+            },
+          },
+          {
+            left: {
+              label: 'THESE/ IRETO — CE(S)/CET(TE)',
+              description: 'Pluriel de THIS.',
+              example: 'These books are mine; I bought them for my studies.',
+              translation: 'Ces livres sont les miens ; je les ai achetés pour mes études.',
+            },
+            right: {
+              label: 'THOSE/ IRETO — CE(S)/CET(TE)',
+              description: 'Pluriel de THAT.',
+              example: 'Can you give me those umbrellas, please?',
+              translation: 'Peux-tu me passer ces parapluies, s’il te plaît ?',
+            },
+          },
+        ],
+        notes: [
+          "THE DEFINITE ARTICLES ‘THE’ = le, la, les, l’ (NY/ILAY)",
+          "THE INDEFINITE ARTICLES 'A', 'AN' = un/une",
+          "→ THIS — THESE (plural) = ITY/IRETO — CE(S)/CET(TE)"
         ]
       }
+    ]    
+
+  },
+];
+
+const grammarRules9 = [
+  {
+    id: 1,
+    title: 'Lesson 21: THE PRONOUNS/ POSSESSIVES',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        type: 'complexTable',
+        title: 'PRONOUNS / POSSESSIVES',
+        headers: [
+          'Personal Pronouns',
+          'Object Pronouns',
+          'Possessive Adjectives',
+          'Possessive Pronouns',
+          'Reflexive Pronouns',
+        ],
+        rows: [
+          {
+            label: 'Singular',
+            data: [
+              ['I', 'me', 'my', 'mine', 'myself'],
+              ['you', 'you', 'your', 'yours', 'yourself'],
+              ['he', 'him', 'his', 'his', 'himself'],
+              ['she', 'her', 'her', 'hers', 'herself'],
+              ['it', 'it', 'its', '*', 'itself'],
+            ]
+          },
+          {
+            label: 'Plural',
+            data: [
+              ['we', 'us', 'our', 'ours', 'ourselves'],
+              ['you', 'you', 'your', 'yours', 'yourselves'],
+              ['they', 'them', 'their', 'theirs', 'themselves'],
+            ]
+          }
+        ]
+      }
+    ],
+    content2: [
+      {
+        type: 'grammarRule',
+        title: 'SIMPLE PAST TENSE',
+        text: [
+          "→ **Structure**: S + Past (V2 : Irrégulier / Reg.V + -ED) + C",
+          "",
+          "→ **Le Past Simple (prétérit simple)** s'emploie pour :",
+          "   Parler d'une action, événement, ou état qui a eu lieu dans une période de temps qui est déjà terminée.",
+          "",
+          "→ **AMPIASAINA NY SIMPLE PAST TENSE** AMIN’NY ZAVATRA NATAO NA NITRANGA EFA LASA.",
+        ],
+      },
+      {
+        type: 'examples',
+        title: 'EXEMPLES',
+        text: [
+          "- I went to visit my friend yesterday.",
+          "   → Je suis allé visiter mon ami.",
+          "   → Nandeha namangy namako izaho omaly.",
+          "",
+          "- I watched a movie all night.",
+          "   → J’ai regardé un film toute la nuit.",
+          "   → Nijery sary mihetsika foana aho nandritra ny alina.",
+        ],
+      },
+      {
+        type: 'table',
+        title: 'Formes : Affirmation / Négation / Interrogation',
+        headers: ['AFFIRMATION', 'NEGATION', 'INTERROGATION'],
+        rows: [
+          ['I spoke with him', 'I didn’t speak with him', 'Did I speak with him?'],
+        ],
+      },
+      {
+        type: 'list',
+        title: 'ADVERBS OF TIME / ADVERBES DE TEMPS',
+        text: [
+          "- YESTERDAY / HIER = OMALY",
+          "- THE DAY BEFORE YESTERDAY / AVANT HIER = AFAKA OMALY",
+          "- LAST NIGHT / LA NUIT DERNIÈRE",
+          "- LAST WEEK / LA SEMAINE DERNIÈRE",
+          "- LAST MONTH / LE MOIS DERNIER",
+          "- LAST YEAR / L’ANNÉE DERNIÈRE",
+          "- ONE/TWO DAYS AGO / IL Y A UN/DEUX JOURS = EFA MISY ROA ANDRO IZA",
+          "- THIS MORNING / CETTE MATINÉE",
+          "- THIS AFTERNOON / CET APRÈS-MIDI",
+        ],
+      },
+      {
+        type: 'narration',
+        title: 'NARRATION – Voir la page 15, changez les verbes au passé',
+        text: [
+          " What time did you get up this morning?",
+          "→ This morning, I got up at 5:30, and then, I went to the bathroom to take a shower,",
+          "to brush my teeth, to comb my hair. After that, I prepared breakfast for myself,",
+          "because I live alone. And after breakfast, I got dressed and prepared my stuff for",
+          "school and I left home early this morning, just because of the traffic jam,",
+          "if not I was late, as I live far. I think that’s all.",
+        ],
+      },
+
+    ],
+    
+        
+  }
+];
+
+
+const grammarRules10 = [
+  {
+    id: 1,
+    title: 'Lesson 22: VOCABULARY IN USE',
+    description: 'BASIC GRAMMARS', 
+    content1: [
+      {
+        vocabulary: "TO GO TO+ v.inf",
+        frenchTranslation: " Aller",
+        malagasyTranslation: " Mandeha"
+      },
+      {
+        vocabulary: "TO COME TO+v.inf",
+        frenchTranslation: " Venir",
+        malagasyTranslation: " Tonga"
+      },
+      {
+        vocabulary: "TO BECOME[bikam]",
+        frenchTranslation: " Devenir",
+        malagasyTranslation: " Lasa"
+      },
+      {
+        vocabulary: "TO TAKE [teik]",
+        frenchTranslation: " Prendre",
+        malagasyTranslation: " Mandray/Maka"
+      },
+      {
+        vocabulary: "TO BRING",
+        frenchTranslation: " Apporter",
+        malagasyTranslation: " Mitondra"
+      },
+      {
+        vocabulary: "TO LOOK FOR STH/SB",
+        frenchTranslation: " Chercher",
+        malagasyTranslation: " Mitady"
+      },
+      {
+        vocabulary: "TO FIND",
+        frenchTranslation: " Trouver",
+        malagasyTranslation: " Mahita"
+      },
+      {
+        vocabulary: "TO GET",
+        frenchTranslation: " Obtenir",
+        malagasyTranslation: " Mahazo"
+      },
+      {
+        vocabulary: "TO GIVE",
+        frenchTranslation: " Donner",
+        malagasyTranslation: " Manome"
+      },
+      {
+        vocabulary: "TO LIE TO SB",
+        frenchTranslation: " Mentir",
+        malagasyTranslation: " Mandainga"
+      },
+      {
+        vocabulary: "TO BE SLEEPY",
+        frenchTranslation: " Avoir sommeil",
+        malagasyTranslation: " Te-hatory"
+      },
+      {
+        vocabulary: "TO FALL ASLEEP",
+        frenchTranslation: " S'endormir",
+        malagasyTranslation: " Tafatory"
+      },
+      {
+        vocabulary: "TO EAT/NOSH",
+        frenchTranslation: " Manger",
+        malagasyTranslation: " Mihinana"
+      },
+      {
+        vocabulary: "TO SPEND MY TIME TO",
+        frenchTranslation: " Passer mon temps",
+        malagasyTranslation: " Mandany fotoana"
+      },
+      {
+        vocabulary: "TO REVISE",
+        frenchTranslation: " Reviser",
+        malagasyTranslation: " Mianatra"
+      },
+      {
+        vocabulary: "TO PICK SB UP",
+        frenchTranslation: " Prendre qlq1",
+        malagasyTranslation: " Mandray/Maka"
+      },
+      {
+        vocabulary: "TO IMITATE",
+        frenchTranslation: " Imiter",
+        malagasyTranslation: " Mankatahaka"
+      },
+      {
+        vocabulary: "TO IMPROVE/BRUSH UP ON STH",
+        frenchTranslation: " Ameliorer",
+        malagasyTranslation: " Manatsara"
+      },
+      {
+        vocabulary: "TO PRACTICE",
+        frenchTranslation: " Pratiquer",
+        malagasyTranslation: " Mizatra"
+      },
+      {
+        vocabulary: "TO GO TO BED/SLEEP",
+        frenchTranslation: " Dormir/Coucher",
+        malagasyTranslation: " Matory/Mandeha matory"
+      },
+      {
+        vocabulary: "TO HAVE A PARTY",
+        frenchTranslation: " Faire une fête",
+        malagasyTranslation: " Manao fety"
+      },
+      {
+        vocabulary: "TO HAVE FUN WITH SB ",
+        frenchTranslation: " S'amuser avec",
+        malagasyTranslation: " Manala azy "
+      },
+      {
+        vocabulary: "TO ASK SB TO DO STH",
+        frenchTranslation: " Demandera qlq1 de",
+        malagasyTranslation: " Miangavy olona"
+      },
+      {
+        vocabulary: "TO PERSUADE SB TO",
+        frenchTranslation: " Persuader qlq1",
+        malagasyTranslation: " Mandresy lahatra"
+      },
+      {
+        vocabulary: "TO FORCE SB TO DO",
+        frenchTranslation: " Forcer",
+        malagasyTranslation: " Manery olona hanao zavatra"
+      },
+      {
+        vocabulary: "TO BUY STH",
+        frenchTranslation: " Acheter",
+        malagasyTranslation: " Mividy"
+      },
+      {
+        vocabulary: "TO MEET SB/BUMP INTO SB",
+        frenchTranslation: " Rencontrer",
+        malagasyTranslation: " Mifanena"
+      },
+      {
+        vocabulary: "ON MY WAY",
+        frenchTranslation: " Sur mon chemin",
+        malagasyTranslation: " Teny an-dalana"
+      },
+      {
+        vocabulary: "TO INVITE SB",
+        frenchTranslation: " Inviter",
+        malagasyTranslation: " Manasa olona"
+      },
+      {
+        vocabulary: "TO HAVE A DRINK/LUNCH",
+        frenchTranslation: " Boire/Déjeuner",
+        malagasyTranslation: " Misotro/Mihinana atoandro"
+      },
+      {
+        vocabulary: "TO HAVE A LONG/SHORT TALK WITH",
+        frenchTranslation: " Avoir une longue conversation",
+        malagasyTranslation: " Miresaka"
+      },
+      {
+        vocabulary: "TO ACCEPT",
+        frenchTranslation: " Accepter",
+        malagasyTranslation: " Manaiky"
+      },
+      {
+        vocabulary: "TO REFUSE/REJECT",
+        frenchTranslation: " Refuser/Nier",
+        malagasyTranslation: " Manda"
+      },
+      {
+        vocabulary: "TO KEEP ON+V.ING",
+        frenchTranslation: " Continuer",
+        malagasyTranslation: " Manohy"
+      },
+      {
+        vocabulary: "TO CALL SB/GIVE SB A CALL",
+        frenchTranslation: " Appeler qlq1",
+        malagasyTranslation: " Miantso"
+      },
+      {
+        vocabulary: "TO POSTPONE/PUSH STH OFF[poush]",
+        frenchTranslation: " Remettre/Reporter",
+        malagasyTranslation: " Manemotra"
+      },
+      {
+        vocabulary: "TO GET ON/IN",
+        frenchTranslation: " Monter",
+        malagasyTranslation: " Mitaingina"
+      },
+      {
+        vocabulary: "TO GET OFF",
+        frenchTranslation: " Descendre",
+        malagasyTranslation: " Midina"
+      },
+      {
+        vocabulary: "TO GIVE SB A LIFT/RIDE[raid]TO DROP SB OFF",
+        frenchTranslation: " Raccompagner/Deposer qlq1",
+        malagasyTranslation: " Manatitra/Mampidina"
+      },
+      {
+        vocabulary: "TO TAKE SB’S PHONE NUMBER[namber]",
+        frenchTranslation: " Prendre le numero de qlq1",
+        malagasyTranslation: " Mandray nomerao"
+      },
+
+    ],
+    
+    content2: [
+      {
+        sentence:`  
+         What did you do yesterday?
+Well, yesterday, I didn’t do anything special, so my mum asked me to buy something for lunch at the
+market. On my way there, I bumped into one of my friends by chance; he was my classmate in high school.
+And he was very excited to see me, and so was I, and then, he invited me to have lunch with his family and
+talked about life. Unfortunately, I wasn’t sure about it, just because I was completely busy as I had to go to
+school after the market. So, I……………..
+        `,
+      },
     ],         
   }
 ];
@@ -1535,7 +2029,6 @@ const GrammarScreen = () => {
   <View style={styles.table}>
     <View style={styles.tableRow}>
       <RNText style={styles.tableHeader}>ETAT MENTAUX</RNText>
-      <RNText style={styles.tableHeader}>ETATS EMOTIONS</RNText>
     </View>
     {rule.content1
       ?.find((c) => c.type === "ETAT MENTAUX")
@@ -1557,16 +2050,14 @@ const GrammarScreen = () => {
   {/* Tableau 2 : Affirmative / Interrogative / Negative */}
   <View style={[styles.table, { marginTop: 24 }]}>
     <View style={styles.tableRow}>
-      <RNText style={styles.tableHeader}></RNText>
-      <RNText style={styles.tableHeader}></RNText>
-      <RNText style={styles.tableHeader}></RNText>
+      <RNText style={styles.tableHeader}>ETATS EMOTIONS</RNText>
     </View>
     {rule.content1
       ?.find((c) => c.type === "ETATS EMOTIONS")
       ?.table.map((item, index) => (
         <View key={index} style={styles.tableRow}>
           {'infinitive1' in item && (
-            <RNText style={styles.tableCell}>{item.infinitive1}</RNText>
+            <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>{item.infinitive1}</RNText>
           )}
           {'frenchTranslation3' in item && (
             <RNText style={styles.tableCell}>{item.frenchTranslation3}</RNText>
@@ -1577,39 +2068,423 @@ const GrammarScreen = () => {
         </View>
       ))}
   </View>
+
+   {/* Tableau 3 : Affirmative / Interrogative / Negative */}
+   <View style={[styles.table, { marginTop: 24 }]}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>PERCEPTIONS</RNText>
+    </View>
+    {rule.content1
+      ?.find((c) => c.type === "PERCEPTIONS")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          {'infinitive2' in item && (
+            <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>{item.infinitive2}</RNText>
+          )}
+          {'frenchTranslation4' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation4}</RNText>
+          )}
+          {'malagasyTranslation3' in item && (
+            <RNText style={styles.tableCell}>{item.malagasyTranslation3}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+
+     {/* Tableau 4 : Affirmative / Interrogative / Negative */}
+     <View style={[styles.table, { marginTop: 24 }]}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>APPARENCES</RNText>
+    </View>
+    {rule.content1
+      ?.find((c) => c.type === "APPARENCES")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          {'infinitive3' in item && (
+            <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>{item.infinitive3}</RNText>
+          )}
+          {'frenchTranslation5' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation5}</RNText>
+          )}
+          {'malagasyTranslation4' in item && (
+            <RNText style={styles.tableCell}>{item.malagasyTranslation4}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+
+   {/* Tableau 6 : Expressions / Interrogative / Negative */}
+   <View style={[styles.table, { marginTop: 24 }]}>
+  <View style={styles.tableRow}>
+    <RNText style={styles.tableHeader}></RNText>
+  </View>
+
+  {rule.content1
+    ?.find((c) => c.type === "expressions")
+    ?.table.map((item, index) => (
+      <View key={index} style={styles.tableRow}>
+        {'expressions' in item && (
+          <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>{item.expressions}</RNText>
+        )}
+        {'frenchTranslation7' in item && (
+          <RNText style={styles.tableCell}>{item.frenchTranslation7}</RNText>
+        )}
+      </View>
+    ))}
+
+  {/* 🔽 Affichage des exemples */}
+  {rule.content1
+    ?.find((c) => c.type === "expressions")
+    ?.examples?.map((ex, idx) => (
+      <View key={`example-${idx}`} style={{ marginTop: 12 }}>
+        <RNText style={{ fontWeight: "bold" }}>- {ex.en}</RNText>
+        <RNText>{ex.fr}</RNText>
+        <RNText style={{ fontStyle: "italic", color: "#555" }}>{ex.mg}</RNText>
+      </View>
+    ))}
+</View>
+
+<View style={[styles.table, { marginTop: 24 }]}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}></RNText>
+    </View>
+    {rule.content1
+      ?.find((c) => c.type === "expressions")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          {'expressions1' in item && (
+            <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>{item.expressions1}</RNText>
+          )}
+          {'frenchTranslation7' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation7}</RNText>
+          )}
+          {'malagasyTranslation6' in item && (
+            <RNText style={styles.tableCell}>{item.malagasyTranslation6}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+</List.Accordion>
+</List.Section>
+  </Card.Content>
+  </Card>
+))}
+
+
+{grammarRules8.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+               <List.Accordion
+                  title="THE DEFINITE ARTICLES ‘THE’ le, la, les, l’ (NY/ILAY)"
+                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+                >
+                {rule.content1.map((section, index) => (
+                <View key={index} style={{ marginBottom: 12 }}>
+                {section.type === 'definition' && (
+                <>
+        {section.text.map((t, i) => (
+          <Text key={i} style={{ marginBottom: 4 }}>{t}</Text>
+        ))}
+      </>
+    )}
+    {section.type === 'prononciation' && (
+      <>
+        <Text style={{ fontWeight: 'bold', marginTop: 8 }}>Prononciation :</Text>
+        {section.text.map((t, i) => (
+          <Text key={i} style={{ marginLeft: 8, marginBottom: 4 }}>{t}</Text>
+        ))}
+      </>
+    )}
+  </View>
+))}
 </List.Accordion>
 
 <List.Accordion
-  title="EXERCISES"
-  left={(props) => (
-    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
-  )}
+    title="THE INDEFINITE ARTICLE A, AN un/une"
+                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+                >
+                {rule.content2.map((section, index) => (
+                <View key={index} style={{ marginBottom: 12 }}>
+                {section.type === 'definition' && (
+                <>
+        {section.text.map((t, i) => (
+          <Text key={i} style={{ marginBottom: 4 }}>{t}</Text>
+        ))}
+      </>
+    )}
+    {section.type === 'prononciation' && (
+      <>
+        <Text style={{ fontWeight: 'bold', marginTop: 8 }}>Prononciation :</Text>
+        {section.text.map((t, i) => (
+          <Text key={i} style={{ marginLeft: 8, marginBottom: 4 }}>{t}</Text>
+        ))}
+      </>
+    )}
+  </View>
+))}
+</List.Accordion>
+
+<List.Accordion
+  title="DEMONSTRATIVES"
+  left={(props) => <List.Icon {...props} icon="gesture-tap" color="#8da9c4" />}
 >
-  {rule.content3.map((exercise, index) => (
-    <View key={index} style={{ paddingHorizontal: 3 }}>
-      <Text style={{ fontWeight: 'bold', marginBottom: 20 }}>{exercise.instructions}</Text>
-      {exercise.questions.map((q, i) => (
-        <List.Item
-        key={i}
-        title={() => (
-          <Text style={{ flex: 2, flexWrap: 'wrap' }}>
-            {q}
-          </Text>
-        )}
-        right={() => (
-          <IconButton
-            icon="volume-high"
-            size={20}
-            onPress={() => speak(q)}
-            iconColor="#8da9c4"
-          />
-        )}
-      />      
+  {rule.content3.map((section, index) => (
+    <View key={index}>
+      {section.type === 'demonstratives_pair' &&
+        section.pairs.map((pair, i) => (
+          <View key={i} style={{ flexDirection: 'row', marginBottom: 16 }}>
+            {/* Colonne gauche */}
+            <View style={{ flex: 1, paddingRight: 8 }}>
+              <Text style={{ fontWeight: 'bold' }}>{pair.left.label}</Text>
+              <Text>{pair.left.description}</Text>
+              <Text style={{ fontStyle: 'italic' }}>{pair.left.example}</Text>
+              <Text>{pair.left.translation}</Text>
+            </View>
+
+            {/* Colonne droite */}
+            <View style={{ flex: 1, paddingLeft: 8 }}>
+              <Text style={{ fontWeight: 'bold' }}>{pair.right.label}</Text>
+              <Text>{pair.right.description}</Text>
+              <Text style={{ fontStyle: 'italic' }}>{pair.right.example}</Text>
+              <Text>{pair.right.translation}</Text>
+            </View>
+          </View>
+        ))
+      }
+
+      {/* Notes en bas */}
+      {section.notes && section.notes.map((note, i) => (
+        <Text key={`note-${i}`} style={{ marginTop: 4 }}>{note}</Text>
       ))}
     </View>
   ))}
 </List.Accordion>
 
+          
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+{grammarRules9.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+               <List.Accordion
+                  title="PRONOUNS/POSSESSIVE ADJE/PRO"
+                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+                >
+                {rule.content1.map((section, index) => (
+                <View key={index} style={{ marginBottom: 12 }}>
+  <Text style={{ fontWeight: 'bold', fontSize: 16, marginBottom: 10 }}>PRONOUNS         POSSESSIVES</Text>
+
+  <View style={{ flexDirection: 'row', backgroundColor: '#ddd', padding: 8 }}>
+    {['Personal', 'Object', 'Adj.', 'Pronoun', 'Reflexive'].map((h, idx) => (
+      <Text key={idx} style={{ flex: 1, fontWeight: 'bold', textAlign: 'center' }}>{h}</Text>
+    ))}
+  </View>
+
+  {grammarRules9[0].content1[0].rows.map((section, idx) => (
+    <View key={idx}>
+      <Text style={{ fontStyle: 'italic', marginTop: 10 }}>{section.label}</Text>
+      {section.data.map((line, i) => (
+        <View key={i} style={{ flexDirection: 'row', paddingVertical: 4 }}>
+          {line.map((cell, j) => (
+            <Text key={j} style={{ flex: 1, textAlign: 'center' }}>{cell}</Text>
+          ))}
+        </View>
+      ))}
+    </View>
+  ))}
+</View>
+))}
+</List.Accordion>
+
+<List.Accordion
+  title="SIMPLE PAST TENSE"
+  left={(props) => <List.Icon {...props} icon="history" color="#8da9c4" />}
+>
+  {/* Grammatical Rule + Examples */}
+<View style={{ paddingHorizontal: 8, marginBottom: 12 }}>
+  <Text style={{ fontWeight: 'bold', marginBottom: 6 }}>Structure et Utilisation :</Text>
+  {rule.content2[0]?.text?.map((line, index) => (
+    <Text key={`rule-${index}`} style={{ marginBottom: 4 }}>
+      {line}
+    </Text>
+  ))}
+
+  {/* Affichage des exemples (type: 'examples') */}
+  <Text style={{ fontWeight: 'bold', marginTop: 12, marginBottom: 6 }}>
+    {rule.content2[1].title}
+  </Text>
+  {rule.content2[1]?.text?.map((example, index) => (
+    <Text key={`example-${index}`} style={{ marginBottom: 4 }}>
+      {example}
+    </Text>
+  ))}
+</View>
+
+ {/* Table: Affirmation / Négation / Interrogation */}
+ <View style={{ paddingHorizontal: 8, marginBottom: 12 }}>
+    <Text style={{ fontWeight: 'bold', marginBottom: 6 }}>
+      {rule.content2[2].title}
+    </Text>
+    <View style={{ flexDirection: 'row', marginBottom: 4 }}>
+      {rule.content2[2]?.headers?.map((header, idx) => (
+        <Text key={`header-${idx}`} style={{ flex: 1, fontWeight: '600' }}>
+          {header}
+        </Text>
+      ))}
+    </View>
+    {rule.content2[2]?.rows?.map((row, rowIndex) => (
+      <View key={`row-${rowIndex}`} style={{ flexDirection: 'row', marginBottom: 4 }}>
+        {row.map((cell, cellIndex) => (
+          <Text key={`cell-${rowIndex}-${cellIndex}`} style={{ flex: 1 }}>
+            {cell}
+          </Text>
+        ))}
+      </View>
+    ))}
+  </View>
+
+   {/* Liste des Adverbes de temps */}
+   <View style={{ paddingHorizontal: 8, marginBottom: 12 }}>
+    <Text style={{ fontWeight: 'bold', marginBottom: 6 }}>
+      {rule.content2[3].title}
+    </Text>
+    {rule.content2[3]?.text?.map((item, index) => (
+      <Text key={`adverb-${index}`} style={{ marginBottom: 4 }}>
+        {item}
+      </Text>
+    ))}
+  </View>
+
+    {/* Narration */}
+    {rule.content2.find((c) => c.type === 'narration') && (
+    <View style={{ paddingHorizontal: 8, marginBottom: 12 }}>
+      <Text style={{ fontWeight: 'bold', marginBottom: 6 }}>
+        {rule.content2.find((c) => c.type === 'narration')?.title}
+      </Text>
+      {rule.content2.find((c) => c.type === 'narration')?.text?.map((line, index) => (
+        <Text key={`narration-${index}`} style={{ marginBottom: 4 }}>
+          {line}
+        </Text>
+      ))}
+    </View>
+  )}
+
+
+</List.Accordion>          
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+{grammarRules10.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+              
+                      {/* First Accordion */}
+                      <List.Accordion
+                title="VOCABULARY"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.table}>
+                  <View style={styles.tableRow}>
+                    <RNText style={styles.tableHeader}></RNText>
+                    <RNText style={styles.tableHeader}></RNText>
+                    <RNText style={styles.tableHeader}></RNText>
+                  </View>
+                  {rule.content1.map((item, index) => (
+                    <View key={index} style={styles.tableRow}>
+                      <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>{item.vocabulary}</RNText>
+                      <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
+                      <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
+                    </View>
+                  ))}
+                </View>
+              </List.Accordion>
+                    
+                 <List.Accordion
+                           title="PRACTICE"
+                           left={(props) => (
+                             <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+                           )}
+                         >
+                           {rule.content2.map((arg, index) => {
+                             const boldPhrases = [
+                               "Asked",
+                               "to buy",
+                               "On my way there",
+                               "bumped into",
+                               "excited",
+                               "invited",
+                               "to have a lunch",
+                             ];
+                 
+                             const regex = new RegExp(`(${boldPhrases.join('|')})`, 'gi');
+                             const parts = arg.sentence.split(regex);
+                 
+                             return (
+                               <List.Item
+                                 key={index}
+                                 title={() => (
+                                   <Text>
+                                     {parts.map((part, i) => {
+                                       const isBold = boldPhrases.some(
+                                         (phrase) =>
+                                           phrase.toLowerCase() === part.trim().toLowerCase()
+                                       );
+                                       return (
+                                         <Text key={i} style={isBold ? { fontWeight: 'bold' } : {}}>
+                                           {part}
+                                         </Text>
+                                       );
+                                     })}
+                                   </Text>
+                                 )}
+                 
+                               />
+                             );
+                           })}
+                         </List.Accordion>
             </List.Section>
           </Card.Content>
         </Card>
