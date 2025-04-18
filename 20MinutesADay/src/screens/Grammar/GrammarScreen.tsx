@@ -1208,6 +1208,96 @@ school after the market. So, I……………..
   }
 ];
 
+const grammarRules11 = [
+  {
+    id: 1,
+    title: 'Lesson 23: PAST CONTINUOUS TENS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "PAST PROGRESSIVE TENSE",
+        description: `                     [WAS/WERE+ ING/V+ C].
+
+       →Le Past Continuous s'emploie pour : 
+         Parler d'une action qui était en train de se dérouler en même temps que l’autre dans le 
+        passé: En utilisant WHEN= QUAND / WHILE= PENDANT QUE..
+           →AMPIASAINA NY PPT AMIN’NY ZAVATRA IRAY EFA NITRANGA, LASA.
+           →AMPIASAINA NY PAST CONT TENSE AMIN’NY TRANGA MIARA MISEHO NA ZAVATRA IRAY EO
+          AMPI-TRANGANA KA NOTAPAHANA TRANGA HAFA(MIARAKA @ WHEN/WHILE)
+
+          Ex: I was eating when he called me
+
+             J’étais en train de manger quand-il m’a appelé.
+             Ex: While I was sleeping; he stole something from the house.
+              Pendant que je dormais; il a volé quelque chose de la maison.
+
+        Note: Marihina fa tsy maintsy SIMPLE PAST TENSE ny iray amin’izy roa.`
+        
+      }      
+    ],
+    content2: [
+      {
+        type: "sentenceForms",
+        table: [
+          {
+            affirmative: "I was",
+            negative: "I wasn’t",
+            interrogative: "Was I?"
+          },
+          {
+            affirmative: "You were",
+            negative: "You weren’t",
+            interrogative: "Were you?"
+          },
+          {
+            affirmative: "He/She/It was",
+            negative: "He/She/It wasn’t",
+            interrogative: "Was he/she/it?"
+          },
+          {
+            affirmative: "We were",
+            negative: "We weren’t",
+            interrogative: "Were we?"
+          },
+          {
+            affirmative: "They were",
+            negative: "They weren’t",
+            interrogative: "Were they?"
+  
+          },
+        ]
+      },
+      {
+        type: "adverbs",
+        table: [
+          { adverbs: "→ YESTERDAY", frenchTranslation1: "- HIER=OMALY" },
+          { adverbs: "→ THE DAY BEFORE YESTERDAY", frenchTranslation1: "- AVANT HIER= AFAKA OMALY" },
+          { adverbs: "→ LAST NIGHT/WEEK/MONTH/YEAR", frenchTranslation1:"- LA NUIT/SEMAINE/MOI/ANNÉE DERNIER(E)" },
+          { adverbs: "→ ONE/TWO DAYS AGO", frenchTranslation1: "- IL Y A UN/DEUX JOURS= EFA MISY ROA ANDRO IZAY" },
+          { adverbs: "→ THIS MORNING/AFTERNOON", frenchTranslation1: "- CE MATIN/CET APRÉS MIDI= TAMIN’NY MARAINA TEO" },
+        ],
+      },
+      
+    ],    
+    
+    content3: [
+      {
+        title: "EXERCISES - FILL IN THE BLANKS",
+        instructions: "I) Exercise: : Put the verb in brackets in the correct form to make different form of the Past Continuous and Simple Past Tense.",
+        questions: [
+          "1. I__________ (see) a movie yesterday. ",
+          "2. I __________ (do not see) a play yesterday" ,
+          "3. Last year, I __________ (travel) to Japan",
+          "4. What (you, do) __________when the accident occurred?",
+          "5. I (watch) __________a mystery movie on TV when the electricity went out",
+          "6. While (I,be) __________(sleep), he arrived at home",
+          "7. I__________ (live in) the dorm, when (study) __________at Ankatso.",
+        ]
+      }
+    ],         
+  }
+];
+
 
 const GrammarScreen = () => {
   const [expanded, setExpanded] = useState<string | number | null>(null);
@@ -2485,6 +2575,120 @@ const GrammarScreen = () => {
                              );
                            })}
                          </List.Accordion>
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+
+{grammarRules11.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+            <List.Accordion
+                title="PAST CONTINUOUS TENSE"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.content3Container}>
+                  <Text style={styles.title}>{rule.content1[0].title}</Text>
+                  <Text style={styles.content}>{rule.content1[0].description}</Text>
+                </View>
+              </List.Accordion>
+              
+              {/* Second Accordion */}
+              <List.Accordion
+  title="ADVERBS"
+  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+>
+   {/* Tableau 1 : Affirmative / Interrogative / Negative */}
+  <View style={[styles.table, { marginTop: 24 }]}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>Affirmation</RNText>
+      <RNText style={styles.tableHeader}>Negation</RNText>
+      <RNText style={styles.tableHeader}>Interrogation</RNText>
+    </View>
+    {rule.content2
+      ?.find((c) => c.type === "sentenceForms")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          {'affirmative' in item && (
+            <RNText style={styles.tableCell}>{String(item.affirmative)}</RNText>
+          )}
+          {'interrogative' in item && (
+            <RNText style={styles.tableCell}>{item.negative}</RNText>
+          )}
+          {'negative' in item && (
+            <RNText style={styles.tableCell}>{item.interrogative}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+
+  {/* Tableau 2 : Adverbs */}
+  <View style={styles.table}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>ADVERBS OF TIME</RNText>
+      <RNText style={styles.tableHeader}>ADVERBES DE TEMPS</RNText>
+    </View>
+    {rule.content2
+      ?.find((c) => c.type === "adverbs")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>
+            {'adverbs' in item ? item.adverbs : ''}
+          </RNText>
+          {'frenchTranslation1' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation1}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+</List.Accordion>
+
+<List.Accordion
+  title="EXERCISES"
+  left={(props) => (
+    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
+  )}
+>
+  {rule.content3.map((exercise, index) => (
+    <View key={index} style={{ paddingHorizontal: 3 }}>
+      <Text style={{ fontWeight: 'bold', marginBottom: 20 }}>{exercise.instructions}</Text>
+      {exercise.questions.map((q, i) => (
+        <List.Item
+        key={i}
+        title={() => (
+          <Text style={{ flex: 2, flexWrap: 'wrap' }}>
+            {q}
+          </Text>
+        )}
+        right={() => (
+          <IconButton
+            icon="volume-high"
+            size={20}
+            onPress={() => speak(q)}
+            iconColor="#8da9c4"
+          />
+        )}
+      />      
+      ))}
+    </View>
+  ))}
+</List.Accordion>
+
             </List.Section>
           </Card.Content>
         </Card>
