@@ -1211,7 +1211,7 @@ school after the market. So, I……………..
 const grammarRules11 = [
   {
     id: 1,
-    title: 'Lesson 23: PAST CONTINUOUS TENS',
+    title: 'Lesson 23: PAST CONTINUOUS TENSE',
     description: 'BASIC GRAMMARS',
     content1: [
       {
@@ -1298,6 +1298,568 @@ const grammarRules11 = [
   }
 ];
 
+
+const grammarRules12 = [
+  {
+    id: 1,
+    title: 'Lesson 24: THE MODAL VERBS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "",
+        description: `    
+       → Les VERBES MODAUX ne sont pas comme tous les verbes infinitifs, comme, on ne peut pas
+mettre S après le verbe conjugué avec la 3ème prs du singulier : Ex: He/she/it can S
+→ Le verbe modal reste le même au futur et sa forme passé doit avoir HAVE+VPP après MV
+     `  
+      }      
+    ],
+    content2: [
+      {
+        type: "modalVerbs",
+        table: [
+          {
+            verb: "CAN / BE ABLE TO",
+            present: "CAN, BE ABLE TO",
+            future: "CAN, WILL BE ABLE TO",
+            past: "COULD, WAS ABLE TO, COULD HAVE + VPP",
+            negative: "CANNOT / CAN'T",
+            usages: [
+              {
+                type: "Possibilité, Capacité, Permission  \n\nPOUVOIR/AFAKA/MAHAY",
+                examples: [
+                  {
+                    en: "He can play the piano.",
+                    fr: "Il peut jouer du piano."
+                  },
+                  {
+                    en: "Can you come to visit me tomorrow?",
+                    fr: "Pouvez-vous venir me rendre visite demain ?"
+                  },
+                  {
+                    en: "I couldn’t come to visit you yesterday because I was busy.",
+                    fr: "Je ne pouvais pas venir te rendre visite hier parce que j’étais occupé."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            verb: "MAY",
+            present: "MAY",
+            future: "MAY",
+            past: "MAY HAVE + VPP",
+            negative: "MAY NOT",
+            usages: [
+              {
+                type: "Probabilité (prédiction), Possibilité, Permission \n\nIL SE PEUT QUE/PEUT ÊTRE/METY/ANGAMBA",
+                examples: [
+                  {
+                    en: "It may rain this afternoon.",
+                    fr: "Il se peut qu’il pleuve cet après-midi."
+                  },
+                  {
+                    en: "You may say that you don’t care, but you need to think it over.",
+                    fr: "Il se peut que vous disiez que vous vous en foutiez, mais vous devez y réfléchir."
+                  },
+                  {
+                    en: "He may have missed the plane.",
+                    fr: "Il a peut-être manqué l’avion."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            verb: "MUST / HAVE TO",
+            present: "MUST / HAVE TO",
+            future: "MUST / WILL HAVE TO",
+            past: "MUST HAVE + VPP / HAD TO",
+            negative: "DON’T HAVE TO",
+            usages: [
+              {
+                type: "Nécessité, Forte probabilité, Obligation \n\nDEVOIR/TSY MAINTSY",
+                examples: [
+                  {
+                    en: "You must go home.",
+                    fr: "Il faut que vous rentriez chez vous."
+                  },
+                  {
+                    en: "I have to go home.",
+                    fr: "Je dois rentrer chez moi."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            verb: "SHOULD / OUGHT TO",
+            present: "SHOULD / OUGHT TO",
+            future: "SHOULD / OUGHT TO",
+            past: "SHOULD / OUGHT TO HAVE + VPP",
+            negative: "SHOULD NOT / SHOULDN’T",
+            usages: [
+              {
+                type: "Conseil (moralité), Probabilité \n\nDEVRAIS/TOKONY",
+                examples: [
+                  {
+                    en: "You should learn English nowadayss [naoedeiz].",
+                    fr: " Vous devriez apprendre l’anglais de nos jours."
+                  },
+                  {
+                    en: "You shouldn’t have told him to do that; it is dangerous.",
+                    fr: "Tu n’aurais pas dû lui dire de faire ça ; c’est dangereux."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        notes: [
+        
+          "→ Structures fréquentes avec les modaux :",
+          "   - THERE + MODAL + BE → ex : There could be no doubt about it.",
+          "   - THERE + MODAL + HAVE BEEN + COMPL. → ex : There can’t have been doubt about it.",
+          "   - MODAL + BE + ADJ / NOM → ex : You may/must/should be tired / a president."
+        ]        
+      },      
+    ],            
+  }
+];
+
+const grammarRules13 = [
+  {
+    id: 1,
+    title: 'Lesson 25: MODAL VERBS- EXERCISES – VOCABULARIES',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "EXERCISES - FILL IN THE BLANKS",
+        instructions: "I) Exercise: Complete the following exercise with past modal verbs. Use the correct form of the verbs in parentheses. Choose between affirmative and negative.",
+        questions: [
+          "1. I got a C on my math test. I ___________(should / do) better than that ",
+          "2. Don't be so hard on yourself. It _________ (may / be) your fault. It just _________ (could / be) a more difficult test than usual." ,
+          "3. No, it _______ (could / be) that difficult. The rest of the class did pretty well. I _______ (should / study) harder.",
+          "4. What you ______ (could / do) differently?",
+          "5. Well, for one thing, I ________ (should / miss) that day of class.",
+          "6. You missed a day? Did you get the notes?",
+          "7. No, I _______ (ought to / copy) them. Some of the problems which I got wrong ",
+        ]
+      }
+    ],     
+    content2: [
+    
+      {
+        type: "vocabs",
+        table: [
+          {
+            vocabs: "TO INTERRUPT[interapt]",
+            frenchTranslation2: "- Interrompre qlq1",
+            malagasyTranslation4: "- Manapaka ny tenin'ny olona"
+          },
+          {
+            vocabs: "TO BUTT IN SB[batin]",
+            frenchTranslation2: "- Interrompre qlq1",
+            malagasyTranslation4: "- Manapaka ny tenin'ny olona"
+          },
+          {
+            vocabs: "TO FEEL FREE TO+V.INF",
+            frenchTranslation2: "- Ne pas gêner/Ne pas hésiter",
+            malagasyTranslation4: "- Tsy misalasala"
+          },
+          {
+            vocabs: "TO BOTHER[bader]DISTURB[disturb]",
+            frenchTranslation2: "- Déranger qlq1",
+            malagasyTranslation4: "- Manelingelina olona"
+          },
+          {
+            vocabs: "TO EXPRESS YOURSEFL[ixpres]",
+            frenchTranslation2: "- S'exprimer",
+            malagasyTranslation4: "- Milaza ny hevitrao"
+          },
+          {
+            vocabs: "WHAT DOES IT MEAN?[wadazit min]",
+            frenchTranslation2: "- Qu’est- ce que ça veut dire ?",
+            malagasyTranslation4: "- Fa inona ny dikan’io/izao ?"
+          },
+          {
+            vocabs: "TO TRANSLATE[transleit] STH INTO STH",
+            frenchTranslation2: "- Traduire",
+            malagasyTranslation4: "- Mandika"
+          },
+          {
+            vocabs: "TO IMPROVISE[improvaiz]",
+            frenchTranslation2: "- Improviser",
+            malagasyTranslation4: "- Mamorona"
+          },
+          {
+            vocabs: "TO PUT STH IN USE/PRACTICE[praktis]",
+            frenchTranslation2: "- Mettre qlqch en pratique",
+            malagasyTranslation4: "- Mampiasa"
+          },
+          {
+            vocabs: "TO CREATE[kriet]",
+            frenchTranslation2: "- Créer",
+            malagasyTranslation4: "- Mamorona"
+          },
+          {
+            vocabs: "TO REPEAT[ripit]AGAIN AND AGAIN",
+            frenchTranslation2: " - Répéter encore et encore",
+            malagasyTranslation4: "- Averimberina foana"
+          },
+          {
+            vocabs: "TO IMPROVE/BRUSH UP[brashap]",
+            frenchTranslation2: " - Améliorer",
+            malagasyTranslation4: "- Manatsara/Mihatsara"
+          },
+          {
+            vocabs: "TO ENRICH[inritr]",
+            frenchTranslation2: "- Enrichir",
+            malagasyTranslation4: "- Mampitombo"
+          },
+          {
+            vocabs: "TO MEMORIZE[memoraiz]",
+            frenchTranslation2: "- Mémoriser",
+            malagasyTranslation4: "- Mitadidy"
+          },
+          {
+            vocabs: "TO MOVE FORWARD[forword]",
+            frenchTranslation2: "- S’avancer",
+            malagasyTranslation4: "- Mandroso foana"
+          },
+          {
+            vocabs: "TO THINK STH OVER[aver]",
+            frenchTranslation2: "- Réfléchir",
+            malagasyTranslation4: "- Mieritreritra"
+          },
+          {
+            vocabs: "TO TAKE STH SERIOUSLY[seriesli]",
+            frenchTranslation2: "- Prendre qlqch au sérieux",
+            malagasyTranslation4: "- Mandray zavatra ampamatorana"
+          },
+          {
+            vocabs: "TO WORK HARD",
+            frenchTranslation2: "- Travailler dur",
+            malagasyTranslation4: "- Miasa mafy"
+          },
+          {
+            vocabs: "TO GO/COME BACK HOME",
+            frenchTranslation2: "- Rentrer chez soi",
+            malagasyTranslation4: "- Mandeha mody"
+          },
+          {
+            vocabs: "TO START/BEGIN (TO+V.INF) + V.ING",
+            frenchTranslation2: "- Commencer à",
+            malagasyTranslation4: "- Manomboka"
+          },
+          {
+            vocabs: "TO MANAGE TO+V.INF[manidge]",
+            frenchTranslation2: "- Se débrouiller",
+            malagasyTranslation4: "- Miezaka"
+          },
+          {
+            vocabs: "TO TRY[trai]TO +V.INF",
+            frenchTranslation2: "- Essayer de",
+            malagasyTranslation4: "- Manandrana"
+          },
+          {
+            vocabs: "TO FOCUS[fokeson]ON STH",
+            frenchTranslation2: "- Se concéntrer sur qlq",
+            malagasyTranslation4: "- Mifantoka @"
+          },
+          {
+            vocabs: "TO DEVOTE[divôout]YOUR TIME[taim]",
+            frenchTranslation2: "- Consacrer le temps",
+            malagasyTranslation4: "- Manoka-potoana"
+          },
+          {
+            vocabs: "TO DEVOTE[divôout]YOUR TIME[taim]",
+            frenchTranslation2: "- Consacrer le temps",
+            malagasyTranslation4: "- Manoka-potoana"
+          },
+          {
+            vocabs: "TO GET BETTER AND BETTER",
+            frenchTranslation2: "- Devenir de plus en plus mieux",
+            malagasyTranslation4: "- Mihatsara"
+          },
+          {
+            vocabs: "TO GET WORSE AND WORSE",
+            frenchTranslation2: "- Devinir de plus en plus mauvais",
+            malagasyTranslation4: "- Miharatsy"
+          },
+          {
+            vocabs: "TO DEEPEN[dipen]",
+            frenchTranslation2: "- Approfondir",
+            malagasyTranslation4: "- Mandalina/Manamafy"
+          },
+          {
+            vocabs: "TO HASTEN[hasen]",
+            frenchTranslation2: "- Précipiter/Se depêcher",
+            malagasyTranslation4: "- Manafaingana"
+          },
+          {
+            vocabs: "TO LOOK FORWARD TO+V.ING",
+            frenchTranslation2: "- Avoir hâte de",
+            malagasyTranslation4: "- Tsy mahandry ny…"
+          },
+        ]
+      }
+
+    ],        
+        
+  }
+];
+
+const grammarRules14 = [
+  {
+    id: 1,
+    title: 'Lesson 26: WH-QUESTION—RELATIVE PRONOUNS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "→ WH + VALEUR DE TEMPS + V(ING)",
+        description: `→ On emploie le WH-Question pour poser une question. Ny WH-Question dia entina anontaniana.
+      
+      WHAT DO YOU DO IN YOUR SPARE TIME?  
+      ARE YOU DOING NOW?  
+      DID YOU DO YESTERDAY?  
+      WERE YOU DOING?  
+      HAVE YOU DONE?  
+      WILL YOU DO?  
+      HAD YOU DONE?
+      
+      → WHAT…./whatever.. (Quoi?) INONA?  
+      ▪ What are you doing now? — Qu’est-ce que tu fais maintenant.  
+      ▪ What do you do in spare time?
+      
+      → WHERE…./wherever.. (Où?) AIZA?  
+      ▪ Where are you from? — D’où viens-tu?  
+      ▪ Where does he stay? — Où est-ce qu’il reste?
+      
+      → WHEN…./whenever.. (Quand?) OVIANA?  
+      ▪ When will you leave? — Quand est-ce que tu partiras ?  
+      ▪ When did you come back?
+      
+      → WHICH…./whichever (Lequel…) IZA?  
+      ▪ Which one do you like?  
+      ▪ Which of them did you choose?  
+      ▪ Laquelle d’entre elles as-tu choisi?
+      
+      → WHOSE… (À qui?) AN’IZA?  
+      ▪ Whose book is it? — C’est à qui ce livre ?
+      
+      → WHY… (Pourquoi?) INONA NY ANTONY?  
+      ▪ Why did you learn English?
+      
+      → HOW… (Comment?) AHOANA?  
+      ▪ How are you doing?  
+      ▪ How does it work?
+      
+      → WHO… (Qui?) IZA?  
+      ▪ Who are you?  
+      ▪ Who are you waiting for?  
+      — Qui es-tu ?  
+      — Qui est-ce que tu attends ?`
+      }           
+    ],
+    content2: [
+      {
+        title: "→ WH + NOUN / SUBJECT / VERB",
+        description: `→ WH-RELATIVE PRONOUNS : utilisés pour relier deux phrases. Ils remplacent un mot (personne, chose, temps, lieu).
+    
+     WHO / THAT → QUELQU’UN (olona) = QUI / QUE / IZAY  
+    ▪ The man who lives here is a scientist.  
+      → L'homme qui habite ici est un scientifique.  
+    ▪ The guy who I told you about is my roommate.  
+      → Le gars dont je t'ai parlé est mon colocataire.
+    
+     WHICH / THAT → QUELQUE CHOSE (zavatra) = QUI / QUE / IZAY  
+    ▪ The thing which/that you gave me was lost.  
+      → La chose que tu m’as donnée était perdue.
+    
+     TO WHOM / WHO → QN (olona) = AVEC QUI  
+    ▪ The woman to whom you were speaking is a doctor.  
+      → La femme avec qui tu parlais est médecin.  
+    ▪ The woman who you were speaking to is a doctor.
+    
+     WHOSE + NOM D’OBJET = DONT  
+    ▪ This is the girl whose mother has just died.  
+      → C’est la fille dont la mère vient juste de mourir.
+    
+     WHERE → Lieu = OÙ / IZAY  
+    ▪ The town where I saw him was in Tana.  
+      → La ville où je l’ai vu est à Tana.
+    
+     WHEN → Temps = QUAND / FOTOANA  
+    ▪ Do you remember the time when we first met?  
+      → Tu te souviens du moment où nous nous sommes rencontrés ?
+    
+     WHAT → CHOSE = CE QUE / CE QUI / IZAY  
+    (pronom ou adjectif)  
+    ▪ Tell me what you want. (pronom)  
+      → Dis-moi ce que tu veux.  
+    ▪ What we had was gone. (adjectif)  
+      → Tout ce qu’on avait est perdu.
+    
+     WHY → POURQUOI = INONA NY ANTONY  
+    ▪ I don’t know why she/he did that.  
+      → Je ne sais pas pourquoi il/elle a fait ça.
+    
+     HOW TO → COMMENT = AHOANA  
+    ▪ I wanna know how you did it.  
+      → Je veux savoir comment tu l’as fait.  
+    ▪ I wanna know how to do it.  
+      → Je veux savoir comment le faire.`
+      }
+    ],
+           
+  }
+];
+
+const grammarRules15 = [
+  {
+    id: 1,
+    title: 'Lesson 27: PRESENT PERFECT (CONT) TENSE',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "→ PRESENT PERFECT TENSE",
+        description: `             → S + HAVE/HAS (JUST) + VPP
+    
+    → Le Present Perfect Tense s'emploie pour parler d'une action, événement, ou état qui vient de se passer dans une période de temps défini ou indéfini. (il y a quelques instants)  
+    → **AMPIASAINA NY PRESENT PERFECT TENSE** amin’ny **zavatra nitranga vao teo**. Ary ampiasaina ihany koa izy io amin’ny **zavatra efa vita/natao** nefa **tsy tadidy oviana no nahavitana azy**.
+    
+    → **Exemples :**  
+    ▪ I have just seen him.  
+    → Je viens de le voir tout à l’heure = Vao teo izaho no nahita azy.  
+    ▪ She has told me about it already.  
+    → Elle me l’a déjà dit = Efa noteneniny tamiko izany.
+    
+    → **ADVERBS fréquents :**
+    
+    • **Up till now / Thus far / So far** → Jusqu’à maintenant = HATRAMIN’IZAO  
+    Ex: He hasn’t called me up till now; I don’t know why.  
+    → Il ne m’a pas encore appelé ; je ne sais pas pourquoi.
+    
+    • **Recently / Lately / Just now** → Récemment = VAO HAINGANA IZAO  
+    Ex: I have (just) finished my job recently, and now, I’m going home.
+    
+    • **Already / Yet / Never** → Déjà / Pas encore / Jamais  
+    Ex:  
+    ✓ I have already seen this movie.  
+    → J’ai déjà vu ce film.`
+      }
+    ],    
+    content2: [
+      {
+        title: "PRESENT PERFECT CONTINUOUS",
+        description: `→ S + HAVE/HAS BEEN + V-ING
+    
+    → On emploie le **Present Perfect Continuous** pour parler d'une action, événement, ou état qui s’est passé dans une période de temps dans le passé mais **n’est pas encore terminé**.  
+    → **AMPIASAINA NY PRESENT PERFECT CONTINUOUS TENSE** amin’ny **zavatra nitsanga tany aloha** nefa **mbola mitohy ankehitriny**.
+    
+    → **Exemples :**  
+    ▪ How long have you been learning English?  
+    → Depuis combien de temps apprends-tu l’anglais ?  
+    ▪ I have been learning it for three months now.  
+    → Je l’apprends depuis trois mois.  
+    ▪ I have been learning English since SEPT 17, 2012.
+    
+    → **ADVERBS** utiles :  
+    • **FOR** → DURÉE D’ÉVÉNEMENT  
+    → (Milaza ny faharetan’ny zavatra iray)  
+    Ex: I have been waiting **for** an hour.  
+    
+    • **SINCE** → DÉBUT D’ÉVÉNEMENT  
+    → (Milaza ny fanombohan’ny zavatra iray)  
+    Ex: He has been working here **since** 2020.
+    
+    • **A LONG TIME** → Longtemps = Efa ela  
+    Ex: They have been talking for **a long time**.
+    
+     TO BE ABOUT TO + V.INF → ÊTRE SUR LE POINT DE + V.ING
+     TO BE IN THE PROCESS OF + V.ING → ÊTRE EN TRAIN DE + V.ING
+    `
+      }
+    ]        
+  }
+];
+
+const grammarRules16 = [
+  {
+    id: 1,
+    title: 'Lesson 28: VOCABULARIES / PAST PERFECT (CONTINUOUS) TENSE',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        type: "vocabs",
+        table: [
+          { vocabs: "TO POKESB [pôouk] mikitika", 
+            frenchTranslation3: "- Donner un coup à ", 
+            malagasyTranslation5: "- Mikitika"
+           },
+           { vocabs: "TO PINCHSTH[pintr]", 
+            frenchTranslation3: "- Pincer",  
+            malagasyTranslation5: "- Manongo"
+           },
+          { vocabs: "TO SQUEEZE STH[skwiz]", 
+            frenchTranslation3: "- Presser",
+            malagasyTranslation5: "- Manapotsitra"
+          },
+          { vocabs: "TO MELT/THAW[fôou]",
+            frenchTranslation3: "- Fondre",
+            malagasyTranslation5: "- Mitsonika"
+          },
+          { vocabs: "TO CHOKE[trôk]",
+            frenchTranslation3: "- S’étouffer",
+            malagasyTranslation5: "- Kenda"
+          },
+          { vocabs: "TO SWALLOW[soalôou] STH",
+            frenchTranslation3: "- Avaler",
+            malagasyTranslation5: "- Mitelina"
+          },
+          { vocabs: "TO SPEW[spio]/VOMIT",
+            frenchTranslation3: "- Vomir",
+            malagasyTranslation5: "- Mandoa"
+          },
+          { vocabs: "TO QUENCHYOUR THIRST[koentr ior ferst]",
+            frenchTranslation3: "- Se désaltérer",
+            malagasyTranslation5: "- Manala hetaheta"
+          },
+          { vocabs: "TO TICKLE (reg)SB",
+            frenchTranslation3: "- Chatouiller qlq1",
+            malagasyTranslation5: "- Migiligilika"
+          },
+
+        ],
+      },
+    ],
+    content2: [
+  {
+    title: "PAST PERFECT (CONT’) TENSE",
+    description: `→ **S + HAD (+ BEEN) + V-ING / PP.V**
+
+→ On emploie le **Past Perfect** pour parler d’une **action qui s’est produite avant une autre** dans le passé.  
+→ Si l'on décrit deux actions passées, on utilise le **Past Perfect** pour celle qui s’est produite **en premier**.
+
+→ **AMPIASAINA NY PAST PERFECT** entina ilazana fa **ny tranga iray dia efa niseho talohan’ny tranga iray hafa.**
+
+→ **Exemples :**  
+▪ After we’d had lunch at a restaurant, we went to the cinema.  
+→ Après avoir déjeuné dans un restaurant, nous sommes allés au cinéma.  
+▪ John had gone out when I arrived in the office.  
+→ John était déjà sorti quand je suis arrivé au bureau.
+
+→ **ADVERBS OF TIME** (Fanamarihan'ny fotoana) :  
+• **At that time** = En ce moment / Tamin’izany fotoana izany  
+• **Once upon a time** = Il était une fois / Indray andro hono  
+• **Many moons ago / A long time ago** = Il y a longtemps / Efa ela be izay`
+  }
+]
+
+    
+  }
+];
 
 const GrammarScreen = () => {
   const [expanded, setExpanded] = useState<string | number | null>(null);
@@ -2694,6 +3256,339 @@ const GrammarScreen = () => {
         </Card>
       ))}
 
+{grammarRules12.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+            <List.Accordion
+                title="THE MODAL VERBS"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.content3Container}>
+                  <Text style={styles.content}>{rule.content1[0].description}</Text>
+                </View>
+              </List.Accordion>
+              
+                
+              <List.Accordion
+  title="MODAL VERBS – LES VERBES MODAUX"
+  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+>
+  {/* Table des verbes modaux */}
+  {rule.content2?.find((c) => c.type === "modalVerbs")?.table?.map((verbItem, idx) => (
+    <View key={idx} style={{ marginTop: 16, paddingHorizontal: 12 }}>
+      {/* Titre du modal verb */}
+      <RNText style={{ fontWeight: "bold", fontSize: 16, marginBottom: 6 }}>
+        {verbItem.verb}
+      </RNText>
+
+      {/* Temps et formes */}
+      <View style={[styles.table, { marginBottom: 8 }]}>
+        <View style={styles.tableRow}>
+          <RNText style={styles.tableHeader}>Présent</RNText>
+          <RNText style={styles.tableHeader}>Futur</RNText>
+          <RNText style={styles.tableHeader}>Passé</RNText>
+          <RNText style={styles.tableHeader}>Négation</RNText>
+        </View>
+        <View style={styles.tableRow}>
+          <RNText style={styles.tableCell}>{verbItem.present}</RNText>
+          <RNText style={styles.tableCell}>{verbItem.future}</RNText>
+          <RNText style={styles.tableCell}>{verbItem.past}</RNText>
+          <RNText style={styles.tableCell}>{verbItem.negative}</RNText>
+        </View>
+      </View>
+
+      {/* Usages et exemples */}
+      {verbItem.usages.map((usage, uIdx) => (
+        <View key={uIdx} style={{ marginBottom: 12 }}>
+          <RNText style={{ fontWeight: "600", marginBottom: 4 }}>{usage.type}</RNText>
+          {usage.examples.map((ex, exIdx) => (
+            <View key={exIdx} style={{ marginBottom: 4 }}>
+              <RNText>• {ex.en}</RNText>
+              <RNText style={{ color: "gray", marginLeft: 8 }}>{ex.fr}</RNText>
+            </View>
+          ))}
+        </View>
+      ))}
+    </View>
+  ))}
+
+  {/* ✅ Section notes, une seule fois */}
+  <View style={{ paddingHorizontal: 12, marginTop: 16 }}>
+    {rule.content2?.find((c) => c.type === "modalVerbs")?.notes?.map((note, index) => (
+      <RNText
+        key={index}
+        style={{
+          fontStyle: note.trim().startsWith("-") ? "normal" : "italic",
+          marginLeft: note.trim().startsWith("-") ? 24 : 12,
+          marginVertical: 2
+        }}
+      >
+        {note}
+      </RNText>
+    ))}
+  </View>
+</List.Accordion>
+
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+
+{grammarRules13.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+            <List.Accordion
+  title="MODAL VERBS- EXERCISES"
+  left={(props) => (
+    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
+  )}
+>
+  {rule.content1.map((exercise, index) => (
+    <View key={index} style={{ paddingHorizontal: 3 }}>
+      <Text style={{ fontWeight: 'bold', marginBottom: 20 }}>{exercise.instructions}</Text>
+      {exercise.questions.map((q, i) => (
+        <List.Item
+        key={i}
+        title={() => (
+          <Text style={{ flex: 2, flexWrap: 'wrap' }}>
+            {q}
+          </Text>
+        )}
+        right={() => (
+          <IconButton
+            icon="volume-high"
+            size={20}
+            onPress={() => speak(q)}
+            iconColor="#8da9c4"
+          />
+        )}
+      />      
+      ))}
+    </View>
+  ))}
+</List.Accordion>           
+              
+              {/* Second Accordion */}
+              <List.Accordion
+  title=" VOCABULARIES"
+  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+>
+   
+  {/* Tableau 2 : Vocabs */}
+  <View style={styles.table}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>ENGLISH</RNText>
+      <RNText style={styles.tableHeader}>FRENCH</RNText>
+      <RNText style={styles.tableHeader}>MALAGASY</RNText>
+    </View>
+    {rule.content2
+      ?.find((c) => c.type === "vocabs")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>
+            {'vocabs' in item ? item.vocabs : ''}
+          </RNText>
+          {'frenchTranslation2' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation2}</RNText>
+          )}
+           {'malagasyTranslation4' in item && (
+            <RNText style={styles.tableCell}>{item.malagasyTranslation4}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+</List.Accordion>
+
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+{grammarRules14.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+            <List.Accordion
+                title="WH-QUESTION"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.content3Container}>
+                  <Text style={styles.title}>{rule.content1[0].title}</Text>
+                  <Text style={styles.content}>{rule.content1[0].description}</Text>
+                </View>
+              </List.Accordion>
+              
+              <List.Accordion
+                title="RELATIVE PRONOUNS"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.content3Container}>
+                  <Text style={styles.title}>{rule.content2[0].title}</Text>
+                  <Text style={styles.content}>{rule.content2[0].description}</Text>
+                </View>
+              </List.Accordion>
+             
+
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+{grammarRules15.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+            <List.Accordion
+                title="PRESENT PERFECT"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.content3Container}>
+                  <Text style={styles.title}>{rule.content1[0].title}</Text>
+                  <Text style={styles.content}>{rule.content1[0].description}</Text>
+                </View>
+              </List.Accordion>
+              
+              <List.Accordion
+                title="PRESENT PERFECT CONTINUOUS"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.content3Container}>
+                  <Text style={styles.title}>{rule.content2[0].title}</Text>
+                  <Text style={styles.content}>{rule.content2[0].description}</Text>
+                </View>
+              </List.Accordion>
+             
+
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+{grammarRules16.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+           
+              
+              {/* Second Accordion */}
+              <List.Accordion
+  title="VOCABULARIES"
+  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+>
+  {/* Tableau 2 : Adverbs */}
+  <View style={styles.table}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>ENGLISH</RNText>
+      <RNText style={styles.tableHeader}>FRENCH</RNText>
+      <RNText style={styles.tableHeader}>MALAGASY</RNText>
+    </View>
+    {rule.content1
+      ?.find((c) => c.type === "vocabs")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>
+            {'vocabs' in item ? item.vocabs : ''}
+          </RNText>
+          {'frenchTranslation3' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation3}</RNText>
+          )}
+          {'malagasyTranslation5' in item && (
+            <RNText style={styles.tableCell}>{item.malagasyTranslation5}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+</List.Accordion>
+
+<List.Accordion
+                title="PAST CONTINUOUS TENSE"
+                left={(props) => (
+                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                )}
+              >
+                <View style={styles.content3Container}>
+                  <Text style={styles.title}>{rule.content2[0].title}</Text>
+                  <Text style={styles.content}>{rule.content2[0].description}</Text>
+                </View>
+              </List.Accordion>
+
+
+
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+
+
 
     </ScrollView>
   );
@@ -2705,15 +3600,15 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 16,
     textAlign: 'center',
     color: '#bb3e03',
   },
   content: {
-    fontSize: 16,
-    marginBottom: 16,
+    fontSize: 14,
+    marginBottom: 14,
   },
   card: {
     marginBottom: 16,
@@ -2750,10 +3645,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   content3Container: {
-    padding: 16,
+    padding: 12,
   },
   example: {
-    fontSize: 16,
+    fontSize: 14,
     fontStyle: 'italic',
     color: '#000000',
     marginTop: 8,
