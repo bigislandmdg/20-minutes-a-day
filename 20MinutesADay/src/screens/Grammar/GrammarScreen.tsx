@@ -1795,42 +1795,162 @@ const grammarRules16 = [
         type: "vocabs",
         table: [
           { vocabs: "TO POKESB [pôouk] mikitika", 
-            frenchTranslation3: "- Donner un coup à ", 
-            malagasyTranslation5: "- Mikitika"
+            frenchTranslation3: " - Donner un coup à ", 
+            malagasyTranslation5: " - Mikitika"
            },
            { vocabs: "TO PINCHSTH[pintr]", 
-            frenchTranslation3: "- Pincer",  
-            malagasyTranslation5: "- Manongo"
+            frenchTranslation3: " - Pincer",  
+            malagasyTranslation5: " - Manongo"
            },
           { vocabs: "TO SQUEEZE STH[skwiz]", 
-            frenchTranslation3: "- Presser",
-            malagasyTranslation5: "- Manapotsitra"
+            frenchTranslation3: " - Presser",
+            malagasyTranslation5: " - Manapotsitra"
           },
           { vocabs: "TO MELT/THAW[fôou]",
-            frenchTranslation3: "- Fondre",
-            malagasyTranslation5: "- Mitsonika"
+            frenchTranslation3: " - Fondre",
+            malagasyTranslation5: " - Mitsonika"
           },
           { vocabs: "TO CHOKE[trôk]",
-            frenchTranslation3: "- S’étouffer",
-            malagasyTranslation5: "- Kenda"
+            frenchTranslation3: " - S’étouffer",
+            malagasyTranslation5: " - Kenda"
           },
           { vocabs: "TO SWALLOW[soalôou] STH",
-            frenchTranslation3: "- Avaler",
-            malagasyTranslation5: "- Mitelina"
+            frenchTranslation3: " - Avaler",
+            malagasyTranslation5: " - Mitelina"
           },
           { vocabs: "TO SPEW[spio]/VOMIT",
-            frenchTranslation3: "- Vomir",
-            malagasyTranslation5: "- Mandoa"
+            frenchTranslation3: " - Vomir",
+            malagasyTranslation5: " - Mandoa"
           },
           { vocabs: "TO QUENCHYOUR THIRST[koentr ior ferst]",
-            frenchTranslation3: "- Se désaltérer",
-            malagasyTranslation5: "- Manala hetaheta"
+            frenchTranslation3: " - Se désaltérer",
+            malagasyTranslation5: " - Manala hetaheta"
           },
           { vocabs: "TO TICKLE (reg)SB",
-            frenchTranslation3: "- Chatouiller qlq1",
-            malagasyTranslation5: "- Migiligilika"
+            frenchTranslation3: " - Chatouiller qlq1",
+            malagasyTranslation5: " - Migiligilika"
           },
-
+          { vocabs: "TO CHUCKLE[trakel]",
+            frenchTranslation3: " - Rire tout bas",
+            malagasyTranslation5: " - Mihomehy irery"
+          },
+          { vocabs: "TO BLOW [blôou]YOUR NOSE",
+            frenchTranslation3: " - Se moucher",
+            malagasyTranslation5: " - Manisin-delo"
+          },
+          { vocabs: "TO WIPE[waip] YOUR TEARS",
+            frenchTranslation3: " - Essuyer ses larmes",
+            malagasyTranslation5: " - Mamafa ny ranomaso"
+          },
+          { vocabs: "TO FART",
+            frenchTranslation3: " - Péter",
+            malagasyTranslation5: " - Mandefa rivotra"
+          },
+          { vocabs: "TO SPIT (A SALIVA) OUT",
+            frenchTranslation3: " - Cracher",
+            malagasyTranslation5: " - Mandrora"
+          },
+          { vocabs: "TO ITCH/TO BE ITCHY",
+            frenchTranslation3: " - Démanger",
+            malagasyTranslation5: " - Mangidihidy"
+          },
+          { vocabs: "TO PUT STH ON/PUT STH OFF",
+            frenchTranslation3: " - Mettre qlqch sur/enlever qlqch",
+            malagasyTranslation5: " - Miakanjo/Manala"
+          },
+          { vocabs: "TO TRY STH ON",
+            frenchTranslation3: " - Essayer qlqch",
+            malagasyTranslation5: " - Manohatra akanjo"
+          },
+          { vocabs: "TO STINK/REEK/TO BE STINKY",
+            frenchTranslation3: " - Puer",
+            malagasyTranslation5: " - Maimbo"
+          },
+          
+          { vocabs: "TO BURP[berp]",
+            frenchTranslation3: " - Roter",
+            malagasyTranslation5: " - Mandrezatra"
+          },
+          { vocabs: "TO LICK",
+            frenchTranslation3: " - Lécher",
+            malagasyTranslation5: " - Milelaka"
+          },
+          { vocabs: "TO SUCK out/at STH[sak]",
+            frenchTranslation3: " - Sucer",
+            malagasyTranslation5: " - Minono/Mitsetsitra"
+          },
+          { vocabs: "TO STRANGLE [streingel]SB ",
+            frenchTranslation3: " - Étrangler qlq1",
+            malagasyTranslation5: " - Mikenda"
+          },
+          { vocabs: "TO HAVE A HANGOVER[hegnover]",
+            frenchTranslation3: " - Avoir la gueule de bois",
+            malagasyTranslation5: " - Makafoka"
+          },
+          { vocabs: "TO HANG UP[hegnap]",
+            frenchTranslation3: " - Raccrocher",
+            malagasyTranslation5: " - Manapaka resaka(phone)"
+          },
+          { vocabs: "TO PICK UP[pikap]",
+            frenchTranslation3: " - Decrocher",
+            malagasyTranslation5: " - Mandray antso(phone)"
+          },
+          { vocabs: "SWITCH ON/OFF",
+            frenchTranslation3: " - Allumer/Éteindre",
+            malagasyTranslation5: " - Mamelona/Mamono(jiro)"
+          },
+          { vocabs: "TO PEEL[pil]",
+            frenchTranslation3: " - Éplucher",
+            malagasyTranslation5: " - Mamofy"
+          },
+          { vocabs: "TO POUR[pour]",
+            frenchTranslation3: " - Verser",
+            malagasyTranslation5: " - Mandraraka"
+          },
+          { vocabs: "TO STIR[ster]",
+            frenchTranslation3: " - Remuer",
+            malagasyTranslation5: " - Manafangaro(siramamy)"
+          },
+          { vocabs: "TO HAVE ONE’S HAIR CUT",
+            frenchTranslation3: " - Se couper les cheveux ",
+            malagasyTranslation5: " - Mihety"
+          },
+          { vocabs: "TO CHEW[trou]",
+            frenchTranslation3: " - Macher",
+            malagasyTranslation5: " - Mitsako"
+          },
+          { vocabs: "TO BE NUMB[nam]",
+            frenchTranslation3: " - Être engourdi",
+            malagasyTranslation5: " - Voly/Ngoly/Maritry"
+          },
+          { vocabs: "TO BE DEAF[dif",
+            frenchTranslation3: " - Être sourd",
+            malagasyTranslation5: " - Marenina"
+          },
+          { vocabs: "TO BE DUMB[dam]",
+            frenchTranslation3: " - Être muet",
+            malagasyTranslation5: " - Moana"
+          },
+          { vocabs: "TO BE BLIND[blaind]",
+            frenchTranslation3: " - Être aveugle",
+            malagasyTranslation5: " - Jamba"
+          },
+          { vocabs: "TO BE BLOATED[blôoutid]",
+            frenchTranslation3: " - Avoir le ventre ballonné",
+            malagasyTranslation5: " - Kibo feno rivotra"
+          },
+          { vocabs: "TO BE DRUNK/SLOUSHED ",
+            frenchTranslation3: " - Être ivre",
+            malagasyTranslation5: " - Mamo"
+          },
+          { vocabs: "TO BE STINGY/MINGY",
+            frenchTranslation3: " - Être radin/avare",
+            malagasyTranslation5: " - Kaiatra/Kaidy"
+          },
+          { vocabs: "TO BE SELFISH",
+            frenchTranslation3: " - Être égoïste",
+            malagasyTranslation5: " - Tia tena"
+          },
         ],
       },
     ],
@@ -1855,11 +1975,668 @@ const grammarRules16 = [
 • **Once upon a time** = Il était une fois / Indray andro hono  
 • **Many moons ago / A long time ago** = Il y a longtemps / Efa ela be izay`
   }
+] 
+  }
+];
+
+
+const grammarRules17 = [
+  {
+    id: 1,
+    title: 'Lesson 29: QUANTIFIERS—QUANTIFIEUR',
+    description: 'BASIC GRAMMARS',
+    content1: [
+  {
+    title: "→ QUANTIFIERS",
+    description: [
+      {
+        ruleTitle: "SOME = DU, DE LA, DE L’, DES / QUELQUES",
+        content: `→ Unspecified Number/Amount  
+→ On emploie SOME avec des noms singuliers ou pluriels.  
+→ Utilisé dans les phrases affirmatives.  
+
+Exemples :  
+▪ I need some water to drink.  
+→ J’ai besoin de l’eau à boire.  
+▪ There are some letters for you.  
+→ Il y a des lettres pour vous.  
+
+→ Formes composées :  
+SOMEONE / SOMEBODY / SOMETHING / SOMEWHERE + Singulier  
+Ex : There is someone who is looking for you outside.`
+      },
+      {
+        ruleTitle: "ANY = DU, DE LA, DE L’, DES / N’IMPORTE QUEL / TOUT",
+        content: `→ On emploie ANY avec des noms singuliers ou pluriels.  
+→ Utilisé dans les phrases négatives et interrogatives.  
+
+Exemples :  
+▪ Do you have any problem?  
+→ As-tu un problème ?  
+▪ Are there any letters for me?  
+→ Y a-t-il des lettres pour moi ?  
+▪ There isn’t anyone at home.  
+→ Il n'y a personne à la maison.  
+
+→ Formes composées :  
+ANYONE / ANYBODY / ANYTHING / ANYWHERE + Singulier`
+      },
+      {
+        ruleTitle: "NO = RIEN / NE...PAS / AUCUN",
+        content: `→ On emploie NO avec des noms singuliers ou pluriels.  
+→ Utilisé dans une phrase affirmative, mais avec un sens négatif.  
+
+Exemples :  
+▪ I have no problem.  
+→ Je n’ai aucun problème.  
+▪ I have no letter for you.  
+→ Je n’ai aucune lettre pour toi.  
+
+→ Formes composées :  
+NO ONE / NOBODY / NOTHING / NOWHERE = NULLE PART  
+Ex : No one knows about it, man, just let it go!`
+      },
+      {
+        ruleTitle: "HOW MANY / HOW MUCH (COMBIEN)",
+        content: `→ On utilise HOW MANY pour les noms pluriels.  
+→ On utilise HOW MUCH pour les noms incomptables / singuliers.  
+
+Exemples :  
+▪ How many students do you teach every day?  
+→ Combien d’élèves enseignes-tu chaque jour ?  
+▪ How much water did you drink today?  
+→ Combien d’eau as-tu bu aujourd’hui ?  
+
+Exemples :  
+▪ I don’t have much money / time / water, sorry!  
+→ Je n’ai pas beaucoup d’argent / de temps / d’eau.  
+▪ There are [many] lemurs in Madagascar.  
+→ Il y a beaucoup de lémuriens à Madagascar.  
+
+→ MUCH / MANY = BEAUCOUP  
+→ On emploie MUCH avec un nom singulier/incomptable  
+→ On emploie MANY avec un nom pluriel`
+      },
+      {
+        ruleTitle: "INSTEAD OF + V.ING = AU LIEU DE = NA DIA TOKONY...",
+        content: `→ On emploie INSTEAD OF suivi du verbe à l’infinitif avec « VING ».  
+→ Cela indique un choix alternatif ou un remplacement d'action.
+
+Exemple :  
+▪ I decided to stay home instead of going to the party.  
+→ J’ai décidé de rester à la maison au lieu d’aller à la fête.`
+      }
+    ]
+  }
+]
+   
+  }
+];
+
+const grammarRules18 = [
+  {
+    id: 1,
+    title: 'Lesson 30: QUANTIFIERS / A LOT OF / LOTS OF / PLENTY OF / A FEW / A LITTLE / ENOUGH / ALL OF / BOTH OF / WHOLE',
+    description: 'BASIC GRAMMARS',
+    content1: [
+  {
+    title: "QUANTIFIERS",
+    description: [
+      {
+        ruleTitle: "A LOT OF / LOTS OF / PLENTY OF = BEAUCOUP DE",
+        content: `→ S’emploient avec des noms indénombrables ou dénombrables pluriels.
+
+Exemples :
+▪ I have a lot of friends.
+→ J’ai beaucoup d’amis.
+▪ He drinks plenty of water.
+→ Il boit beaucoup d’eau.
+▪ There are lots of books on the table.
+→ Il y a beaucoup de livres sur la table.`
+      },
+      {
+        ruleTitle: "A FEW / A LITTLE = QUELQUES / UN PEU DE",
+        content: `→ « A FEW » s’emploie avec des noms dénombrables pluriels.
+→ « A LITTLE » s’emploie avec des noms indénombrables.
+
+Exemples :
+▪ I have a few friends.
+→ J’ai quelques amis.
+▪ She has a little money.
+→ Elle a un peu d’argent.`
+      },
+      {
+        ruleTitle: "ENOUGH = ASSEZ DE",
+        content: `→ Peut être utilisé avant un nom, un adjectif ou un adverbe.
+
+Exemples :
+▪ I have enough money.
+→ J’ai assez d’argent.
+▪ He is not tall enough.
+→ Il n’est pas assez grand.`
+      },
+      {
+        ruleTitle: "ALL OF (YOU / THEM / US) / THE / MY / THESE = TOUS LES / MES / CES",
+        content: `→ S’emploie avec les noms singuliers et pluriels.
+→ Permet d’exprimer la totalité d’un groupe ou d’un ensemble.
+
+Exemples :
+▪ I like you all / all of you / them.
+→ Je vous/les aime tous.
+▪ He stole all my books.
+→ Il a volé tous mes livres.
+▪ All the books in the library are interesting.
+→ Tous les livres de la bibliothèque sont intéressants.
+▪ I drank all of the water in the bottle.
+→ J’ai bu toute l’eau dans la bouteille.`
+      },
+      {
+        ruleTitle: "BOTH OF (YOU / THEM / US) / THE = TOUS LES DEUX / LES DEUX",
+        content: `→ S’emploie avec des noms pluriels.
+→ Sert à désigner deux éléments ou deux personnes en même temps.
+
+Exemples :
+▪ Both (the) books are expensive.
+→ Les deux livres sont chers.
+▪ I like them both.
+→ J’aime les deux.
+▪ Both of them are my friends.
+→ Les deux sont mes amis.
+▪ Can you see it? – Yes, we both can.
+→ Tu peux le voir ? – Oui, nous deux pouvons.`
+      },
+      {
+        ruleTitle: "ALL (THE) / THE WHOLE (TIME / DAY / WEEK / MONTH / YEAR) = TOUT(E) LE / LA...",
+        content: `→ « ALL » + nom pluriel ou singulier indénombrable.
+→ « THE WHOLE » + nom singulier dénombrable.
+
+Exemples :
+▪ I spent all the day cleaning the house.
+→ J’ai passé toute la journée à nettoyer la maison.
+▪ He was busy the whole week.
+→ Il a été occupé toute la semaine.
+▪ She worked the whole year without a break.
+→ Elle a travaillé toute l’année sans pause.
+▪ They stayed here all the time.
+→ Ils sont restés ici tout le temps.`
+      }
+    ]
+  }
 ]
 
+  }
+];
+
+const grammarRules19 = [
+  {
+    id: 1,
+    title: 'Lesson 31: QUANTIFIERS / HALF / ONE OF/ EACH & EVERY/',
+    description: 'BASIC GRAMMARS',
+     content1: [
+  {
+    title: "",
+    description: [
+      {
+        ruleTitle: "HALF OF THE/THESE/THEM = LA MOITIE DE CES",
+        content: `→ On l’emploie avec le nom pluriel et singulier.
+        
+Exemples :
+▪ I have read the half of the book.
+→ J’ai déjà lu la moitié du livre.
+▪ Half of the eggs are rotten.
+→ La moitié des œufs sont pourris.`
+      },
+      {
+        ruleTitle: "ONE OF YOU/THEM/US = L’UN(E) DE VOUS/NOUS",
+        content: `→ On l’emploie avec le nom pluriel.
+        
+Exemples :
+▪ Yesterday, I met one of my friends at the market.
+→ Hier, j’ai rencontré un de mes amis au marché.
+▪ One of his brothers is in America.
+→ L'un de ses frères est en Amérique.`
+      },
+      {
+        ruleTitle: "EACH & EVERY = CHAQUE/TOUT",
+        content: `→ On l’emploie avec le nom singulier (CHAQUE).
+        
+Exemples :
+▪ My teacher asked each of us to get our homework done by Monday.
+→ Mon professeur a demandé à chacun de (d’entre) nous de finir nos devoirs d'ici lundi.`
+      },
+      {
+        ruleTitle: "EACH OF YOU/THEM/US—EVERYONE OF YOU/THEM/US = CHACUN DE VOUS/NOUS",
+        content: `→ On l’emploie avec le nom singulier.
+        
+Exemples :
+▪ Each of you must do your best.
+→ Chacun de vous doit donner son meilleur.
+▪ Everyone of them was surprised.
+→ Tout le monde parmi eux était surpris.`
+      },
+      {
+        ruleTitle: "ANOTHER = UN AUTRE / OTHER = L’AUTRE",
+        content: `→ "Another" s'emploie pour un autre élément. "Other" pour un élément parmi plusieurs.
+        
+Exemples :
+▪ I need another more coke.
+→ J’ai besoin d’un autre coca-cola.
+▪ Give me the other one.
+→ Donnez-moi l’autre.`
+      },
+      {
+        ruleTitle: "EACH OTHER = L’UN À L’AUTRE / ONE ANOTHER = LES UNS LES AUTRES",
+        content: `→ "Each other" est utilisé pour deux personnes, et "one another" pour plus de deux.
+        
+Exemples :
+▪ We first need to help each other.
+→ On doit d’abord s’entraider.
+▪ We first need to talk to one another.
+→ On doit d’abord discuter les uns les autres.`
+      },
+      {
+        ruleTitle: "TOO MUCH = TROP (Nom singulier)",
+        content: `→ Sera employé avec un nom singulier.
+        
+Exemples :
+▪ I have drunk too much coke and I’m bloated.
+→ J’ai bu trop de coca et je suis ballonné.`
+      },
+      {
+        ruleTitle: "TOO MANY = TROP (Nom pluriel)",
+        content: `→ Sera employé avec un nom pluriel.
+        
+Exemples :
+▪ There are too many dogs in my town.
+→ Il y a trop de chiens dans ma ville.`
+      },
+      {
+        ruleTitle: "SO MUCH = TELLEMENT DE (Nom singulier)",
+        content: `→ Sera employé avec un nom singulier.
+        
+Exemples :
+▪ I have drunk so much coke that I’m bloated.
+→ J’ai bu tellement de coca que je suis ballonné.`
+      },
+      {
+        ruleTitle: "SO MANY = TELLEMENT DE (Nom pluriel)",
+        content: `→ Sera employé avec un nom pluriel.
+        
+Exemples :
+▪ There are so many dogs in my town.
+→ Il y a tellement de chiens dans ma ville.`
+      },
+      {
+        ruleTitle: "TOO/SO = AUSSI = TORAK’IZANY",
+        content: `→ Utilisé pour indiquer que l’on fait ou ressent la même chose que l’autre.
+        
+Exemples :
+▪ I like to eat pizza, and my children do, too.
+→ J’aime manger de la pizza, et mes enfants aussi.
+▪ He’s intelligent and I’m too.
+→ Il est intelligent, et moi aussi.
+▪ She is happy, and so is John.
+→ Elle est heureuse, et John aussi.`
+      },
+      {
+        ruleTitle: "SO = AUSSI / SI (TRÈS)",
+        content: `→ Utilisé pour montrer la même chose ou une conséquence.
+        
+Exemples :
+▪ I like to eat pizza, and so do my children.
+→ J’aime manger de la pizza, et mes enfants aussi.
+▪ I liked to eat pizza, and so did she.
+→ J’aimais manger de la pizza, et elle aussi.
+▪ She is happy, and so is John.
+→ Elle est heureuse, et John aussi.
+   
+  SO DO I/SO AM I/IS HE/SHE = MOI AUSSI
+  ME NEITHER  = MOI NON PLUS`
+      }
+    ]
+  }
+]
+  }
+];
+
+
+const grammarRules20 = [
+  {
+    id: 1,
+    title: 'Lesson 32: VOCABULARY',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        type: "vocabs",
+        table: [
+          { vocabs: "TO BE RIPE (raip) [raip]", 
+            frenchTranslation3: " - Mûr", 
+            malagasyTranslation5: " - Masaka"
+           },
+           { vocabs: "TO BE RAW (rô) [rôou]", 
+            frenchTranslation3: " -  Cru",  
+            malagasyTranslation5: " - Manta"
+           },
+          { vocabs: "TO BE TOUGH (taf)[taf]", 
+            frenchTranslation3: " -  Dur",
+            malagasyTranslation5: " - Mafy/Mahery"
+          },
+          { vocabs: "TO BE TENDER",
+            frenchTranslation3: " - Tendre",
+            malagasyTranslation5: " - Malefaka/Malemy"
+          },
+          { vocabs: "TO BE SWEET[swit]",
+            frenchTranslation3: " -  Sucré",
+            malagasyTranslation5: " -  Mamy"
+          },
+          { vocabs: "TO BE BITTER",
+            frenchTranslation3: " - Amer",
+            malagasyTranslation5: " - Mangidy"
+          },
+          { vocabs: "TO BE SOUR (saor)",
+            frenchTranslation3: " - Aigre",
+            malagasyTranslation5: " - Marikivy"
+          },
+          { vocabs: "TO BE SALTY[solti]",
+            frenchTranslation3: " - Salé",
+            malagasyTranslation5: " - Masira"
+          },
+          { vocabs: "TO BE DELICIOUS[delisies]YUMMY",
+            frenchTranslation3: " - Délicieux",
+            malagasyTranslation5: " - Matsiro"
+          },
+          { vocabs: "TO BE ROTTEN[raten]",
+            frenchTranslation3: " - Pourri",
+            malagasyTranslation5: " - Lo"
+          },
+          { vocabs: "TO GRATE[greit]",
+            frenchTranslation3: " - Râper",
+            malagasyTranslation5: " - Mikiky(karaoty)"
+          },
+          { vocabs: "TO PICK STH UP",
+            frenchTranslation3: " - Ramasser",
+            malagasyTranslation5: " - Mandraoka/maka"
+          },
+          { vocabs: "TO GAWK AT/GAZE AT[gok/geiz]",
+            frenchTranslation3: " - Regarder qlq1 fixement",
+            malagasyTranslation5: " - Mijery olona maharitra"
+          },
+          { vocabs: "TO BE WELL-COOKED[oel-koukt]",
+            frenchTranslation3: " - Bien cuit",
+            malagasyTranslation5: " - Masaka tsara(nandrahoana)"
+          },
+          { vocabs: "TO BE PEEK AT SB",
+            frenchTranslation3: " -  Jetter un coup d’oeil ",
+            malagasyTranslation5: " - Mitsirika/mangalatra mijery"
+          },
+          { vocabs: "TO BE DISGUSTING [disgastin]/TO BE YUKKY",
+            frenchTranslation3: " - Dégoûtant",
+            malagasyTranslation5: " - Ratsy/Mantsiravina"
+          },
+          { vocabs: "TO EXTEND[ikstend]",
+            frenchTranslation3: " - Etendre",
+            malagasyTranslation5: " - Manitatra"
+          },
+          { vocabs: "TO SMELL GOOD/BAD",
+            frenchTranslation3: " - Sentir bon/mauvais",
+            malagasyTranslation5: " - Manitra/Maimbo"
+          },
+          
+          { vocabs: "TO BE SHABBY (sheibi)",
+            frenchTranslation3: " - Rapé, élimé ",
+            malagasyTranslation5: " - Vasoka"
+          },
+          { vocabs: "TO STAIN/ A STAIN",
+            frenchTranslation3: " - Tacher/une tache",
+            malagasyTranslation5: " - Misy pentina"
+          },
+          { vocabs: "TO SHRIVEL/WITHER",
+            frenchTranslation3: " - Se déssecher ",
+            malagasyTranslation5: " - Malazo(ravin-javatra)"
+          },
+          { vocabs: "TO SPROUT [spraot]",
+            frenchTranslation3: " - Pousser",
+            malagasyTranslation5: " - Mitsimoka"
+          },
+          { vocabs: "TO FLAKE (OUT)[fleik]",
+            frenchTranslation3: " - S’écailler ",
+            malagasyTranslation5: " - Mihitsana(volo)"
+          },
+          { vocabs: "TO DOZE OFF",
+            frenchTranslation3: " - S’endormir",
+            malagasyTranslation5: " - Tafatory"
+          },
+          { vocabs: "TO GAPE[geip]",
+            frenchTranslation3: " - Regarder bouche bée",
+            malagasyTranslation5: " - Midanàka"
+          },
+          { vocabs: "TO BRIBE SB[braib]",
+            frenchTranslation3: " - Corrompre qlq1",
+            malagasyTranslation5: " - Manao kolikoly"
+          },
+          { vocabs: "TO GET RID OF STH/SB",
+            frenchTranslation3: " - Se débarrasser de qlqch/qlq1",
+            malagasyTranslation5: " - Miala/mamaha olana"
+          },
+          { vocabs: "TO PREVENT SB FROM+V.ING[privent]",
+            frenchTranslation3: " - Empêcher qlq1 de faire qlqch",
+            malagasyTranslation5: " - Misakana olona tsy ..."
+          },
+          { vocabs: "TO BASE ON STH[beiz]",
+            frenchTranslation3: " - Se baser sur qlchose",
+            malagasyTranslation5: " - Mifototra"
+          },
+          { vocabs: "TO UNDERESTIMATE SB/STH[anderestimeit]",
+            frenchTranslation3: " - Sous-estimer qlq1/qlqch",
+            malagasyTranslation5: " - Manambanimbany"
+          },
+          { vocabs: "TO NEGLECT[niglekt]",
+            frenchTranslation3: " - Négliger",
+            malagasyTranslation5: " - Tsy miraharaha"
+          },
+          { vocabs: "TO IGNORE[ignor]",
+            frenchTranslation3: " - Ignorer",
+            malagasyTranslation5: " - Mody fanina"
+          },
+          { vocabs: "TO TAKE CARE OF SB",
+            frenchTranslation3: " - Prendre soin de qlq1",
+            malagasyTranslation5: " - Mikarakara olona"
+          },
+          { vocabs: "TO LOOK AFTER SB",
+            frenchTranslation3: " - S’occuper de qlq1",
+            malagasyTranslation5: " - Mikarakara olona"
+          },
+          { vocabs: "TO RESOLVE/SOLVE STH[rizalv]",
+            frenchTranslation3: " - Résoudre",
+            malagasyTranslation5: " - Mamaha olana"
+          },
+          { vocabs: "TO AVOID + VING[evoid]",
+            frenchTranslation3: " - Éviter de faire qlqch",
+            malagasyTranslation5: " - Misoroka/miala"
+          },
+          { vocabs: "TO RETAIN/KEEP STH",
+            frenchTranslation3: " - Rétenir",
+            malagasyTranslation5: " - Mitazona/mitahiry"
+          },
+          { vocabs: "TO PRACTICE[praktis]",
+            frenchTranslation3: " - Pratiquer",
+            malagasyTranslation5: " - Manazatra"
+          },
+          { vocabs: "TO APPLY[eplai]",
+            frenchTranslation3: " - Appliquer",
+            malagasyTranslation5: " - Mampihatra"
+          },
+          { vocabs: "TO MASTER[master]",
+            frenchTranslation3: " - Maîtriser",
+            malagasyTranslation5: " - Mahavoafehy"
+          },
+          { vocabs: "TO DO MY BEST TO+V.INF",
+            frenchTranslation3: " - Faire de mon mieux pour faire qlqch",
+            malagasyTranslation5: " - Manao izay azo atao"
+          },
+          { vocabs: "TO SNORE",
+            frenchTranslation3: " - Ronfler",
+            malagasyTranslation5: " - Miesona"
+          },
+          { vocabs: "TO YAWN[ion]",
+            frenchTranslation3: " - Bâiller",
+            malagasyTranslation5: " - Manoaka"
+          },
+          { vocabs: "TO SNEEZE",
+            frenchTranslation3: " - Eternuer",
+            malagasyTranslation5: " - Mievona"
+          },
+        ],
+      },
+    ],
+   
+  }
+];
+
+const grammarRules21 = [
+  {
+    id: 1,
+    title: 'Lesson 33: PREPOSITIONS – PUNCTUATIONS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        type: "ENGLISH PREPOSITIONS",
+        table: [
+          { english: "TO", french: "à" },
+          { english: "AT", french: "À" },
+          { english: "IN", french: "Dans/à" },
+          { english: "OF", french: "De/à" },
+          { english: "WITH", french: "Avec" },
+          { english: "FOR", french: "Pour" },
+          { english: "AGAINST", french: "Contre" },
+          { english: "THROUGH", french: "À travers" },
+          { english: "ACROSS", french: "À travers" },
+          { english: "BY", french: "Par/à" },
+          { english: "ON", french: "Sur/À" },
+          { english: "ALONG", french: "Au long de" },
+          { english: "FROM", french: "Dès/ depuis" },
+          { english: "AMONG(ST)", french: "Parmi/Entre" },
+          { english: "UNDER", french: "Sous" },
+          { english: "BELOW", french: "Au-dessous" },
+          { english: "ABOVE", french: "Au-dessus" },
+          { english: "UP", french: "En haut" },
+          { english: "DOWN", french: "En bas" },
+          { english: "BEYOND", french: "Au-delà" },
+          { english: "AROUND/ABOUT", french: "Autour/ environ/ Au sujet de- Sur" },
+          { english: "BETWEEN", french: "Entre" },
+          { english: "BEFORE", french: "Avant/devant" },
+          { english: "BESIDES/BESIDE", french: "À côté de" },
+          { english: "INTO", french: "Dans" },
+          { english: "INSIDE", french: "Dedans" },
+          { english: "OUTSIDE", french: "Dehors/ en dehors" },
+          { english: "TOWARD(S)", french: "Vers/ Envers" },
+          { english: "FORWARD(S)", french: "En avant" },
+          { english: "BACKWARD(S)", french: "En arrière" },
+          { english: "OUT OF", french: "Hors" },
+          { english: "OVER", french: "Par-dessus" },
+          { english: "UNTIL", french: "Jusque" },
+          { english: "STRAIGHT", french: "Droit" },
+          { english: "DURING/FOR", french: "Pendant" },
+          { english: "UPSIDE DOWN", french: "À l’envers/ la tête en bas" },
+          { english: "INSIDE OUT", french: "À l’envers" },
+          { english: "AT THE BOTTOM", french: "Au fond" },
+          { english: "ON THE TOP", french: "Sur" },
+        ],
+      },
+      {
+        type: "PUNCTUATIONS",
+        content: [
+          ["COMMA : ,", "COLON : :"],
+          ["SEMICOLON : ;", "FULL STOP / PERIOD : ."],
+          ["DOT : .", "HYPHEN : -"],
+          ["DASH : --", "QUESTION MARK : ?"],
+          ["EXCLAMATION MARK : !", "PARENTHESIS : ( )"],
+          ["BRACKETS : [ ]", "QUOTATION MARKS : “ ”"],
+          ["SLASH / BACK SLASH : \\ /", "APOSTROPHE : ’"]
+        ]
+      }
+            
+    ]
+  }
+];
+
+const grammarRules22 = [
+  {
+    id: 1,
+    title: 'Lesson 34: ACTIVE-PASSIVE VOICE',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: " ACTIVE-PASSIVE VOICE",
+        description: [
+          {
+            ruleTitle: "TO BE + V.PP = PASSIVE VOICE",
+            content: `→ En général, on emploie la forme passive lorsqu'on ne s'intéresse pas à, ou ne connaît pas l'agent.  
+→ Quand le sujet fait l'action, c'est la voix active, (la plus courante) :  
+Ex : Marc watches TV. → Marc regarde la TV  
+→ Quand le sujet subit l'action, c'est la voix passive :  
+Ex : The TV is watched. → La télé est regardée. Ici, le sujet (la TV) subit l'action, elle est regardée.`
+          },
+          {
+            ruleTitle: "TENSES COMPARISON TABLE",
+            table: [
+              { tense: "SIMPLE PRESENT", active: "John cooks the food", passive: "The food is cooked by John" },
+              { tense: "PRESENT CONTINUOUS", active: "John is cooking the food", passive: "The food is being cooked by John" },
+              { tense: "SIMPLE PAST", active: "John cooked the food", passive: "The food was cooked by John" },
+              { tense: "PAST CONTINUOUS", active: "John was cooking the food", passive: "The food was being cooked by John" },
+              { tense: "PRESENT PERFECT", active: "John has cooked the food", passive: "The food has been cooked by John" },
+              { tense: "FUTURE", active: "John will cook the food", passive: "The food will be cooked by John" },
+              { tense: "MODAL VERBS", active: "John may cook the food", passive: "The food may be cooked by John" },
+            ]
+          },
+          {
+            ruleTitle: "",
+            content: `→ GET + V.PP = Se faire + V. (passif)
+             You'll get fired = Tu vas te faire virer.
+             Causative Form: To Have + Noun + V.PP = I'm having my car washed.
+             Ex: We're having/getting the job done by the local builders.
+            `
+          },
+
+        ]
+      }
+    ],
+    content2: [
+      {
+        title: "FUTURE SIMPLE / CONTINUOUS TENSE",
+        description: [
+          {
+            ruleTitle: "S + WILL (BE) + V(ING)",
+            content: `• On emploie le Future pour parler de l'avenir.  
+    • AMPIASAINA NY FUTURE SIMPLE/CONT TENSE ENTINA ILAZANA NY ZAVATRA MBOLA HOAVY.  
+    → I will come to see you tomorrow.  
+    Je viendrai te voir demain  
+    → I’ll be gone tomorrow at this time.  
+    Je serai parti demain à cette heure ci.`
+          },
+          {
+            ruleTitle: "PRESENT CONTINUOUS = TO BE + V.ING",
+            content: `• On emploie le Present Continuous pour parler de :  
+      - Ce qui a été prévu ou décidé dans le futur = AMPIASAINA @ ZAVATRA EFA VOALAHATRA  
+      Ex: We're having dinner at 8 o’clock = Nous dînons à 20h00  
+      - Nos arrangements personnels  
+      Ex: This weekend I'm leaving for Tana = Ce week-end je vais partir pour Tana`
+          },
+          {
+            ruleTitle: "TO BE GOING TO + INF.",
+            content: `• On l’emploie pour parler :  
+      - D'une intention ou d’un désir  
+      Ex: I'm going to call him = Je vais l’appeler  
+      • Forme informelle : I'm gonna + V.inf.  
+      Ex: I'm gonna eat = Je vais manger`
+          }
+        ]
+      }
+    ]
     
   }
 ];
+
 
 const GrammarScreen = () => {
   const [expanded, setExpanded] = useState<string | number | null>(null);
@@ -3587,7 +4364,288 @@ const GrammarScreen = () => {
         </Card>
       ))}
 
+      {grammarRules17.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+              <List.Accordion
+  title={rule.content1[0].title}
+  left={(props) => (
+    <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+  )}
+>
+  {rule.content1[0].description.map((item, index) => (
+    <View key={index} style={styles.content3Container}>
+      <Text style={styles.ruleTitle}>{item.ruleTitle}</Text>
+      <Text style={styles.content}>{item.content}</Text>
+    </View>
+  ))}
+</List.Accordion>
 
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+      {grammarRules18.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+               <List.Accordion
+  title="QUANTIFIERS/ A LOT OF/ LOTS OF / PLENTY OF/A FEW/ A LITTLE"
+  left={(props) => (
+    <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+  )}
+>
+  <View style={styles.content3Container}>
+    <Text style={styles.title}>{rule.content1[0].title}</Text>
+
+    {rule.content1[0].description.map((section, index) => (
+      <View key={index} style={styles.ruleBox}>
+        <Text style={styles.ruleTitle}>{section.ruleTitle}</Text>
+        <Text style={styles.ruleContent}>{section.content}</Text>
+      </View>
+    ))}
+  </View>
+</List.Accordion>
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+       {grammarRules19.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+               <List.Accordion
+  title="QUANTIFIERS / HALF / ONE OF/ EACH & EVERY/ "
+  left={(props) => (
+    <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+  )}
+>
+  <View style={styles.content3Container}>
+    <Text style={styles.title}>{rule.content1[0].title}</Text>
+
+    {rule.content1[0].description.map((section, index) => (
+      <View key={index} style={styles.ruleBox}>
+        <Text style={styles.ruleTitle}>{section.ruleTitle}</Text>
+        <Text style={styles.ruleContent}>{section.content}</Text>
+      </View>
+    ))}
+  </View>
+</List.Accordion>
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+      {grammarRules20.map((rule) => (
+        <Card key={rule.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+            subtitle={rule.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => speak(rule.title)}
+              />
+            )}
+          />
+          <Card.Content>
+            <List.Section>
+           
+              
+              {/* Second Accordion */}
+              <List.Accordion
+  title="VOCABULARIES"
+  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+>
+  {/* Tableau 2 : Adverbs */}
+  <View style={styles.table}>
+    <View style={styles.tableRow}>
+      <RNText style={styles.tableHeader}>ENGLISH</RNText>
+      <RNText style={styles.tableHeader}>FRENCH</RNText>
+      <RNText style={styles.tableHeader}>MALAGASY</RNText>
+    </View>
+    {rule.content1
+      ?.find((c) => c.type === "vocabs")
+      ?.table.map((item, index) => (
+        <View key={index} style={styles.tableRow}>
+          <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>
+            {'vocabs' in item ? item.vocabs : ''}
+          </RNText>
+          {'frenchTranslation3' in item && (
+            <RNText style={styles.tableCell}>{item.frenchTranslation3}</RNText>
+          )}
+          {'malagasyTranslation5' in item && (
+            <RNText style={styles.tableCell}>{item.malagasyTranslation5}</RNText>
+          )}
+        </View>
+      ))}
+  </View>
+</List.Accordion>
+            </List.Section>
+          </Card.Content>
+        </Card>
+      ))}
+
+       
+{grammarRules21.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title="ENGLISH PREPOSITIONS"
+          left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+        >
+          <View style={styles.table}>
+            <View style={styles.tableRow}>
+              <RNText style={[styles.tableHeader, styles.tableCell]}>ENGLISH</RNText>
+              <RNText style={[styles.tableHeader, styles.tableCell]}>FRENCH</RNText>
+            </View>
+            {rule.content1?.find((c) => c.type === "ENGLISH PREPOSITIONS")?.table?.map((item, index) => (
+                <View key={index} style={styles.tableRow}>
+                  <RNText style={[styles.tableCell, { fontWeight: "bold" }]}>{item.english}</RNText>
+                  <RNText style={styles.tableCell}>{item.french}</RNText>
+                </View>
+              ))}
+          </View>
+        </List.Accordion>
+        <List.Accordion
+  title="PUNCTUATIONS"
+  left={(props) => <List.Icon {...props} icon="pencil" color="#8DA9C4" />}
+>
+  <View style={{ paddingHorizontal: 8, gap: 8 }}>
+    {(rule.content1?.find(c => c.type === "PUNCTUATIONS")?.content || []).map((pair, index) => (
+      <View key={index} style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+        {pair.map((item, idx) => (
+          <Text key={idx} style={{ flex: 1, paddingRight: 6, lineHeight: 22 }}>{item}</Text>
+        ))}
+      </View>
+    ))}
+  </View>
+</List.Accordion>
+
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+{grammarRules22.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => (
+            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+          )}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              <Text style={styles.ruleTitle}>{item.ruleTitle}</Text>
+              
+              {/* Affichage du texte si disponible */}
+              {item.content && (
+                <Text style={styles.content}>{item.content}</Text>
+              )}
+
+              {/* Affichage du tableau s'il existe */}
+              {item.table && (
+                <View style={styles.tableContainer}>
+                  <View style={styles.tableHeader1}>
+                    <Text style={styles.tableCell}>Tense</Text>
+                    <Text style={styles.tableCell}>Active</Text>
+                    <Text style={styles.tableCell}>Passive</Text>
+                  </View>
+                  
+                  {item.table.map((row, rowIndex) => (
+                    <View key={rowIndex} style={styles.tableRow1}>
+                      <Text style={styles.tableCell}>{row.tense}</Text>
+                      <Text style={styles.tableCell}>{row.active}</Text>
+                      <Text style={styles.tableCell}>{row.passive}</Text>
+                    </View>
+                  ))}
+                </View>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+         
+        <List.Accordion
+  title={rule.content2[0].title}
+  left={(props) => (
+    <List.Icon {...props} icon="calendar" color='#8DA9C4' />
+  )}
+>
+  {rule.content2[0].description.map((item, index) => (
+    <View key={index} style={styles.content3Container}>
+      <Text style={styles.ruleTitle}>{item.ruleTitle}</Text>
+      <Text style={styles.content}>{item.content}</Text>
+    </View>
+  ))}
+</List.Accordion>
+
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
 
 
     </ScrollView>
@@ -3665,6 +4723,52 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#333',
   },
+  ruleBox: {
+  backgroundColor: '#F0F4FA',
+  borderRadius: 10,
+  padding: 12,
+  marginVertical: 8,
+  borderColor: '#A8C3DA',
+  borderWidth: 1,
+},
+
+ruleTitle: {
+  fontWeight: 'bold',
+  fontSize: 16,
+  color: '#1E3A5F',
+  marginBottom: 6,
+},
+
+ruleContent: {
+  fontSize: 12,
+  lineHeight: 20,
+  color: '#333',
+},
+ruleTitle1: {
+  fontWeight: 'bold',
+  fontSize: 16,
+  marginBottom: 8,
+},
+
+tableContainer: {
+  borderWidth: 1,
+  borderColor: '#ccc',
+  borderRadius: 4,
+  marginTop: 12,
+  marginBottom: 12,
+},
+tableHeader1: {
+  flexDirection: 'row',
+  backgroundColor: '#f0f4fa',
+  padding: 5,
+},
+tableRow1: {
+  flexDirection: 'row',
+  padding: 8,
+  borderTopWidth: 1,
+  borderColor: '#eee',
+},
+
 });
 
 export default GrammarScreen;
