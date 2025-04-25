@@ -2637,6 +2637,778 @@ Ex : The TV is watched. → La télé est regardée. Ici, le sujet (la TV) subit
   }
 ];
 
+const grammarRules23 = [
+  {
+    id: 1,
+    title: 'Lesson 35: COMPARATIVE AND SUPERLATIVE FORMS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "COMPARATIVE AND SUPERLATIVE FORMS",
+        description: [
+          {
+            ruleTitle: "COMPARATIVE FORM",
+            type: "text",
+            content: `On emploie le comparatif lorsqu’on est amené à comparer deux éléments (individus, groupes d'individus, objets, etc.)\n\nAMPIASAINA NY COMPARATIF RAHA HAMPITAHA ZAVATRA na OLONA ROA
+            \n\nNote : Cette formule est utilisée avec les ADJECTIFS moins de 2 syllabes, ce qu’on appelle ADJECTIF COURT, 
+               Ex : TO BE TALL = GRAND / TO BE PRETTY = JOLIE`
+          },
+          {
+            type: "formula",
+            content: "COMPARATIVE : S + ADJ + ER/IER + THAN [plus… que]"
+          },
+          {
+            type: "examples",
+            content: `Ex: You are tallER than me (I am) = Tu es plus grand que moi\n→ She is prettIER than you (you are) = Elle est plus jolie que toi.`
+          },
+          {
+            type: "table",
+            table: [
+              { adjective: "Clean = propre", comparative: "Cleaner", superlative: "THE Cleanest" },
+              { adjective: "Big = grand", comparative: "Bigger", superlative: "THE Biggest" },
+              { adjective: "Nice = bien", comparative: "Nicer", superlative: "THE Nicest" },
+              { adjective: "Tidy = bien rangé", comparative: "Tidier", superlative: "THE Tidiest" },
+              { adjective: "Narrow = étroit", comparative: "Narrower", superlative: "THE Narrowest" }
+            ]
+          },
+          {
+            ruleTitle: "SUPERLATIVE FORM",
+            type: "text",
+            content: `On parle de superlatif lorsqu'on met en évidence qu'un élément se situe à l'extrémité d'un gradient.\n\nAMPIASAINA NY SUPERLATIF ENTINA ILAZANA ZAVATRA NA OLONA ANANKIRAY FARANY AMBONY INDRINDRA.`
+          },
+          {
+            type: "formula",
+            content: "SUPERLATIVE : S + THE + ADJ + EST/IEST + IN [le plus…]"
+          },
+          {
+            type: "examples",
+            content: `Ex: You are the tallEST in your basketball team = Vous êtes le plus grand dans votre équipe de basketball\n→ She is the prettIEST in my class.`
+          },
+          {
+            ruleTitle: "IRREGULAR ADJECTIVES",
+            type: "table",
+            table: [
+              { adjective: "Good", comparative: "Better", superlative: "THE Best" },
+              { adjective: "Bad", comparative: "Worse", superlative: "THE Worst" },
+              { adjective: "Far", comparative: "Farther / Further", superlative: "THE Furthest" },
+              { adjective: "Old", comparative: "Older / Elder", superlative: "THE Oldest / Eldest" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const grammarRules24 = [
+  {
+    id: 1,
+    title: 'Lesson 36: COMPARATIVE AND SUPERLATIVE FORMS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "COMPARATIVE AND SUPERLATIVE FORMS",
+        description: [
+          {
+            ruleTitle: "DOUBLING THE CONSONANT",
+            type: "text",
+            content: `→ Les adjectifs d'une syllabe s'épelant "consonne + voyelle + consonne" redoublent cette dernière consonne.\n→ NY ADJECTIF IZAY MISY RENIN-TSORATRA + ZANATSORATRA + RENIN-TSORATRA DIA AMPIANA RENI-TSORATRA ANAKIRAY INDRAY MANDEHA.`
+          },
+          {
+            type: "table",
+            table: [
+              { adjective: "Fat", comparative: "Fatter", superlative: "THE Fattest" },
+              { adjective: "Big", comparative: "Bigger", superlative: "THE Biggest" },
+              { adjective: "Sad", comparative: "Sadder", superlative: "THE Saddest" }
+            ]
+          },
+          {
+            ruleTitle: "ENDING WITH 'I' + CONSONANT",
+            type: "text",
+            content: `→ Les adjectifs d'une syllabe se terminant par "i" + "consonne" redoublent cette dernière consonne.`
+          },
+          {
+            type: "table",
+            table: [
+              { adjective: "Thin", comparative: "Thinner", superlative: "THE Thinnest" }
+            ]
+          },
+          {
+            ruleTitle: "COMPARATIVE WITH LONG ADJECTIVES",
+            type: "formula",
+            content: "S + MORE + ADJECTIVE + THAN [plus… que]"
+          },
+          {
+            type: "examples",
+            content: `Ex: English is MORE important THAN French nowadays.\n→ L’Anglais est plus important que le Français.\n→ My young brother is more intelligent than I am / me.`
+          },
+          {
+            ruleTitle: "SUPERLATIVE WITH LONG ADJECTIVES",
+            type: "formula",
+            content: "S + THE MOST + ADJECTIVE (+ IN THE) [le plus…]"
+          },
+          {
+            type: "examples",
+            content: `Ex: English is the most important language which I have ever known.\n→ L’Anglais est la langue la plus importante que je n’ai jamais connue.`
+          },
+          {
+            ruleTitle: "INFERIORITY COMPARATIVE",
+            type: "formula",
+            content: "S + LESS + ADJECTIVE + THAN [moins… que]"
+          },
+          {
+            type: "examples",
+            content: `Ex: This book is less interesting than that one.\n→ Ce livre est moins intéressant que celui-là.`
+          },
+          {
+            ruleTitle: "EQUALITY",
+            type: "formula",
+            content: "S + AS + ADJECTIVE + AS [aussi… que]"
+          },
+          {
+            type: "examples",
+            content: `EX : This comic is as funny as yours. → They are the same.\n→ Cette BD est aussi drôle que la tienne.`
+          },
+          {
+            ruleTitle: "ADVANCED COMPARATIVE STRUCTURE",
+            type: "examples",
+            content: `= The more difficult it is, the more interested the pupils are.\n= Arakaraky ny maha-sarotra azy, no maha-liana ny mpianatra.`
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const grammarRules25 = [
+  {
+    id: 1,
+    title: 'Lesson 37: THE CONDITIONAL – IF CLAUSES (SI)',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "IF CLAUSES (CONDITIONAL SENTENCES)",
+        description: [
+          {
+            ruleTitle: "→ IF + SIMPLE PRESENT → FUTURE SIMPLE (WILL)",
+            type: "examples",
+            content: `Ex: If I have time, I will come to visit you.\n→ Si j’ai le temps, je viendrai te visiter.\n\n▪ What will you do, if you can speak English?\n→ Que feriez-vous, si vous pouvez parler l’Anglais ?`
+          },
+          {
+            ruleTitle: "→ IF + SIMPLE PAST → CONDITIONAL PRESENT (WOULD)",
+            type: "examples",
+            content: `Ex: If I had money, I would buy that car.\n→ Si j’avais de l’argent, j’achèterais cette voiture.\n\n▪ What would you answer, if he asked you to marry him?\n→ Que répondrais-tu, s’il te demandait de l’épouser ?`
+          },
+          {
+            ruleTitle: "→ IF I WERE YOU → CONDITIONAL PRESENT (WOULD)",
+            type: "examples",
+            content: `Ex: If I were rich, I would buy a big house.\n→ Si j’étais riche, j’achèterais une grande maison.\n\n▪ If you were a president, what would be your priority?\n→ Si vous étiez un président, quelle serait votre priorité ?`
+          },
+          {
+            ruleTitle: "→ IF + PAST PERFECT → CONDITIONAL PAST (WOULD HAVE + VPP)",
+            type: "examples",
+            content: `✓ Il est impossible de remplir une condition qui est donnée dans le IF Clause.\n\nEx: If I had studied, I would have passed the exams.\n→ Si j'avais étudié, j'aurais passé les examens.`
+          },
+          {
+            ruleTitle: "→ WHETHER...OR NOT = SI ... OUI NON",
+            type: "examples",
+            content: `Ex: I don't know whether he will come or not.\n→ Je ne sais pas s'il viendra ou non.`
+          },
+          {
+            ruleTitle: "→ WHETHER...OR NOT = QUE...OU NON",
+            type: "examples",
+            content: `Ex: Wheter[weder] you want to or not, I don't care!\n→ Que tu le veuilles ou non, je m'en fous!.`
+          },
+          {
+            ruleTitle: "→ EITHER...OR = SOIT...SOIT/OU...OU",
+            type: "examples",
+            content: `Ex: Either you stop complaining or I go home.`
+          },
+          {
+            ruleTitle: "→ NEITHER... NOR = NI...NI",
+            type: "examples",
+            content: `Ex: I like neither[nider] tea nor coffee.\n→ Je n'aime ni le the ni le cafe.`
+          },
+          {
+            ruleTitle: "→ NEITHER OF = AUCUNE DE...",
+            type: "examples",
+            content: `Ex: I like neither[nider] of them.\n→ Je n'aime aucun d'eux.`
+          },
+          
+        ]
+      }
+    ]
+  }
+];
+
+const grammarRules26 = [
+  {
+    id: 1,
+    title: 'Lesson 40: THE ADVERBS',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "LES ADVERBES",
+        description: [
+          {
+            ruleTitle: "→ Les adverbes peuvent se diviser en divers types selon leur sens",
+            type: "examples",
+            content: `→ Ny adverbes dia mizarazara maro isa-tsokajiny avy miankina @ ny dikany.`
+          },
+          {
+            ruleTitle: "→ Adverbes de temps",
+            type: "examples",
+            content: `Ex: now (maintenant), then (alors), once (une fois), soon (bientôt), always (toujours), briefly (brièvement).`
+          },
+          {
+            ruleTitle: "→ Adverbes de lieu",
+            type: "examples",
+            content: `Ex: here (ici), there (là-bas), everywhere (partout), up (en haut), down (en bas), back (derrière).`
+          },
+          {
+            ruleTitle: "→ Adverbes de manière",
+            type: "examples",
+            content: `Ex: well (bien), clumsily (maladroitement), beautifully (merveilleusement).`
+          },
+          {
+            ruleTitle: "→ Exemples d'adverbes de manière",
+            type: "examples",
+            content: `Ex: He does well = Il le fait bien.`
+          },
+          {
+            ruleTitle: "→ Adverbes d'intensité",
+            type: "examples",
+            content: `Ex: Very/so much: I enjoyed your party. ~ Tellement/Beaucoup.`
+          },
+          {
+            ruleTitle: "→ Adverbes d'intensité - Exemples",
+            type: "examples",
+            content: `Ex: How can you tell such lies?\n→ Comment peux-tu raconter de tels mensonges.\n\nEx: I don’t like classical music at all.\n→ Je n’aime pas du tout la musique classique.`
+          },
+          {
+            ruleTitle: "→ Adverbes d'intensité - Autres exemples",
+            type: "examples",
+            content: `→ rather (plutôt), quite (assez), very (très), hardly (à peine), extremely (extrêmement), Almost (presque).`
+          },
+          {
+            ruleTitle: "→ Exemples d'adverbes d'intensité",
+            type: "examples",
+            content: `Ex: It is rather good.\n→ C’est plutôt bien.\n\nEx: Even: même. ~ Tom knows that 2 and 2 make 4.\n→ Même Tom sait que 2 et 2 font 4.`
+          },
+          {
+            ruleTitle: "→ Adverbes de restriction",
+            type: "examples",
+            content: `→ Even: même pas.\nEx: You don’t know it.\n→ Tu ne le sais même pas.`
+          },
+          {
+            ruleTitle: "→ Adverbes de restriction - Autre exemple",
+            type: "examples",
+            content: `→ Only (seul, seulement / ne…que).\nEx: He only wants to help you.\n→ Il ne veut que t’aider.`
+          },
+          {
+            ruleTitle: "→ Adverbes - Too / As well",
+            type: "examples",
+            content: `→ Too/As well: (aussi)\nEx: I like John and I like his wife, too/as well.\n→ J’aime John et j’aime aussi sa femme.`
+          },
+          {
+            ruleTitle: "→ LES DIFFERENTES FORMES DES ADVERBES",
+            type: "examples",
+            content: `a) Les adverbes en –ly: On ajoute normalement cette terminaison directement à l'adjectif correspondant pour former un adverbe.`
+          },
+          {
+            ruleTitle: "→ Exemples d'adverbes en –ly",
+            type: "examples",
+            content: `Ex: TO BE HAPPY = HAPPILY – heureusement\nEx: TO BE SWEET = SWEETLY – doucement`
+          },
+          {
+            ruleTitle: "→ Exception pour les adjectifs en -ic",
+            type: "examples",
+            content: `Mais si l'adjectif se termine en -ic, on ajoute -ally.\nEx: TO BE CRITIC = CRITICALLY – Critiquement`
+          },
+          {
+            ruleTitle: "→ Exceptions à la règle en –ly",
+            type: "examples",
+            content: `Les seules exceptions sont :\nEx: TO BE PUBLIC = PUBLICLY\nEx: TO BE POLITIC = POLITICALLY`
+          },
+          {
+            ruleTitle: "→ b) Même forme que l'adjectif",
+            type: "examples",
+            content: `Certains adverbes ont la même forme que l'adjectif correspondant.\nEx: a fast car = une voiture rapide\nEx: he hit him hard = Il l’a frappé fort.`
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const grammarRules27 = [
+  {
+    id: 1,
+    title: 'Lesson 41: REPORTED SPEECH',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "REPORTED SPEECH",
+        description: [
+          {
+            ruleTitle: "→ On emploie le reported speech pour dire ce que quelqu'un a dit ( nous parlons presque du passé). Il y a deux façons de faire cela:",
+            type: "examples",
+            content: `→ Ampiasaina ny reported speech entina amerenana ny zavatra nolazain’olona, ary, saika zavatra efa lasa daholo ilay izy.`
+          },
+          {
+            ruleTitle: "1. Discours direct",
+            type: "examples",
+            content: `Ex: He said: "I'm watching TV" → Izy dia nanao hoe: "Mijery TV aho".`
+          },
+          {
+            ruleTitle: "2. Discours indirect",
+            type: "examples",
+            content: `Ex: He said (that) he was watching TV → Izy dia nanao hoe (fa) izy dia nijery TV.`
+          },
+          {
+            ruleTitle: "Présent → Présent",
+            type: "examples",
+            content: `Ex: He says “I like living here” → R.S = He says (that) he likes living here.`
+          },
+          {
+            ruleTitle: "SIMPLE Present(S+V+C)-----SIMPLE Past (S+PAST+C)\n PRESENT Continuous (I’M+ V.ING) PAST Continuous (WAS/WERE+V.ING)",
+            type: "examples",
+            content: `  → N’oubliez pas que le discours direct doit être entre guillemet :
+Ex: He said :“I want to speak English”
+Reported S= He said (that) he wantED to speak English..Simple past.
+Ex: “I’m going to visit my buddy” He said→RS= He said (that) he was going tohisbuddy.
+“Where do you live here?” He asked me→RS= He asked me where I lived.`
+          },
+          {
+            ruleTitle: "SIMPLE Past (S+PAST+C)  PAST Perfect(HAD+VParticipe Passé)  PAST Continuous PAST Perf Cont (HAD BEEN+ V.ING)",
+            type: "examples",
+            content: ` Ex: “I spoke with him yesterday” I replied.
+      R.S= I replied (that)I had spoken with him the day before.
+Ex: “I was learning English” I said → R.S= I said (that) I had been learning English.
+“DID you like it” He asked→ He asked if I liked it.`
+          },
+          {
+            ruleTitle: "PRESENT perfect(Have+VPP) PAST perfect PRESENT Perf Cont (Have been+V.ING) PAST Perfect Continuous",
+            type: "examples",
+            content: `Ex: “Have you told him about it”He asked meHe asked me if I had told him about it
+              “I have been living here for a year” He said He said (that) he had been for a year.`
+          },
+          {
+            ruleTitle: "Future(WILL(BE)+(V+ING) Conditional present (WOULD)",
+            type: "examples",
+            content: `Ex: He said “I will call you” → R.S= He said (that) he would call me.`
+          },
+          {
+            ruleTitle: "Les modaux (could, might, must, ought, should, would) restent inchangés",
+            type: "examples",
+            content: `   La plupart des modaux
+(could, might, must, ought, should, would) restent inchanger dans le discours
+indirect.
+En revanche, can devient could et may devient might.
+ “You should see a doctor” he told me = He told me that I should see a doctor.
+ → Where/what/when/who/ → He asked me where I
+                                            You whereYou
+                                            Him/her where He/She
+                                            Us where we`
+          },
+          
+        ]
+      }
+    ]
+  }
+];
+
+const grammarRules28 = [
+  {
+    id: 1,
+    title: 'Lesson 42: REPORTED SPEECH',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "REPORTED SPEECH",
+        description: [
+          {
+            ruleTitle: "→ SAY/TELL/ASK/ANSWER/REPLY = sont les verbes utilisés avec REPORTED SPEECH",
+            type: "examples",
+            content: `→ Ampiasaina ireo verbe ireo amin'ny fanehoana reported speech: SAY, TELL, ASK, ANSWER, REPLY, ary koa WONDER IF/WHETHER.`
+          },
+          {
+            ruleTitle: "Correcte:",
+            type: "examples",
+            content: `He told me (that) he didn't know the answer. → He said (that) he didn't know the answer.`
+          },
+          {
+            ruleTitle: "→ ORDRE:",
+            type: "examples",
+            content: `“Finish the job by Friday,” my boss said. → My boss told me to finish the job by Friday.\n“Do it now!” he said. → He ordered me to do the job right away.`
+          },
+          {
+            ruleTitle: "→ DEMANDE ET YES OR NO QUESTION",
+            type: "examples",
+            content: `He said: “Can you pass me the salt?” → He asked me to pass the salt.\n“Can you help me?” I asked → I asked him if/whether he could help me.`
+          },
+          {
+            ruleTitle: "To wonder if… = Se demander si...",
+            type: "examples",
+            content: `Ex: I wonder if she knows the truth. → Je me demande si elle connaît la vérité.`
+          },
+          {
+            ruleTitle: "Exemples de possibilité de changement du temps ou lieu",
+            type: "table",
+            content: [
+              { from: "NOW", to: "THEN / IMMEDIATELY" },
+              { from: "TWO DAYS AGO", to: "TWO DAYS BEFORE / EARLIER" },
+              { from: "TODAY", to: "THAT DAY" },
+              { from: "LAST NIGHT", to: "THAT NIGHT" },
+              { from: "TOMORROW", to: "THE NEXT / FOLLOWING DAY" },
+              { from: "YESTERDAY", to: "THE DAY BEFORE" },
+              { from: "TONIGHT", to: "THE NIGHT BEFORE" },
+              { from: "HERE", to: "THERE" },
+              { from: "THIS PLACE", to: "THAT PLACE" },
+              { from: "THESE PLACES", to: "THOSE PLACES" },
+              { from: "COME / BRING", to: "GO / TAKE" }
+            ]
+          },
+          {
+            ruleTitle: "Exemples",
+            type: "examples",
+            content: `“He has to do it now,” he said. → His boss said that he had to do it immediately.\n“I saw him two days ago,” he said. → He said he had seen him two days before.`
+          },
+          {
+            ruleTitle: "→ What did you do last week?",
+            type: "examples",
+            content: `        Well, last week, I didn’t really have a bigger fish to fry, except, when my pal came and
+asked me to go out with him to buy some stuff at the market, I didn’t wanna go, in fact, but he
+actually persuaded me, then I decided. On our way there, we bumped into an American man,
+and he seemed lost the guy and asked us   \n“Excuse me, can you speak English”and “Yes, we
+can, how can we help you?” we replied. Then he said that he had been to the market and he
+didn’t remember the way back, so, we asked him “Where do you wanna go?” “I wanna go
+to the Colbert Hotel” He said. Then, we showed him the way to get there, and before he left,
+he said “I thank you very much guys” and gave us some money. In fact, we told him that he
+didn’t need to give us anything, but he didn’t accept until we took the compensation. And
+then, we left for the market. Apart from that, I just discussed about the political situation in
+Madagascar; we had a long talk, and I was just stunning when my father told me that he
+wasn’t interested in politics. And all of a sudden, his friend showed up and our talk was
+finished from there. That’s all I can remember for the last week.`
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const grammarRules29 = [
+  {
+    id: 1,
+    title: 'Lesson 44: GERUNDIVE AND INFINITIVE',
+    description: 'BASIC GRAMMARS',
+    content1: [
+      {
+        title: "GERUNDIVE AND INFINITIVE",
+        description: [
+          {
+            ruleTitle: "GERUNDIVE = verbe + ING après une préposition ou un nom",
+            type: "examples",
+            content: `Ex: I like eating – I hate doing the dishes in my spare time.\n- I’m feeling like (to) sleeping.\n- I’m looking forward to meeting my future wife.\n- I’m used to taking a nap every afternoon.`
+          },
+          {
+            ruleTitle: "INFINITIVE = verbe à l'infinitif après certains verbes ou structures",
+            type: "examples",
+            content: `Ex: I always go to visit friends every weekend.\n- I don’t want to ask him to do anything which he doesn’t want to.\n- I try not to tell her what I feel in my heart.`
+          },
+          {
+            ruleTitle: "TO SEE SB + V.ING = Voir quelqu’un faire quelque chose",
+            type: "examples",
+            content: `Ex: I saw him playing basketball yesterday. → Je l’ai vu jouer au basketball.\n- I didn’t see him doing his homework.`
+          },
+          {
+            ruleTitle: "TO HEAR SB + V.ING = Entendre quelqu’un faire quelque chose",
+            type: "examples",
+            content: `Ex: I want to hear you playing the guitar. → Je veux t'entendre jouer de la guitare.`
+          },
+          {
+            ruleTitle: "TO HELP SB + V.INF = Aider quelqu’un à faire quelque chose",
+            type: "examples",
+            content: `Ex: I try to help you remember what happened.`
+          },
+          {
+            ruleTitle: "TO LET SB + V.INF = Laisser quelqu’un faire quelque chose",
+            type: "examples",
+            content: `Ex: Don’t let anyone bully you like that.`
+          },
+          {
+            ruleTitle: "TO DARE (TO) + V.INF = Oser, ne pas avoir peur",
+            type: "examples",
+            content: `TO DARE est un verbe modal qui signifie ne pas avoir peur.\nEx: I don’t dare have that conversation with him.\nI daren’t have that conversation with him.\n→ Je n’ose pas avoir cette conversation avec lui.`
+          },
+          {
+            ruleTitle: "",
+            type: "examples",
+            content: `What kind of movie do you watch? → Quel genre/sorte/type..       Inona ny karazana \n-What type of + Noun\n-What sort of.`
+          },
+        ]
+      }
+    ]
+  }
+];
+
+const grammarRules30 = [
+  {
+    id: 2,
+    title: 'Lesson 46: NUMBERS',
+    description: 'TRICKY GRAMMARS',
+    content1: [
+      {
+        title: 'CARDINAL AND ORDINAL NUMBERS',
+        description: [
+          {
+            ruleTitle: 'CARDINAL NUMBERS – Utilisés pour compter',
+            type: 'examples',
+            content: `- En Anglais, la façon de dire le montant d’argent est pareille qu’en Français.\n→ HUNDRED = CENT\n→ THOUSAND [taozend] = MILLE\n→ MILLION [milen] = MILLION\n→ BILLION [bilen] = MILLIARD\n\nExemples :\n- (One) hundred = 100\n- One hundred and one = 101\n- One thousand and two hundred = 1 200\n- One million and two hundred thousand = 1 200 000\n- One billion and two hundred million = 1 200 000 000`
+          },
+          {
+            ruleTitle: 'CARDINAL NUMBERS',
+            type: 'table',
+            content: [
+              { from: 'One', to: 'Un' },
+              { from: 'Two', to: 'Deux' },
+              { from: 'Three', to: 'Trois' },
+              { from: 'Four', to: 'Quatre' },
+              { from: 'Five', to: 'Cinq' },
+              { from: 'Six', to: 'Six' },
+              { from: 'Seven', to: 'Sept' },
+              { from: 'Eight', to: 'Huit' },
+              { from: 'Nine', to: 'Neuf' },
+              { from: 'Ten', to: 'Dix' },
+              { from: 'Eleven', to: 'Onze' },
+              { from: 'Twelve', to: 'Douze' },
+              { from: 'Thirteen', to: 'Treize' },
+              { from: 'Fourteen', to: 'Quatorze' },
+              { from: 'Fifteen', to: 'Quinze' },
+              { from: 'Sixteen', to: 'Seize' },
+              { from: 'Seventeen', to: 'Dix-sept' },
+              { from: 'Eighteen', to: 'Dix-huit' },
+              { from: 'Nineteen', to: 'Dix-neuf' },
+              { from: 'Twenty', to: 'Vingt' },
+              { from: 'Twenty-one', to: 'Vingt et un' },
+              { from: 'Twenty-two', to: 'Vingt-deux' },
+              { from: 'Twenty-three', to: 'Vingt-trois' },
+              { from: 'Twenty-four', to: 'Vingt-quatre' },
+              { from: 'Twenty-five', to: 'Vingt-cinq' },
+              { from: 'Twenty-six', to: 'Vingt-six' },
+              { from: 'Twenty-seven', to: 'Vingt-sept' },
+              { from: 'Twenty-eight', to: 'Vingt-huit' },
+              { from: 'Twenty-nine', to: 'Vingt-neuf' },
+              { from: 'Thirty', to: 'Trente' }
+            ]
+          },
+          {
+            ruleTitle: "THE NOUNS – Suivis de 'OF' pour exprimer des quantités vagues",
+            type: "examples",
+            content: `→ Hundreds of people : des centaines de gens
+→ Thousands of trees : des milliers d'arbres
+→ Dozens of eggs : des douzaines d'œufs
+→ Scores of animals : des vingtaines d'animaux
+→ Millions of people : des millions de gens
+→ Hundreds of millions of people : des centaines de millions de gens
+
+Exemple :
+- The refugees arrived in their hundreds. → Les réfugiés arrivèrent par centaines.`
+          },
+          {
+            ruleTitle: "c – We put AND before the group of ten/units:",
+            type: "examples",
+            content: `125 = one hundred and twenty-five \n1,012 = one thousand and twelve.`
+          },
+          {
+            ruleTitle: 'ORDINAL NUMBERS',
+            type: 'table',
+            content: [
+              { from: 'First', to: 'Première' },
+              { from: 'Second', to: 'Deuxième' },
+              { from: 'Third', to: 'Troisième' },
+              { from: 'Fourth', to: 'Quatrième' },
+              { from: 'Fifth', to: 'Cinquième' },
+              { from: 'Sixth', to: 'Sixième' },
+              { from: 'Seventh', to: 'Septième' },
+              { from: 'Eighth', to: 'Huitième' },
+              { from: 'Ninth', to: 'Neuvième' },
+              { from: 'Tenth', to: 'Dixième' },
+              { from: 'Eleventh', to: 'Onzième' },
+              { from: 'Twelfth', to: 'Douzième' },
+              { from: 'Thirteenth', to: 'Treizième' },
+              { from: 'Fourteenth', to: 'Quatorzième' },
+              { from: 'Fifteenth', to: 'Quinzième' },
+              { from: 'Sixteenth', to: 'Seizième' },
+              { from: 'Seventeenth', to: 'Dix-septième' },
+              { from: 'Eighteenth', to: 'Dix-huitième' },
+              { from: 'Nineteenth', to: 'Dix-neuvième' },
+              { from: 'Twenty-first', to: 'Vingt et unième' },
+              { from: 'Twenty-second', to: 'Vingt-deuxième' },
+              { from: 'Twenty-third', to: 'Vingt-troisième' },
+              { from: 'Twenty-fourth', to: 'Vingt-quatrième' },
+              { from: 'Twenty-fifth', to: 'Vingt-cinquième' },
+              { from: 'Twenty-sixth', to: 'Vingt-sixième' },
+              { from: 'Twenty-seventh', to: 'Vingt-septième' },
+              { from: 'Twenty-eighth', to: 'Vingt-huitième' },
+              { from: 'Twenty-ninth', to: 'Vingt-neuvième' }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const grammarRules31 = [
+  {
+    id: 1,
+    title: 'Lesson 47: NUMBERS – SUMS',
+    description: 'TRICKY GRAMMARS',
+    content1: [
+      {
+        title: 'NUMBERS – SUMS',
+        description: [
+          {
+            ruleTitle: 'Sums=Sommes',
+            type: 'table',
+            content: [
+              { symbol: '+', word: 'Plus (And)', symbolFrench: 'Plus' },
+              { symbol: '-', word: 'Minus (Take away)', symbolFrench: 'Moins' },
+              { symbol: 'x', word: 'Multiplied by (Times)', symbolFrench: 'Fois' },
+              { symbol: '÷', word: 'Divided by', symbolFrench: 'Divisé par' },
+              { symbol: '=', word: 'Equals (Is)', symbolFrench: 'Égal(e)' },
+              { symbol: '.', word: 'Point', symbolFrench: 'Point' },
+              { symbol: '%', word: 'Percent', symbolFrench: 'Pourcent' }
+            ]
+          },
+          {
+            ruleTitle: 'EXAMPLES OF EXPRESSIONS',
+            type: 'examples',
+            content: `(((1 + 6) - 2) x 2) ÷ 2.5 = 4\n→ One plus six minus two multiplied by two divided by two point five equals four or\n→ One and six take away two times two divided by two point five is four.\n\n10% of 100 = 10\n→ Ten percent of one hundred equals ten.`
+          },
+          {
+            ruleTitle: 'WHAT TO SAY',
+            type: 'examples',
+            content: `→ On dit souvent "a" au lieu de "one". Par exemple quand on a des nombres 100 ou 1/2 on dit "A hundred" ou "A half".\nPar exemple :\n- 11/2 = "One and a half."\n→ Quand on prononce les décimales, on utilise "Point" pour représenter le Dot (.) et les chiffres suivants sont prononcés séparément.\nPar exemple : 1.36 = "One point three six."`
+          },
+          {
+            ruleTitle: 'DIFFERENT WAYS TO SAY ZERO',
+            type: 'table',
+            content: [
+              { zero: '0', pronunciation: 'Oh', usage: 'After a decimal point, e.g., 9.02 = "Nine point oh two."' },
+              { zero: '0', pronunciation: 'Nought', usage: 'Before a decimal point, e.g., 0.06 = "Nought point oh six."' },
+              { zero: '0', pronunciation: 'Zero', usage: 'American English usage, e.g., -10°C = "Ten degrees below zero."' },
+              { zero: '0', pronunciation: 'Nil', usage: 'In sports, e.g., Chelsea 2 Manchester United 0 = "Chelsea two Manchester United nil."' },
+              { zero: '0', pronunciation: 'Love', usage: 'In tennis, e.g., 20 - 0 = "Twenty love."' }
+            ]
+          },
+
+        ]
+      },    
+    ]
+  }
+];
+
+const grammarRules32 = [
+  {
+    id: 1,
+    title: 'Lesson 51: NOUNS IN PLURAL – NOMS AU PLURIEL',
+    description: 'TRICKY GRAMMARS',
+    content1: [
+      {
+        title: "NOUNS IN PLURAL",
+        description: [
+          {
+            ruleTitle: "LIFE → LIVES = La vie",
+            type: "examples",
+            content: `Ex: Today, the people’s lives are at stake (en jeux).`
+          },
+          {
+            ruleTitle: "CHILD → CHILDREN = Enfant",
+            type: "examples",
+            content: `Ex: There are many poor children.\n- She is a poor child.`
+          },
+          {
+            ruleTitle: "WIFE → WIVES = Femme",
+            type: "examples",
+            content: `Ex: He has a lot of wives; he is so called a polygamist.`
+          },
+          {
+            ruleTitle: "LEAF → LEAVES = Feuille",
+            type: "examples",
+            content: `Ex: There are plenty of leaves in the yard; you need to sweep them up.`
+          },
+          {
+            ruleTitle: "MOUSE → MICE = Souris",
+            type: "examples",
+            content: `Ex: Oh gosh, I found many mice in your room.`
+          },
+          {
+            ruleTitle: "LOUSE → LICE = Pou",
+            type: "examples",
+            content: `Ex: Look! Some lice in your hair.`
+          },
+          {
+            ruleTitle: "V.INF → TO MAKE SB + rendre/faire quelqu’un heureux/pleurer",
+            type: "examples",
+            content: `Ex: You made me angry this time.\n- I didn't mean to make you cry.`
+          },
+          {
+            ruleTitle: "ADJ → Descriptive Adjectives",
+            type: "examples",
+            content: `Ex: He made me feel happy.\n- This time, you made me angry.`
+          },
+        ]
+      }
+    ],
+    content2: [
+      {
+        title: "TAG QUESTION—N’EST-CE-PAS",
+        description: [
+          {
+            ruleTitle: "",
+            type: "explanation",
+            content: `En anglais, on peut transformer une phrase affirmative en question, en ajoutant un petit
+tag, comme le n'est-ce-pas français. IZAY MIDIKA HOE SA TSY IZANY
+→ Pour faire cette question tag, on regarde la phrase et son temps. S’il y a déjà un auxiliaire,
+on le reprend à la forme inverse (phrase affirmative => question tag négatif OU phrase
+négative => question tag affirmatif) et on remet le sujet.`
+          },
+          {
+            ruleTitle: "Form of tag questions: AFF---NEGForm of tag questions: NEG---INTER",
+            type: "table",
+            content: [
+              { verb: "BE", affirmative: "I’m late,", negative: "I’m not late,", negativeInterrogative: "Aren’t I?" },
+              { verb: "BE", affirmative: "They’re waiting,", negative: "He isn’t leaving,", negativeInterrogative: "Aren’t they?" },
+              { verb: "BE", affirmative: "We were late,", negative: "I wasn’t ill,", negativeInterrogative: "Weren’t we?" },
+              { verb: "BE", affirmative: "It’s good, huh?", negative: "", negativeInterrogative: "Isn’t it?" },
+              { verb: "HAVE", affirmative: "I’ve finished,", negative: "I haven’t finished,", negativeInterrogative: "Haven’t I?" },
+              { verb: "HAVE", affirmative: "He’s left,", negative: "He hasn’t left,", negativeInterrogative: "Hasn’t he?" },
+              { verb: "DO/DOES/DID", affirmative: "You like it,", negative: "You don’t like it,", negativeInterrogative: "Don’t you?" },
+              { verb: "DO/DOES/DID", affirmative: "It works,", negative: "It doesn’t work,", negativeInterrogative: "Doesn’t it?" },
+              { verb: "DO/DOES/DID", affirmative: "You painted it,", negative: "You didn’t paint it,", negativeInterrogative: "Didn’t you?" },
+              { verb: "WILL", affirmative: "You will do it,", negative: "You won’t be there,", negativeInterrogative: "Won’t you?" }
+        ]
+          },
+          {
+            ruleTitle: "Note",
+            type: "explanation",
+            content: `Parfois, la phrase ne comporte pas d'auxiliaire, le présent simple ou le prétérit simple par exemple. Il faut alors prendre l'auxiliaire de remplacement TO DO et le conjuguer au temps voulu. Exemple : John works hard every day → on prend TO DO au présent simple avec "He" cela donne "Doesn’t he?"`
+          },    
+          {
+            ruleTitle: "Example",
+            type: "examples",
+            content: `Ex: John works hard every day → Doesn't he?`
+          }
+        ]
+      }
+    ]
+  }
+];
+
+
+
 
 const GrammarScreen = () => {
   const [expanded, setExpanded] = useState<string | number | null>(null);
@@ -4647,6 +5419,726 @@ const GrammarScreen = () => {
   </Card>
 ))}
 
+{grammarRules23.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {item.ruleTitle && <Text style={styles.ruleTitle}>{item.ruleTitle}</Text>}
+
+              {item.type === 'text' && (
+                <Text style={styles.content}>{item.content}</Text>
+              )}
+
+              {item.type === 'formula' && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.content}</Text>
+                </View>
+              )}
+
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>{item.content}</Text>
+              )}
+
+              {item.type === 'table' && item.table && (
+                <View style={styles.tableContainer}>
+                  <View style={styles.tableHeader2}>
+                    <Text style={styles.tableCell}>Adjective</Text>
+                    <Text style={styles.tableCell}>Comparative</Text>
+                    <Text style={styles.tableCell}>Superlative</Text>
+                  </View>
+
+                  {item.table.map((row, rowIndex) => (
+                    <View key={rowIndex} style={styles.tableRow2}>
+                      {/* Adjective */}
+                      <Text style={styles.tableCell}>{row.adjective}</Text>
+
+                      {/* Comparative */}
+                      <Text style={styles.tableCell}>
+                        {row.comparative.endsWith('ier') ? (
+                          <>
+                            {row.comparative.slice(0, -3)}
+                            <Text style={{ fontWeight: 'bold' }}>ier</Text>
+                          </>
+                        ) : row.comparative.endsWith('er') ? (
+                          <>
+                            {row.comparative.slice(0, -2)}
+                            <Text style={{ fontWeight: 'bold' }}>er</Text>
+                          </>
+                        ) : (
+                          row.comparative
+                        )}
+                      </Text>
+
+                      {/* Superlative */}
+                      <Text style={styles.tableCell}>
+                        {row.superlative.startsWith('THE ') ? (
+                          <>
+                            <Text style={{ fontWeight: 'bold' }}>THE </Text>
+                            {row.superlative.includes('iest') ? (
+                              <>
+                                {row.superlative.slice(4, -4)}
+                                <Text style={{ fontWeight: 'bold' }}>iest</Text>
+                              </>
+                            ) : row.superlative.includes('est') ? (
+                              <>
+                                {row.superlative.slice(4, -3)}
+                                <Text style={{ fontWeight: 'bold' }}>est</Text>
+                              </>
+                            ) : (
+                              row.superlative.slice(4)
+                            )}
+                          </>
+                        ) : (
+                          row.superlative
+                        )}
+                      </Text>
+                    </View>
+                  ))}
+                </View>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+{grammarRules24.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {item.ruleTitle && <Text style={styles.ruleTitle}>{item.ruleTitle}</Text>}
+
+              {item.type === 'text' && (
+                <Text style={styles.content}>{item.content}</Text>
+              )}
+
+              {item.type === 'formula' && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.content}</Text>
+                </View>
+              )}
+
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>{item.content}</Text>
+              )}
+
+              {item.type === 'table' && item.table && (
+                <View style={styles.tableContainer}>
+                  <View style={styles.tableHeader2}>
+                    <Text style={styles.tableCell}>Adjective</Text>
+                    <Text style={styles.tableCell}>Comparative</Text>
+                    <Text style={styles.tableCell}>Superlative</Text>
+                  </View>
+
+                  {item.table.map((row, rowIndex) => (
+                    <View key={rowIndex} style={styles.tableRow2}>
+                      {/* Adjective */}
+                      <Text style={styles.tableCell}>{row.adjective}</Text>
+
+                      {/* Comparative */}
+                      <Text style={styles.tableCell}>
+                        {row.comparative.endsWith('ier') ? (
+                          <>
+                            {row.comparative.slice(0, -3)}
+                            <Text style={{ fontWeight: 'bold' }}>ier</Text>
+                          </>
+                        ) : row.comparative.endsWith('er') ? (
+                          <>
+                            {row.comparative.slice(0, -2)}
+                            <Text style={{ fontWeight: 'bold' }}>er</Text>
+                          </>
+                        ) : (
+                          row.comparative
+                        )}
+                      </Text>
+
+                      {/* Superlative */}
+                      <Text style={styles.tableCell}>
+                        {row.superlative.startsWith('THE ') ? (
+                          <>
+                            <Text style={{ fontWeight: 'bold' }}>THE </Text>
+                            {row.superlative.includes('iest') ? (
+                              <>
+                                {row.superlative.slice(4, -4)}
+                                <Text style={{ fontWeight: 'bold' }}>iest</Text>
+                              </>
+                            ) : row.superlative.includes('est') ? (
+                              <>
+                                {row.superlative.slice(4, -3)}
+                                <Text style={{ fontWeight: 'bold' }}>est</Text>
+                              </>
+                            ) : (
+                              row.superlative.slice(4)
+                            )}
+                          </>
+                        ) : (
+                          row.superlative
+                        )}
+                      </Text>
+                    </View>
+                  ))}
+                </View>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+{grammarRules25.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {/* Affichage du ruleTitle dans une formulaBox */}
+              {item.ruleTitle && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.ruleTitle}</Text>
+                </View>
+              )}
+
+              {/* Contenu des exemples en italique */}
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>
+                  {typeof item.content === 'string' ? (
+                  item.content
+                  ) : Array.isArray(item.content) ? (
+                  (item.content as { from: string; to: string }[]).map((row, index) => (
+                    <View key={index} style={styles.tableRow}>
+                    <Text style={styles.tableCell}>{row.from}</Text>
+                    <Text style={styles.tableCell}>{row.to}</Text>
+                    </View>
+                  ))
+                  ) : null}
+                </Text>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+{grammarRules26.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {/* Affichage du ruleTitle dans une formulaBox */}
+              {item.ruleTitle && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.ruleTitle}</Text>
+                </View>
+              )}
+
+              {/* Contenu des exemples en italique */}
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>{item.content}</Text>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+{grammarRules27.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {/* Affichage du ruleTitle dans une formulaBox */}
+              {item.ruleTitle && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.ruleTitle}</Text>
+                </View>
+              )}
+
+              {/* Contenu des exemples en italique */}
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>{item.content}</Text>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+{grammarRules28.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => (
+            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+          )}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {/* Affichage du ruleTitle dans une formulaBox */}
+              {item.ruleTitle && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.ruleTitle}</Text>
+                </View>
+              )}
+
+              {/* Affichage du contenu en italique pour les exemples */}
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>
+                  {typeof item.content === 'string' ? (
+                    item.content
+                  ) : Array.isArray(item.content) ? (
+                    item.content.map((row, index) => (
+                      <View key={index} style={styles.tableRow}>
+                        <Text style={styles.tableCell}>{row.from}</Text>
+                        <Text style={styles.tableCell}>{row.to}</Text>
+                      </View>
+                    ))
+                  ) : null}
+                </Text>
+              )}
+
+              {/* Affichage du tableau si le type est 'table' */}
+              {item.type === 'table' &&
+                Array.isArray(item.content) &&
+                (item.content as { from: string; to: string }[]).length > 0 && (
+                  <View style={styles.tableContainer}>
+                    <View style={styles.tableRowHeader}>
+                      <Text style={styles.tableHeaderText}>From</Text>
+                      <Text style={styles.tableHeaderText}>To</Text>
+                    </View>
+                    {(item.content as { from: string; to: string }[]).map(
+                      (row, i) => (
+                        <View key={i} style={styles.tableRow}>
+                          <Text style={styles.tableCell}>{row.from}</Text>
+                          <Text style={styles.tableCell}>{row.to}</Text>
+                        </View>
+                      )
+                    )}
+                  </View>
+                )}
+            </View>
+          ))}
+        </List.Accordion>
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+{grammarRules29.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {/* Titre de la règle */}
+              {item.ruleTitle && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.ruleTitle}</Text>
+                </View>
+              )}
+
+              {/* Exemples en italique */}
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>{item.content}</Text>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+{grammarRules30.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {/* Titre de la règle */}
+              {item.ruleTitle && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.ruleTitle}</Text>
+                </View>
+              )}
+
+              {/* Contenu exemples */}
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>
+                  {typeof item.content === 'string' ? (
+                    item.content
+                  ) : Array.isArray(item.content) ? (
+                    item.content.map((row, index) => (
+                      <View key={index} style={styles.tableRow}>
+                        <Text style={styles.tableCell}>{row.from}</Text>
+                        <Text style={styles.tableCell}>{row.to}</Text>
+                      </View>
+                    ))
+                  ) : null}
+                </Text>
+              )}
+
+              {/* Contenu tableau */}
+              {item.type === 'table' && (
+                <View style={styles.tableContainer}>
+                  {Array.isArray(item.content) && item.content.map((row: { from: string; to: string }, rowIndex: number) => (
+                    <View
+                      key={rowIndex}
+                      style={{
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        paddingVertical: 4,
+                        borderBottomWidth: 0.5,
+                        borderBottomColor: '#ccc'
+                      }}
+                    >
+                      <Text style={styles.tableText}>{row.from}</Text>
+                      <Text style={styles.tableText}>{row.to}</Text>
+                    </View>
+                  ))}
+                </View>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+
+{grammarRules31.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {/* Titre de la règle */}
+              {item.ruleTitle && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.ruleTitle}</Text>
+                </View>
+              )}
+
+              {/* Contenu exemples */}
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>
+                  {typeof item.content === 'string' ? (
+                    item.content
+                  ) : Array.isArray(item.content) ? (
+                    item.content.map((row, index) => (
+                      <View key={index} style={styles.tableRow}>
+                        <Text style={styles.tableCell}>
+                          {('symbol' in row && row.symbol) || 
+                           ('zero' in row && row.zero)}
+                        </Text>
+                      </View>
+                    ))
+                  ) : null}
+                </Text>
+              )}
+
+              {/* Contenu tableau */}
+              {item.type === 'table' && (
+                <View style={styles.tableContainer}>
+                  <View style={styles.tableHeaderRow}>
+                    <Text style={[styles.tableHeaderText, styles.symbolColumn]}>Symbols</Text>
+                    <Text style={[styles.tableHeaderText, styles.wordColumn]}>Word (Common term in brackets)</Text>
+                    <Text style={[styles.tableHeaderText, styles.symbolFrenchColumn]}>Symboles</Text>
+                  </View>
+                  {Array.isArray(item.content) && item.content.map((row, rowIndex) => (
+                    <View
+                      key={rowIndex}
+                      style={{
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        paddingVertical: 8,
+                        borderBottomWidth: 0.5,
+                        borderBottomColor: '#ccc',
+                        paddingHorizontal: 10,
+                      }}
+                    >
+                      {'symbol' in row && (
+                        <View style={styles.tableCellContainer}>
+                          <Text style={[styles.tableText, styles.symbolColumn]}>{row.symbol}</Text>
+                        </View>
+                      )}
+                      {'word' in row && (
+                        <View style={styles.tableCellContainer}>
+                          <Text style={[styles.tableText, styles.wordColumn]}>{row.word}</Text>
+                        </View>
+                      )}
+                      {'symbolFrench' in row && (
+                        <View style={styles.tableCellContainer}>
+                          <Text style={[styles.tableText, styles.symbolFrenchColumn]}>{row.symbolFrench}</Text>
+                        </View>
+                      )}
+                      {'zero' in row && (
+                        <View style={styles.tableCellContainer}>
+                          <Text style={styles.tableText}>{row.zero}</Text>
+                        </View>
+                      )}
+                      {'pronunciation' in row && (
+                        <View style={styles.tableCellContainer}>
+                          <Text style={styles.tableText}>{row.pronunciation}</Text>
+                        </View>
+                      )}
+                      {'usage' in row && (
+                        <View style={styles.tableCellContainer}>
+                          <Text style={styles.tableText}>{row.usage}</Text>
+                        </View>
+                      )}
+                    </View>
+                  ))}
+                </View>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+
+{grammarRules32.map((rule) => (
+  <Card key={rule.id} style={styles.card}>
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{rule.title}</Text>}
+      subtitle={rule.description}
+      right={(props) => (
+        <IconButton
+          {...props}
+          icon="volume-high"
+          onPress={() => speak(rule.title)}
+        />
+      )}
+    />
+    <Card.Content>
+      <List.Section>
+        <List.Accordion
+          title={rule.content1[0].title}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+        >
+          {rule.content1[0].description.map((item, index) => (
+            <View key={index} style={styles.content3Container}>
+              {/* Titre de la règle */}
+              {item.ruleTitle && (
+                <View style={styles.formulaBox}>
+                  <Text style={styles.formulaText}>{item.ruleTitle}</Text>
+                </View>
+              )}
+
+              {/* Exemples en italique */}
+              {item.type === 'examples' && (
+                <Text style={[styles.content, { fontStyle: 'italic' }]}>{item.content}</Text>
+              )}
+            </View>
+          ))}
+        </List.Accordion>
+
+        <List.Accordion
+  title={rule.content2[0].title}
+  left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+>
+  {rule.content2[0].description.map((item, index) => (
+    <View key={index} style={styles.content3Container}>
+      {/* Titre de la règle */}
+      {item.ruleTitle && (
+        <View style={styles.formulaBox}>
+          <Text style={styles.formulaText}>{item.ruleTitle}</Text>
+        </View>
+      )}
+
+      {/* Affichage de la table */}
+      {item.type === 'table' && (
+         <View style={[styles.tableContainer, { padding: 7 }]}>
+         <View style={[styles.tableHeader, { flexDirection: 'row', justifyContent: 'space-between' }]}>
+           <Text style={[styles.tableHeaderText, { flex: 1 }]}>Verb</Text>
+           <Text style={[styles.tableHeaderText, { flex: 1 }]}>Affirmative</Text>
+           <Text style={[styles.tableHeaderText, { flex: 1 }]}>Negative</Text>
+           <Text style={[styles.tableHeaderText, { flex: 1 }]}>Negative Interrogative</Text>
+         </View>
+       
+         {Array.isArray(item.content) &&
+           item.content.map((row, rowIndex) => (
+             <View key={rowIndex} style={[styles.tableRow, { flexDirection: 'row', justifyContent: 'space-between' }]}>
+               <Text style={[styles.tableCell, { flex: 1 }]}>{row.verb}</Text>
+               <Text style={[styles.tableCell, { flex: 1 }]}>{row.affirmative}</Text>
+               <Text style={[styles.tableCell, { flex: 1 }]}>{row.negative}</Text>
+               <Text style={[styles.tableCell, { flex: 1 }]}>{row.negativeInterrogative}</Text>
+             </View>
+           ))}
+       </View>       
+      )}
+
+      {/* Affichage des exemples */}
+      {item.type === 'examples' && typeof item.content === 'string' && (
+        <Text style={[styles.content, { fontStyle: 'italic' }]}>{item.content}</Text>
+      )}
+
+      {/* Affichage de l'explication */}
+      {item.type === 'explanation' && typeof item.content === 'string' && (
+        <Text style={styles.content}>{item.content}</Text>
+      )}
+    </View>
+  ))}
+</List.Accordion>
+
+      </List.Section>
+    </Card.Content>
+  </Card>
+))}
+
+
 
     </ScrollView>
   );
@@ -4757,6 +6249,15 @@ tableContainer: {
   marginTop: 12,
   marginBottom: 12,
 },
+tableRowHeader: {
+  flexDirection: 'row',
+  backgroundColor: '#cce0f0',
+  padding: 8,
+},
+tableHeaderText: {
+  flex: 1,
+  fontWeight: 'bold',
+},
 tableHeader1: {
   flexDirection: 'row',
   backgroundColor: '#f0f4fa',
@@ -4767,6 +6268,60 @@ tableRow1: {
   padding: 8,
   borderTopWidth: 1,
   borderColor: '#eee',
+},
+tableHeader2: {
+  flexDirection: 'row',
+  backgroundColor: '#D3E4F0',
+  padding: 5,
+  borderTopLeftRadius: 5,
+  borderTopRightRadius: 5,
+},
+tableRow2: {
+  flexDirection: 'row',
+  borderBottomWidth: 1,
+  borderBottomColor: '#ccc',
+  padding: 4,
+},
+formulaBox: {
+  backgroundColor: '#F0F8FF',
+  padding: 4,
+  marginVertical: 8,
+  borderLeftWidth: 5,
+  borderLeftColor: '#4682B4',
+  borderRadius: 5,
+},
+formulaText: {
+  fontWeight: 'bold',
+  fontSize: 14,
+  color: '#333',
+},
+tableHeaderRow: {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  paddingVertical: 8,
+  backgroundColor: '#f1f1f1',  // Fond gris clair pour l'en-tête
+  borderBottomWidth: 1,
+  borderBottomColor: '#ccc',
+},
+
+tableCellContainer: {
+  flex: 1,
+  justifyContent: 'center',
+  paddingHorizontal: 5,
+},
+tableText: {
+  fontSize: 14,
+  color: '#333',
+},
+symbolColumn: {
+  fontWeight: 'bold',
+  textAlign: 'left', // Alignement à gauche pour les symboles
+},
+wordColumn: {
+  textAlign: 'center', // Alignement centré pour les mots
+},
+symbolFrenchColumn: {
+  textAlign: 'right', // Alignement à droite pour les symboles français
 },
 
 });
