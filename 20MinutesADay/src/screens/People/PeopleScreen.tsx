@@ -7,6 +7,7 @@ import * as Speech from 'expo-speech';
 const headImage = require('../../../assets/images/humanbody.png');
 const faceImage = require('../../../assets/images/womanface.jpg');
 
+
 const people1 = [
   {
     id: 1,
@@ -746,8 +747,61 @@ const PeopleScreen = () => {
                   <Image source={item.source} style={styles.image3} />
                   <Text style={styles.imageTitle}>{item.title}- {item.translation}</Text>
              </View>
+
+
                  ))}
-              </View>           
+              </View>
+              <View style={styles.handImageContainer}>
+                <Image source={require('../../../assets/images/hand.jpg')} style={styles.handImage} />
+
+                {/* Lettres ou textes positionnés sur la main */}
+                <Text style={[styles.label, { top: 120, left: 240 }]}>1. Thumb = Le Pouce</Text>
+  <Text style={[styles.label, { top: 20, left: 220 }]}>2. Point finger = L'index</Text>
+  <Text style={[styles.label, { top: 40, left: 179 }]}>3. Middle finger = Le majeur</Text>
+  <Text style={[styles.label, { top: 60, left: 155 }]}>4. Ring finger =L'annulaire</Text>
+  <Text style={[styles.label, { top: 80, left: 125 }]}>5. Little finger = L'auriculaire</Text>
+  <Text style={[styles.label, { bottom: 50, left: 160 }]}>a. Palm = Le paume</Text>
+</View>
+
+           <View style={styles.imageContainer}>
+               {/* Image de poing fermé */}
+               <Image source={require('../../../assets/images/fist.jpg')} style={styles.handImage} />
+
+                {/* Tu peux aussi ajouter des labels sur le poing si besoin */}
+                <Text style={[styles.label, { top: 150, left: 100 , color:'#333'}]}>Poing fermé = Fist</Text>
+             </View>
+
+             <View style={styles.handImageContainer}>
+                <Image source={require('../../../assets/images/handface.jpg')} style={styles.handImage} />
+
+                {/* Lettres ou textes positionnés sur la main */}
+                <Text style={[styles.label, { top: 25, left: 160,color:'#333' }]}>1.l’ongle/Nail</Text>
+                  <Text style={[styles.label, { top: 120, left: 220, color:'#333' }]}>2. la cuticule/Cuticule</Text>
+                  <Text style={[styles.label, { bottom: 40, left: 160,color:'#333' }]}>O.le nœud de l’articulation
+                   knuckle</Text>
+                </View>
+
+                <View style={styles.footImageContainer}>
+  <Image source={require('../../../assets/images/barefoot.png')} style={styles.footImage} />
+
+  {/* Orteil */}
+  <Text style={[styles.label, { top: 170, left: 100, color: '#333' }]}>
+    ⬇️ L’orteil / Toe
+  </Text>
+
+  {/* Avant-pied */}
+     <Text style={[styles.label, { top: 200, left: 160, color: '#333' }]}>
+     ⬆️ L’avant-pied / Ball
+      </Text>
+
+  {/* Talon */}
+  <Text style={[styles.label, { bottom: 65, left: 240, color: '#333' }]}>
+    ⬆️ Le talon / Heel
+  </Text>
+</View>
+
+
+
               </List.Accordion>
             ))}
           </Card.Content>
@@ -764,7 +818,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f8f8',
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 16,
     color: '#bb3e03',
@@ -823,6 +877,15 @@ const styles = StyleSheet.create({
     height: 65,
     resizeMode: 'cover',
   },
+  footImageContainer: {
+    position: 'relative',
+    alignItems: 'baseline',
+  },
+  footImage: {
+    width: 220,
+    height: 300,
+    resizeMode: 'contain',
+  },
   arrow: {
     position: 'absolute',
     width: 5,
@@ -832,7 +895,7 @@ const styles = StyleSheet.create({
     borderRightWidth: 5,
     borderRightColor: 'transparent',
     borderTopWidth: 10,
-    borderTopColor: 'red',
+    borderTopColor: '#555',
   },
   arrowTitle: {
     position: 'absolute',
@@ -855,6 +918,27 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 8,
   },
+  handImageContainer: {
+    position: 'relative',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 16,
+  },
+  handImage: {
+    width: 200,
+    height: 220,
+    resizeMode: 'contain',
+  },
+  label: {
+    position: 'absolute',
+    color: '#555',
+    fontWeight: 'bold',
+    fontSize: 12,
+    backgroundColor: 'rgba(252, 249, 249, 0.7)', // optionnel pour améliorer la lisibilité
+    padding: 2,
+    borderRadius: 4,
+  },
+  
 });
 
 export default PeopleScreen;

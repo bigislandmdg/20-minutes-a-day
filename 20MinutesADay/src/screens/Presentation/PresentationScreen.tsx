@@ -108,7 +108,9 @@ const speak = (text: string) => {
 // Composant réutilisable pour afficher une présentation
 const PresentationCard = ({ presentation }: { presentation: Presentation }) => (
   <Card key={presentation.id} style={styles.card}>
-    <Card.Title title={presentation.title} />
+    <Card.Title
+      title={<Text style={{ fontWeight: 'bold' }}>{presentation.title}</Text>}
+    />
     <Card.Content>
       <Text style={styles.subtitle} onPress={() => speak(presentation.subtitle)}>
         {presentation.subtitle}
@@ -176,7 +178,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 16,
     textAlign: 'center',
@@ -197,7 +199,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 14,
   },
   accordion: {
     backgroundColor: '#f4f4f4',

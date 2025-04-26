@@ -6127,8 +6127,47 @@ const GrammarScreen = () => {
 
       {/* Affichage de l'explication */}
       {item.type === 'explanation' && typeof item.content === 'string' && (
-        <Text style={styles.content}>{item.content}</Text>
-      )}
+  <Text style={styles.content}>
+    {item.content
+      .split(/(TO DO|n'est-ce-pas|SA TSY IZANY|auxiliaire)/gi)
+      .map((part, i) => {
+        const lowerPart = part.toLowerCase();
+
+        if (lowerPart === 'to do') {
+          return (
+            <Text key={i} style={{ fontWeight: 'bold' }}>
+              {part}
+            </Text>
+          );
+        }
+
+        if (lowerPart === "n'est-ce-pas" || part === 'SA TSY IZANY') {
+          return (
+            <Text
+              key={i}
+              style={{ fontWeight: 'bold', textDecorationLine: 'underline' }}
+            >
+              {part}
+            </Text>
+          );
+        }
+
+        if (lowerPart === 'auxiliaire') {
+          return (
+            <Text
+              key={i}
+              style={{ textDecorationLine: 'underline' }}
+            >
+              {part}
+            </Text>
+          );
+        }
+
+        return <Text key={i}>{part}</Text>;
+      })}
+  </Text>
+)}
+
     </View>
   ))}
 </List.Accordion>

@@ -115,6 +115,9 @@ const AccentTrainingScreen = () => {
         rate: 1,
       });
     };
+
+  
+    
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Accent Training</Text>
@@ -124,7 +127,7 @@ const AccentTrainingScreen = () => {
 
        {trainings1.map((section) => (
               <Card key={section.id} style={styles.card}>
-                <Card.Title title={section.title}  />
+                  <Card.Title titleStyle={styles.boldTitle} title={section.title} />
                 <Card.Content>
                   <Text style={styles.description}>{section.description}</Text>
       
@@ -305,16 +308,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f8f8',
   },
   title: {
-    fontSize: 28,
+    fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 16,
     textAlign: 'center',
     color: '#bb3e03',
   },
   description: {
-    fontSize: 16,
-    lineHeight: 24,
-    marginBottom: 16,
+    fontSize: 12,
+    lineHeight: 16,
+    marginBottom: 12,
     color: '#333',
     textAlign: 'center',
   },
@@ -363,6 +366,10 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     marginBottom: 16,
 
+  },
+  boldTitle: {
+    fontWeight: 'bold',
+    fontSize: 12, // You can adjust the size if needed
   },
 });
 
