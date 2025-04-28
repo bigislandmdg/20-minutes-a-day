@@ -45,25 +45,29 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
       )}
 
       {/* Titre centré */}
-      <Text style={[styles.title, isSearching && styles.titleHidden]}>{title}</Text>
+      {!isSearching && (
+        <Text style={styles.title}>{title}</Text>
+      )}
 
       {/* Barre de recherche animée */}
-      <Animated.View style={[styles.searchContainer, { width: searchWidth }]}>
-        <Ionicons name="search" size={20} color="#000" style={styles.searchIcon} />
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Rechercher..."
-          placeholderTextColor="#666"
-          value={searchQuery}
-          onChangeText={setSearchQuery}
-          autoFocus={isSearching}
-        />
-        <TouchableOpacity onPress={handleCloseSearch}>
-          <Ionicons name="close" size={20} color="#000" />
-        </TouchableOpacity>
-      </Animated.View>
+      {isSearching && (
+        <Animated.View style={[styles.searchContainer, { width: searchWidth }]}>
+          <Ionicons name="search" size={20} color="#000" style={styles.searchIcon} />
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Rechercher..."
+            placeholderTextColor="#666"
+            value={searchQuery}
+            onChangeText={setSearchQuery}
+            autoFocus={true}
+          />
+          <TouchableOpacity onPress={handleCloseSearch}>
+            <Ionicons name="close" size={20} color="#000" />
+          </TouchableOpacity>
+        </Animated.View>
+      )}
 
-      {/* Icône recherche (toujours affichée quand `isSearching` est faux) */}
+      {/* Icône recherche */}
       {!isSearching && (
         <TouchableOpacity onPress={handleOpenSearch} style={styles.searchButton}>
           <Ionicons name="search" size={24} color="#fff" />
@@ -88,21 +92,19 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#fff',
     fontWeight: 'bold',
-    position: 'absolute',
-    left: 0,
-    right: 0,
     textAlign: 'center',
-  },
-  titleHidden: {
-    opacity: 0, // Cache le titre quand la barre de recherche est active
+    flex: 1,
+    position: 'absolute',
+    left: 50,
+    right: 50,
   },
   icon: {
     padding: 10,
-    zIndex: 1, // Pour s'assurer que l'icône reste au-dessus du titre
+    zIndex: 2,
   },
   searchButton: {
     padding: 10,
-    zIndex: 1,
+    zIndex: 2,
   },
   searchContainer: {
     flexDirection: 'row',
@@ -113,7 +115,7 @@ const styles = StyleSheet.create({
     height: 35,
     position: 'absolute',
     right: 10,
-    zIndex: 2,
+    zIndex: 3,
     overflow: 'hidden',
   },
   searchIcon: {
@@ -122,7 +124,7 @@ const styles = StyleSheet.create({
   searchInput: {
     flex: 1,
     fontSize: 16,
-    color: '#000', // Rendre le texte visible
+    color: '#fff',
   },
 });
 

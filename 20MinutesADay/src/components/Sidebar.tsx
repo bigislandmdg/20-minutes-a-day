@@ -1,52 +1,56 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons';
 
-const appVersion = '1.1.0'; // Define the version here
 import HomeScreen from '../screens/Home/HomeScreen';
 import ActivateAppScreen from '../screens/ActivateApp/ActivateAppScreen'; 
-import AboutScreen from '../screens/About/AboutScreen'; // Import the AboutScreen component
+import AboutScreen from '../screens/About/AboutScreen';
+import GetStartedScreen from '../screens/GetStarted/GetStartedScreen'; // Assure-toi que ce fichier existe
+
+const appVersion = '1.1.0';
 
 const Drawer = createDrawerNavigator();
 
 const CustomDrawerContent = (props: any) => {
-  
-
-  const handleActivateApp = () => {
-    props.navigation.navigate('ActivateApp');
-  };
-
   const handleLogout = () => {
-    console.log('Déconnexion...');
-    // Ajouter ici la logique pour la déconnexion
+    props.navigation.navigate('GetStarted');
   };
 
   return (
     <View style={{ flex: 1 }}>
-      {/* Titre de l'application */}
+      {/* Header with Logo and Titles */}
       <View style={styles.header}>
+        {/*<Image
+          source={require('../assets/logo.png')} // Mets ici le chemin correct de ton logo
+          style={styles.logo}
+          resizeMode="contain"
+        />*/}
         <View style={styles.titleContainer}>
           <Text style={styles.appTitle}>20 Minutes A Day</Text>
-          <Text style={styles.subTitle}>Améliorez votre vocabulaire chaque jour</Text>
-          <Text style={styles.subTitle}>Avec Rene Fulgence Tovondrainy</Text>
+          <Text style={styles.subTitle}>Improve your vocabulary every day</Text>
+          <Text style={styles.subTitle}>With Rene Fulgence Tovondrainy</Text>
         </View>
       </View>
 
-      {/* Contenu du Drawer */}
+      {/* Drawer Content */}
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
 
       {/* Footer */}
       <View style={styles.footer}>
-        <TouchableOpacity>
+        {/* App Version */}
         <TouchableOpacity style={styles.versionContainer}>
           <Text style={styles.versionText}>Version {appVersion}</Text>
         </TouchableOpacity>
+
+        {/* Logout */}
+        <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+          <Ionicons name="log-out-outline" size={24} color="#bb3e03" />
+          <Text style={styles.logoutText}>Logout</Text>
         </TouchableOpacity>
-        
       </View>
     </View>
   );
@@ -63,31 +67,29 @@ const Sidebar = () => {
         component={HomeScreen} 
         options={{
           drawerIcon: ({ color }) => (
-            <Ionicons name="home" size={24} color='#bb3e03' />
+            <Ionicons name="home" size={24} color="#bb3e03" />
           ),
         }}
       />
-
-<Drawer.Screen 
-  name="About" 
-  component={AboutScreen} 
-  options={{
-    drawerIcon: ({ color }) => (
-      <Ionicons name="information-circle" size={25} color='#bb3e03' />
-    ),
-  }} 
-/>
-
-      
       <Drawer.Screen 
-        name="Activate application" 
-        component={ActivateAppScreen} 
+        name="About" 
+        component={AboutScreen} 
         options={{
           drawerIcon: ({ color }) => (
-            <Ionicons name="key" size={25} color='#bb3e03' />
+            <Ionicons name="information-circle" size={25} color="#bb3e03" />
           ),
         }} 
       />
+      <Drawer.Screen 
+        name="ActivateApp" 
+        component={ActivateAppScreen} 
+        options={{
+          drawerIcon: ({ color }) => (
+            <Ionicons name="key" size={25} color="#bb3e03" />
+          ),
+        }} 
+      />
+      {/* Ajoute GetStartedScreen dans ta navigation principale, pas ici dans Drawer */}
     </Drawer.Navigator>
   );
 };
@@ -95,50 +97,54 @@ const Sidebar = () => {
 // Styles
 const styles = StyleSheet.create({
   header: {
-    padding: 29,
+    padding: 20,
     backgroundColor: '#8da9c4',
     alignItems: 'center',
   },
+  logo: {
+    width: 80,
+    height: 80,
+    marginBottom: 10,
+  },
+  titleContainer: {
+    alignItems: 'center',
+  },
   appTitle: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#fff',
   },
   subTitle: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#fff',
-    marginTop: 5,
-  },
-  titleContainer: {
-    alignItems: 'center',
-    marginTop: 10,
+    marginTop: 4,
+    textAlign: 'center',
   },
   footer: {
-    padding: 17,
-    borderTopWidth: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 15,
+    borderTopWidth: 2,
     borderColor: '#eee',
     backgroundColor: '#f9f9f9',
-  },
-  activateButton: {
-    backgroundColor: '#8da9c4',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    marginBottom: 10,
-    borderRadius: 25,
-    alignItems: 'center',
-  },
-  activateButtonText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#fff',
-  },
+  },  
   versionContainer: {
-    marginTop: 10,
-    alignItems: 'center',
-  },
+    justifyContent: 'center',
+  },  
   versionText: {
     fontSize: 14,
     color: '#777',
+  },
+  logoutButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },  
+  logoutText: {
+    marginLeft: 8,
+    fontSize: 16,
+    color: '#bb3e03',
+    fontWeight: 'bold',
   },
 });
 

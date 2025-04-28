@@ -1,7 +1,9 @@
-import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import React, { useRef } from 'react';
+import { ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Card, Text, List, IconButton } from 'react-native-paper';
+import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
+import { Audio } from 'expo-av';
 
 const dialogues1 = [
   {
@@ -1944,6 +1946,20 @@ const dialogues12 = [
 ];
 
 const DailyDialoguesScreen = () => {
+  const sound = useRef<Audio.Sound | null>(null);
+
+  // Fonction pour jouer l'audio
+  const playSound = async () => {
+    if (sound.current) {
+      await sound.current.unloadAsync(); // Décharge si déjà chargé
+    }
+   // const { sound: newSound } = await Audio.Sound.createAsync(
+    //  require('../assets/audio/daily_dialogue.mp3')  // ton chemin audio ici
+    //);
+    //sound.current = newSound;
+    //await sound.current.playAsync();
+  };
+  
   const speak = (text: string) => {
     Speech.speak(text, {
       language: 'en',
@@ -1954,9 +1970,17 @@ const DailyDialoguesScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Daily Dialogues</Text>
-      <Text style={styles.content}>
-        Learn to hold a daily conversation in English.
-      </Text>
+       
+      <View style={styles.textWithButtonContainer}>
+    <Text style={styles.content}>
+      Learn to hold a daily conversation in English.
+    </Text>
+
+    {/* Bouton pour jouer l'audio */}
+    <TouchableOpacity style={styles.audioButton} onPress={playSound}>
+      <Ionicons name="volume-high" size={24} color="#8da9c4" />
+    </TouchableOpacity>
+  </View>
 
       {dialogues1.map((dialogue) => (
         <Card key={dialogue.id} style={styles.card}>
@@ -3424,6 +3448,16 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 7,
     backgroundColor: '#f0f0f0',
+  },
+  textWithButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center', // Aligne verticalement le texte et le bouton
+    justifyContent: 'space-between', // Optionnel, permet d'ajuster l'espacement
+    marginTop: 0, // Ajoute de l'espace entre le titre et cette ligne
+  },
+  audioButton: {
+    marginLeft: 30,
+    padding: 10,
   },
 });
 

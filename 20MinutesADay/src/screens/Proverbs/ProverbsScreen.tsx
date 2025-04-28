@@ -73,7 +73,7 @@ const ProverbsScreen = () => {
     <ScrollView style={styles.container}>
       <Text style={styles.screenTitle}>Proverbs</Text>
       <Text style={styles.screenSubtitle}>
-        This screen contains grammar lessons and rules.
+        This screen contains proverbs lessons.
       </Text>
       {proverbs.map((section) => (
         <Card key={section.id} style={styles.card}>
@@ -100,17 +100,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f8f8',
   },
   card: {
-    marginBottom: 22,
+    marginBottom: 18,
     borderRadius: 8,
     backgroundColor: '#ffffff',
   },
   cardTitle: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: 'bold',
     color: '#000',
   },
   screenTitle: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#bb3e03',
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     color: '#666',
   },
   description: {
-    fontSize: 16,
+    fontSize: 14,
     marginBottom: 12,
     color: '#333',
   },
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   content: {
     fontSize: 14,
     color: '#333',
-    marginTop: 10,
+    marginTop: 14,
     lineHeight: 22,
     marginBottom: 16,
   },

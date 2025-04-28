@@ -1965,7 +1965,7 @@ const VerbsScreen = () => {
                                                </View>
                                                {rule.content1.map((item, index) => (
                                                  <View key={index} style={styles.tableRow}>
-                                                   <RNText style={styles.tableCell}>{item.verb}</RNText>
+                                                   <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.verb}</RNText>
                                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                                    <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                         </View>
@@ -2000,27 +2000,27 @@ const VerbsScreen = () => {
                     >
                     <View style={styles.table}>
                       <View style={styles.tableRow}>
-                          <RNText style={styles.tableHeader}>INFINITIVE</RNText>
-                          <RNText style={styles.tableHeader}>PAST</RNText>
-                          <RNText style={styles.tableHeader}>PAST PARTICIPLE</RNText>
-                            <RNText style={styles.tableHeader}>TRANSLATION</RNText>
-                                                 <RNText style={styles.tableHeader}>DIKATENY</RNText>
+                          <RNText style={styles.tableHeader}> INFINITIVE</RNText>
+                          <RNText style={styles.tableHeader}> PAST</RNText>
+                          <RNText style={styles.tableHeader}> PAST PARTICIPLE</RNText>
+                            <RNText style={styles.tableHeader}> TRANSLATION </RNText>
+                                                 <RNText style={styles.tableHeader}> DIKATENY</RNText>
                                                </View>
                                                {rule.content1.map((item, index) => (
                                                  <View key={index} style={styles.tableRow}>
-                                                   <RNText style={styles.tableCell}>{item.infinitive}</RNText>
+                                                   <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.infinitive}</RNText>
                                                    <RNText style={styles.tableCell}>{item.past}</RNText>
                                                    <RNText style={styles.tableCell}>{item.pastParticiple}</RNText>
                                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                                    <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
-                        </View>
-                      ))}
-                    </View>
-                </List.Accordion>
-            </List.Section>
-          </Card.Content>
-        </Card>
-      ))}
+                                                  </View>
+                                             ))}
+                                          </View>
+                                      </List.Accordion>
+                                    </List.Section>
+                                  </Card.Content>
+                                </Card>
+                            ))}
 
 
 {verbsRules3.map((rule) => (
@@ -2054,7 +2054,7 @@ const VerbsScreen = () => {
                                                </View>
                                                {rule.content1.map((item, index) => (
                                                  <View key={index} style={styles.tableRow}>
-                                                   <RNText style={styles.tableCell}>{item.infinitive}</RNText>
+                                                   <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.infinitive}</RNText>
                                                    <RNText style={styles.tableCell}>{item.past}</RNText>
                                                    <RNText style={styles.tableCell}>{item.pastParticiple}</RNText>
                                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
@@ -2099,7 +2099,7 @@ const VerbsScreen = () => {
                                                </View>
                                                {rule.content1.map((item, index) => (
                                                  <View key={index} style={styles.tableRow}>
-                                                   <RNText style={styles.tableCell}>{item.infinitive}</RNText>
+                                                     <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.infinitive}</RNText>
                                                    <RNText style={styles.tableCell}>{item.past}</RNText>
                                                    <RNText style={styles.tableCell}>{item.pastParticiple}</RNText>
                                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
@@ -2145,7 +2145,7 @@ const VerbsScreen = () => {
                                                </View>
                                                {rule.content1.map((item, index) => (
                                                  <View key={index} style={styles.tableRow}>
-                                                   <RNText style={styles.tableCell}>{item.infinitive}</RNText>
+                                                     <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.infinitive}</RNText>
                                                    <RNText style={styles.tableCell}>{item.past}</RNText>
                                                    <RNText style={styles.tableCell}>{item.pastParticiple}</RNText>
                                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
@@ -2167,8 +2167,8 @@ const VerbsScreen = () => {
                                                  <RNText style={styles.tableHeader}>Malagasy</RNText>
                                                </View>
                                                {rule.content2.map((item, index) => (
-                                                 <View key={index} style={styles.tableRow}>
-                                                   <RNText style={styles.tableCell}>{item.verb}</RNText>
+                                                 <View key={index} style={styles.tableRow}>  
+                                                   <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.verb}</RNText>
                                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                                    <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                         </View>
@@ -2209,9 +2209,8 @@ const VerbsScreen = () => {
                                                </View>
                                                {rule.content1.map((item, index) => (
                                                  <View key={index} style={styles.tableRow}>
-                                                   <RNText style={styles.tableCell}>{item.verb}</RNText>
+                                                   <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.verb}</RNText>
                                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
-                                                  
                         </View>
                       ))}
                     </View>

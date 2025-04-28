@@ -865,7 +865,7 @@ const VocabulariesScreen = () => {
                                 </View>
                                 {rule.content1.map((item, index) => (
                                   <View key={index} style={styles.tableRow}>
-                                    <RNText style={styles.tableCell}>{item.vocabulary}</RNText>
+                                    <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.vocabulary}</RNText>
                                     <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                     <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                                   </View>
@@ -908,7 +908,7 @@ const VocabulariesScreen = () => {
                                 </View>
                                 {rule.content1.map((item, index) => (
                                   <View key={index} style={styles.tableRow}>
-                                    <RNText style={styles.tableCell}>{item.vocabulary}</RNText>
+                                    <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.vocabulary}</RNText>
                                     <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                     <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                                   </View>
@@ -951,7 +951,7 @@ const VocabulariesScreen = () => {
                                 </View>
                                 {rule.content1.map((item, index) => (
                                   <View key={index} style={styles.tableRow}>
-                                    <RNText style={styles.tableCell}>{item.vocabulary}</RNText>
+                                    <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}> {item.vocabulary}</RNText>
                                     <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                     <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                                   </View>

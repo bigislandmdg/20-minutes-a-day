@@ -1,14 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+
 import { StatusBar } from 'expo-status-bar';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 // Import des écrans
 import GetStartedScreen from './src/screens/GetStarted/GetStartedScreen';
-import HomeScreen from './src/screens/Home/HomeScreen';
+
 import VocabulariesScreen from './src/screens/Vocabularies/VocabulariesScreen';
 import DailyDialoguesScreen from './src/screens/DailyDialogues/DailyDialoguesScreen';
 import GrammarScreen from './src/screens/Grammar/GrammarScreen';
@@ -19,6 +18,7 @@ import AccentTrainingScreen from './src/screens/AccentTraining/AccentTrainingScr
 import PresentationScreen from './src/screens/Presentation/PresentationScreen';
 import VerbsScreen from './src/screens/Verbs/VerbsScreen';
 import Sidebar from './src/components/Sidebar';
+
 
 
 const Drawer = createDrawerNavigator();
