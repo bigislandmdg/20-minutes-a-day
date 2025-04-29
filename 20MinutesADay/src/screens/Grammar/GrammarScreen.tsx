@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { ScrollView, StyleSheet, View, Text as RNText } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { Audio } from 'expo-av';
+import { ScrollView, StyleSheet, View, Text as RNText, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { Card, List, Text, IconButton } from 'react-native-paper';
 import * as Speech from 'expo-speech';
 
@@ -212,11 +214,9 @@ const grammarRules3 = [
         pronunciation: "[ wot - taym - doo - yoo - get - up - evri - morn - ing ]",
         frenchTranslation: " A quelle heure tu te lèves tous les matins?",
         malagasyTranslation: "Amin'ny firy ianao mifoha isa-maraina?"
-      },
-     
-      
+      },   
     ],
-    
+
     content2: [
       {
         table: [
@@ -235,14 +235,9 @@ const grammarRules3 = [
           { verbs: "To put on make-up", frenchTranslation: "Se maquiller", },
           { verbs: "To get ready to go out", frenchTranslation: "S’apprêter", },
           { verbs: "To put my shoes on", frenchTranslation: "Mettre les chaussures", },
-          { verbs: "To leave home for school", frenchTranslation: "Sortir de la maison", },
-
-
-
-
-        
+          { verbs: "To leave home for school", frenchTranslation: "Sortir de la maison", },    
         ],
-       
+
       }
     ],
     
@@ -272,7 +267,7 @@ const grammarRules3 = [
         ]
       }
     ]
-        
+
   }
 ];
 
@@ -3412,7 +3407,21 @@ négative => question tag affirmatif) et on remet le sujet.`
 
 const GrammarScreen = () => {
   const [expanded, setExpanded] = useState<string | number | null>(null);
-
+  
+  const sound = useRef<Audio.Sound | null>(null);
+  
+    // Fonction pour jouer l'audio
+    const playSound = async () => {
+      if (sound.current) {
+        await sound.current.unloadAsync(); // Décharge si déjà chargé
+      }
+     // const { sound: newSound } = await Audio.Sound.createAsync(
+      //  require('../assets/audio/daily_dialogue.mp3')  // ton chemin audio ici
+      //);
+      //sound.current = newSound;
+      //await sound.current.playAsync();
+    };
+    
   const speak = (text: string) => {
     Speech.speak(text, {
       language: 'en',
@@ -3424,9 +3433,17 @@ const GrammarScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Grammar</Text>
-      <Text style={styles.content}>
-        This screen contains grammar lessons and rules.
-      </Text>
+      
+       <View style={styles.textWithButtonContainer}>
+          <Text style={styles.content}>
+            Learn to hold a grammar lessons and rules in English.
+          </Text>
+      
+          {/* Bouton pour jouer l'audio */}
+          <TouchableOpacity style={styles.audioButton} onPress={playSound}>
+            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+          </TouchableOpacity>
+        </View>
 
       {grammarRules1.map((rule) => (
         <Card key={rule.id} style={styles.card}>
@@ -3443,44 +3460,40 @@ const GrammarScreen = () => {
           />
           <Card.Content>
             <List.Section>
-              <List.Accordion
-                title="DAILY DIALOGUES"
-                left={(props) => (
-                  <List.Icon {...props} icon="handshake" color='#8da9c4' />
-                )}
+            <List.Accordion
+              title="DAILY DIALOGUES"
+              left={(props) => (
+              <List.Icon {...props} icon="handshake" color="#8da9c4" />
+               )}
               >
-                {rule.content1.map((line, index) => (
-                  <List.Item
-                    key={index}
-                    title={line.sentence}
-                    description={line.frenchTranslation}
-                    descriptionStyle={styles.pronunciation}
-                    right={() => (
-                      <IconButton
-                        icon="volume-high"
-                        size={24}
-                        onPress={() => speak(line.sentence)}
-                        iconColor="#8da9c4"
-                      />
-                    )}
+             {rule.content1.map((line, index) => (
+             <View key={index} style={styles.dialogueBlock}>
+               <List.Item
+                  title={line.sentence}
+                  description={line.pronunciation}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                  <IconButton
+                   icon="volume-high"
+                   size={24}
+                   onPress={() => speak(line.sentence)}
+                   iconColor="#8da9c4"
                   />
-                  )
                 )}
-                {rule.content1.map((line, index) => (
-                  <React.Fragment key={index}>
-                    <List.Item
-                      title={`French: ${line.frenchTranslation}`}
-                      description="French Translation"
-                      descriptionStyle={styles.translation}
-                    />
-                    <List.Item
-                      title={`Malagasy: ${line.malagasyTranslation}`}
-                      description="Malagasy Translation"
-                      descriptionStyle={styles.translation}
-                    />
-                  </React.Fragment>
-                ))}
-              </List.Accordion>
+              />
+             <List.Item
+               title={`🇫🇷 ${line.frenchTranslation}`}
+               description="French Translation"
+               descriptionStyle={styles.translation}
+              />
+             <List.Item
+               title={`🇲🇬 ${line.malagasyTranslation}`}
+               description="Malagasy Translation"
+               descriptionStyle={styles.translation}
+              />
+             </View>
+               ))}
+             </List.Accordion>
 
               <List.Accordion
                 title="VOCABULARIES IN USE"
@@ -3496,7 +3509,7 @@ const GrammarScreen = () => {
                   </View>
                   {rule.content2.map((item, index) => (
                     <View key={index} style={styles.tableRow}>
-                      <RNText style={styles.tableCell}>{item.vocabulary}</RNText>
+                      <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.vocabulary}</RNText>
                       <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                       <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                     </View>
@@ -3533,15 +3546,15 @@ const GrammarScreen = () => {
                   {rule.content4?.map((content, contentIndex) =>
                     content.table?.map((item: { adverb: string; frenchTranslation: string; malagasyTranslation: string }, index: number) => (
                     <View key={index} style={styles.tableRow}>
-                      <RNText style={styles.tableCell}>{item.adverb}</RNText>
+                      <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.adverb}</RNText>
                       <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                       <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                     </View>
                   )))}
                 </View>
                 <RNText style={styles.example}>
-    Ex: <Text style={{ fontWeight: 'bold' }}>(Every time)</Text> I go to visit my family every day/all the time/each day, (I’m happy.)
-  </RNText>
+                 Ex: <Text style={{ fontWeight: 'bold' }}>(Every time)</Text> I go to visit my family every day/all the time/each day, (I’m happy.)
+                </RNText>
               </List.Accordion>
             </List.Section>
           </Card.Content>
@@ -3564,7 +3577,6 @@ const GrammarScreen = () => {
           <Card.Content>
             <List.Section>
 
-
               <List.Accordion
                 title=" S+ADV.FREQ+V"
                 left={(props) => (
@@ -3579,47 +3591,47 @@ const GrammarScreen = () => {
                   </View>
                   {rule.content1.map((item, index) => (
                     <View key={index} style={styles.tableRow}>
-                      <RNText style={styles.tableCell}>{item.vocabulary}</RNText>
+                      <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.vocabulary}</RNText>
                       <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                       <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                     </View>
                   ))}
                 </View>
                 <RNText style={styles.example}>
-  Ex: I <Text style={{ fontWeight: 'bold' }}>sometimes</Text> like to play the guitar and write a song.
-  {'\n'}  {/* Retour à la ligne */}
-  {'\u2192'} J’aime parfois jouer à la guitare et écrire de la chanson...
-  {'\n\n'}  {/* Retour à la ligne */}
-  Ex: I always go to the gym and work out.
-  {'\n'}  {/* Retour à la ligne */}
-  I<Text style={{ fontWeight: 'bold' }}> often</Text> stay home and relax and <Text style={{ fontWeight: 'bold' }}>sometimes</Text> I surf on the net.
-</RNText>
+                  Ex: I <Text style={{ fontWeight: 'bold' }}>sometimes</Text> like to play the guitar and write a song.
+                  {'\n'}  {/* Retour à la ligne */}
+                  {'\u2192'} J’aime parfois jouer à la guitare et écrire de la chanson...
+                  {'\n\n'}  {/* Retour à la ligne */}
+                   Ex: I always go to the gym and work out.
+                  {'\n'}  {/* Retour à la ligne */}
+                   I<Text style={{ fontWeight: 'bold' }}> often</Text> stay home and relax and <Text style={{ fontWeight: 'bold' }}>sometimes</Text> I surf on the net.
+                </RNText>
 
-              </List.Accordion>
+                 </List.Accordion>
 
-                 {/* New Accordion for Simple Present Tense Explanation */}
-              <List.Accordion
-                title="AUXILIARY TO DO"
-                left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
-                )}
-              >
-                {rule.content2.map((line, index) => (
-                  <List.Item
-                    key={index}
-                    title={line.sentence}
-                  
-                    right={() => (
-                      <IconButton
-                        icon="volume-high"
-                        size={24}
-                        onPress={() => speak(line.sentence)}
-                        iconColor="#8da9c4"
-                      />
+                    {/* New Accordion for Simple Present Tense Explanation */}
+                  <List.Accordion
+                    title="AUXILIARY TO DO"
+                    left={(props) => (
+                     <List.Icon {...props} icon="book-open" color='#8DA9C4' />
                     )}
-                  />
-                  )
-                )}
+                  >
+                   {rule.content2.map((line, index) => (
+                   <List.Item
+                       key={index}
+                       title={line.sentence}
+                  
+                       right={() => (
+                        <IconButton
+                          icon="volume-high"
+                          size={24}
+                          onPress={() => speak(line.sentence)}
+                          iconColor="#8da9c4"
+                        />
+                       )}
+                    />
+                   )
+                 )}
                 {rule.content2.map((line, index) => (
                   <React.Fragment key={index}>
                     <List.Item
@@ -3635,33 +3647,33 @@ const GrammarScreen = () => {
                   </React.Fragment>
                 ))}
                  <RNText style={styles.example}>
-  Ex: <Text style={{ fontWeight: 'bold' }}>Do</Text> you understand me? I <Text style={{ fontWeight: 'bold' }}>Don't</Text> understand you.
-  {'\n'}  {/* Retour à la ligne */}TOUS LES VERBES QUI SE TERMINENT PAR “O, SH, CH, X, S et Y”:{'\n'}
-  {`→ HE\n→ SHE\n→ IT`}
-  <Text style={{ fontWeight: 'bold' }}> GO+ES/FINISH+ES/WATCH+ES/ FIX+ES/MISS+ES/CRY</Text> = <Text style={{ fontWeight: 'bold' }}>[IES]</Text>
-</RNText>
-                {/* Tableau Affirmative/Negative/Interrogative */}
-  <View style={styles.table}>
-    {/* En-tête du tableau */}
-    <View style={styles.tableRow}>
-      <RNText style={styles.tableHeader}>Affirmative</RNText>
-      <RNText style={styles.tableHeader}>Negative</RNText>
-      <RNText style={styles.tableHeader}>Interrogative</RNText>
-    </View>
+                  Ex: <Text style={{ fontWeight: 'bold' }}>Do</Text> you understand me? I <Text style={{ fontWeight: 'bold' }}>Don't</Text> understand you.
+                 {'\n'}  {/* Retour à la ligne */}TOUS LES VERBES QUI SE TERMINENT PAR “O, SH, CH, X, S et Y”:{'\n'}
+                 {`→ HE\n→ SHE\n→ IT`}
+                 <Text style={{ fontWeight: 'bold' }}> GO+ES/FINISH+ES/WATCH+ES/ FIX+ES/MISS+ES/CRY</Text> = <Text style={{ fontWeight: 'bold' }}>[IES]</Text>
+                </RNText>
+                    {/* Tableau Affirmative/Negative/Interrogative */}
+                <View style={styles.table}>
+                 {/* En-tête du tableau */}
+                <View style={styles.tableRow}>
+                   <RNText style={styles.tableHeader}>Affirmative</RNText>
+                   <RNText style={styles.tableHeader}>Negative</RNText>
+                  <RNText style={styles.tableHeader}>Interrogative</RNText>
+                </View>
 
-    {/* Corps du tableau */}
-    {rule.content2.map((item, index) => (
-      <View key={index} style={styles.tableRow}>
-      {/* Affirmative */}
-      <View style={styles.tableCell}>
-        <RNText style={styles.cellText}>{item.affirmative1}</RNText>
-        <RNText style={styles.cellText}>{item.affirmative2}</RNText>
-        <RNText style={styles.cellText}>{item.affirmative3}</RNText>
-      </View>
+                {/* Corps du tableau */}
+                 {rule.content2.map((item, index) => (
+                <View key={index} style={styles.tableRow}>
+                {/* Affirmative */}
+                <View style={styles.tableCell}>
+                  <RNText style={styles.cellText}>{item.affirmative1}</RNText>
+                  <RNText style={styles.cellText}>{item.affirmative2}</RNText>
+                  <RNText style={styles.cellText}>{item.affirmative3}</RNText>
+                </View>
     
-      {/* Negative */}
-      <View style={styles.tableCell1}>
-        <RNText style={styles.cellText}>{item.negative1}</RNText>
+                {/* Negative */}
+               <View style={styles.tableCell1}>
+        <RNText style={[styles.cellText, { fontWeight: 'bold' }]}>{item.negative1}</RNText>
         <RNText style={styles.cellText}>{item.negative2}</RNText>
         <RNText style={styles.cellText}>{item.negative3}</RNText>
       </View>
@@ -3693,7 +3705,7 @@ const GrammarScreen = () => {
                   {rule.content3?.map((content, contentIndex) =>
                     content.table?.map((item: { linkingWords: string; frenchTranslation: string; malagasyTranslation: string }, index: number) => (
                     <View key={index} style={styles.tableRow}>
-                      <RNText style={styles.tableCell}>{item.linkingWords}</RNText>
+                      <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.linkingWords}</RNText>
                       <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                       <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                     </View>
@@ -3706,8 +3718,6 @@ const GrammarScreen = () => {
           </Card.Content>
         </Card>
       ))}
-
-
 
 
 {grammarRules3.map((rule) => (
@@ -3726,48 +3736,40 @@ const GrammarScreen = () => {
           <Card.Content>
             <List.Section>
 
-
             <List.Accordion
-                title="DAILY DIALOGUES"
-                left={(props) => (
-                  <List.Icon {...props} icon="handshake" color='#8da9c4' />
-                )}
+              title="DAILY DIALOGUES"
+              left={(props) => (
+              <List.Icon {...props} icon="handshake" color="#8da9c4" />
+               )}
               >
-                {rule.content1.map((line, index) => (
-                  <List.Item
-                    key={index}
-                    title={line.sentence}
-                    description={line.frenchTranslation}
-                    descriptionStyle={styles.pronunciation}
-                    right={() => (
-                      <IconButton
-                        icon="volume-high"
-                        size={24}
-                        onPress={() => speak(line.sentence)}
-                        iconColor="#8da9c4"
-                      />
-                    )}
+             {rule.content1.map((line, index) => (
+             <View key={index} style={styles.dialogueBlock}>
+               <List.Item
+                  title={line.sentence}
+                  description={line.pronunciation}
+                  descriptionStyle={styles.pronunciation}
+                  right={() => (
+                  <IconButton
+                   icon="volume-high"
+                   size={24}
+                   onPress={() => speak(line.sentence)}
+                   iconColor="#8da9c4"
                   />
-                  )
                 )}
-                {rule.content1.map((line, index) => (
-                  <React.Fragment key={index}>
-                    <List.Item
-                      title={`French: ${line.frenchTranslation}`}
-                      description="French Translation"
-                      descriptionStyle={styles.translation}
-                    />
-                    <List.Item
-                      title={`Malagasy: ${line.malagasyTranslation}`}
-                      description="Malagasy Translation"
-                      descriptionStyle={styles.translation}
-                    />
-                  </React.Fragment>
-                ))}
-              </List.Accordion>
-
-            
-             
+              />
+             <List.Item
+               title={`🇫🇷 ${line.frenchTranslation}`}
+               description="French Translation"
+               descriptionStyle={styles.translation}
+              />
+             <List.Item
+               title={`🇲🇬 ${line.malagasyTranslation}`}
+               description="Malagasy Translation"
+               descriptionStyle={styles.translation}
+              />
+             </View>
+               ))}
+             </List.Accordion>
          {/* New Accordion for Adverbs of Time (content4) */}
          <List.Accordion
                 title="VERBS "
@@ -3799,24 +3801,32 @@ const GrammarScreen = () => {
     <List.Icon {...props} icon="handshake" color="#8da9c4" />
   )}
 >
-  {rule.content3.map((line, index) => (
-    <List.Item
-      key={index}
-      title={line.sentence}
-      titleStyle={[
-        { fontSize: 14 },
-        line.sentence.startsWith("→") && { fontWeight: "bold", color: "#4a4a4a" }
-      ]}
-      right={() => (
-        <IconButton
-          icon="volume-high"
-          size={24}
-          onPress={() => speak(line.sentence)}
-          iconColor="#8da9c4"
+  {rule.content3.map((line, index) => {
+    const isTitleLine = line.sentence.startsWith("→");
+
+    return (
+      <View key={index} style={styles.dialogueBlock}>
+        <List.Item
+          title={line.sentence}
+          titleNumberOfLines={5}
+          titleStyle={[
+            styles.sentence,
+            isTitleLine && styles.sectionTitle
+          ]}
+          right={() => (
+            !isTitleLine && (
+              <IconButton
+                icon="volume-high"
+                size={24}
+                onPress={() => speak(line.sentence)}
+                iconColor="#8da9c4"
+              />
+            )
+          )}
         />
-      )}
-    />
-  ))}
+      </View>
+    );
+  })}
 </List.Accordion>
 
 <List.Accordion
@@ -3997,28 +4007,42 @@ const GrammarScreen = () => {
           />
           <Card.Content>
             <List.Section>
-               <List.Accordion
-                  title="POUR COMMENCER"
-                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
-                >
-                {rule.content1.map((line, index) => (
-                               <List.Item
-                                 key={index}
-                                 title={<Text style={{ fontWeight: 'bold',flexWrap: 'nowrap' }}>
-                                   {line.sentence}</Text>}
-                                 description={`${line.pronunciation}  ${line.translationFr}\n  ${line.translationMg}`}
-                                 descriptionStyle={styles.pronunciation}
-                                 right={() => (
-                                   <IconButton
-                                     icon="volume-high"
-                                     size={24}
-                                     onPress={() => speak(line.sentence)}
-                                     iconColor="#8da9c4"
-                                   />
-                                 )}
-                               />
-                             ))}
-                           </List.Accordion>
+            <List.Accordion
+  title="POUR COMMENCER"
+  left={(props) => <List.Icon {...props} icon="comment" color="#8da9c4" />}
+>
+  {rule.content1.map((line, index) => (
+    <View key={index} style={styles.itemBlock}>
+      <List.Item
+        title={
+          <Text style={styles.sentence}>{line.sentence}</Text>
+        }
+        description={() => (
+          <View>
+            {line.pronunciation ? (
+              <Text style={styles.pronunciation}>{line.pronunciation}</Text>
+            ) : null}
+            {line.translationFr ? (
+              <Text style={styles.translationFr}>🇫🇷 {line.translationFr.trim()}</Text>
+            ) : null}
+            {line.translationMg ? (
+              <Text style={styles.translationMg}>🇲🇬 {line.translationMg.trim()}</Text>
+            ) : null}
+          </View>
+        )}
+        right={() => (
+          <IconButton
+            icon="volume-high"
+            size={24}
+            onPress={() => speak(line.sentence)}
+            iconColor="#8da9c4"
+          />
+        )}
+      />
+    </View>
+  ))}
+</List.Accordion>
+
               
                       {/* Second Accordion */}
                       <List.Accordion
@@ -4108,16 +4132,42 @@ const GrammarScreen = () => {
           <Card.Content>
             <List.Section>
             <List.Accordion
-                title="PRESENT PROGRESSIVE TENSE"
-                left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
-                )}
-              >
-                <View style={styles.content3Container}>
-                  <Text style={styles.title}>{rule.content1[0].title}</Text>
-                  <Text style={styles.content}>{rule.content1[0].description}</Text>
-                </View>
-              </List.Accordion>
+  title="PRESENT PROGRESSIVE TENSE"
+  left={(props) => (
+    <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+  )}
+>
+  <View style={styles.tenseContainer}>
+    <Text style={styles.tenseTitle}>{rule.content1[0].title}</Text>
+
+    {/* Structure */}
+    <Text style={styles.grammarStructure}>&nbsp;[TO BE + V(ING) + C]</Text>
+
+    {/* Description française */}
+    <Text style={styles.sectionHeading}>🇫🇷 Usage :</Text>
+    <Text style={styles.contentText}>
+      Le Présent Progressif (ou *Present Continuous*) s'emploie pour parler de ce qui se passe maintenant.
+    </Text>
+
+    {/* Description malgache */}
+    <Text style={styles.sectionHeading}>🇲🇬 Fampiasana :</Text>
+    <Text style={styles.contentText}>
+      Ampiasaina ny *PRESENT CONTINUOUS* amin’ny zavatra mitranga amin’ny fotoana anaovana an’ilay zavatra.
+    </Text>
+
+    {/* Exemple */}
+    <Text style={styles.sectionHeading}>📌 Exemples :</Text>
+    <Text style={styles.exemple}>
+      "I'm reading a page on the Internet at the moment" {"\n"}
+      → Je suis en train de lire une page sur Internet en ce moment.
+    </Text>
+    <Text style={styles.exemple}>
+      "I’m now eating and watching TV" {"\n"}
+      → Je mange et regarde la télé.
+    </Text>
+  </View>
+</List.Accordion>
+
               
               {/* Second Accordion */}
               <List.Accordion
@@ -4156,7 +4206,7 @@ const GrammarScreen = () => {
       ?.table.map((item, index) => (
         <View key={index} style={styles.tableRow}>
           {'affirmative' in item && (
-            <RNText style={styles.tableCell}>{String(item.affirmative)}</RNText>
+            <RNText  style={[styles.tableCell, { fontWeight: 'bold' }]}>{String(item.affirmative)}</RNText>
           )}
           {'interrogative' in item && (
             <RNText style={styles.tableCell}>{item.interrogative}</RNText>
@@ -4387,54 +4437,99 @@ const GrammarScreen = () => {
           />
           <Card.Content>
             <List.Section>
-               <List.Accordion
-                  title="THE DEFINITE ARTICLES ‘THE’ le, la, les, l’ (NY/ILAY)"
-                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
-                >
-                {rule.content1.map((section, index) => (
-                <View key={index} style={{ marginBottom: 12 }}>
-                {section.type === 'definition' && (
-                <>
-        {section.text.map((t, i) => (
-          <Text key={i} style={{ marginBottom: 4 }}>{t}</Text>
-        ))}
-      </>
-    )}
-    {section.type === 'prononciation' && (
-      <>
-        <Text style={{ fontWeight: 'bold', marginTop: 8 }}>Prononciation :</Text>
-        {section.text.map((t, i) => (
-          <Text key={i} style={{ marginLeft: 8, marginBottom: 4 }}>{t}</Text>
-        ))}
-      </>
-    )}
-  </View>
-))}
+            <List.Accordion
+  title="THE DEFINITE ARTICLES ‘THE’ le, la, les, l’ (NY/ILAY)"
+  left={(props) => <List.Icon {...props} icon="comment" color="#8da9c4" />}
+>
+  {rule.content1.map((section, index) => (
+    <View key={index} style={{ marginBottom: 12, paddingHorizontal: 8 }}>
+      {section.type === 'definition' && (
+        <>
+          <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#3b5998', marginBottom: 4 }}>
+            Définition :
+          </Text>
+          {section.text.map((t, i) => (
+            <Text key={`def-${i}`} style={{ marginBottom: 4 }}>
+              {t.split(/(THE)/gi).map((part, j) =>
+                part.toUpperCase() === 'THE' ? (
+                  <Text key={j} style={{ fontWeight: 'bold' }}>{part}</Text>
+                ) : (
+                  <Text key={j}>{part}</Text>
+                )
+              )}
+            </Text>
+          ))}
+        </>
+      )}
+
+      {section.type === 'prononciation' && (
+        <>
+          <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#3b5998', marginTop: 8, marginBottom: 4 }}>
+            Prononciation :
+          </Text>
+          {section.text.map((t, i) => (
+            <Text key={`pro-${i}`} style={{ marginLeft: 8, marginBottom: 4 }}>
+              {t.split(/(THE)/gi).map((part, j) =>
+                part.toUpperCase() === 'THE' ? (
+                  <Text key={j} style={{ fontWeight: 'bold' }}>{part}</Text>
+                ) : (
+                  <Text key={j}>{part}</Text>
+                )
+              )}
+            </Text>
+          ))}
+        </>
+      )}
+    </View>
+  ))}
 </List.Accordion>
 
+
 <List.Accordion
-    title="THE INDEFINITE ARTICLE A, AN un/une"
-                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
-                >
-                {rule.content2.map((section, index) => (
-                <View key={index} style={{ marginBottom: 12 }}>
-                {section.type === 'definition' && (
-                <>
-        {section.text.map((t, i) => (
-          <Text key={i} style={{ marginBottom: 4 }}>{t}</Text>
-        ))}
-      </>
-    )}
-    {section.type === 'prononciation' && (
-      <>
-        <Text style={{ fontWeight: 'bold', marginTop: 8 }}>Prononciation :</Text>
-        {section.text.map((t, i) => (
-          <Text key={i} style={{ marginLeft: 8, marginBottom: 4 }}>{t}</Text>
-        ))}
-      </>
-    )}
-  </View>
-))}
+  title="THE INDEFINITE ARTICLE A, AN un/une"
+  left={(props) => <List.Icon {...props} icon="comment" color="#8da9c4" />}
+>
+  {rule.content2.map((section, index) => (
+    <View key={index} style={{ marginBottom: 12, paddingHorizontal: 8 }}>
+      {section.type === 'definition' && (
+        <>
+          <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#3b5998', marginBottom: 4 }}>
+            Définition :
+          </Text>
+          {section.text.map((t, i) => (
+            <Text key={`def-${i}`} style={{ marginBottom: 4 }}>
+              {t.split(/()/gi).map((part, j) =>
+                part.toUpperCase() === '' ? (
+                  <Text key={j} style={{ fontWeight: 'bold' }}>{part}</Text>
+                ) : (
+                  <Text key={j}>{part}</Text>
+                )
+              )}
+            </Text>
+          ))}
+        </>
+      )}
+
+      {section.type === 'prononciation' && (
+        <>
+          <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#3b5998', marginTop: 8, marginBottom: 4 }}>
+            Prononciation :
+          </Text>
+          {section.text.map((t, i) => (
+            <Text key={`pro-${i}`} style={{ marginLeft: 8, marginBottom: 4 }}>
+              {t.split(/(AN)/gi).map((part, j) =>
+                part.toUpperCase() === 'AN' ? (
+                  <Text key={j} style={{ fontWeight: 'bold' }}>{part}</Text>
+                ) : (
+                  <Text key={j}>{part}</Text>
+                )
+              )}
+            </Text>
+          ))}
+        </>
+      )}
+    </View>
+  ))}
 </List.Accordion>
 
 <List.Accordion
@@ -4442,38 +4537,84 @@ const GrammarScreen = () => {
   left={(props) => <List.Icon {...props} icon="gesture-tap" color="#8da9c4" />}
 >
   {rule.content3.map((section, index) => (
-    <View key={index}>
-      {section.type === 'demonstratives_pair' &&
-        section.pairs.map((pair, i) => (
-          <View key={i} style={{ flexDirection: 'row', marginBottom: 16 }}>
-            {/* Colonne gauche */}
-            <View style={{ flex: 1, paddingRight: 8 }}>
-              <Text style={{ fontWeight: 'bold' }}>{pair.left.label}</Text>
-              <Text>{pair.left.description}</Text>
-              <Text style={{ fontStyle: 'italic' }}>{pair.left.example}</Text>
-              <Text>{pair.left.translation}</Text>
+    <View key={index} style={{ marginBottom: 12, paddingHorizontal: 8 }}>
+      {section.type === 'demonstratives_pair' && (
+        <>
+          {section.pairs.map((pair, i) => (
+            <View
+              key={i}
+              style={{
+                borderWidth: 1,
+                borderColor: '#ddd',
+                borderRadius: 12,
+                padding: 10,
+                marginBottom: 12,
+                backgroundColor: '#f1f1f1',
+              }}
+            >
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  marginBottom: 10,
+                }}
+              >
+                <View style={{ flex: 1, marginRight: 4 }}>
+                  <Text
+                    style={{
+                      fontWeight: 'bold',
+                      color: '#3b5998',
+                      fontSize: 14,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {pair.left.label}
+                  </Text>
+                  <Text style={{ fontStyle: 'italic', marginBottom: 4 }}>
+                    {pair.left.description}
+                  </Text>
+                  <Text style={{ marginBottom: 4 }}>Ex: {pair.left.example}</Text>
+                  <Text style={{ color: '#6c757d' }}>→ {pair.left.translation}</Text>
+                </View>
+                <View style={{ flex: 1 }}>
+                  <Text
+                    style={{
+                      fontWeight: 'bold',
+                      color: '#3b5998',
+                      fontSize: 16,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {pair.right.label}
+                  </Text>
+                  <Text style={{ fontStyle: 'italic', marginBottom: 4 }}>
+                    {pair.right.description}
+                  </Text>
+                  <Text style={{ marginBottom: 2 }}>Ex: {pair.right.example}</Text>
+                  <Text style={{ color: '#6c757d' }}>→ {pair.right.translation}</Text>
+                </View>
+              </View>
             </View>
-
-            {/* Colonne droite */}
-            <View style={{ flex: 1, paddingLeft: 8 }}>
-              <Text style={{ fontWeight: 'bold' }}>{pair.right.label}</Text>
-              <Text>{pair.right.description}</Text>
-              <Text style={{ fontStyle: 'italic' }}>{pair.right.example}</Text>
-              <Text>{pair.right.translation}</Text>
+          ))}
+          {section.notes.length > 0 && (
+            <View style={{ marginTop: 5 }}>
+              <Text style={{ fontWeight: 'bold', marginBottom: 8 }}>
+                Notes supplémentaires :
+              </Text>
+              {section.notes.map((note, j) => (
+                <Text key={j} style={{ marginBottom: 5 }}>
+                  ▪ {note}
+                </Text>
+              ))}
             </View>
-          </View>
-        ))
-      }
-
-      {/* Notes en bas */}
-      {section.notes && section.notes.map((note, i) => (
-        <Text key={`note-${i}`} style={{ marginTop: 4 }}>{note}</Text>
-      ))}
+          )}
+        </>
+      )}
     </View>
   ))}
 </List.Accordion>
 
-          
+
             </List.Section>
           </Card.Content>
         </Card>
@@ -4523,39 +4664,38 @@ const GrammarScreen = () => {
 </View>
 ))}
 </List.Accordion>
-
 <List.Accordion
   title="SIMPLE PAST TENSE"
   left={(props) => <List.Icon {...props} icon="history" color="#8da9c4" />}
 >
   {/* Grammatical Rule + Examples */}
-<View style={{ paddingHorizontal: 8, marginBottom: 12 }}>
-  <Text style={{ fontWeight: 'bold', marginBottom: 6 }}>Structure et Utilisation :</Text>
-  {rule.content2[0]?.text?.map((line, index) => (
-    <Text key={`rule-${index}`} style={{ marginBottom: 4 }}>
-      {line}
-    </Text>
-  ))}
+  <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
+    <Text style={{ fontWeight: 'bold', marginBottom: 6, fontSize: 18 }}>Structure et Utilisation :</Text>
+    {rule.content2[0]?.text?.map((line, index) => (
+      <Text key={`rule-${index}`} style={{ marginBottom: 6, fontSize: 16 }}>
+        {line}
+      </Text>
+    ))}
 
-  {/* Affichage des exemples (type: 'examples') */}
-  <Text style={{ fontWeight: 'bold', marginTop: 12, marginBottom: 6 }}>
-    {rule.content2[1].title}
-  </Text>
-  {rule.content2[1]?.text?.map((example, index) => (
-    <Text key={`example-${index}`} style={{ marginBottom: 4 }}>
-      {example}
+    {/* Affichage des exemples (type: 'examples') */}
+    <Text style={{ fontWeight: 'bold', marginTop: 12, marginBottom: 6, fontSize: 18 }}>
+      {rule.content2[1].title}
     </Text>
-  ))}
-</View>
+    {rule.content2[1]?.text?.map((example, index) => (
+      <View key={`example-${index}`} style={{ backgroundColor: '#f5f5f5', padding: 8, borderRadius: 8, marginBottom: 12 }}>
+        <Text style={{ marginBottom: 4, fontSize: 16 }}>{example}</Text>
+      </View>
+    ))}
+  </View>
 
- {/* Table: Affirmation / Négation / Interrogation */}
- <View style={{ paddingHorizontal: 8, marginBottom: 12 }}>
-    <Text style={{ fontWeight: 'bold', marginBottom: 6 }}>
+  {/* Table: Affirmation / Négation / Interrogation */}
+  <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
+    <Text style={{ fontWeight: 'bold', marginBottom: 6, fontSize: 18 }}>
       {rule.content2[2].title}
     </Text>
     <View style={{ flexDirection: 'row', marginBottom: 4 }}>
       {rule.content2[2]?.headers?.map((header, idx) => (
-        <Text key={`header-${idx}`} style={{ flex: 1, fontWeight: '600' }}>
+        <Text key={`header-${idx}`} style={{ flex: 1, fontWeight: '600', fontSize: 16 }}>
           {header}
         </Text>
       ))}
@@ -4563,7 +4703,7 @@ const GrammarScreen = () => {
     {rule.content2[2]?.rows?.map((row, rowIndex) => (
       <View key={`row-${rowIndex}`} style={{ flexDirection: 'row', marginBottom: 4 }}>
         {row.map((cell, cellIndex) => (
-          <Text key={`cell-${rowIndex}-${cellIndex}`} style={{ flex: 1 }}>
+          <Text key={`cell-${rowIndex}-${cellIndex}`} style={{ flex: 1, fontSize: 16 }}>
             {cell}
           </Text>
         ))}
@@ -4571,34 +4711,33 @@ const GrammarScreen = () => {
     ))}
   </View>
 
-   {/* Liste des Adverbes de temps */}
-   <View style={{ paddingHorizontal: 8, marginBottom: 12 }}>
-    <Text style={{ fontWeight: 'bold', marginBottom: 6 }}>
+  {/* Liste des Adverbes de temps */}
+  <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
+    <Text style={{ fontWeight: 'bold', marginBottom: 6, fontSize: 18 }}>
       {rule.content2[3].title}
     </Text>
     {rule.content2[3]?.text?.map((item, index) => (
-      <Text key={`adverb-${index}`} style={{ marginBottom: 4 }}>
+      <Text key={`adverb-${index}`} style={{ marginBottom: 6, fontSize: 16 }}>
         {item}
       </Text>
     ))}
   </View>
 
-    {/* Narration */}
-    {rule.content2.find((c) => c.type === 'narration') && (
-    <View style={{ paddingHorizontal: 8, marginBottom: 12 }}>
-      <Text style={{ fontWeight: 'bold', marginBottom: 6 }}>
+  {/* Narration */}
+  {rule.content2.find((c) => c.type === 'narration') && (
+    <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
+      <Text style={{ fontWeight: 'bold', marginBottom: 6, fontSize: 18 }}>
         {rule.content2.find((c) => c.type === 'narration')?.title}
       </Text>
       {rule.content2.find((c) => c.type === 'narration')?.text?.map((line, index) => (
-        <Text key={`narration-${index}`} style={{ marginBottom: 4 }}>
+        <Text key={`narration-${index}`} style={{ marginBottom: 4, fontSize: 16 }}>
           {line}
         </Text>
       ))}
     </View>
   )}
-
-
-</List.Accordion>          
+</List.Accordion>
+           
             </List.Section>
           </Card.Content>
         </Card>
@@ -6191,13 +6330,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 16,
+    marginBottom: 12,
     textAlign: 'center',
     color: '#bb3e03',
   },
   content: {
     fontSize: 14,
-    marginBottom: 14,
+    marginBottom: 10,
   },
   card: {
     marginBottom: 16,
@@ -6205,14 +6344,21 @@ const styles = StyleSheet.create({
     elevation: 4,
     backgroundColor: '#fff',
   },
+  dialogueBlock: {
+    marginBottom: 20,
+    backgroundColor: '#f5f9ff',
+    borderRadius: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 5,
+  },
   pronunciation: {
     fontStyle: 'italic',
-    color: '#000000',
+    color: '#6c757d',
     fontSize: 14
   },
   translation: {
     fontStyle: 'italic',
-    color: '#3a86ff',
+    color: '#495057',
   },
   table: {
     padding: 10,
@@ -6361,6 +6507,80 @@ wordColumn: {
 },
 symbolFrenchColumn: {
   textAlign: 'right', // Alignement à droite pour les symboles français
+},
+sentence: {
+  fontSize: 14,
+  color: '#333',
+},
+sectionTitle: {
+  fontWeight: 'bold',
+  fontSize: 15,
+  color: '#4a4a4a',
+  backgroundColor: '#e1ecf4',
+  padding: 4,
+  borderRadius: 4,
+},
+textWithButtonContainer: {
+  flexDirection: 'row',
+  alignItems: 'center', // Aligne verticalement le texte et le bouton
+  justifyContent: 'space-between', // Optionnel, permet d'ajuster l'espacement
+  marginTop: 0, // Ajoute de l'espace entre le titre et cette ligne
+},
+audioButton: {
+  marginLeft: 12,
+  padding: 10,
+},
+itemBlock: {
+  backgroundColor: '#f0f4f8',
+  marginBottom: 6,
+  borderRadius: 8,
+  paddingHorizontal: 4,
+},
+
+translationFr: {
+  color: '#2a71d0',
+  fontSize: 14,
+  marginTop: 2,
+},
+translationMg: {
+  color: '#2da34f',
+  fontSize: 14,
+  marginTop: 2,
+},
+tenseContainer: {
+  paddingHorizontal: 12,
+  paddingVertical: 8,
+  backgroundColor: '#f9fafa',
+},
+tenseTitle: {
+  fontSize: 16,
+  fontWeight: 'bold',
+  color: '#3a3a3a',
+  marginBottom: 4,
+},
+grammarStructure: {
+  fontSize: 15,
+  fontWeight: '600',
+  color: '#8da9c4',
+  marginVertical: 4,
+},
+sectionHeading: {
+  fontSize: 14,
+  fontWeight: 'bold',
+  marginTop: 10,
+  marginBottom: 2,
+  color: '#4a4a4a',
+},
+contentText: {
+  fontSize: 14,
+  color: '#333',
+  lineHeight: 20,
+},
+exemple: {
+  fontSize: 14,
+  color: '#1e5631',
+  fontStyle: 'italic',
+  marginTop: 6,
 },
 
 });

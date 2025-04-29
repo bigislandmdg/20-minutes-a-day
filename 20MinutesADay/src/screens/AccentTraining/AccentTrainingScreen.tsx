@@ -1,7 +1,9 @@
-import React from 'react';
-import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useRef } from 'react';
+import { ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Card, List, Text } from 'react-native-paper';
 import * as Speech from 'expo-speech';
+import { Audio } from 'expo-av';
+import { Ionicons } from '@expo/vector-icons';
 
 const trainings1 = [
   {
@@ -10,7 +12,7 @@ const trainings1 = [
     description: 'INTONATION PRACTICE',
     content1: [
       {
-        training: '→ Reading with Staircase Intonation',
+        training: 'READING WITH STAIRCASE INTONATION',
         subtitle: 'Practice clear intonation',
         description: `Read the following with clear intonation where marked. Every time, you come to the
 underlined bold characters, you rise your voice up. Repeat after me, let’s begin!
@@ -46,14 +48,14 @@ const trainings2 = [
     description: 'SPOKEN EXPRESSIONS',
     content1: [
       {
-        training: '→ TO PULL SB’S LEG → = blaguer =Mananiany',
+        training: 'TO PULL SB’S LEG → = blaguer =Mananiany',
         subtitle: '',
         description: `Ex: Don’t take it seriously; I’m just pulling your leg.`,
       },
     ],
     content2: [
       {
-        training: '→ TO BEAT AROUND THE BUSH → NOT STRAIGHT= Tourner autour du pôt= Tsy miteny izay tiana hotenenina',
+        training: 'TO BEAT AROUND THE BUSH → NOT STRAIGHT= Tourner autour du pôt= Tsy miteny izay tiana hotenenina',
         subtitle: '',
         description: ` 
         \n →Ex: Stop beating around the bush, but tell me what you want?`,
@@ -61,7 +63,7 @@ const trainings2 = [
     ],
     content3: [
       {
-        training: '→ TO PLAY HARD TO GET → ACT SEEM MORE ATTRACTIVE= Mamilafila.Jouer les insaisissable.',
+        training: 'TO PLAY HARD TO GET → ACT SEEM MORE ATTRACTIVE= Mamilafila.Jouer les insaisissable.',
         subtitle: '',
         description: ` 
         \n →Ex: You really play hard to get, who do you think you are? ..pour qui tu te prends?`,
@@ -69,7 +71,7 @@ const trainings2 = [
     ],
     content4: [
       {
-        training: '→ TO BE AT A LOSS → DISORIENTED= TSY MAHAFANTATRA NY ATAO=Désorienté/déconcerté.',
+        training: 'TO BE AT A LOSS → DISORIENTED= TSY MAHAFANTATRA NY ATAO=Désorienté/déconcerté.',
         subtitle: '',
         description: ` 
         \n → Ex: Yesterday, when I met her I was at a loss.`,
@@ -77,7 +79,7 @@ const trainings2 = [
     ],
     content5: [
       {
-        training: '→ TO HAVE A BIGGER FISH TO FRY → BE TIED UP= TERY = Occupé',
+        training: 'TO HAVE A BIGGER FISH TO FRY → BE TIED UP= TERY = Occupé',
         subtitle: '',
         description: `\nAvoir d'autres chats à fouetter.
         Ex : Sorry for yesterday, I had a bigger fish to fry`,
@@ -85,7 +87,7 @@ const trainings2 = [
     ],
     content6: [
       {
-        training: '→ TO BE A WET BLANKET → A KILL JOY= RABBAT-JOIE= BE RESAKA SADY TSY MBA MINO HAHAVITA ZAVATRA.',
+        training: 'TO BE A WET BLANKET → A KILL JOY= RABBAT-JOIE= BE RESAKA SADY TSY MBA MINO HAHAVITA ZAVATRA.',
         subtitle: '',
         description: ` 
         \nEx: James was not invited to go on the outing with the rest of the group as he’s such a
@@ -94,19 +96,32 @@ const trainings2 = [
     ],
     content7: [
       {
-        training: '→ TO BE OUT OF THE WOODS → TIRÉ D’AFFAIRE= TSY MISY OLANA INTSONY',
+        training: 'TO BE OUT OF THE WOODS → TIRÉ D’AFFAIRE= TSY MISY OLANA INTSONY',
         subtitle: '',
         description: ` 
         \n →Ex: You are not out of the woods yet, so you need to be careful!
         Vou n’êtes pasencore tiré d’affaire, alors faites attention !`,
       },
     ],
-    
-   
+
   },
 ];
 
 const AccentTrainingScreen = () => {
+   const sound = useRef<Audio.Sound | null>(null);
+        
+          // Fonction pour jouer l'audio
+          const playSound = async () => {
+            if (sound.current) {
+              await sound.current.unloadAsync(); // Décharge si déjà chargé
+            }
+           // const { sound: newSound } = await Audio.Sound.createAsync(
+            //  require('../assets/audio/daily_dialogue.mp3')  // ton chemin audio ici
+            //);
+            //sound.current = newSound;
+            //await sound.current.playAsync();
+          };
+          
    // Fonction pour faire parler le proverbe
     const speakTraining = (training: string): void => {
       Speech.speak(training, {
@@ -121,9 +136,17 @@ const AccentTrainingScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Accent Training</Text>
-      <Text style={styles.description}>
-        Improve your pronunciation with our accent training exercises.
-      </Text>
+      
+      <View style={styles.textWithButtonContainer}>
+          <Text style={styles.content}>
+          Improve your accent training exercises.
+          </Text>
+      
+          {/* Bouton pour jouer l'audio */}
+          <TouchableOpacity style={styles.audioButton} onPress={playSound}>
+            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+          </TouchableOpacity>
+        </View>
 
        {trainings1.map((section) => (
               <Card key={section.id} style={styles.card}>
@@ -355,7 +378,7 @@ const styles = StyleSheet.create({
   },
   speakButton: {
     color: '#007aff',
-
+    fontSize: 16,
     fontWeight: 'bold',
     textDecorationLine: 'underline',
   },
@@ -370,6 +393,16 @@ const styles = StyleSheet.create({
   boldTitle: {
     fontWeight: 'bold',
     fontSize: 12, // You can adjust the size if needed
+  },
+  textWithButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center', // Aligne verticalement le texte et le bouton
+    justifyContent: 'space-between', // Optionnel, permet d'ajuster l'espacement
+    marginTop: 0, // Ajoute de l'espace entre le titre et cette ligne
+  },
+  audioButton: {
+    marginLeft: 16,
+    padding: 10,
   },
 });
 

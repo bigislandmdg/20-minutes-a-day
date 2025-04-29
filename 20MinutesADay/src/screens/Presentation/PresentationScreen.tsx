@@ -1,9 +1,10 @@
-import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { Card, List, Text } from 'react-native-paper';
+import React, { useState } from 'react';
+import { ScrollView, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { List, Text, IconButton, Card } from 'react-native-paper';
+import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 
-type Section = {
+type ContentItem = {
   title: string;
   items: string[];
 };
@@ -12,14 +13,14 @@ type Presentation = {
   id: number;
   title: string;
   subtitle: string;
-  content: Section[];
+  content: ContentItem[];
 };
 
 const presentations: Presentation[] = [
   {
     id: 1,
     title: 'Lesson 61: ENGLISH FOR PRESENTATION',
-    subtitle: 'LADIES AND GENTLEMENT',
+    subtitle: 'LADIES AND GENTLEMEN & STRUCTURING A PRESENTATION',
     content: [
       {
         title: '1.1 Welcoming the audience',
@@ -50,7 +51,7 @@ const presentations: Presentation[] = [
         ],
       },
       {
-        title: '1.4 Explaining why your topic relevant for your audience',
+        title: '1.4 Explaining why your topic is relevant for your audience',
         items: [
           '- My talk is particularly relevant to those of you/us who…',
           '- Today’s topic is of particular interest to those of you/us who..',
@@ -58,15 +59,8 @@ const presentations: Presentation[] = [
           '- By the end of this talk you will be familiar with...',
         ],
       },
-    ],
-  },
-  {
-    id: 2,
-    title: 'Lesson 61: ENGLISH FOR PRESENTATION',
-    subtitle: 'STRUCTURING A PRESENTATION',
-    content: [
       {
-        title: '→ Most formal and many informal presentations have three main parts and follow this simple formula:',
+        title: 'Structuring a presentation',
         items: [
           '1- Tell the audience what you are going to say! = Introduction',
           '2- Say it! = Main part',
@@ -74,13 +68,13 @@ const presentations: Presentation[] = [
         ],
       },
       {
-        title: '→ There are several ways you can tell the audience what you are going to say.',
+        title: 'Ways to tell the audience what you are going to say',
         items: [
           '→ Would like + infinitive\nEx: Today I’d like to tell about our new plans.',
-          '→ Going to + infinitive\n\nEx: I’m going to talk to you today about ….',
-          '→ Will + infinitive\n\nEx: I’ll begin by + v.ing',
-          '→ Will be + verb.Ing\n\nEx: I’ll be talking about our…',
-          '→ The purpose of the introduction is not only to tell the audience who you are, what the is about, and why it is relevant to them; you also want to tell the audience briefly how the talk is structured.',
+          '→ Going to + infinitive\nEx: I’m going to talk to you today about ….',
+          '→ Will + infinitive\nEx: I’ll begin by + v.ing',
+          '→ Will be + verb.ing\nEx: I’ll be talking about our…',
+          '→ The purpose of the introduction is not only to tell the audience who you are, what the talk is about, and why it is relevant to them; you also want to tell the audience briefly how the talk is structured.',
           '→ I’ve divided my presentation into three main parts: X, Y, and Z',
           '→ In my presentation I’ll focus on three major issues=problem',
           '→ First of all, I’ll be looking at…, second…, and third…',
@@ -89,80 +83,75 @@ const presentations: Presentation[] = [
         ],
       },
       {
-        title: 'REMARKS',
+        title: 'Remarks',
         items: [
-          'ISSUE = Question/Probleme TO BE RELEVANT TO = Etre pertinent par rapport à ch PARTICULAR = Particulier; TO FOCUS ON = Se concentrer sur qlq chose; AUDIENCE = Audience',
+          'ISSUE = Question/Problem TO BE RELEVANT TO = Etre pertinent par rapport à… PARTICULAR = Particulier; TO FOCUS ON = Se concentrer sur quelque chose; AUDIENCE = Audience',
         ],
       },
     ],
   },
 ];
 
-// Fonction pour lire le texte avec la synthèse vocale
-const speak = (text: string) => {
-  Speech.speak(text, {
-    language: 'en',
-  });
-};
 
-// Composant réutilisable pour afficher une présentation
-const PresentationCard = ({ presentation }: { presentation: Presentation }) => (
-  <Card key={presentation.id} style={styles.card}>
-    <Card.Title
-      title={<Text style={{ fontWeight: 'bold' }}>{presentation.title}</Text>}
-    />
-    <Card.Content>
-      <Text style={styles.subtitle} onPress={() => speak(presentation.subtitle)}>
-        {presentation.subtitle}
-      </Text>
+const PresentationScreen = () => {
+  const [expanded, setExpanded] = useState<number | null>(null);
 
-      {presentation.content.map((section, index) => (
-        <List.Accordion
-          key={index}
-          title={<Text style={styles.sectionTitle}>{section.title}</Text>}
-          style={styles.accordion}
-        >
-          {section.items.map((item, idx) => {
-            const parts = item.split('\n\n');
-            const mainText = parts[0];
-            const example = parts[1] || '';
+  const handlePress = (index: number) => {
+    setExpanded(expanded === index ? null : index); // Toggle accordion expansion
+  };
 
-            return (
-              <List.Item
-                key={idx}
-                title={
-                  <>
-                    {/* Affichage du texte principal */}
-                    <Text style={styles.mainText}>{mainText}</Text>
-                    {/* Affichage de l'exemple s'il existe */}
-                    {example ? (
-                      <Text style={styles.exampleText}>{`\nEx: ${example}`}</Text>
-                    ) : null}
-                  </>
-                }
-                onPress={() => speak(item)}
-                style={styles.listItem}
-              />
-            );
-          })}
-        </List.Accordion>
-      ))}
-    </Card.Content>
-  </Card>
-);
+  const speak = (text: string) => {
+    Speech.speak(text, {
+      language: 'en-US',
+      pitch: 1,
+      rate: 1,
+    });
+  };
 
-const PresentationScreen = () => (
-  <ScrollView style={styles.container}>
-    <Text style={styles.title}>English for Presentation</Text>
-    <Text style={styles.content}>
-      This screen contains English for Presentation.
-    </Text>
+  const renderContent = (content: ContentItem[]) =>
+    content.map((section, index) => (
+      <Card key={index} style={styles.card}>
+        <Card.Content>
+          <List.Accordion
+            title={section.title}
+            expanded={expanded === index}
+            onPress={() => handlePress(index)}
+          >
+            {section.items.map((item, idx) => (
+              <List.Item key={idx} title={item} />
+            ))}
+          </List.Accordion>
+        </Card.Content>
+      </Card>
+    ));
+    
+  return (
+    <ScrollView style={styles.container}>
+    <Text style={styles.screenTitle}>Presentations</Text>
+
+    <View style={styles.textWithButtonContainer}>
+      <Text style={styles.content}>Learn useful presentation phrases.</Text>
+      <TouchableOpacity style={styles.audioButton}>
+        <Ionicons name="volume-high" size={24} color="#8da9c4" />
+      </TouchableOpacity>
+    </View>
 
     {presentations.map((presentation) => (
-      <PresentationCard key={presentation.id} presentation={presentation} />
+      <Card key={presentation.id} style={styles.card}>
+        <Card.Title
+          titleStyle={styles.lessonTitle}
+          title={presentation.title}
+          subtitle={presentation.subtitle}
+         
+        />
+        <Card.Content>
+          {renderContent(presentation.content)}
+        </Card.Content>
+      </Card>
     ))}
   </ScrollView>
-);
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -171,52 +160,55 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f8f8',
   },
   card: {
-    paddingVertical: 10,
-    paddingHorizontal: 8,
-    backgroundColor: '#ffffff',
-    marginBottom: 22,
+    marginVertical: 8,
+    backgroundColor: '#fff',
     borderRadius: 8,
+    elevation: 2,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 16,
-    textAlign: 'center',
-    color: '#bb3e03',
-  },
-  content: {
-    fontSize: 14,
-    color: '#333',
-    marginTop: 10,
-    lineHeight: 22,
-    marginBottom: 16,
-  },
-  subtitle: {
+  
+  cardTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#8da9c4',
-    marginBottom: 8,
+    color: '#000',
   },
-  sectionTitle: {
+  subtitle: {
+    fontSize: 10,
+    color: '#555',
+    marginBottom: 12,
+  },
+  screenTitle: {
+    fontSize: 20,
     fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#bb3e03',
+    marginBottom: 10,
+  },
+  description: {
     fontSize: 14,
-  },
-  accordion: {
-    backgroundColor: '#f4f4f4',
-  },
-  listItem: {
-    paddingLeft: 16,
-  },
-  mainText: {
-    fontWeight: 'bold',
-    fontSize: 16,
+    marginBottom: 12,
     color: '#333',
   },
-  exampleText: {
-    fontStyle: 'italic',
-    fontSize: 14,
-    color: '#555',
+  content: {
+    fontSize: 16,
+    color: '#333',
+    marginBottom: 16,
   },
+  textWithButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+    justifyContent: 'space-between',
+  },
+  audioButton: {
+    marginLeft: 1,
+    padding: 0,
+  },
+  lessonTitle: {
+    fontWeight: 'bold',
+    fontSize: 13,
+    color: '#000',
+  },
+  
 });
 
 export default PresentationScreen;

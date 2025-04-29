@@ -1,7 +1,9 @@
-import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import React, { useRef } from 'react';
+import { ScrollView, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Card, List, Text, Button, IconButton } from 'react-native-paper';
+import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
+import { Audio } from 'expo-av';
 
 const proverbs = [
   {
@@ -40,6 +42,21 @@ const proverbs = [
 ];
 
 const ProverbsScreen = () => {
+   
+  const sound = useRef<Audio.Sound | null>(null);
+       
+         // Fonction pour jouer l'audio
+         const playSound = async () => {
+           if (sound.current) {
+             await sound.current.unloadAsync(); // Décharge si déjà chargé
+           }
+          // const { sound: newSound } = await Audio.Sound.createAsync(
+           //  require('../assets/audio/daily_dialogue.mp3')  // ton chemin audio ici
+           //);
+           //sound.current = newSound;
+           //await sound.current.playAsync();
+         };
+
   const speakProverb = (text: string): void => {
     Speech.speak(text, {
       language: 'en-US',
@@ -72,9 +89,18 @@ const ProverbsScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.screenTitle}>Proverbs</Text>
-      <Text style={styles.screenSubtitle}>
-        This screen contains proverbs lessons.
-      </Text>
+
+      <View style={styles.textWithButtonContainer}>
+          <Text style={styles.content}>
+            Learn to hold a various proverbs lessons in English.
+          </Text>
+      
+          {/* Bouton pour jouer l'audio */}
+          <TouchableOpacity style={styles.audioButton} onPress={playSound}>
+            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+          </TouchableOpacity>
+        </View>
+
       {proverbs.map((section) => (
         <Card key={section.id} style={styles.card}>
           <Card.Title
@@ -149,6 +175,16 @@ const styles = StyleSheet.create({
     marginTop: 14,
     lineHeight: 22,
     marginBottom: 16,
+  },
+  textWithButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center', // Aligne verticalement le texte et le bouton
+    justifyContent: 'space-between', // Optionnel, permet d'ajuster l'espacement
+    marginTop: 0, // Ajoute de l'espace entre le titre et cette ligne
+  },
+  audioButton: {
+    marginLeft: 10,
+    padding: 10,
   },
 });
 

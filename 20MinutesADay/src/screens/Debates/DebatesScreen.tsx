@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import { ScrollView, StyleSheet, View, Text as RNText } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { ScrollView, StyleSheet, View, Text as RNText, TouchableOpacity } from 'react-native';
 import { Card, List, Text, IconButton } from 'react-native-paper';
+import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
+import { Audio } from 'expo-av';
 
 const debateTopics1 = [
   {
@@ -694,23 +696,21 @@ const debateTopics4 = [
     ],
     arguments2: [
       {
-        debate:`     Well, thanks for your question, to start with, let me talk a little bit about myself for those of you who don’t know me. My name’s Rene, I’m from Tulear, and I’ve been here in Tana
+        debate:`Well, thanks for your question, to start with, let me talk a little bit about myself for those of you who don’t know me. My name’s Rene, I’m from Tulear, and I’ve been here in Tana
 for more than nine years and I like Tana. So, to me “Education” defines of theact or process of imparting or acquiring general knowledge, developing the powers of reasoning and
 judgment, and generally of preparing oneself or others intellectually for mature life, which means that it plays an important role in our lives, and anybody who wants to develop and move forwards according to the world’s development shouldn’t underestimate its importance.
 And also, education is the key of success, I mean, if you want to succeed in everything you do, I think, education can help you unlock your pontential. You may say that there many people out there who are illiterate but rich, what about them? For sure, I realize that, because education
 is not only done in school and have degrees but everywhere, you can learn from your mistake, you can learn from others mistake, and especially from others’ success, that’s to say, u know the way of getting and developing our ability to know everything,`,
       },
-    ],
-    arguments3: [
       {
-        debate:` → TO BE CROOKED[kroukid]  =Tordu /Mivalana
-        \n → TO BE BENT[bent]  =Courbé/ Biloka /Mivilana
-        \n → TO BE DENT[dent]  =Cabossé = Pepo/Kepoka
-        \n → TO BE TWIST/ TO BE TWISTED[twisted]  =Tordu/Entortillé = Miforitra
-        \n → SLOPE[slôup] =Pente = Tendrombohitra
+        debate: `→ TO BE CROOKED[kroukid] = Tordu /Mivalana
+        \n → TO BE BENT[bent] = Courbé/ Biloka /Mivilana
+        \n → TO BE DENT[dent] = Cabossé = Pepo/Kepoka
+        \n → TO BE TWIST/ TO BE TWISTED[twisted] = Tordu/Entortillé = Miforitra
+        \n → SLOPE[slôup] = Pente = Tendrombohitra
         \n → TO GO UPHILL/DOWNHILL = Monteé/Descente = Miakatra/Midina`,
       },
-    ]
+    ],
   },
  
 ];
@@ -2075,7 +2075,7 @@ const debateTopics11 = [
         debate:`  
           WHAT IF………SI………..AHOANA RAHA……….
         \n 
-        \n IF EVER……….SI JAMAIS……..RAHA SANATRIA………..
+        \n IF EVER……….SI JAMAIS……..RAHA SANATRIA………..
         \n`,
       },
     ],
@@ -2338,7 +2338,21 @@ const debateTopics11 = [
 
 
 const DebatesScreen = () => {
-  const [expanded, setExpanded] = useState<string | null>(null);
+   const [expanded, setExpanded] = useState<string | null>(null);
+
+   const sound = useRef<Audio.Sound | null>(null);
+     
+       // Fonction pour jouer l'audio
+       const playSound = async () => {
+         if (sound.current) {
+           await sound.current.unloadAsync(); // Décharge si déjà chargé
+         }
+        // const { sound: newSound } = await Audio.Sound.createAsync(
+         //  require('../assets/audio/daily_dialogue.mp3')  // ton chemin audio ici
+         //);
+         //sound.current = newSound;
+         //await sound.current.playAsync();
+       };
 
   // ✅ Fonction pour lire le texte avec Expo Speech
   const speak = (text: string) => {
@@ -2352,9 +2366,18 @@ const DebatesScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Debates</Text>
-      <Text style={styles.content}>
-        This screen displays various topics for debates.
-      </Text>
+      
+      <View style={styles.textWithButtonContainer}>
+          <Text style={styles.content}>
+            Learn to hold a various topics for debates.
+          </Text>
+      
+          {/* Bouton pour jouer l'audio */}
+          <TouchableOpacity style={styles.audioButton} onPress={playSound}>
+            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+          </TouchableOpacity>
+        </View>
+
 
       {debateTopics1.map((debate) => (
               <Card key={debate.id} style={styles.card}>
@@ -2385,7 +2408,7 @@ const DebatesScreen = () => {
                                                      </View>
                                                      {debate.arguments1.map((item, index) => (
                                                        <View key={index} style={styles.tableRow}>
-                                                         <RNText style={styles.tableCell}>{item.debate}</RNText>
+                                                         <RNText  style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.debate}</RNText>
                                                          <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                                          <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                               </View>
@@ -2490,7 +2513,7 @@ const DebatesScreen = () => {
                                                      </View>
                                                      {debate.arguments1.map((item, index) => (
                                                        <View key={index} style={styles.tableRow}>
-                                                         <RNText style={styles.tableCell}>{item.debate}</RNText>
+                                                         <RNText  style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.debate}</RNText>
                                                          <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                                          <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                               </View>
@@ -2540,90 +2563,63 @@ const DebatesScreen = () => {
                       </List.Accordion>
 
                       <List.Accordion
-          title="→ WHAT MEANS EDUCATION TO YOU?"
-          left={(props) => (
-            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
-          )}
-        >
-          {debate.arguments2.map((arg, index) => {
-            const boldPhrases = [
-              "imparting",
-              "mature",
-              "lives",
-            ];
+                         title="→ WHAT MEANS EDUCATION TO YOU?"
+                         left={(props) => (
+                        <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+                        )}>
+                        {/* Partie argumentaire avec mots en gras */}
+                      
+                      <List.Item
+                        title={() => {
+                        const boldPhrases = [
+                             "imparting",
+                              "mature",
+                              "lives",
+                              "develop",
+                             "success",
+                              "realize",
+                              "learn",
+                              "mistake",
+                             "ability",
+                            "potential",
+      ];
 
-            const regex = new RegExp(`(${boldPhrases.join('|')})`, 'gi');
-            const parts = arg.debate.split(regex);
+      const text = debate.arguments2[0].debate;
+      const regex = new RegExp(`(${boldPhrases.join('|')})`, 'gi');
+      const parts = text.split(regex);
 
+      return (
+        <Text>
+          {parts.map((part, i) => {
+            const isBold = boldPhrases.some(
+              (phrase) =>
+                phrase.toLowerCase() === part.trim().toLowerCase()
+            );
             return (
-              <List.Item
-                key={index}
-                title={() => (
-                  <Text>
-                    {parts.map((part, i) => {
-                      const isBold = boldPhrases.some(
-                        (phrase) =>
-                          phrase.toLowerCase() === part.trim().toLowerCase()
-                      );
-                      return (
-                        <Text key={i} style={isBold ? { fontWeight: 'bold' } : {}}>
-                          {part}
-                        </Text>
-                      );
-                    })}
-                  </Text>
-                )}
-
-              />
+              <Text key={i} style={isBold ? { fontWeight: 'bold' } : {}}>
+                {part}
+              </Text>
             );
           })}
+        </Text>
+      );
+    }}
+  />
+
+      {/* Partie vocabulaires, ligne par ligne */}
+      {debate.arguments2[1].debate.split('\n').map((line, index) => (
+        <Text key={index} style={{ paddingVertical: 1, fontSize: 16, color: '#333' }}>
+            {line.trim()}
+        </Text>
+      ))}
         </List.Accordion>
-
-        <List.Accordion
-          title="→ WHAT MEANS EDUCATION TO YOU?"
-          left={(props) => (
-            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
-          )}
-        >
-          {debate.arguments3.map((arg, index) => {
-            const boldPhrases = [
-              "imparting",
-              "mature",
-              "lives",
-            ];
-
-            const regex = new RegExp(`(${boldPhrases.join('|')})`, 'gi');
-            const parts = arg.debate.split(regex);
-
-            return (
-              <List.Item
-                key={index}
-                title={() => (
-                  <Text>
-                    {parts.map((part, i) => {
-                      const isBold = boldPhrases.some(
-                        (phrase) =>
-                          phrase.toLowerCase() === part.trim().toLowerCase()
-                      );
-                      return (
-                        <Text key={i} style={isBold ? { fontWeight: 'bold' } : {}}>
-                          {part}
-                        </Text>
-                      );
-                    })}
-                  </Text>
-                )}
-
-              />
-            );
-          })}
-        </List.Accordion>
+       
                   </List.Section>
                 </Card.Content>
               </Card>
             ))}
 
-{debateTopics5.map((debate) => (
+      {debateTopics5.map((debate) => (
               <Card key={debate.id} style={styles.card}>
                 <Card.Title
                   title={<Text style={{ fontWeight: 'bold' }}>{debate.topic}</Text>}
@@ -2900,7 +2896,7 @@ const DebatesScreen = () => {
                                                      </View>
                                                      {debate.arguments1.map((item, index) => (
                                                        <View key={index} style={styles.tableRow}>
-                                                         <RNText style={styles.tableCell}>{item.debate}</RNText>
+                                                         <RNText  style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.debate}</RNText>
                                                          <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                                                          <RNText style={styles.tableCell}>{item.malagasyTranslation}</RNText>
                               </View>
@@ -2948,7 +2944,6 @@ const DebatesScreen = () => {
           })}
         </List.Accordion>
 
-
                   </List.Section>
                 </Card.Content>
               </Card>
@@ -2972,11 +2967,11 @@ const DebatesScreen = () => {
                   <List.Section>
 
                   <List.Accordion
-          title="WHAT IF THE PEASANT MOVES TO THE TOWN?"
-          left={(props) => (
-            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
-          )}
-        >
+                    title="WHAT IF THE PEASANT MOVES TO THE TOWN?"
+                    left={(props) => (
+                   <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+                  )}
+                 >
           {debate.arguments1.map((arg, index) => {
             const boldPhrases = [
               "I'm grateful to",
@@ -3085,6 +3080,16 @@ const styles = StyleSheet.create({
     flex: 1,
     color: '#000',
     fontSize: 15,
+  },
+  textWithButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center', // Aligne verticalement le texte et le bouton
+    justifyContent: 'space-between', // Optionnel, permet d'ajuster l'espacement
+    marginTop: 0, // Ajoute de l'espace entre le titre et cette ligne
+  },
+  audioButton: {
+    marginLeft: 16,
+    padding: 10,
   },
 });
 

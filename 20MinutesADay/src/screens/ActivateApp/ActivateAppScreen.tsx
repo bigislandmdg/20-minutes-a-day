@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   input: {
-    height: 50,
+    height: 40,
     borderColor: '#ccc',
     borderWidth: 1,
     borderRadius: 8,
@@ -123,6 +123,9 @@ const styles = StyleSheet.create({
     backgroundColor: '##8da9c4',
     paddingVertical: 15,
     borderRadius: 8,
+    fontSize: 14,
+    width: '100%',
+    height:50,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'center',

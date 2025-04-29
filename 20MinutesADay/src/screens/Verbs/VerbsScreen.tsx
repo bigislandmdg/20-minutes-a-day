@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import { ScrollView, StyleSheet, View, Text as RNText } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { ScrollView, StyleSheet, View, Text as RNText, TouchableOpacity } from 'react-native';
 import { Card, IconButton, List, Text } from 'react-native-paper';
 import * as Speech from 'expo-speech';
+import { Audio } from 'expo-av';
+import { Ionicons } from '@expo/vector-icons';
 
 
 const verbsRules1 = [
@@ -1920,6 +1922,20 @@ const verbsRules6 = [
 const VerbsScreen = () => {
   const [expanded, setExpanded] = useState<string | null>(null);
 
+   const sound = useRef<Audio.Sound | null>(null);
+         
+           // Fonction pour jouer l'audio
+           const playSound = async () => {
+             if (sound.current) {
+               await sound.current.unloadAsync(); // Décharge si déjà chargé
+             }
+            // const { sound: newSound } = await Audio.Sound.createAsync(
+             //  require('../assets/audio/daily_dialogue.mp3')  // ton chemin audio ici
+             //);
+             //sound.current = newSound;
+             //await sound.current.playAsync();
+           };
+
   // Fonction pour lire le texte avec expo-speech
   const speak = (text: string) => {
     Speech.speak(text, {
@@ -1932,9 +1948,17 @@ const VerbsScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Verbs</Text>
-      <Text style={styles.content}>
-        This screen displays various verbs and their conjugations to help you with your language learning.
-      </Text>
+      
+      <View style={styles.textWithButtonContainer}>
+          <Text style={styles.content}>
+          Learn verbs to help you learn English.
+          </Text>
+      
+          {/* Bouton pour jouer l'audio */}
+          <TouchableOpacity style={styles.audioButton} onPress={playSound}>
+            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+          </TouchableOpacity>
+        </View>
 
       {verbsRules1.map((rule) => (
         <Card key={rule.id} style={styles.card}>
@@ -2205,10 +2229,9 @@ const VerbsScreen = () => {
                       <View style={styles.tableRow}>
                           <RNText style={styles.tableHeader}>English</RNText>
                             <RNText style={styles.tableHeader}>Francais</RNText>
-                                                
-                                               </View>
-                                               {rule.content1.map((item, index) => (
-                                                 <View key={index} style={styles.tableRow}>
+                                </View>
+                                    {rule.content1.map((item, index) => (
+                                    <View key={index} style={styles.tableRow}>
                                                    <RNText style={[styles.tableCell, { fontWeight: 'bold' }]}>{item.verb}</RNText>
                                                    <RNText style={styles.tableCell}>{item.frenchTranslation}</RNText>
                         </View>
@@ -2277,6 +2300,16 @@ const styles = StyleSheet.create({
     flex: 1,
     color: '#333',
     fontSize: 15,
+  },
+  textWithButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center', // Aligne verticalement le texte et le bouton
+    justifyContent: 'space-between', // Optionnel, permet d'ajuster l'espacement
+    marginTop: 0, // Ajoute de l'espace entre le titre et cette ligne
+  },
+  audioButton: {
+    marginLeft: 14,
+    padding: 10,
   },
 });
 

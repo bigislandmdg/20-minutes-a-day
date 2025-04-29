@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import { ScrollView, StyleSheet, View, Text as RNText } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { ScrollView, StyleSheet, View, Text as RNText, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { Card, IconButton, List, Text } from 'react-native-paper';
 import * as Speech from 'expo-speech'; // Import the expo-speech library
+import { Audio } from 'expo-av';
 
 const vocabsRules1 = [
   {
@@ -818,7 +820,21 @@ const vocabsRules3 = [
 
 const VocabulariesScreen = () => {
   const [expanded, setExpanded] = useState(false);
-  
+   
+    const sound = useRef<Audio.Sound | null>(null);
+            
+    // Fonction pour jouer l'audio
+    const playSound = async () => {
+      if (sound.current) {
+        await sound.current.unloadAsync(); // Décharge si déjà chargé
+      }
+               // const { sound: newSound } = await Audio.Sound.createAsync(
+                //  require('../assets/audio/daily_dialogue.mp3')  // ton chemin audio ici
+                //);
+                //sound.current = newSound;
+                //await sound.current.playAsync();
+              };
+
    const speak = (text: string) => {
        Speech.speak(text, {
          language: 'en',
@@ -831,9 +847,17 @@ const VocabulariesScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Vocabularies</Text>
-      <Text style={styles.content}>
-        This screen displays a list of vocabularies.
-      </Text>
+     
+      <View style={styles.textWithButtonContainer}>
+          <Text style={styles.content}>
+          Learn vocabs to help you learn English.
+          </Text>
+      
+          {/* Bouton pour jouer l'audio */}
+          <TouchableOpacity style={styles.audioButton} onPress={playSound}>
+            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+          </TouchableOpacity>
+        </View>
 
       {vocabsRules1.map((rule) => (
         <Card key={rule.id} style={styles.card}>
@@ -1021,6 +1045,16 @@ const styles = StyleSheet.create({
     flex: 1,
     color: '#333',
     fontSize: 16,
+  },
+  textWithButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center', // Aligne verticalement le texte et le bouton
+    justifyContent: 'space-between', // Optionnel, permet d'ajuster l'espacement
+    marginTop: 0, // Ajoute de l'espace entre le titre et cette ligne
+  },
+  audioButton: {
+    marginLeft: 14,
+    padding: 10,
   },
 });
 
