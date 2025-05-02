@@ -17,7 +17,7 @@ export default function GetStartedScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.navigate('Home');
-    }, 2000);
+    }, 10000);
 
     return () => clearTimeout(timer); // Nettoyer le timer si le composant est démonté
   }, [navigation]);

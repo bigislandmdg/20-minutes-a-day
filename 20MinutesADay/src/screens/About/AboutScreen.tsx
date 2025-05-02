@@ -65,19 +65,26 @@ const AboutScreen = () => {
       <Card style={styles.card}>
         <Card.Title title="About the App" />
         <Card.Content>
-          <List.Section>
-            <List.Accordion
-              title="App Details"
-              left={props => <List.Icon {...props} icon="information" />}
-              expanded={expanded === 'appDetails'}
-              onPress={() => handlePress('appDetails')}
-            >
-              <Text style={styles.text}>
-                This app is designed to improve your vocabulary in 20 minutes per day.
-              </Text>
-              <Text style={styles.version}>Version: 1.1.0</Text>
-            </List.Accordion>
-          </List.Section>
+<List.Section>
+  <List.Accordion
+    title="App Details"
+    left={props => (
+      <List.Icon 
+        {...props} 
+        icon="information" 
+        color={expanded === 'appDetails' ? '#2541b2' : props.color} 
+      />
+    )}
+    expanded={expanded === 'appDetails'}
+    onPress={() => handlePress('appDetails')}
+    titleStyle={styles.title}
+  >
+    <Text style={styles.text}>
+      This app is designed to improve your vocabulary in 20 minutes per day.
+    </Text>
+    <Text style={styles.version}>Version: 1.1.0</Text>
+  </List.Accordion>
+</List.Section>
         </Card.Content>
       </Card>
 
@@ -89,9 +96,18 @@ const AboutScreen = () => {
             <List.Section>
               <List.Accordion
                 title={`Details of ${module.title}`}
-                left={props => <List.Icon {...props} icon="book" />}
+                left={props => 
+                   <List.Icon 
+                  {...props} 
+                  icon="book" 
+                  color={expanded === module.id ? '#2541b2' : props.color} // Change color when expanded
+                />}
                 expanded={expanded === module.id}
                 onPress={() => handlePress(module.id)}
+                titleStyle={{
+                  color: expanded === module.id ? '#2541b2' : '#000', // Change title color when expanded
+                  fontWeight: expanded === module.id ? 'bold' : 'normal', // Optional: Make title bold when expanded
+                }}
               >
                 <Text style={styles.text}>{module.description}</Text>
               </List.Accordion>
@@ -135,6 +151,11 @@ const styles = StyleSheet.create({
     color: '#777',
     fontStyle: 'normal',
   },
+  title: {
+    color: '#2541b2', // un joli bleu Material Design
+    fontWeight: 'bold',
+  }
+  
 });
 
 export default AboutScreen;

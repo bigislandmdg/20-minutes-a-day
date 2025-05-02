@@ -3405,7 +3405,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 16,
     textAlign: 'center',
-    color: '#bb3e03',
+    color: '#c75146',
   },
   content: {
     fontSize: 16,

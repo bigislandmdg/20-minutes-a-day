@@ -126,12 +126,12 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose }) => {
       {/* Payment Button or Loader */}
       <View style={styles.paymentOption}>
         {loading ? (
-          <ActivityIndicator size="large" color="#bb3e03" />
+          <ActivityIndicator size="large" color="#c75146" />
         ) : (
           <Button 
             title="Make Payment" 
             onPress={handlePayment}
-            color="#bb3e03"
+            color="#c75146"
             accessibilityLabel="Make a payment"
           />
         )}

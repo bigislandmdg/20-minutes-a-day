@@ -127,7 +127,7 @@ const AccentTrainingScreen = () => {
       Speech.speak(training, {
         language: 'en-US',
         pitch: 1,
-        rate: 1,
+        rate: 2,
       });
     };
 
@@ -157,7 +157,11 @@ const AccentTrainingScreen = () => {
                   {section.content1.map((item, index) => (
                     <List.Accordion
                       key={index}
-                      title={item.training}
+                      title={
+                        <Text style={{ flexWrap: 'wrap' }}>
+                          {item.training}
+                        </Text>
+                      }
                       left={(props) => <List.Icon {...props} icon="microphone" />}
                       style={styles.accordion}
                     >

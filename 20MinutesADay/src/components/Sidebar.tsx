@@ -98,7 +98,7 @@ const Sidebar = () => {
 const styles = StyleSheet.create({
   header: {
     padding: 20,
-    backgroundColor: '#8da9c4',
+    backgroundColor: '#2541b2',
     alignItems: 'center',
   },
   logo: {
