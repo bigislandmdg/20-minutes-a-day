@@ -1,17 +1,61 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import HomeScreen from '../screens/Home/HomeScreen';
 import ActivateAppScreen from '../screens/ActivateApp/ActivateAppScreen'; 
 import AboutScreen from '../screens/About/AboutScreen';
-import GetStartedScreen from '../screens/GetStarted/GetStartedScreen'; // Assure-toi que ce fichier existe
+import GetStartedScreen from '../screens/GetStarted/GetStartedScreen';
+import PayementScreen from '../screens/Payement/PayementScreen'; // <-- Ton PaymentScreen
 
 const appVersion = '1.1.0';
 
 const Drawer = createDrawerNavigator();
+
+// ===> NOUVEAU : Composant intermédiaire
+const ActivateAppScreenWrapper = () => {
+  const [hasPaid, setHasPaid] = React.useState<boolean | null>(null);
+
+  React.useEffect(() => {
+    const checkPaymentStatus = async () => {
+      try {
+        const value = await AsyncStorage.getItem('hasPaid');
+        if (value === 'true') {
+          setHasPaid(true);
+        } else {
+          setHasPaid(false);
+        }
+      } catch (error) {
+        console.error('Error fetching payment status:', error);
+        setHasPaid(false);
+      }
+    };
+
+    checkPaymentStatus();
+  }, []);
+
+  // Tu peux afficher un loading en attendant le statut
+  if (hasPaid === null) {
+    return (
+      <View style={styles.center}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
+  // Rediriger selon paiement
+  return hasPaid ? (
+    <ActivateAppScreen />
+  ) : (
+    <PayementScreen 
+      onClose={() => console.log('Payment screen closed')} 
+      onPaymentSuccess={() => setHasPaid(true)} 
+    />
+  );
+};
 
 const CustomDrawerContent = (props: any) => {
   const handleLogout = () => {
@@ -20,13 +64,8 @@ const CustomDrawerContent = (props: any) => {
 
   return (
     <View style={{ flex: 1 }}>
-      {/* Header with Logo and Titles */}
+      {/* Header */}
       <View style={styles.header}>
-        {/*<Image
-          source={require('../assets/logo.png')} // Mets ici le chemin correct de ton logo
-          style={styles.logo}
-          resizeMode="contain"
-        />*/}
         <View style={styles.titleContainer}>
           <Text style={styles.appTitle}>20 Minutes A Day</Text>
           <Text style={styles.subTitle}>Improve your vocabulary every day</Text>
@@ -34,19 +73,17 @@ const CustomDrawerContent = (props: any) => {
         </View>
       </View>
 
-      {/* Drawer Content */}
+      {/* Menu */}
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
 
       {/* Footer */}
       <View style={styles.footer}>
-        {/* App Version */}
         <TouchableOpacity style={styles.versionContainer}>
           <Text style={styles.versionText}>Version {appVersion}</Text>
         </TouchableOpacity>
 
-        {/* Logout */}
         <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
           <Ionicons name="log-out-outline" size={24} color="#bb3e03" />
           <Text style={styles.logoutText}>Logout</Text>
@@ -82,14 +119,13 @@ const Sidebar = () => {
       />
       <Drawer.Screen 
         name="ActivateApp" 
-        component={ActivateAppScreen} 
+        component={ActivateAppScreenWrapper} // <== Utilise le composant intermédiaire
         options={{
           drawerIcon: ({ color }) => (
             <Ionicons name="key" size={25} color="#bb3e03" />
           ),
         }} 
       />
-      {/* Ajoute GetStartedScreen dans ta navigation principale, pas ici dans Drawer */}
     </Drawer.Navigator>
   );
 };
@@ -100,11 +136,6 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#2541b2',
     alignItems: 'center',
-  },
-  logo: {
-    width: 80,
-    height: 80,
-    marginBottom: 10,
   },
   titleContainer: {
     alignItems: 'center',
@@ -146,6 +177,11 @@ const styles = StyleSheet.create({
     color: '#bb3e03',
     fontWeight: 'bold',
   },
+  center: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 });
 
 export default Sidebar;

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Utilisation de Ionicons d'Expo
+import { Ionicons } from '@expo/vector-icons';
 
 const ActivateAppScreen = () => {
   const [nomComplet, setNomComplet] = useState('');
@@ -11,17 +11,12 @@ const ActivateAppScreen = () => {
     console.log('Licence vérifiée avec : ', nomComplet, numeroTel);
   };
 
-  const handleInputChange = (input: string, type: string) => {
-    if (type === 'nomComplet') {
-      setNomComplet(input);
-    } else if (type === 'numeroTel') {
-      setNumeroTel(input);
-    }
+  useEffect(() => {
     validateForm();
-  };
+  }, [nomComplet, numeroTel]);
 
   const validateForm = () => {
-    if (nomComplet && numeroTel) {
+    if (nomComplet.trim() && numeroTel.trim()) {
       setIsFormValid(true);
     } else {
       setIsFormValid(false);
@@ -34,18 +29,18 @@ const ActivateAppScreen = () => {
         <View style={styles.card}>
           <Text style={styles.cardTitle}>Vérifier ma licence</Text>
 
-          {/* Champ Nom Complet avec icône */}
+          {/* Champ Nom Complet */}
           <View style={styles.inputContainer}>
             <Ionicons name="person-outline" size={22} color="#3a86ff" style={styles.icon} />
             <TextInput
               style={styles.input}
               placeholder="Nom complet"
               value={nomComplet}
-              onChangeText={(text) => handleInputChange(text, 'nomComplet')}
+              onChangeText={(text) => setNomComplet(text)}
             />
           </View>
 
-          {/* Champ Numéro de Téléphone avec icône */}
+          {/* Champ Numéro de Téléphone */}
           <View style={styles.inputContainer}>
             <Ionicons name="call-outline" size={22} color="#3a86ff" style={styles.icon} />
             <TextInput
@@ -53,11 +48,11 @@ const ActivateAppScreen = () => {
               placeholder="Numéro de téléphone"
               keyboardType="phone-pad"
               value={numeroTel}
-              onChangeText={(text) => handleInputChange(text, 'numeroTel')}
+              onChangeText={(text) => setNumeroTel(text)}
             />
           </View>
 
-          {/* Bouton de Soumission avec icône */}
+          {/* Bouton de Soumission */}
           <TouchableOpacity
             style={[styles.submitButton, !isFormValid && styles.disabledButton]}
             onPress={handleSubmit}
@@ -78,13 +73,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    marginBottom: 100,
     backgroundColor: '#f5f5f5',
   },
   cardContainer: {
     width: '100%',
     padding: 10,
-    marginBottom: 300,
     borderRadius: 10,
     backgroundColor: '#fff',
     shadowColor: '#000',
@@ -101,6 +94,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 20,
+    textAlign: 'center',
   },
   inputContainer: {
     flexDirection: 'row',
@@ -120,18 +114,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   submitButton: {
-    backgroundColor: '##8da9c4',
+    backgroundColor: '#8da9c4',
     paddingVertical: 15,
     borderRadius: 8,
-    fontSize: 14,
-    width: '100%',
-    height:50,
-    alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
+    height: 50,
   },
   disabledButton: {
-    backgroundColor: '#8da9c4',
+    backgroundColor: '#ccc',
   },
   submitButtonText: {
     fontSize: 16,
@@ -140,7 +132,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   buttonIcon: {
-    marginRight: 10,
+    marginRight: 5,
   },
 });
 

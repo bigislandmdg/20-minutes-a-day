@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -18,6 +18,8 @@ import AccentTrainingScreen from './src/screens/AccentTraining/AccentTrainingScr
 import PresentationScreen from './src/screens/Presentation/PresentationScreen';
 import VerbsScreen from './src/screens/Verbs/VerbsScreen';
 import Sidebar from './src/components/Sidebar';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import PayementScreen from './src/screens/Payement/PayementScreen';
 
 
 
@@ -26,6 +28,32 @@ const Stack = createStackNavigator();
 
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasPaid, setHasPaid] = useState(false);
+
+  useEffect(() => {
+    const checkPaymentStatus = async () => {
+      try {
+        const value = await AsyncStorage.getItem('hasPaid');
+        if (value === 'true') {
+          setHasPaid(true);
+        } else {
+          setHasPaid(false);
+        }
+      } catch (error) {
+        console.error('Error reading payment status', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    checkPaymentStatus();
+  }, []);
+
+  if (isLoading) {
+    return null; // ou un écran de chargement
+  }
+  
   return (
     
     <NavigationContainer>
@@ -34,6 +62,21 @@ export default function App() {
       <Stack.Navigator initialRouteName="GetStarted">
         <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Sidebar} options={{ headerShown: false }} />
+         
+         {/* Correction ici : PayementScreen avec les bonnes props */}
+        <Stack.Screen name="Payement" options={{ title: 'Payement' }}>
+          {(props) => (
+            <PayementScreen
+              {...props}
+              onClose={() => props.navigation.goBack()}
+              onPaymentSuccess={() => {
+                // Exemple: après paiement réussi, retour à Home
+                props.navigation.navigate('Home');
+              }}
+            />
+          )}
+        </Stack.Screen>
+
         <Stack.Screen name="DailyDialogues" component={DailyDialoguesScreen} />
         <Stack.Screen name="Grammar" component={GrammarScreen} />
         <Stack.Screen name="Debates" component={DebatesScreen} />

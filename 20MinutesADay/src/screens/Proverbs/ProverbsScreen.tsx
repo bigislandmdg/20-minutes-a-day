@@ -1,9 +1,11 @@
-import React, { useRef } from 'react';
-import { ScrollView, StyleSheet, View, TouchableOpacity } from 'react-native';
+
+import React, { useRef, useState } from 'react';
+import { ScrollView, StyleSheet, View, TouchableOpacity, Modal } from 'react-native';
 import { Card, List, Text, Button, IconButton } from 'react-native-paper';
 import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import { Audio } from 'expo-av';
+import PayementScreen from '../Payement/PayementScreen';
 
 const proverbs = [
   {
@@ -42,7 +44,9 @@ const proverbs = [
 ];
 
 const ProverbsScreen = () => {
-   
+
+  const [isLessonUnlocked, setIsLessonUnlocked] = useState(false); // <- Lock/Unlock
+  const [isPaymentModalVisible, setPaymentModalVisible] = useState(false);
   const sound = useRef<Audio.Sound | null>(null);
        
          // Fonction pour jouer l'audio
@@ -86,6 +90,11 @@ const ProverbsScreen = () => {
       </List.Accordion>
     ));
 
+    const handlePaymentSuccess = () => {
+      setIsLessonUnlocked(true);
+      setPaymentModalVisible(false);
+    };
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.screenTitle}>Proverbs</Text>
@@ -101,6 +110,39 @@ const ProverbsScreen = () => {
           </TouchableOpacity>
         </View>
 
+        {proverbs.map((section) => (
+        <Card key={section.id} style={styles.card}>
+          <Card.Title
+            title={<Text style={styles.cardTitle}>{section.title}</Text>}
+          />
+          <Card.Content>
+            <Text style={styles.description}>{section.description}</Text>
+
+            {isLessonUnlocked ? (
+              <>
+                {renderContent(section.content1)}
+                {renderContent(section.content2)}
+                {renderContent(section.content3)}
+                {renderContent(section.content4)}
+              </>
+            ) : (
+              <View style={styles.lockedContainer}>
+                <Text style={styles.lockedText}>
+                  This lesson is locked. Please purchase to unlock.
+                </Text>
+                <Button
+                  mode="contained"
+                  onPress={() => setPaymentModalVisible(true)}
+                  style={styles.paymentButton}
+                >
+                  Unlock Lesson
+                </Button>
+              </View>
+            )}
+          </Card.Content>
+        </Card>
+      ))}
+
       {proverbs.map((section) => (
         <Card key={section.id} style={styles.card}>
           <Card.Title
@@ -108,13 +150,41 @@ const ProverbsScreen = () => {
           />
           <Card.Content>
             <Text style={styles.description}>{section.description}</Text>
-            {renderContent(section.content1)}
-            {renderContent(section.content2)}
-            {renderContent(section.content3)}
-            {renderContent(section.content4)}
+
+            {isLessonUnlocked ? (
+              <>
+                {renderContent(section.content1)}
+                {renderContent(section.content2)}
+                {renderContent(section.content3)}
+                {renderContent(section.content4)}
+              </>
+            ) : (
+              <View style={styles.lockedContainer}>
+                <Text style={styles.lockedText}>
+                  This lesson is locked. Please purchase to unlock.
+                </Text>
+                <Button
+                  mode="contained"
+                  onPress={() => setPaymentModalVisible(true)}
+                  style={styles.paymentButton}
+                >
+                  Unlock Lesson
+                </Button>
+              </View>
+            )}
           </Card.Content>
         </Card>
       ))}
+
+       {/* Modal for Payment */}
+      <Modal
+        visible={isPaymentModalVisible}
+        animationType="slide"
+        transparent={false}
+      >
+        <PayementScreen onClose={() => setPaymentModalVisible(false)} onPaymentSuccess={handlePaymentSuccess} />
+      </Modal>
+
     </ScrollView>
   );
 };
@@ -185,6 +255,19 @@ const styles = StyleSheet.create({
   audioButton: {
     marginLeft: 10,
     padding: 10,
+  },
+  lockedContainer: {
+    alignItems: 'center',
+    marginVertical: 20,
+  },
+  lockedText: {
+    fontSize: 16,
+    color: '#888',
+    marginBottom: 12,
+    textAlign: 'center',
+  },
+  paymentButton: {
+    backgroundColor: '#bb3e03',
   },
 });
 
