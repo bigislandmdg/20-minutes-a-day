@@ -4,6 +4,7 @@ import { Card, Text, List, IconButton } from 'react-native-paper';
 import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import { Audio } from 'expo-av';
+import * as FileSystem from 'expo-file-system';
 
 const dialogues1 = [
   {
@@ -1946,7 +1947,8 @@ const dialogues12 = [
 ];
 
 const DailyDialoguesScreen = () => {
-  const sound = useRef<Audio.Sound | null>(null);
+  const AUDIO_DIR = FileSystem.documentDirectory ? FileSystem.documentDirectory + 'audios/' : '';
+  const sound = useRef<Audio.Sound | null>(null); // Référence pour le son
 
   // Fonction pour jouer l'audio
   const playSound = async () => {
@@ -1960,6 +1962,53 @@ const DailyDialoguesScreen = () => {
     //await sound.current.playAsync();
   };
   
+  const playAudio = async (audioFileName: string): Promise<void> => {
+    try {
+      //const { sound } = await Audio.Sound.createAsync(
+        //require(`../assets/audio/${audioFileName}`) // adapte le chemin
+      //);
+      //await sound.playAsync();
+    } catch (error) {
+      console.log('Erreur lecture audio', error);
+    }
+  };
+
+  // Notre dossier audios
+
+ const playOrDownloadAudio = async (fileName: string, remoteUrl: string): Promise<void> => {
+  try {
+    // Créer le dossier "audios" si nécessaire
+    const dirInfo = await FileSystem.getInfoAsync(AUDIO_DIR);
+    if (!dirInfo.exists) {
+      await FileSystem.makeDirectoryAsync(AUDIO_DIR, { intermediates: true });
+    }
+
+    const fileUri = AUDIO_DIR + fileName; // chemin complet du fichier local
+
+    const fileInfo = await FileSystem.getInfoAsync(fileUri);
+
+    if (!fileInfo.exists) {
+      console.log('Téléchargement audio...');
+      await FileSystem.downloadAsync(remoteUrl, fileUri);
+      console.log('Téléchargement terminé');
+    } else {
+      console.log('Audio déjà téléchargé');
+    }
+
+    const { sound } = await Audio.Sound.createAsync({ uri: fileUri });
+    await sound.playAsync();
+
+    sound.setOnPlaybackStatusUpdate((status) => {
+      if (status.isLoaded && status.didJustFinish) {
+        sound.unloadAsync();
+      }
+    });
+
+  } catch (error) {
+    console.error('Erreur lors du téléchargement/lecture:', error);
+  }
+};
+
   const speak = (text: string) => {
     Speech.speak(text, {
       language: 'en',
@@ -1987,6 +2036,14 @@ const DailyDialoguesScreen = () => {
           <Card.Title
                title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
             subtitle={dialogue.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => playAudio('audioFileName.mp3')} // Replace 'audioFileName.mp3' with the actual file name
+              />
+            )}
+            
           />
           <Card.Content>
           <List.Accordion
@@ -2135,6 +2192,13 @@ const DailyDialoguesScreen = () => {
           <Card.Title
             title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
             subtitle={dialogue.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => playAudio('audioFileName.mp3')} // Replace 'audioFileName.mp3' with the actual file name
+              />
+            )}
           />
           <Card.Content>
             <List.Accordion
@@ -2214,7 +2278,14 @@ const DailyDialoguesScreen = () => {
         <Card key={dialogue.id} style={styles.card}>
           <Card.Title
               title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
-            subtitle={dialogue.description}
+              subtitle={dialogue.description}
+              right={(props) => (
+                <IconButton
+                  {...props}
+                  icon="volume-high"
+                  onPress={() => playAudio('audioFileName.mp3')} // Replace 'audioFileName.mp3' with the actual file name
+                />
+              )}
           />
           <Card.Content>
           <List.Accordion
@@ -2337,6 +2408,13 @@ const DailyDialoguesScreen = () => {
             
             title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
             subtitle={dialogue.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => playAudio('audioFileName.mp3')} // Replace 'audioFileName.mp3' with the actual file name
+              />
+            )}
           />
           <Card.Content>
             <List.Accordion
@@ -2464,6 +2542,13 @@ const DailyDialoguesScreen = () => {
             
             title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
             subtitle={dialogue.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => playAudio('audioFileName.mp3')} // Replace 'audioFileName.mp3' with the actual file name
+              />
+            )}
           />
           <Card.Content>
             <List.Accordion
@@ -2558,6 +2643,13 @@ const DailyDialoguesScreen = () => {
             
             title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
             subtitle={dialogue.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => playAudio('audioFileName.mp3')} // Replace 'audioFileName.mp3' with the actual file name
+              />
+            )}
           />
           <Card.Content>
             <List.Accordion
@@ -2652,6 +2744,13 @@ const DailyDialoguesScreen = () => {
             
             title={<Text style={{ fontWeight: 'bold' }}>{dialogue.title}</Text>}
             subtitle={dialogue.description}
+            right={(props) => (
+              <IconButton
+                {...props}
+                icon="volume-high"
+                onPress={() => playAudio('audioFileName.mp3')} // Replace 'audioFileName.mp3' with the actual file name
+              />
+            )}
           />
           <Card.Content>
             <List.Accordion

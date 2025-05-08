@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Dimensions, ScrollView, Anima
 import { Card, FAB } from 'react-native-paper';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import PayementScreen from '../Payement/PayementScreen';
+import DownloadedAudioScreen from '../DownloadedAudio/DownloadedAudioScreen';
 
 const windowWidth = Dimensions.get('window').width;
 
@@ -64,6 +65,7 @@ export default function HomeScreen() {
                   <Text>Track your progress and stay consistent! 💪</Text>
            </Card.Content>
           </Card>
+          <DownloadedAudioScreen />
           </TouchableOpacity>
         </View>
    
@@ -237,7 +239,13 @@ export default function HomeScreen() {
           inputRange: [0, 1],
           outputRange: [500, 0],  // Slide from bottom to top
         }) }] }]}>
-          <PayementScreen onClose={toggleModal} />
+          <PayementScreen 
+            onClose={toggleModal} 
+            onPaymentSuccess={() => {
+              console.log('Payment was successful!');
+              toggleModal();
+            }} 
+          />
         </Animated.View>
       )}
      

@@ -20,6 +20,7 @@ import VerbsScreen from './src/screens/Verbs/VerbsScreen';
 import Sidebar from './src/components/Sidebar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import PayementScreen from './src/screens/Payement/PayementScreen';
+import DownloadedAudioScreen from './src/screens/DownloadedAudio/DownloadedAudioScreen';
 
 
 
@@ -62,6 +63,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="GetStarted">
         <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Sidebar} options={{ headerShown: false }} />
+        <Stack.Screen name="Audio" component={DownloadedAudioScreen} />
          
          {/* Correction ici : PayementScreen avec les bonnes props */}
         <Stack.Screen name="Payement" options={{ title: 'Payement' }}>

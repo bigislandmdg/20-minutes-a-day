@@ -10,6 +10,7 @@ import ActivateAppScreen from '../screens/ActivateApp/ActivateAppScreen';
 import AboutScreen from '../screens/About/AboutScreen';
 import GetStartedScreen from '../screens/GetStarted/GetStartedScreen';
 import PayementScreen from '../screens/Payement/PayementScreen'; // <-- Ton PaymentScreen
+import DownloadedAudioScreen from '../screens/DownloadedAudio/DownloadedAudioScreen';
 
 const appVersion = '1.1.0';
 
@@ -126,6 +127,15 @@ const Sidebar = () => {
           ),
         }} 
       />
+      <Drawer.Screen 
+       name="Audio Downloaded" 
+       component={DownloadedAudioScreen}
+       options={{
+        drawerIcon: ({ color }) => (
+        <Ionicons name="download" size={24} color="#bb3e03" />
+      ),
+    }} 
+  />
     </Drawer.Navigator>
   );
 };
