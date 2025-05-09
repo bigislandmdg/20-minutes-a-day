@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Dimensions, ScrollView, Anima
 import { Card, FAB } from 'react-native-paper';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import PayementScreen from '../Payement/PayementScreen';
-import DownloadedAudioScreen from '../DownloadedAudio/DownloadedAudioScreen';
+//import DownloadedAudioScreen from '../DownloadedAudio/DownloadedAudioScreen';
 
 const windowWidth = Dimensions.get('window').width;
 
@@ -65,7 +65,9 @@ export default function HomeScreen() {
                   <Text>Track your progress and stay consistent! 💪</Text>
            </Card.Content>
           </Card>
-          <DownloadedAudioScreen />
+         {/*
+             <DownloadedAudioScreen />
+         */} 
           </TouchableOpacity>
         </View>
    

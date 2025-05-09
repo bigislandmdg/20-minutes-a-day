@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import { Audio } from 'expo-av';
 import PayementScreen from '../Payement/PayementScreen';
+import { useSearch } from '../../contexts/SearchContext';
 
 const proverbs = [
   {
@@ -48,6 +49,7 @@ const ProverbsScreen = () => {
   const [isLessonUnlocked, setIsLessonUnlocked] = useState(false); // <- Lock/Unlock
   const [isPaymentModalVisible, setPaymentModalVisible] = useState(false);
   const sound = useRef<Audio.Sound | null>(null);
+  const { searchTerm } = useSearch();
        
          // Fonction pour jouer l'audio
          const playSound = async () => {
@@ -69,8 +71,14 @@ const ProverbsScreen = () => {
     });
   };
 
-  const renderContent = (content: any[]) =>
-    content.map((item, index) => (
+  const renderContent = (content: any[]) => {
+    // Filtrer ici :
+    const filteredContent = content.filter(item =>
+      item.proverb.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  
+    return filteredContent.map((item, index) => (
       <List.Accordion
         key={index}
         title={item.proverb}
@@ -89,8 +97,9 @@ const ProverbsScreen = () => {
         <Text style={styles.content}>{item.description}</Text>
       </List.Accordion>
     ));
-
-    const handlePaymentSuccess = () => {
+  };
+  
+  const handlePaymentSuccess = () => {
       setIsLessonUnlocked(true);
       setPaymentModalVisible(false);
     };

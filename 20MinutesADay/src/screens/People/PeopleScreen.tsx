@@ -4,6 +4,7 @@ import { Card, Text, List } from 'react-native-paper';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import { Audio } from 'expo-av';
+import { useSearch } from '../../contexts/SearchContext';
 
 const headImage = require('../../../assets/images/humanbody.png');
 const faceImage = require('../../../assets/images/womanface.jpg');
@@ -183,6 +184,7 @@ const speak = (text: string) => {
 
 const PeopleScreen = () => {
    const sound = useRef<Audio.Sound | null>(null);
+    const { searchTerm } = useSearch();
               
       // Fonction pour jouer l'audio
       const playSound = async () => {
@@ -195,6 +197,29 @@ const PeopleScreen = () => {
                   //sound.current = newSound;
                   //await sound.current.playAsync();
                 };
+                const renderContent = (content: any[]) => {
+                  // Filtrer ici :
+                  const filteredContent = content.filter(item =>
+                    item.proverb.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    item.description.toLowerCase().includes(searchTerm.toLowerCase())
+                  );
+                
+                  return filteredContent.map((item, index) => (
+                    <List.Accordion
+                      key={index}
+                      title={item.proverb}
+                      left={(props) => <List.Icon {...props} icon="format-quote-close" />}
+                      style={styles.accordion}
+                    >
+                      <View style={styles.subtitleContainer}>
+                        <Text style={styles.subtitle}>{item.subtitle}</Text>
+                        
+                      </View>
+                      <Text style={styles.content}>{item.description}</Text>
+                    </List.Accordion>
+                  ));
+                };
+                
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>People</Text>
@@ -970,6 +995,12 @@ const styles = StyleSheet.create({
   audioButton: {
     marginLeft: 14,
     padding: 10,
+  },
+  subtitleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginVertical: 8,
   },
   
 });

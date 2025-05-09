@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
+import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { createDrawerNavigator, DrawerItem, DrawerContentScrollView } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -9,14 +8,16 @@ import HomeScreen from '../screens/Home/HomeScreen';
 import ActivateAppScreen from '../screens/ActivateApp/ActivateAppScreen'; 
 import AboutScreen from '../screens/About/AboutScreen';
 import GetStartedScreen from '../screens/GetStarted/GetStartedScreen';
-import PayementScreen from '../screens/Payement/PayementScreen'; // <-- Ton PaymentScreen
+import PayementScreen from '../screens/Payement/PayementScreen';
 import DownloadedAudioScreen from '../screens/DownloadedAudio/DownloadedAudioScreen';
+import SettingsScreen from '../screens/Settings/SettingsScreen';
+import HelpFeedbackScreen from '../screens/HelpFeedback/HelpFeedbackScreen';
 
 const appVersion = '1.1.0';
 
 const Drawer = createDrawerNavigator();
 
-// ===> NOUVEAU : Composant intermédiaire
+// Composant intermédiaire pour vérifier le paiement
 const ActivateAppScreenWrapper = () => {
   const [hasPaid, setHasPaid] = React.useState<boolean | null>(null);
 
@@ -24,30 +25,24 @@ const ActivateAppScreenWrapper = () => {
     const checkPaymentStatus = async () => {
       try {
         const value = await AsyncStorage.getItem('hasPaid');
-        if (value === 'true') {
-          setHasPaid(true);
-        } else {
-          setHasPaid(false);
-        }
+        setHasPaid(value === 'true');
       } catch (error) {
         console.error('Error fetching payment status:', error);
         setHasPaid(false);
       }
     };
-
     checkPaymentStatus();
   }, []);
 
-  // Tu peux afficher un loading en attendant le statut
   if (hasPaid === null) {
     return (
       <View style={styles.center}>
+        <ActivityIndicator size="large" color="#2541b2" />
         <Text>Loading...</Text>
       </View>
     );
   }
 
-  // Rediriger selon paiement
   return hasPaid ? (
     <ActivateAppScreen />
   ) : (
@@ -58,6 +53,7 @@ const ActivateAppScreenWrapper = () => {
   );
 };
 
+// Custom Drawer Content
 const CustomDrawerContent = (props: any) => {
   const handleLogout = () => {
     props.navigation.navigate('GetStarted');
@@ -70,13 +66,45 @@ const CustomDrawerContent = (props: any) => {
         <View style={styles.titleContainer}>
           <Text style={styles.appTitle}>20 Minutes A Day</Text>
           <Text style={styles.subTitle}>Improve your vocabulary every day</Text>
-          <Text style={styles.subTitle}>With Rene Fulgence Tovondrainy</Text>
+          <Text style={styles.subTitle}>With Réné Fulgence Tovondrainy</Text>
         </View>
       </View>
 
-      {/* Menu */}
+      {/* Drawer Items */}
       <DrawerContentScrollView {...props}>
-        <DrawerItemList {...props} />
+        {/* Section 1 - General */}
+        <Text style={styles.sectionTitle}>General</Text>
+        {props.state.routes.slice(0, 4).map((route: any, index: number) => (
+          <View key={route.key}>
+            {index === 3 && <View style={styles.divider} />}
+            <DrawerItem
+              label={({ color }) => (
+                <Text style={{ color }}>{props.descriptors[route.key]?.options?.drawerLabel ?? route.name}</Text>
+              )}
+              icon={({ color, size }) =>
+                props.descriptors[route.key]?.options?.drawerIcon?.({ color, size })
+              }
+              onPress={() => props.navigation.navigate(route.name)}
+            />
+          </View>
+        ))}
+
+        <View style={styles.divider} />
+
+        {/* Section 2 - Settings & Help */}
+        <Text style={styles.sectionTitle}>Settings & Help</Text>
+        {props.state.routes.slice(4).map((route: any) => (
+          <DrawerItem
+            key={route.key}
+            label={({ color }) => (
+              <Text style={{ color }}>{props.descriptors[route.key]?.options?.drawerLabel ?? route.name}</Text>
+            )}
+            icon={({ color, size }) =>
+              props.descriptors[route.key]?.options?.drawerIcon?.({ color, size })
+            }
+            onPress={() => props.navigation.navigate(route.name)}
+          />
+        ))}
       </DrawerContentScrollView>
 
       {/* Footer */}
@@ -84,7 +112,6 @@ const CustomDrawerContent = (props: any) => {
         <TouchableOpacity style={styles.versionContainer}>
           <Text style={styles.versionText}>Version {appVersion}</Text>
         </TouchableOpacity>
-
         <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
           <Ionicons name="log-out-outline" size={24} color="#bb3e03" />
           <Text style={styles.logoutText}>Logout</Text>
@@ -104,8 +131,13 @@ const Sidebar = () => {
         name="Home" 
         component={HomeScreen} 
         options={{
-          drawerIcon: ({ color }) => (
-            <Ionicons name="home" size={24} color="#bb3e03" />
+          drawerLabel: 'Home',
+          drawerIcon: ({ color, size, focused }) => (
+            <Ionicons 
+              name="home" 
+              size={25} 
+              color={focused ? 'red' : color} 
+            />
           ),
         }}
       />
@@ -113,29 +145,53 @@ const Sidebar = () => {
         name="About" 
         component={AboutScreen} 
         options={{
-          drawerIcon: ({ color }) => (
-            <Ionicons name="information-circle" size={25} color="#bb3e03" />
+          drawerLabel: 'About',
+          drawerIcon: ({ color, size, focused }) => (
+            <Ionicons name="information-circle" size={25} 
+            color={color} />
           ),
-        }} 
+        }}
       />
       <Drawer.Screen 
         name="ActivateApp" 
-        component={ActivateAppScreenWrapper} // <== Utilise le composant intermédiaire
+        component={ActivateAppScreenWrapper}
         options={{
+          drawerLabel: 'Activate App',
           drawerIcon: ({ color }) => (
-            <Ionicons name="key" size={25} color="#bb3e03" />
+            <Ionicons name="key" size={25} color={color} />
           ),
-        }} 
+        }}
       />
       <Drawer.Screen 
-       name="Audio Downloaded" 
-       component={DownloadedAudioScreen}
-       options={{
-        drawerIcon: ({ color }) => (
-        <Ionicons name="download" size={24} color="#bb3e03" />
-      ),
-    }} 
-  />
+        name="Audio Downloaded" 
+        component={DownloadedAudioScreen}
+        options={{
+          drawerLabel: 'Audio Downloaded',
+          drawerIcon: ({ color }) => (
+            <Ionicons name="download" size={25} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen 
+        name="Settings" 
+        component={SettingsScreen} 
+        options={{
+          drawerLabel: 'Settings',
+          drawerIcon: ({ color }) => (
+            <Ionicons name="settings" size={25} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen 
+        name="Help & Feedback" 
+        component={HelpFeedbackScreen} 
+        options={{
+          drawerLabel: 'Help & Feedback',
+          drawerIcon: ({ color }) => (
+            <Ionicons name="help-circle" size={24} color={color} />
+          ),
+        }}
+      />
     </Drawer.Navigator>
   );
 };
@@ -158,7 +214,7 @@ const styles = StyleSheet.create({
   subTitle: {
     fontSize: 14,
     color: '#fff',
-    marginTop: 4,
+    marginTop: 5,
     textAlign: 'center',
   },
   footer: {
@@ -166,13 +222,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 15,
-    borderTopWidth: 2,
+    borderTopWidth: 1,
     borderColor: '#eee',
     backgroundColor: '#f9f9f9',
-  },  
+  },
   versionContainer: {
     justifyContent: 'center',
-  },  
+  },
   versionText: {
     fontSize: 14,
     color: '#777',
@@ -180,7 +236,7 @@ const styles = StyleSheet.create({
   logoutButton: {
     flexDirection: 'row',
     alignItems: 'center',
-  },  
+  },
   logoutText: {
     marginLeft: 8,
     fontSize: 16,
@@ -191,7 +247,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
+  divider: {
+    height: 1,
+    backgroundColor: '#ccc',
+    marginVertical: 10,
+  },
+  sectionTitle: {
+    paddingVertical: 10,
+    paddingLeft: 15,
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#333',
+  },
 });
 
 export default Sidebar;
