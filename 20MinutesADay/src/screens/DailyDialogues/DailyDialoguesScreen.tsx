@@ -2027,7 +2027,7 @@ const DailyDialoguesScreen = () => {
 
     {/* Bouton pour jouer l'audio */}
     <TouchableOpacity style={styles.audioButton} onPress={playSound}>
-      <Ionicons name="volume-high" size={24} color="#8da9c4" />
+      <Ionicons name="volume-high" size={24} color="#004e98" />
     </TouchableOpacity>
   </View>
 
@@ -2048,7 +2048,7 @@ const DailyDialoguesScreen = () => {
           <Card.Content>
           <List.Accordion
         title="GREETING PHRASES"
-        left={(props) => <List.Icon {...props} icon="handshake" color='#8da9c4' />}
+        left={(props) => <List.Icon {...props} icon="handshake" color='#004e98' />}
       >
         {dialogue.content1.map((line, index) => (
           <React.Fragment key={index}>
@@ -2062,7 +2062,7 @@ const DailyDialoguesScreen = () => {
                   icon="volume-high"
                   size={24}
                   onPress={() => speak(line.sentence)}
-                  iconColor="#8da9c4"
+                  iconColor="#004e98"
                 />
               )}
             />
@@ -2085,7 +2085,7 @@ const DailyDialoguesScreen = () => {
             {/* Second Accordion */}
             <List.Accordion
               title="RESPONDING TO GREETINGS"
-              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#004e98' />}
             >
               {dialogue.content2.map((line, index) => (
                 <List.Item
@@ -2098,7 +2098,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2108,7 +2108,7 @@ const DailyDialoguesScreen = () => {
             {/* Third Accordion */}
             <List.Accordion
               title="ASKING THE NEWS"
-              left={(props) => <List.Icon {...props} icon="newspaper" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="newspaper" color='#004e98' />}
             >
               {dialogue.content3.map((line, index) => (
                 <List.Item
@@ -2121,7 +2121,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2130,7 +2130,7 @@ const DailyDialoguesScreen = () => {
 
             <List.Accordion
   title="ASKING SB's NAME"
-  left={(props) => <List.Icon {...props} icon="account-group" color='#8da9c4' />}
+  left={(props) => <List.Icon {...props} icon="account-group" color='#004e98' />}
 >
   {dialogue.content4.map((line, index) => (
     <List.Item
@@ -2152,7 +2152,7 @@ const DailyDialoguesScreen = () => {
           icon="volume-high"
           size={24}
           onPress={() => speak(line.sentence)}
-          iconColor="#8da9c4"
+          iconColor="#004e98"
         />
       )}
     />
@@ -2163,7 +2163,7 @@ const DailyDialoguesScreen = () => {
             {/* Fourth Accordion: Asking SB's Origin */}
             <List.Accordion
               title="ASKING SB's ORIGIN"
-              left={(props) => <List.Icon {...props} icon="map-marker" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="map-marker" color='#004e98' />}
             >
               {dialogue.content5.map((line, index) => (
                 <List.Item
@@ -2176,7 +2176,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2203,7 +2203,7 @@ const DailyDialoguesScreen = () => {
           <Card.Content>
             <List.Accordion
               title="ASKING SB’S DWELLING"
-              left={(props) => <List.Icon {...props} icon="home-city" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="home-city" color='#004e98' />}
             >
               {dialogue.content1.map((line, index) => (
                 <List.Item
@@ -2216,7 +2216,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2226,7 +2226,7 @@ const DailyDialoguesScreen = () => {
             {/* Second Accordion */}
             <List.Accordion
               title="ASKING SB’S IF THEY HAVE SIBLINGS"
-              left={(props) => <List.Icon {...props} icon="account-group" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="account-group" color='#004e98' />}
             >
               {dialogue.content2.map((line, index) => (
                 <List.Item
@@ -2239,7 +2239,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                   
@@ -2250,7 +2250,7 @@ const DailyDialoguesScreen = () => {
             {/* Third Accordion */}
             <List.Accordion
               title="ASKING SB’S DIRECTION"
-              left={(props) => <List.Icon {...props} icon="compass" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="compass" color='#004e98' />}
             >
               {dialogue.content3.map((line, index) => (
                 <List.Item
@@ -2263,7 +2263,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2290,7 +2290,7 @@ const DailyDialoguesScreen = () => {
           <Card.Content>
           <List.Accordion
   title="ASKING SB’S STAY"
-  left={(props) => <List.Icon {...props} icon="home-city" color='#8da9c4' />}
+  left={(props) => <List.Icon {...props} icon="home-city" color='#004e98' />}
 >
   {dialogue.content1.map((line, index) => (
     <List.Item
@@ -2324,7 +2324,7 @@ const DailyDialoguesScreen = () => {
           icon="volume-high"
           size={24}
           onPress={() => speak(line.sentence)}
-          iconColor="#8da9c4"
+          iconColor="#004e98"
         />
       )}
     />
@@ -2334,7 +2334,7 @@ const DailyDialoguesScreen = () => {
 
 <List.Accordion
   title="TO BE"
-  left={(props) => <List.Icon {...props} icon="account-group" color='#8da9c4' />}
+  left={(props) => <List.Icon {...props} icon="account-group" color='#004e98' />}
 >
   <View style={{ flexDirection: 'row', padding: 8, backgroundColor: '#f0f0f0' }}>
     <Text style={[styles.header, { flex: 1 }]}>Affirmative</Text>
@@ -2351,7 +2351,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={24}
         onPress={() => speak(`${line.affirmative}, ${line.interrogative}, ${line.negative}`)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -2359,7 +2359,7 @@ const DailyDialoguesScreen = () => {
   
 <List.Accordion
   title="EXPRESSIONS"
-  left={(props) => <List.Icon {...props} icon="comment" color="#8da9c4" />}
+  left={(props) => <List.Icon {...props} icon="comment" color="#004e98" />}
 >
   {/* En-tête */}
   <View style={{ flexDirection: 'row', padding: 8, backgroundColor: '#f0f0f0' }}>
@@ -2393,7 +2393,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={24}
         onPress={() => speak(group.terms.join(", ") + " " + group.pronunciations.join(", "))}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -2419,7 +2419,7 @@ const DailyDialoguesScreen = () => {
           <Card.Content>
             <List.Accordion
               title="SAYING GOODBYE"
-              left={(props) => <List.Icon {...props} icon="home-city" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="home-city" color='#004e98' />}
             >
               {dialogue.content1.map((line, index) => (
                 <List.Item
@@ -2432,7 +2432,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2442,7 +2442,7 @@ const DailyDialoguesScreen = () => {
             {/* Second Accordion */}
             <List.Accordion
               title="TAKE A LEAVE"
-              left={(props) => <List.Icon {...props} icon="account-group" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="account-group" color='#004e98' />}
             >
               {dialogue.content2.map((line, index) => (
                 <List.Item
@@ -2455,7 +2455,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2465,7 +2465,7 @@ const DailyDialoguesScreen = () => {
             {/* Third Accordion */}
             <List.Accordion
               title="TRAVELING (Voyage)"
-              left={(props) => <List.Icon {...props} icon="compass" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="compass" color='#004e98' />}
             >
               {dialogue.content3.map((line, index) => (
                 <List.Item
@@ -2478,7 +2478,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2489,7 +2489,7 @@ const DailyDialoguesScreen = () => {
              {/* Third Accordion */}
             <List.Accordion
               title="FOR A MEAL (Repas)"
-              left={(props) => <List.Icon {...props} icon="food" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="food" color='#004e98' />}
             >
               {dialogue.content4.map((line, index) => (
                 <List.Item
@@ -2502,7 +2502,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2512,7 +2512,7 @@ const DailyDialoguesScreen = () => {
 {/* Third Accordion */}
 <List.Accordion
               title="RECEIVING PEOPLE (Acceillir qlq1)"
-              left={(props) => <List.Icon {...props} icon="account" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="account" color='#004e98' />}
             >
               {dialogue.content5.map((line, index) => (
                 <List.Item
@@ -2525,7 +2525,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2553,7 +2553,7 @@ const DailyDialoguesScreen = () => {
           <Card.Content>
             <List.Accordion
               title=" ASKING SB’S JOB"
-              left={(props) => <List.Icon {...props} icon="home-city" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="home-city" color='#004e98' />}
             >
               {dialogue.content1.map((line, index) => (
                 <List.Item
@@ -2566,7 +2566,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2576,7 +2576,7 @@ const DailyDialoguesScreen = () => {
             {/* Second Accordion */}
             <List.Accordion
               title="SCHOOLING"
-              left={(props) => <List.Icon {...props} icon="school" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="school" color='#004e98' />}
             >
                {dialogue.content2.map((line, index) => (
   <List.Item
@@ -2601,7 +2601,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={24}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     )}
   />
@@ -2612,7 +2612,7 @@ const DailyDialoguesScreen = () => {
             {/* Third Accordion */}
             <List.Accordion
               title="GENERAL QUESTION"
-              left={(props) => <List.Icon {...props} icon="information" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="information" color='#004e98' />}
             >
               {dialogue.content3.map((line, index) => (
                 <List.Item
@@ -2625,7 +2625,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2654,7 +2654,7 @@ const DailyDialoguesScreen = () => {
           <Card.Content>
             <List.Accordion
               title="PRESENTATION"
-              left={(props) => <List.Icon {...props} icon="account" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="account" color='#004e98' />}
             >
               {dialogue.content1.map((line, index) => (
                 <List.Item
@@ -2667,7 +2667,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2677,7 +2677,7 @@ const DailyDialoguesScreen = () => {
             {/* Second Accordion */}
             <List.Accordion
               title="INTRODUCING PEOPLE"
-              left={(props) => <List.Icon {...props} icon="account" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="account" color='#004e98' />}
             >
                {dialogue.content2.map((line, index) => (
   <List.Item
@@ -2702,7 +2702,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={24}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     )}
   />
@@ -2713,7 +2713,7 @@ const DailyDialoguesScreen = () => {
             {/* Third Accordion */}
             <List.Accordion
               title="ASKING SB WHERE HE WAS"
-              left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="comment" color='#004e98' />}
             >
               {dialogue.content3.map((line, index) => (
                 <List.Item
@@ -2726,7 +2726,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2755,7 +2755,7 @@ const DailyDialoguesScreen = () => {
           <Card.Content>
             <List.Accordion
               title="FAMILY RELATIONSHIP"
-              left={(props) => <List.Icon {...props} icon="account-group" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="account-group" color='#004e98' />}
             >
               {dialogue.content1.map((line, index) => (
                 <List.Item
@@ -2768,7 +2768,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2778,7 +2778,7 @@ const DailyDialoguesScreen = () => {
             {/* Second Accordion */}
             <List.Accordion
               title="COMPLIMENT"
-              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#004e98' />}
             >
                {dialogue.content2.map((line, index) => (
   <List.Item
@@ -2803,7 +2803,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={24}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     )}
   />
@@ -2814,7 +2814,7 @@ const DailyDialoguesScreen = () => {
             {/* Third Accordion */}
             <List.Accordion
               title="EXPRESSIONS"
-              left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="comment" color='#004e98' />}
             >
               {dialogue.content3.map((line, index) => (
                 <List.Item
@@ -2827,7 +2827,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2848,7 +2848,7 @@ const DailyDialoguesScreen = () => {
           <Card.Content>
             <List.Accordion
               title="TELLING THE TIME"
-              left={(props) => <List.Icon {...props} icon="clock" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="clock" color='#004e98' />}
             >
               {dialogue.content1.map((line, index) => (
                 <List.Item
@@ -2862,7 +2862,7 @@ const DailyDialoguesScreen = () => {
                       icon="volume-high"
                       size={24}
                       onPress={() => speak(line.sentence)}
-                      iconColor="#8da9c4"
+                      iconColor="#004e98"
                     />
                   )}
                 />
@@ -2872,7 +2872,7 @@ const DailyDialoguesScreen = () => {
             {/* Second Accordion */}
             <List.Accordion
               title="SAYING THANK YOU"
-              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#004e98' />}
             >
                {dialogue.content2.map((line, index) => (
                 <List.Item
@@ -2889,7 +2889,7 @@ const DailyDialoguesScreen = () => {
                     icon="volume-high"
                     size={24}
                     onPress={() => speak(line.sentence)}
-                    iconColor="#8da9c4"
+                    iconColor="#004e98"
                   />
                 )}
               />              
@@ -2912,7 +2912,7 @@ const DailyDialoguesScreen = () => {
             <List.Accordion
               title="MINOR SICKNESS"
                left={(props) => (
-               <List.Icon {...props} icon="hospital" color="#8da9c4" />
+               <List.Icon {...props} icon="hospital" color="#004e98" />
                )}
               >
              {dialogue.content1.map((line, index) => (
@@ -2944,7 +2944,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -2953,7 +2953,7 @@ const DailyDialoguesScreen = () => {
             {/* Second Accordion */}
             <List.Accordion
               title="SAYING THANK YOU"
-              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#8da9c4' />}
+              left={(props) => <List.Icon {...props} icon="emoticon-happy" color='#004e98' />}
             >
                {dialogue.content2.map((line, index) => (
                 <List.Item
@@ -2970,7 +2970,7 @@ const DailyDialoguesScreen = () => {
                     icon="volume-high"
                     size={24}
                     onPress={() => speak(line.sentence)}
-                    iconColor="#8da9c4"
+                    iconColor="#004e98"
                   />
                 )}
               />              
@@ -2993,7 +2993,7 @@ const DailyDialoguesScreen = () => {
           <List.Accordion
   title="STATING YOUR CONCURRENCE"
   left={(props) => (
-    <List.Icon {...props} icon="handshake" color="#8da9c4" />
+    <List.Icon {...props} icon="handshake" color="#004e98" />
   )}
 >
   {dialogue.content1.map((line, index) => (
@@ -3025,7 +3025,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3036,7 +3036,7 @@ const DailyDialoguesScreen = () => {
             <List.Accordion
   title="STATING THAT YOU UNDERSTAND"
   left={(props) => (
-    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+    <List.Icon {...props} icon="emoticon-confused" color="#004e98" />
   )}
 >
   {dialogue.content2.map((line, index) => (
@@ -3069,7 +3069,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3079,7 +3079,7 @@ const DailyDialoguesScreen = () => {
           <List.Accordion
   title="STATING THAT YOU DON'T UNDERSTAND"
   left={(props) => (
-    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+    <List.Icon {...props} icon="emoticon-confused" color="#004e98" />
   )}
 >
   {dialogue.content3.map((line, index) => (
@@ -3112,7 +3112,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3120,9 +3120,9 @@ const DailyDialoguesScreen = () => {
 
       {/* Fourth Accordion */}
 <List.Accordion
-  title="Conversational Tips"
+  title="CONVERSATIONAL TIPS"
   left={(props) => (
-    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+    <List.Icon {...props} icon="emoticon-confused" color="#004e98" />
   )}
 >
   {dialogue.content4.map((line, index) => (
@@ -3153,7 +3153,7 @@ const DailyDialoguesScreen = () => {
           icon="volume-high"
           size={20}
           onPress={() => speak(line.sentence)}
-          iconColor="#8da9c4"
+          iconColor="#004e98"
         />
       </View>
     )
@@ -3175,7 +3175,7 @@ const DailyDialoguesScreen = () => {
           <List.Accordion
   title="STATING YOUR ACCEPTANCE"
   left={(props) => (
-    <List.Icon {...props} icon="handshake" color="#8da9c4" />
+    <List.Icon {...props} icon="handshake" color="#004e98" />
   )}
 >
   {dialogue.content1.map((line, index) => (
@@ -3207,7 +3207,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3218,7 +3218,7 @@ const DailyDialoguesScreen = () => {
             <List.Accordion
   title="STATING THAT YOU DISAGREE"
   left={(props) => (
-    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+    <List.Icon {...props} icon="emoticon-confused" color="#004e98" />
   )}
 >
   {dialogue.content2.map((line, index) => (
@@ -3251,7 +3251,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3261,7 +3261,7 @@ const DailyDialoguesScreen = () => {
           <List.Accordion
   title="STATING STRONG DISAGREEMENT"
   left={(props) => (
-    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+    <List.Icon {...props} icon="emoticon-confused" color="#004e98" />
   )}
 >
   {dialogue.content3.map((line, index) => (
@@ -3294,7 +3294,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3316,7 +3316,7 @@ const DailyDialoguesScreen = () => {
           <List.Accordion
   title="GETTING SB’S ATTENTION/TO LISTEN"
   left={(props) => (
-    <List.Icon {...props} icon="handshake" color="#8da9c4" />
+    <List.Icon {...props} icon="handshake" color="#004e98" />
   )}
 >
   {dialogue.content1.map((line, index) => (
@@ -3348,7 +3348,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3359,7 +3359,7 @@ const DailyDialoguesScreen = () => {
             <List.Accordion
   title="CONFERMING THAT YOU ARE PAYING ATT"
   left={(props) => (
-    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+    <List.Icon {...props} icon="emoticon-confused" color="#004e98" />
   )}
 >
   {dialogue.content2.map((line, index) => (
@@ -3392,7 +3392,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3402,7 +3402,7 @@ const DailyDialoguesScreen = () => {
           <List.Accordion
   title="LAUNCHING THE CONVERSATION"
   left={(props) => (
-    <List.Icon {...props} icon="emoticon-confused" color="#8da9c4" />
+    <List.Icon {...props} icon="emoticon-confused" color="#004e98" />
   )}
 >
   {dialogue.content3.map((line, index) => (
@@ -3435,7 +3435,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3445,7 +3445,7 @@ const DailyDialoguesScreen = () => {
 <List.Accordion
   title="INVITING SB TO TALK"
   left={(props) => (
-    <List.Icon {...props} icon="comment" color="#8da9c4" />
+    <List.Icon {...props} icon="comment" color="#004e98" />
   )}
 >
   {dialogue.content4.map((line, index) => (
@@ -3478,7 +3478,7 @@ const DailyDialoguesScreen = () => {
         icon="volume-high"
         size={20}
         onPress={() => speak(line.sentence)}
-        iconColor="#8da9c4"
+        iconColor="#004e98"
       />
     </View>
   ))}
@@ -3487,7 +3487,6 @@ const DailyDialoguesScreen = () => {
           </Card.Content>
         </Card>
       ))}
-
 
     </ScrollView>
   );

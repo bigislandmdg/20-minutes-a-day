@@ -39,13 +39,13 @@ const HelpFeedbackScreen = () => {
                 <List.Icon 
                   {...props} 
                   icon="help-circle" 
-                  color={expanded === 'usage' ? '#2541b2' : props.color}
+                  color={expanded === 'usage' ? '#004e98' : props.color}
                 />
               )}
               expanded={expanded === 'usage'}
               onPress={() => handlePress('usage')}
               titleStyle={{
-                color: expanded === 'usage' ? '#2541b2' : '#000',
+                color: expanded === 'usage' ? '#004e98' : '#000',
                 fontWeight: expanded === 'usage' ? 'bold' : 'normal',
               }}
             >
@@ -53,7 +53,7 @@ const HelpFeedbackScreen = () => {
                 mode="contained"
                 onPress={openUsageDialog}
                 style={styles.button}
-                buttonColor="#2541b2"
+                buttonColor="#004e98"
               >
                 Learn How to Use
               </Button>
@@ -66,13 +66,13 @@ const HelpFeedbackScreen = () => {
                 <List.Icon 
                   {...props} 
                   icon="email" 
-                  color={expanded === 'feedback' ? '#2541b2' : props.color}
+                  color={expanded === 'feedback' ? '#004e98' : props.color}
                 />
               )}
               expanded={expanded === 'feedback'}
               onPress={() => handlePress('feedback')}
               titleStyle={{
-                color: expanded === 'feedback' ? '#2541b2' : '#000',
+                color: expanded === 'feedback' ? '#004e98' : '#000',
                 fontWeight: expanded === 'feedback' ? 'bold' : 'normal',
               }}
             >
@@ -80,7 +80,7 @@ const HelpFeedbackScreen = () => {
                 mode="contained"
                 onPress={openFeedbackDialog}
                 style={styles.button}
-                buttonColor="#2541b2"
+                buttonColor="#004e98"
               >
                 Write Feedback
               </Button>

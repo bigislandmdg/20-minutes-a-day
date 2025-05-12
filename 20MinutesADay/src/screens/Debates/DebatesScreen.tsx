@@ -2374,7 +2374,7 @@ const DebatesScreen = () => {
       
           {/* Bouton pour jouer l'audio */}
           <TouchableOpacity style={styles.audioButton} onPress={playSound}>
-            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+            <Ionicons name="volume-high" size={24} color="#004e98" />
           </TouchableOpacity>
         </View>
 
@@ -2397,7 +2397,7 @@ const DebatesScreen = () => {
                      <List.Accordion
                           title="SOCIAL—WHAT DO YOU THINK ABOUT LIFE IN TANA? "
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>
@@ -2438,7 +2438,7 @@ const DebatesScreen = () => {
         <List.Accordion
           title="SOCIAL—WHAT DO YOU THINK ABOUT LIFE IN TANA?"
           left={(props) => (
-            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+            <List.Icon {...props} icon="book-open" color="#004e98" />
           )}
         >
           {debate.arguments1.map((arg, index) => {
@@ -2502,7 +2502,7 @@ const DebatesScreen = () => {
                      <List.Accordion
                           title="VOCABS—WHAT MEANS EDUCATIONS TO YOU? "
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>
@@ -2543,7 +2543,7 @@ const DebatesScreen = () => {
                      <List.Accordion
                           title="VOCABS—WHAT MEANS EDUCATIONS TO YOU? "
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>
@@ -2565,7 +2565,7 @@ const DebatesScreen = () => {
                       <List.Accordion
                          title="→ WHAT MEANS EDUCATION TO YOU?"
                          left={(props) => (
-                        <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+                        <List.Icon {...props} icon="book-open" color="#004e98" />
                         )}>
                         {/* Partie argumentaire avec mots en gras */}
                       
@@ -2637,7 +2637,7 @@ const DebatesScreen = () => {
                      <List.Accordion
                           title="WHAT WOULD YOU DO IF SB STOLE YOUR BELONGINGS? "
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>
@@ -2678,7 +2678,7 @@ const DebatesScreen = () => {
                      <List.Accordion
                           title="WHY DO YOU GO TO CHURCH?? "
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>
@@ -2720,7 +2720,7 @@ const DebatesScreen = () => {
                   <List.Accordion
           title="WHY DO YOU GO TO CHURCH?"
           left={(props) => (
-            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+            <List.Icon {...props} icon="book-open" color="#004e98" />
           )}
         >
           {debate.arguments1.map((arg, index) => {
@@ -2761,7 +2761,7 @@ const DebatesScreen = () => {
                            WHAT DO YOU THINK ABOUT THE GOVERNMENT ?"
                            
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>
@@ -2802,7 +2802,7 @@ const DebatesScreen = () => {
                      <List.Accordion
                           title="WHAT DO YOU THINK ABOUT THE GOVERNMENT ? "
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>
@@ -2843,7 +2843,7 @@ const DebatesScreen = () => {
                      <List.Accordion
                           title="ARE YOU AGAINST OR FOR ABORTION?"
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>
@@ -2885,7 +2885,7 @@ const DebatesScreen = () => {
                      <List.Accordion
                           title="ARE YOU AGAINST OR FOR ABORTION? "
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>
@@ -2907,7 +2907,7 @@ const DebatesScreen = () => {
                       <List.Accordion
           title="  Are you against or for the abortion?"
           left={(props) => (
-            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+            <List.Icon {...props} icon="book-open" color="#004e98" />
           )}
         >
           {debate.arguments2.map((arg, index) => {
@@ -2969,7 +2969,7 @@ const DebatesScreen = () => {
                   <List.Accordion
                     title="WHAT IF THE PEASANT MOVES TO THE TOWN?"
                     left={(props) => (
-                   <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+                   <List.Icon {...props} icon="book-open" color="#004e98" />
                   )}
                  >
           {debate.arguments1.map((arg, index) => {
@@ -3008,7 +3008,7 @@ const DebatesScreen = () => {
                      <List.Accordion
                           title="WHAT IF THE PEASANT MOVES TO THE TOWN?"
                           left={(props) => (
-                            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                            <List.Icon {...props} icon="book-open" color='#004e98' />
                               )}
                           >
                           <View style={styles.table}>

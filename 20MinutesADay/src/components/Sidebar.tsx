@@ -200,7 +200,7 @@ const Sidebar = () => {
 const styles = StyleSheet.create({
   header: {
     padding: 20,
-    backgroundColor: '#2541b2',
+    backgroundColor: '#004e98',
     alignItems: 'center',
   },
   titleContainer: {

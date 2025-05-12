@@ -132,7 +132,7 @@ const PresentationScreen = () => {
     <View style={styles.textWithButtonContainer}>
       <Text style={styles.content}>Learn useful presentation phrases.</Text>
       <TouchableOpacity style={styles.audioButton}>
-        <Ionicons name="volume-high" size={24} color="#8da9c4" />
+        <Ionicons name="volume-high" size={24} color="#004e98" />
       </TouchableOpacity>
     </View>
 

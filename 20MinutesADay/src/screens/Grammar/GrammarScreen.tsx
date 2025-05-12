@@ -3441,7 +3441,7 @@ const GrammarScreen = () => {
       
           {/* Bouton pour jouer l'audio */}
           <TouchableOpacity style={styles.audioButton} onPress={playSound}>
-            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+            <Ionicons name="volume-high" size={24} color="#004e98" />
           </TouchableOpacity>
         </View>
 
@@ -3463,7 +3463,7 @@ const GrammarScreen = () => {
             <List.Accordion
               title="DAILY DIALOGUES"
               left={(props) => (
-              <List.Icon {...props} icon="handshake" color="#8da9c4" />
+              <List.Icon {...props} icon="handshake" color="#004e98" />
                )}
               >
              {rule.content1.map((line, index) => (
@@ -3477,7 +3477,7 @@ const GrammarScreen = () => {
                    icon="volume-high"
                    size={24}
                    onPress={() => speak(line.sentence)}
-                   iconColor="#8da9c4"
+                   iconColor="#004e98"
                   />
                 )}
               />
@@ -3498,7 +3498,7 @@ const GrammarScreen = () => {
               <List.Accordion
                 title="VOCABULARIES IN USE"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.table}>
@@ -3521,7 +3521,7 @@ const GrammarScreen = () => {
               <List.Accordion
                 title="SIMPLE PRESENT TENSE"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.content3Container}>
@@ -3534,7 +3534,7 @@ const GrammarScreen = () => {
               <List.Accordion
                 title="ADVERBS OF TIME"
                 left={(props) => (
-                  <List.Icon {...props} icon="clock" color='#8DA9C4' />
+                  <List.Icon {...props} icon="clock" color='#004e98' />
                 )}
               >
                 <View style={styles.table}>
@@ -3580,7 +3580,7 @@ const GrammarScreen = () => {
               <List.Accordion
                 title=" S+ADV.FREQ+V"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.table}>
@@ -3613,7 +3613,7 @@ const GrammarScreen = () => {
                   <List.Accordion
                     title="AUXILIARY TO DO"
                     left={(props) => (
-                     <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                     <List.Icon {...props} icon="book-open" color='#004e98' />
                     )}
                   >
                    {rule.content2.map((line, index) => (
@@ -3626,7 +3626,7 @@ const GrammarScreen = () => {
                           icon="volume-high"
                           size={24}
                           onPress={() => speak(line.sentence)}
-                          iconColor="#8da9c4"
+                          iconColor="#004e98"
                         />
                        )}
                     />
@@ -3693,7 +3693,7 @@ const GrammarScreen = () => {
          <List.Accordion
                 title="PRACTICE LINKING WORDS"
                 left={(props) => (
-                  <List.Icon {...props} icon="book" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book" color='#004e98' />
                 )}
               >
                 <View style={styles.table}>
@@ -3739,7 +3739,7 @@ const GrammarScreen = () => {
             <List.Accordion
               title="DAILY DIALOGUES"
               left={(props) => (
-              <List.Icon {...props} icon="handshake" color="#8da9c4" />
+              <List.Icon {...props} icon="handshake" color="#004e98" />
                )}
               >
              {rule.content1.map((line, index) => (
@@ -3753,7 +3753,7 @@ const GrammarScreen = () => {
                    icon="volume-high"
                    size={24}
                    onPress={() => speak(line.sentence)}
-                   iconColor="#8da9c4"
+                   iconColor="#004e98"
                   />
                 )}
               />
@@ -3774,7 +3774,7 @@ const GrammarScreen = () => {
          <List.Accordion
                 title="VERBS "
                 left={(props) => (
-                  <List.Icon {...props} icon="book" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book" color='#004e98' />
                 )}
               >
                 <View style={styles.table}>
@@ -3798,7 +3798,7 @@ const GrammarScreen = () => {
               <List.Accordion
   title="DAILY DIALOGUES"
   left={(props) => (
-    <List.Icon {...props} icon="handshake" color="#8da9c4" />
+    <List.Icon {...props} icon="handshake" color="#004e98" />
   )}
 >
   {rule.content3.map((line, index) => {
@@ -3819,7 +3819,7 @@ const GrammarScreen = () => {
                 icon="volume-high"
                 size={24}
                 onPress={() => speak(line.sentence)}
-                iconColor="#8da9c4"
+                iconColor="#004e98"
               />
             )
           )}
@@ -3832,7 +3832,7 @@ const GrammarScreen = () => {
 <List.Accordion
   title="EXERCISES"
   left={(props) => (
-    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
+    <List.Icon {...props} icon="book-open-variant" color="#004e98" />
   )}
 >
   {rule.content4.map((exercise, index) => (
@@ -3851,7 +3851,7 @@ const GrammarScreen = () => {
             icon="volume-high"
             size={20}
             onPress={() => speak(q)}
-            iconColor="#8da9c4"
+            iconColor="#004e98"
           />
         )}
       />      
@@ -3884,7 +3884,7 @@ const GrammarScreen = () => {
             <List.Section>
                <List.Accordion
                   title="EXPRESSING OPINIONS"
-                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+                  left={(props) => <List.Icon {...props} icon="comment" color='#004e98' />}
                 >
                 {rule.content1.map((line, index) => (
                                <List.Item
@@ -3898,7 +3898,7 @@ const GrammarScreen = () => {
                                      icon="volume-high"
                                      size={24}
                                      onPress={() => speak(line.sentence)}
-                                     iconColor="#8da9c4"
+                                     iconColor="#004e98"
                                    />
                                  )}
                                />
@@ -3909,7 +3909,7 @@ const GrammarScreen = () => {
                                  <List.Accordion
                        title="EXPRESSING OPINIONS"
                        left={(props) => (
-                         <List.Icon {...props} icon="comment" color="#8da9c4" />
+                         <List.Icon {...props} icon="comment" color="#004e98" />
                        )}
                      >
                        {rule.content2.map((line, index) => (
@@ -3942,7 +3942,7 @@ const GrammarScreen = () => {
                              icon="volume-high"
                              size={20}
                              onPress={() => speak(line.sentence)}
-                             iconColor="#8da9c4"
+                             iconColor="#004e98"
                            />
                          </View>
                        ))}
@@ -3951,7 +3951,7 @@ const GrammarScreen = () => {
                      <List.Accordion
   title="ADJECTIVES"
   left={(props) => (
-    <List.Icon {...props} icon="brain" color="#8da9c4" />
+    <List.Icon {...props} icon="brain" color="#004e98" />
   )}
 >
   {rule.content3.map((item, index) => (
@@ -3979,7 +3979,7 @@ const GrammarScreen = () => {
             icon="volume-high"
             size={20}
             onPress={() => speak(ex.sentence)}
-            iconColor="#8DA9C4"
+            iconColor="#004e98"
           />
         </View>
       ))}
@@ -4009,7 +4009,7 @@ const GrammarScreen = () => {
             <List.Section>
             <List.Accordion
   title="POUR COMMENCER"
-  left={(props) => <List.Icon {...props} icon="comment" color="#8da9c4" />}
+  left={(props) => <List.Icon {...props} icon="comment" color="#004e98" />}
 >
   {rule.content1.map((line, index) => (
     <View key={index} style={styles.itemBlock}>
@@ -4035,7 +4035,7 @@ const GrammarScreen = () => {
             icon="volume-high"
             size={24}
             onPress={() => speak(line.sentence)}
-            iconColor="#8da9c4"
+            iconColor="#004e98"
           />
         )}
       />
@@ -4043,12 +4043,12 @@ const GrammarScreen = () => {
   ))}
 </List.Accordion>
 
-              
-                      {/* Second Accordion */}
-                      <List.Accordion
+
+      {/* Second Accordion */}
+        <List.Accordion
                 title="POUR DEVELOPPER UN SUJET"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.table}>
@@ -4070,7 +4070,7 @@ const GrammarScreen = () => {
                  <List.Accordion
                            title="PRACTICE"
                            left={(props) => (
-                             <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+                             <List.Icon {...props} icon="book-open" color="#004e98" />
                            )}
                          >
                            {rule.content3.map((arg, index) => {
@@ -4134,7 +4134,7 @@ const GrammarScreen = () => {
             <List.Accordion
   title="PRESENT PROGRESSIVE TENSE"
   left={(props) => (
-    <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+    <List.Icon {...props} icon="book-open" color="#004e98" />
   )}
 >
   <View style={styles.tenseContainer}>
@@ -4172,7 +4172,7 @@ const GrammarScreen = () => {
               {/* Second Accordion */}
               <List.Accordion
   title="ADVERBS"
-  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+  left={(props) => <List.Icon {...props} icon="book" color="#004e98" />}
 >
   {/* Tableau 1 : Adverbs */}
   <View style={styles.table}>
@@ -4222,7 +4222,7 @@ const GrammarScreen = () => {
 <List.Accordion
   title="EXERCISES"
   left={(props) => (
-    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
+    <List.Icon {...props} icon="book-open-variant" color="#004e98" />
   )}
 >
   {rule.content3.map((exercise, index) => (
@@ -4241,7 +4241,7 @@ const GrammarScreen = () => {
             icon="volume-high"
             size={20}
             onPress={() => speak(q)}
-            iconColor="#8da9c4"
+            iconColor="#004e98"
           />
         )}
       />      
@@ -4274,7 +4274,7 @@ const GrammarScreen = () => {
               {/* Second Accordion */}
               <List.Accordion
   title="INFINITIVE VERBS"
-  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+  left={(props) => <List.Icon {...props} icon="book" color="#004e98" />}
 >
   {/* Tableau 1 : Adverbs */}
   <View style={styles.table}>
@@ -4439,7 +4439,7 @@ const GrammarScreen = () => {
             <List.Section>
             <List.Accordion
   title="THE DEFINITE ARTICLES ‘THE’ le, la, les, l’ (NY/ILAY)"
-  left={(props) => <List.Icon {...props} icon="comment" color="#8da9c4" />}
+  left={(props) => <List.Icon {...props} icon="comment" color="#004e98" />}
 >
   {rule.content1.map((section, index) => (
     <View key={index} style={{ marginBottom: 12, paddingHorizontal: 8 }}>
@@ -4487,7 +4487,7 @@ const GrammarScreen = () => {
 
 <List.Accordion
   title="THE INDEFINITE ARTICLE A, AN un/une"
-  left={(props) => <List.Icon {...props} icon="comment" color="#8da9c4" />}
+  left={(props) => <List.Icon {...props} icon="comment" color="#004e98" />}
 >
   {rule.content2.map((section, index) => (
     <View key={index} style={{ marginBottom: 12, paddingHorizontal: 8 }}>
@@ -4534,7 +4534,7 @@ const GrammarScreen = () => {
 
 <List.Accordion
   title="DEMONSTRATIVES"
-  left={(props) => <List.Icon {...props} icon="gesture-tap" color="#8da9c4" />}
+  left={(props) => <List.Icon {...props} icon="gesture-tap" color="#004e98" />}
 >
   {rule.content3.map((section, index) => (
     <View key={index} style={{ marginBottom: 12, paddingHorizontal: 8 }}>
@@ -4613,12 +4613,10 @@ const GrammarScreen = () => {
     </View>
   ))}
 </List.Accordion>
-
-
-            </List.Section>
-          </Card.Content>
-        </Card>
-      ))}
+  </List.Section>
+  </Card.Content>
+</Card>
+))}
 
 {grammarRules9.map((rule) => (
         <Card key={rule.id} style={styles.card}>
@@ -4637,7 +4635,7 @@ const GrammarScreen = () => {
             <List.Section>
                <List.Accordion
                   title="PRONOUNS/POSSESSIVE ADJE/PRO"
-                  left={(props) => <List.Icon {...props} icon="comment" color='#8da9c4' />}
+                  left={(props) => <List.Icon {...props} icon="comment" color='#004e98' />}
                 >
                 {rule.content1.map((section, index) => (
                 <View key={index} style={{ marginBottom: 12 }}>
@@ -4666,7 +4664,7 @@ const GrammarScreen = () => {
 </List.Accordion>
 <List.Accordion
   title="SIMPLE PAST TENSE"
-  left={(props) => <List.Icon {...props} icon="history" color="#8da9c4" />}
+  left={(props) => <List.Icon {...props} icon="history" color="#004e98" />}
 >
   {/* Grammatical Rule + Examples */}
   <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
@@ -4763,7 +4761,7 @@ const GrammarScreen = () => {
                       <List.Accordion
                 title="VOCABULARY"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.table}>
@@ -4785,7 +4783,7 @@ const GrammarScreen = () => {
                  <List.Accordion
                            title="PRACTICE"
                            left={(props) => (
-                             <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+                             <List.Icon {...props} icon="book-open" color="#004e98" />
                            )}
                          >
                            {rule.content2.map((arg, index) => {
@@ -4849,7 +4847,7 @@ const GrammarScreen = () => {
             <List.Accordion
                 title="PAST CONTINUOUS TENSE"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.content3Container}>
@@ -4861,7 +4859,7 @@ const GrammarScreen = () => {
               {/* Second Accordion */}
               <List.Accordion
   title="ADVERBS"
-  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+  left={(props) => <List.Icon {...props} icon="book" color="#004e98" />}
 >
    {/* Tableau 1 : Affirmative / Interrogative / Negative */}
   <View style={[styles.table, { marginTop: 24 }]}>
@@ -4911,7 +4909,7 @@ const GrammarScreen = () => {
 <List.Accordion
   title="EXERCISES"
   left={(props) => (
-    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
+    <List.Icon {...props} icon="book-open-variant" color="#004e98" />
   )}
 >
   {rule.content3.map((exercise, index) => (
@@ -4930,7 +4928,7 @@ const GrammarScreen = () => {
             icon="volume-high"
             size={20}
             onPress={() => speak(q)}
-            iconColor="#8da9c4"
+            iconColor="#004e98"
           />
         )}
       />      
@@ -4962,7 +4960,7 @@ const GrammarScreen = () => {
             <List.Accordion
                 title="THE MODAL VERBS"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.content3Container}>
@@ -4973,7 +4971,7 @@ const GrammarScreen = () => {
                 
               <List.Accordion
   title="MODAL VERBS – LES VERBES MODAUX"
-  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+  left={(props) => <List.Icon {...props} icon="book" color="#004e98" />}
 >
   {/* Table des verbes modaux */}
   {rule.content2?.find((c) => c.type === "modalVerbs")?.table?.map((verbItem, idx) => (
@@ -5053,11 +5051,11 @@ const GrammarScreen = () => {
           <Card.Content>
             <List.Section>
             <List.Accordion
-  title="MODAL VERBS- EXERCISES"
-  left={(props) => (
-    <List.Icon {...props} icon="book-open-variant" color="#8da9c4" />
-  )}
->
+               title="MODAL VERBS- EXERCISES"
+               left={(props) => (
+               <List.Icon {...props} icon="book-open-variant" color="#004e98" />
+              )}
+           >
   {rule.content1.map((exercise, index) => (
     <View key={index} style={{ paddingHorizontal: 3 }}>
       <Text style={{ fontWeight: 'bold', marginBottom: 20 }}>{exercise.instructions}</Text>
@@ -5074,7 +5072,7 @@ const GrammarScreen = () => {
             icon="volume-high"
             size={20}
             onPress={() => speak(q)}
-            iconColor="#8da9c4"
+            iconColor="#004e98"
           />
         )}
       />      
@@ -5086,7 +5084,7 @@ const GrammarScreen = () => {
               {/* Second Accordion */}
               <List.Accordion
   title=" VOCABULARIES"
-  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+  left={(props) => <List.Icon {...props} icon="book" color="#004e98" />}
 >
    
   {/* Tableau 2 : Vocabs */}
@@ -5137,7 +5135,7 @@ const GrammarScreen = () => {
             <List.Accordion
                 title="WH-QUESTION"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.content3Container}>
@@ -5149,7 +5147,7 @@ const GrammarScreen = () => {
               <List.Accordion
                 title="RELATIVE PRONOUNS"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.content3Container}>
@@ -5182,7 +5180,7 @@ const GrammarScreen = () => {
             <List.Accordion
                 title="PRESENT PERFECT"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.content3Container}>
@@ -5194,7 +5192,7 @@ const GrammarScreen = () => {
               <List.Accordion
                 title="PRESENT PERFECT CONTINUOUS"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.content3Container}>
@@ -5229,7 +5227,7 @@ const GrammarScreen = () => {
               {/* Second Accordion */}
               <List.Accordion
   title="VOCABULARIES"
-  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+  left={(props) => <List.Icon {...props} icon="book" color="#004e98" />}
 >
   {/* Tableau 2 : Adverbs */}
   <View style={styles.table}>
@@ -5259,7 +5257,7 @@ const GrammarScreen = () => {
 <List.Accordion
                 title="PAST CONTINUOUS TENSE"
                 left={(props) => (
-                  <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                  <List.Icon {...props} icon="book-open" color='#004e98' />
                 )}
               >
                 <View style={styles.content3Container}>
@@ -5267,8 +5265,6 @@ const GrammarScreen = () => {
                   <Text style={styles.content}>{rule.content2[0].description}</Text>
                 </View>
               </List.Accordion>
-
-
 
             </List.Section>
           </Card.Content>
@@ -5293,7 +5289,7 @@ const GrammarScreen = () => {
               <List.Accordion
   title={rule.content1[0].title}
   left={(props) => (
-    <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+    <List.Icon {...props} icon="book-open" color='#004e98' />
   )}
 >
   {rule.content1[0].description.map((item, index) => (
@@ -5325,13 +5321,13 @@ const GrammarScreen = () => {
           <Card.Content>
             <List.Section>
                <List.Accordion
-  title="QUANTIFIERS/ A LOT OF/ LOTS OF / PLENTY OF/A FEW/ A LITTLE"
-  left={(props) => (
-    <List.Icon {...props} icon="book-open" color="#8DA9C4" />
-  )}
->
-  <View style={styles.content3Container}>
-    <Text style={styles.title}>{rule.content1[0].title}</Text>
+                 title="QUANTIFIERS/ A LOT OF/ LOTS OF / PLENTY OF/A FEW/ A LITTLE"
+                 left={(props) => (
+                  <List.Icon {...props} icon="book-open" color="#004e98" />
+                   )}
+               >
+            <View style={styles.content3Container}>
+            <Text style={styles.title}>{rule.content1[0].title}</Text>
 
     {rule.content1[0].description.map((section, index) => (
       <View key={index} style={styles.ruleBox}>
@@ -5362,11 +5358,11 @@ const GrammarScreen = () => {
           <Card.Content>
             <List.Section>
                <List.Accordion
-  title="QUANTIFIERS / HALF / ONE OF/ EACH & EVERY/ "
-  left={(props) => (
-    <List.Icon {...props} icon="book-open" color="#8DA9C4" />
-  )}
->
+                 title="QUANTIFIERS / HALF / ONE OF/ EACH & EVERY/ "
+                 left={(props) => (
+                 <List.Icon {...props} icon="book-open" color="#004e98" />
+                 )}
+        >
   <View style={styles.content3Container}>
     <Text style={styles.title}>{rule.content1[0].title}</Text>
 
@@ -5403,7 +5399,7 @@ const GrammarScreen = () => {
               {/* Second Accordion */}
               <List.Accordion
   title="VOCABULARIES"
-  left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+  left={(props) => <List.Icon {...props} icon="book" color="#004e98" />}
 >
   {/* Tableau 2 : Adverbs */}
   <View style={styles.table}>
@@ -5452,7 +5448,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title="ENGLISH PREPOSITIONS"
-          left={(props) => <List.Icon {...props} icon="book" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book" color="#004e98" />}
         >
           <View style={styles.table}>
             <View style={styles.tableRow}>
@@ -5469,7 +5465,7 @@ const GrammarScreen = () => {
         </List.Accordion>
         <List.Accordion
   title="PUNCTUATIONS"
-  left={(props) => <List.Icon {...props} icon="pencil" color="#8DA9C4" />}
+  left={(props) => <List.Icon {...props} icon="pencil" color="#004e98" />}
 >
   <View style={{ paddingHorizontal: 8, gap: 8 }}>
     {(rule.content1?.find(c => c.type === "PUNCTUATIONS")?.content || []).map((pair, index) => (
@@ -5505,7 +5501,7 @@ const GrammarScreen = () => {
         <List.Accordion
           title={rule.content1[0].title}
           left={(props) => (
-            <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+            <List.Icon {...props} icon="book-open" color='#004e98' />
           )}
         >
           {rule.content1[0].description.map((item, index) => (
@@ -5542,7 +5538,7 @@ const GrammarScreen = () => {
         <List.Accordion
   title={rule.content2[0].title}
   left={(props) => (
-    <List.Icon {...props} icon="calendar" color='#8DA9C4' />
+    <List.Icon {...props} icon="calendar" color='#004e98' />
   )}
 >
   {rule.content2[0].description.map((item, index) => (
@@ -5575,7 +5571,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title={rule.content1[0].title}
-          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
         >
           {rule.content1[0].description.map((item, index) => (
             <View key={index} style={styles.content3Container}>
@@ -5677,7 +5673,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title={rule.content1[0].title}
-          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
         >
           {rule.content1[0].description.map((item, index) => (
             <View key={index} style={styles.content3Container}>
@@ -5779,7 +5775,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title={rule.content1[0].title}
-          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
         >
           {rule.content1[0].description.map((item, index) => (
             <View key={index} style={styles.content3Container}>
@@ -5830,7 +5826,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title={rule.content1[0].title}
-          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
         >
           {rule.content1[0].description.map((item, index) => (
             <View key={index} style={styles.content3Container}>
@@ -5870,7 +5866,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title={rule.content1[0].title}
-          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
         >
           {rule.content1[0].description.map((item, index) => (
             <View key={index} style={styles.content3Container}>
@@ -5911,7 +5907,7 @@ const GrammarScreen = () => {
         <List.Accordion
           title={rule.content1[0].title}
           left={(props) => (
-            <List.Icon {...props} icon="book-open" color="#8DA9C4" />
+            <List.Icon {...props} icon="book-open" color="#004e98" />
           )}
         >
           {rule.content1[0].description.map((item, index) => (
@@ -5983,7 +5979,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title={rule.content1[0].title}
-          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
         >
           {rule.content1[0].description.map((item, index) => (
             <View key={index} style={styles.content3Container}>
@@ -6023,7 +6019,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title={rule.content1[0].title}
-          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
         >
           {rule.content1[0].description.map((item, index) => (
             <View key={index} style={styles.content3Container}>
@@ -6096,7 +6092,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title={rule.content1[0].title}
-          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
         >
           {rule.content1[0].description.map((item, index) => (
             <View key={index} style={styles.content3Container}>
@@ -6205,7 +6201,7 @@ const GrammarScreen = () => {
       <List.Section>
         <List.Accordion
           title={rule.content1[0].title}
-          left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+          left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
         >
           {rule.content1[0].description.map((item, index) => (
             <View key={index} style={styles.content3Container}>
@@ -6226,7 +6222,7 @@ const GrammarScreen = () => {
 
         <List.Accordion
   title={rule.content2[0].title}
-  left={(props) => <List.Icon {...props} icon="book-open" color="#8DA9C4" />}
+  left={(props) => <List.Icon {...props} icon="book-open" color="#004e98" />}
 >
   {rule.content2[0].description.map((item, index) => (
     <View key={index} style={styles.content3Container}>

@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   headerWrapper: {
     width: '100%',
     height: 70,
-    backgroundColor: '#8da9c4',
+    backgroundColor: '#004e98',
     justifyContent: 'center',
     position: 'relative',
     overflow: 'hidden',

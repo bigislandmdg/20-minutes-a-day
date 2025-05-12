@@ -231,7 +231,7 @@ const PeopleScreen = () => {
       
           {/* Bouton pour jouer l'audio */}
           <TouchableOpacity style={styles.audioButton} onPress={playSound}>
-            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+            <Ionicons name="volume-high" size={24} color="#004e98" />
           </TouchableOpacity>
         </View>
 
@@ -247,7 +247,7 @@ const PeopleScreen = () => {
               <List.Accordion
                 key={index}
                 title={item.part}
-                left={(props) => <MaterialCommunityIcons {...props} name="human" />}
+                left={(props) => <MaterialCommunityIcons {...props} name="human" color="#004e98" size={24} />}
                 style={styles.accordion}
               >
                 <Text style={styles.subtitle}>{item.description}</Text>
@@ -593,7 +593,7 @@ const PeopleScreen = () => {
               <List.Accordion
                 key={index}
                 title={item.part}
-                left={(props) => <MaterialCommunityIcons {...props} name="human" />}
+                left={(props) => <MaterialCommunityIcons {...props} name="account" color="#004e98" size={24} />}
                 style={styles.accordion}
               >
                 <Text style={styles.subtitle}>{item.description}</Text>

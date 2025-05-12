@@ -144,7 +144,7 @@ const AccentTrainingScreen = () => {
       
           {/* Bouton pour jouer l'audio */}
           <TouchableOpacity style={styles.audioButton} onPress={playSound}>
-            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+            <Ionicons name="volume-high" size={24} color="#004e98" />
           </TouchableOpacity>
         </View>
 
@@ -162,7 +162,7 @@ const AccentTrainingScreen = () => {
                           {item.training}
                         </Text>
                       }
-                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      left={(props) => <List.Icon {...props} icon="microphone" color="#004e98" />}
                       style={styles.accordion}
                     >
                       {/* Sous-titre */}
@@ -184,7 +184,8 @@ const AccentTrainingScreen = () => {
                     <List.Accordion
                       key={index}
                       title={item.training}
-                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      left={(props) => <List.Icon {...props} icon="microphone" 
+                      color="#004e98" />}
                       style={styles.accordion}
                     >
                       {/* Sous-titre */}
@@ -216,7 +217,8 @@ const AccentTrainingScreen = () => {
                     <List.Accordion
                       key={index}
                       title={item.training}
-                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      left={(props) => <List.Icon {...props} icon="microphone"
+                      color="#004e98" />}
                       style={styles.accordion}
                       onPress={() => speakTraining(item.training)}
                     >
@@ -232,7 +234,7 @@ const AccentTrainingScreen = () => {
                     <List.Accordion
                       key={index}
                       title={item.training}
-                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      left={(props) => <List.Icon {...props} icon="microphone" color="#004e98" />}
                       style={styles.accordion}
                       onPress={() => speakTraining(item.training)}
                     >
@@ -247,7 +249,7 @@ const AccentTrainingScreen = () => {
                     <List.Accordion
                       key={index}
                       title={item.training}
-                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      left={(props) => <List.Icon {...props} icon="microphone" color="#004e98" />}
                       style={styles.accordion}
                       onPress={() => speakTraining(item.training)}
                     >
@@ -262,7 +264,7 @@ const AccentTrainingScreen = () => {
                     <List.Accordion
                       key={index}
                       title={item.training}
-                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      left={(props) => <List.Icon {...props} icon="microphone" color="#004e98" />}
                       style={styles.accordion}
                       onPress={() => speakTraining(item.training)}
                     >
@@ -277,7 +279,7 @@ const AccentTrainingScreen = () => {
                     <List.Accordion
                       key={index}
                       title={item.training}
-                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      left={(props) => <List.Icon {...props} icon="microphone" color="#004e98" />}
                       style={styles.accordion}
                       onPress={() => speakTraining(item.training)}
                     >
@@ -292,7 +294,7 @@ const AccentTrainingScreen = () => {
                     <List.Accordion
                       key={index}
                       title={item.training}
-                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      left={(props) => <List.Icon {...props} icon="microphone" color="#004e98" />}
                       style={styles.accordion}
                       onPress={() => speakTraining(item.training)}
                     >
@@ -307,7 +309,7 @@ const AccentTrainingScreen = () => {
                     <List.Accordion
                       key={index}
                       title={item.training}
-                      left={(props) => <List.Icon {...props} icon="microphone" />}
+                      left={(props) => <List.Icon {...props} icon="microphone" color="#004e98" />}
                       style={styles.accordion}
                       onPress={() => speakTraining(item.training)}
                     >
@@ -318,12 +320,10 @@ const AccentTrainingScreen = () => {
                     </List.Accordion>
                   ))}
 
-
-      
                 </Card.Content>
               </Card>
             ))}
-
+            
     </ScrollView>
   );
 };

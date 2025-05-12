@@ -115,7 +115,7 @@ const ProverbsScreen = () => {
       
           {/* Bouton pour jouer l'audio */}
           <TouchableOpacity style={styles.audioButton} onPress={playSound}>
-            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+            <Ionicons name="volume-high" size={24} color="#004e98" />
           </TouchableOpacity>
         </View>
 

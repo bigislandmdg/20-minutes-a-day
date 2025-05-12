@@ -1956,7 +1956,7 @@ const VerbsScreen = () => {
       
           {/* Bouton pour jouer l'audio */}
           <TouchableOpacity style={styles.audioButton} onPress={playSound}>
-            <Ionicons name="volume-high" size={24} color="#8da9c4" />
+            <Ionicons name="volume-high" size={24} color="#004e98" />
           </TouchableOpacity>
         </View>
 
@@ -1978,7 +1978,7 @@ const VerbsScreen = () => {
                <List.Accordion
                     title="SLANGS AND IDIOMS"
                     left={(props) => (
-                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                      <List.Icon {...props} icon="book-open" color='#004e98' />
                         )}
                     >
                     <View style={styles.table}>
@@ -2019,7 +2019,7 @@ const VerbsScreen = () => {
                <List.Accordion
                     title="IRREGULARS VERBS"
                     left={(props) => (
-                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                      <List.Icon {...props} icon="book-open" color='#004e98' />
                         )}
                     >
                     <View style={styles.table}>
@@ -2065,7 +2065,7 @@ const VerbsScreen = () => {
                <List.Accordion
                     title="IRREGULARS VERBS"
                     left={(props) => (
-                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                      <List.Icon {...props} icon="book-open" color='#004e98' />
                         )}
                     >
                     <View style={styles.table}>
@@ -2110,7 +2110,7 @@ const VerbsScreen = () => {
                <List.Accordion
                     title="IRREGULARS VERBS"
                     left={(props) => (
-                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                      <List.Icon {...props} icon="book-open" color='#004e98' />
                         )}
                     >
                     <View style={styles.table}>
@@ -2156,7 +2156,7 @@ const VerbsScreen = () => {
                <List.Accordion
                     title="IRREGULARS VERBS"
                     left={(props) => (
-                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                      <List.Icon {...props} icon="book-open" color='#004e98' />
                         )}
                     >
                     <View style={styles.table}>
@@ -2181,7 +2181,7 @@ const VerbsScreen = () => {
                 <List.Accordion
                     title="IRREGULAR AND IDIOMS"
                     left={(props) => (
-                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                      <List.Icon {...props} icon="book-open" color='#004e98' />
                         )}
                     >
                     <View style={styles.table}>
@@ -2222,7 +2222,7 @@ const VerbsScreen = () => {
                 <List.Accordion
                     title="MIXED VOCABULARIES"
                     left={(props) => (
-                      <List.Icon {...props} icon="book-open" color='#8DA9C4' />
+                      <List.Icon {...props} icon="book-open" color='#004e98' />
                         )}
                     >
                     <View style={styles.table}>
