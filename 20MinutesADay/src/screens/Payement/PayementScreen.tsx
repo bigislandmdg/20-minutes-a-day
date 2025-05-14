@@ -3,7 +3,8 @@ import { View, Text, TextInput, ScrollView, Alert, ActivityIndicator, StyleSheet
 import { Picker } from '@react-native-picker/picker';
 import { ToggleButton, Button } from 'react-native-paper';
 import { Ionicons } from '@expo/vector-icons';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import { createPayment } from '../../services/mvolaService'; // ✅ Utilisation de createPayment qui est un alias pour processMvolaPayment
 
 interface PayementScreenProps {
   onClose: () => void;
@@ -16,32 +17,21 @@ interface PaymentData {
   amount: string;
   cardNumber?: string;
   expiryDate?: string;
+  phoneNumber?: string;
   date: string;
-  phoneNumber?: string; // Nouveau champ pour le numéro de téléphone
 }
 
 const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSuccess }) => {
   const [paymentMethod, setPaymentMethod] = useState<'credit-card' | 'mobile-money'>('credit-card');
   const [paymentProvider, setPaymentProvider] = useState<string>(''); 
-  const [amount, setAmount] = useState<string>('');
-  const [cardNumber, setCardNumber] = useState<string>('');
-  const [expiryDate, setExpiryDate] = useState<string>('');
-  const [cvv, setCvv] = useState<string>('');
-  const [phoneNumber, setPhoneNumber] = useState<string>(''); // Nouvel état pour le numéro de téléphone
+  const [amount, setAmount] = useState<string>(''); 
+  const [cardNumber, setCardNumber] = useState<string>(''); 
+  const [expiryDate, setExpiryDate] = useState<string>(''); 
+  const [cvv, setCvv] = useState<string>(''); 
+  const [phoneNumber, setPhoneNumber] = useState<string>(''); 
   const [loading, setLoading] = useState<boolean>(false);
 
-  const savePayment = async (payment: PaymentData) => {
-    try {
-      const existingPayments = await AsyncStorage.getItem('payments');
-      const payments = existingPayments ? JSON.parse(existingPayments) : [];
-      payments.push(payment);
-      await AsyncStorage.setItem('payments', JSON.stringify(payments));
-    } catch (error) {
-      console.error('Failed to save payment:', error);
-    }
-  };
-
-  const handlePayment = () => {
+  const handlePayment = async () => {
     if (!paymentProvider) {
       Alert.alert('Select Provider', 'Please select a payment provider.');
       return;
@@ -65,8 +55,6 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSucce
         Alert.alert('Invalid Amount', 'Please enter a valid numeric amount.');
         return;
       }
-
-      // Validation du numéro de téléphone pour mobile money
       if (!/^\d{10}$/.test(phoneNumber)) {
         Alert.alert('Invalid Phone Number', 'Please enter a valid 10-digit phone number.');
         return;
@@ -75,24 +63,32 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSucce
 
     setLoading(true);
 
-    setTimeout(async () => {
-      setLoading(false);
+    const paymentData: PaymentData = {
+      method: paymentMethod,
+      provider: paymentProvider,
+      amount: amount || '0',
+      cardNumber: paymentMethod === 'credit-card' ? cardNumber : undefined,
+      expiryDate: paymentMethod === 'credit-card' ? expiryDate : undefined,
+      phoneNumber: paymentMethod === 'mobile-money' ? phoneNumber : undefined,
+      date: new Date().toISOString(),
+    };
 
-      const paymentData: PaymentData = {
-        method: paymentMethod,
-        provider: paymentProvider,
-        amount: amount || '0',
-        cardNumber: paymentMethod === 'credit-card' ? cardNumber : undefined,
-        expiryDate: paymentMethod === 'credit-card' ? expiryDate : undefined,
-        phoneNumber: paymentMethod === 'mobile-money' ? phoneNumber : undefined, // Ajouter le numéro de téléphone dans les données
-        date: new Date().toISOString(),
-      };
-
-      await savePayment(paymentData);
-
+    try {
+      await createPayment({
+        amount: Number(paymentData.amount),
+        phoneNumber: paymentData.phoneNumber || '',
+        externalId: paymentData.date, // vous pouvez mettre un UUID aussi
+        description: 'Paiement via l\'application',
+        environment: 'sandbox',
+      });
       Alert.alert('Payment Successful', 'Your payment has been processed successfully.');
       onPaymentSuccess();
-    }, 2000);
+    } catch (error) {
+      console.error(error);
+      Alert.alert('Payment Failed', 'An error occurred while processing the payment.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const getProviders = () => {
@@ -118,7 +114,7 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSucce
         style={styles.toggleButtonRow}
         onValueChange={(value) => {
           setPaymentMethod(value as 'credit-card' | 'mobile-money');
-          setPaymentProvider(''); // Réinitialiser provider quand on change de méthode
+          setPaymentProvider('');
         }}
         value={paymentMethod}
       >
@@ -127,7 +123,6 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSucce
       </ToggleButton.Row>
 
       <ScrollView style={styles.formContainer}>
-        {/* Dropdown des providers */}
         <View style={styles.dropdownContainer}>
           <Text style={styles.label}>Choose Provider</Text>
           <Picker
@@ -157,6 +152,7 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSucce
               placeholder="Expiry Date (MM/YY)"
               value={expiryDate}
               onChangeText={setExpiryDate}
+              maxLength={5}
             />
             <TextInput
               style={styles.input}
@@ -171,13 +167,6 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSucce
           <>
             <TextInput
               style={styles.input}
-              placeholder="Amount"
-              keyboardType="numeric"
-              value={amount}
-              onChangeText={setAmount}
-            />
-            <TextInput
-              style={styles.input}
               placeholder="Phone Number"
               keyboardType="numeric"
               value={phoneNumber}
@@ -187,11 +176,24 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSucce
           </>
         )}
 
+        <TextInput
+          style={styles.input}
+          placeholder="Amount"
+          keyboardType="numeric"
+          value={amount}
+          onChangeText={setAmount}
+        />
+
         {loading ? (
-          <ActivityIndicator size="large" color="#bb3e03" />
+          <ActivityIndicator size="large" color="#00f" />
         ) : (
-          <Button mode="contained" onPress={handlePayment} style={styles.paymentButton}>
-            Pay
+          <Button
+            mode="contained"
+            onPress={handlePayment}
+            disabled={!paymentProvider || !amount || loading}
+            style={styles.paymentButton}
+          >
+            Pay Now
           </Button>
         )}
       </ScrollView>
@@ -203,7 +205,7 @@ const styles = StyleSheet.create({
   modalContent: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
   },
   header: {
     flexDirection: 'row',
@@ -211,41 +213,43 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
   },
   closeIcon: {
     padding: 5,
   },
   toggleButtonRow: {
-    marginTop: 20,
+    marginVertical: 10,
     justifyContent: 'center',
+   
+
   },
   formContainer: {
-    marginTop: 20,
+    marginTop: 10,
   },
   dropdownContainer: {
-    marginBottom: 20,
+    marginVertical: 10,
   },
   label: {
-    marginBottom: 5,
-    fontWeight: 'bold',
+    fontSize: 16,
   },
   picker: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 5,
+    height: 50,
+    width: '100%',
   },
   input: {
-    borderBottomWidth: 1,
+    height: 40,
     borderColor: '#ccc',
-    marginBottom: 20,
-    paddingVertical: 8,
-    paddingHorizontal: 4,
+    borderWidth: 1,
+    marginBottom: 15,
+    paddingHorizontal: 10,
+    borderRadius: 5,
   },
   paymentButton: {
-    backgroundColor: '#bb3e03',
-    marginTop: 10,
+    marginTop: 20,
+    paddingVertical: 10,
+    backgroundColor: '#004e98'
   },
 });
 
