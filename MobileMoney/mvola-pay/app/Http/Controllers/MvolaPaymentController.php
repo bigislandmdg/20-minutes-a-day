@@ -9,8 +9,7 @@ use App\Models\Transaction;
 
 class MvolaPaymentController extends Controller
 {
-    //
-     public function pay(Request $request)
+    public function pay(Request $request)
     {
         $request->validate([
             'amount' => 'required|numeric|min:1',
@@ -18,14 +17,21 @@ class MvolaPaymentController extends Controller
             'description' => 'nullable|string',
         ]);
 
-        $env = 'sandbox'; // ou 'preprod' selon ton environnement
+        $env = 'sandbox'; // ou 'preprod'
         $config = config("mvola.$env");
 
-        // Étape 1 : Récupérer le token d'accès
-        $tokenResponse = Http::withHeaders([
+        // ➕ Créer une instance Http et désactiver SSL si on est en local
+        $http = Http::withHeaders([
             'Authorization' => $config['basic_auth'],
             'Content-Type' => 'application/x-www-form-urlencoded',
-        ])->asForm()->post($config['token_url'], [
+        ])->asForm();
+
+        if (app()->environment('local')) {
+            $http = $http->withOptions(['verify' => false]);
+        }
+
+        // Étape 1 : Obtenir le token
+        $tokenResponse = $http->post($config['token_url'], [
             'grant_type' => 'client_credentials',
         ]);
 
@@ -35,7 +41,7 @@ class MvolaPaymentController extends Controller
 
         $accessToken = $tokenResponse->json()['access_token'];
 
-        // Étape 2 : Préparer et envoyer la transaction
+        // Étape 2 : Préparer les données de paiement
         $correlationId = Str::uuid()->toString();
         $referenceId = Str::uuid()->toString();
 
@@ -53,16 +59,23 @@ class MvolaPaymentController extends Controller
             ]
         ];
 
-        $response = Http::withHeaders([
+        // ➕ Préparation de la requête de transaction
+        $transactionHttp = Http::withHeaders([
             'Authorization' => "Bearer $accessToken",
             'X-CorrelationID' => $correlationId,
             'X-User-ID' => $config['user_id'],
             'X-Partner-ID' => $config['partner_id'],
             'Content-Type' => 'application/json',
             'Cache-Control' => 'no-cache',
-        ])->post($config['transaction_url'], $payload);
+        ]);
 
-        // Sauvegarde de la transaction en base de données
+        if (app()->environment('local')) {
+            $transactionHttp = $transactionHttp->withOptions(['verify' => false]);
+        }
+
+        $response = $transactionHttp->post($config['transaction_url'], $payload);
+
+        // Enregistrer la transaction
         $transaction = Transaction::create([
             'correlation_id' => $correlationId,
             'reference_id' => $referenceId,
