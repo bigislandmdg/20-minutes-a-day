@@ -25,6 +25,8 @@ import PayementScreen from './src/screens/Payement/PayementScreen';
 import DownloadedAudioScreen from './src/screens/DownloadedAudio/DownloadedAudioScreen';
 import { SearchProvider } from './src/contexts/SearchContext';
 import { PaperProvider } from 'react-native-paper';
+import VerifyCodeScreen from './src/screens/VerifyCode/VerifyCodeScreen';
+import RegisterScreen from './src/screens/Register/RegisterScreen';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -63,11 +65,21 @@ export default function App() {
           component={GetStartedScreen}
           options={{ headerShown: false }}
         />
+
+         {/* Nouveaux écrans ajoutés */}
+         <Stack.Screen
+             name="Register"
+             component={RegisterScreen}
+             options={{ headerShown: false }}
+         />
+        
+      
         <Stack.Screen
           name="Home"
           component={Sidebar}
           options={{ headerShown: false }}
         />
+        
         <Stack.Screen
           name="Audio"
           component={DownloadedAudioScreen}
