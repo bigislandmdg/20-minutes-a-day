@@ -187,14 +187,15 @@ const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSucce
         {loading ? (
           <ActivityIndicator size="large" color="#00f" />
         ) : (
-          <Button
-            mode="contained"
-            onPress={handlePayment}
-            disabled={!paymentProvider || !amount || loading}
-            style={styles.paymentButton}
-          >
-            Pay Now
-          </Button>
+           <Button
+        mode="contained"
+        onPress={handlePayment}
+        disabled={!paymentProvider || !amount || loading}
+        style={styles.paymentButton}
+        labelStyle={styles.buttonText} // Ajout pour le style du texte
+      >
+        Pay Now
+      </Button>
         )}
       </ScrollView>
     </View>
@@ -249,7 +250,14 @@ const styles = StyleSheet.create({
   paymentButton: {
     marginTop: 20,
     paddingVertical: 10,
-    backgroundColor: '#004e98'
+    backgroundColor: '#004e98',
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 

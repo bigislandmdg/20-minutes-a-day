@@ -16,8 +16,8 @@ export default function GetStartedScreen() {
   // 👉 Redirection automatique après 2 secondes
   useEffect(() => {
     const timer = setTimeout(() => {
-      //navigation.navigate('Home'); // Remplacez 'Home' par l'écran que vous souhaitez afficher après le démarrage
-      navigation.navigate('Register'); 
+       navigation.navigate('Home'); // Remplacez 'Home' par l'écran que vous souhaitez afficher après le démarrage
+      //navigation.navigate('Register'); 
 
     }, 10000);
 

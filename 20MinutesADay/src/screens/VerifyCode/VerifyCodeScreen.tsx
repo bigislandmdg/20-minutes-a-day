@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  StyleSheet,
+import React, { useState } from 'react';
+import { 
+  View, 
+  Text, 
+  TextInput, 
+  TouchableOpacity, 
+  StyleSheet, 
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
+  Image,
+  ScrollView,
   Alert
 } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -61,46 +63,64 @@ const VerifyCodeScreen: React.FC<VerifyCodeScreenProps> = ({ navigation, route }
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.keyboardAvoidingView}
       >
-        <View style={styles.header}>
-          <Text style={styles.title}>Vérifier mon code</Text>
-        </View>
-        
-        <Text style={styles.instructions}>
-          Entrez le code reçu après votre inscription
-        </Text>
-        
-        {error && (
-          <View style={styles.errorContainer}>
-            <Text style={styles.errorText}>{error}</Text>
-          </View>
-        )}
-        
-        <View style={styles.inputContainer}>
-          <Text style={styles.label}>Code</Text>
-          <TextInput
-            style={styles.input}
-            value={code}
-            onChangeText={setCode}
-            placeholder="Entrez le code"
-            placeholderTextColor="#999"
-            keyboardType="number-pad"
-            maxLength={6}
-            autoFocus={true}
-          />
-        </View>
-        
-        <TouchableOpacity 
-          style={styles.button}
-          onPress={handleVerify}
-          disabled={isLoading}
-          activeOpacity={0.8}
+        <ScrollView 
+          contentContainerStyle={styles.scrollContainer}
+          showsVerticalScrollIndicator={false}
         >
-          {isLoading ? (
-            <ActivityIndicator color="#fff" size="small" />
-          ) : (
-            <Text style={styles.buttonText}>Vérifier</Text>
-          )}
-        </TouchableOpacity>
+          <View style={styles.logoContainer}>
+            <Image
+              source={require('../../../assets/images/getstarted.png')} // Remplacez par votre image
+              style={styles.logo}
+              resizeMode="contain"
+            />
+          </View>
+
+          <View style={styles.card}>
+            <Text style={styles.title}>Vérification du code</Text>
+            <Text style={styles.subtitle}>Entrez le code envoyé à {email}</Text>
+            
+            {error && (
+              <View style={styles.errorContainer}>
+                <Text style={styles.errorText}>{error}</Text>
+              </View>
+            )}
+            
+            <View style={styles.inputContainer}>
+              <Text style={styles.label}>Code de vérification</Text>
+              <TextInput
+                style={styles.input}
+                value={code}
+                onChangeText={setCode}
+                placeholder="123456"
+                placeholderTextColor="#999"
+                keyboardType="number-pad"
+                maxLength={6}
+                autoFocus={true}
+                textAlign="center"
+              />
+            </View>
+            
+            <TouchableOpacity 
+              style={styles.button}
+              onPress={handleVerify}
+              disabled={isLoading}
+              activeOpacity={0.8}
+            >
+              {isLoading ? (
+                <ActivityIndicator color="#fff" size="small" />
+              ) : (
+                <Text style={styles.buttonText}>Vérifier</Text>
+              )}
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.footer}>
+            <Text style={styles.footerText}>Vous n'avez pas reçu de code?</Text>
+            <TouchableOpacity onPress={() => Alert.alert('Info', 'Un nouveau code a été envoyé')}>
+              <Text style={styles.loginLink}>Renvoyer</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
@@ -109,31 +129,52 @@ const VerifyCodeScreen: React.FC<VerifyCodeScreenProps> = ({ navigation, route }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f8f9fa',
   },
   keyboardAvoidingView: {
     flex: 1,
   },
   scrollContainer: {
+    flexGrow: 1,
     paddingHorizontal: 25,
     paddingBottom: 30,
     paddingTop: 20,
   },
-  header: {
-    marginBottom: 30,
+  logoContainer: {
+    alignItems: 'center',
+    marginBottom: 50,
+    marginTop: 20,
+  },
+  logo: {
+    width: 180,
+    height: 180,
+  },
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 20,
+    padding: 25,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+    elevation: 2,
+    marginBottom: 20,
   },
   title: {
-    fontSize: 22,
-    fontWeight: 'bold',
+    fontSize: 24,
+    fontWeight: '700',
     color: '#333',
     textAlign: 'center',
+    marginBottom: 8,
   },
-  instructions: {
+  subtitle: {
     fontSize: 16,
     color: '#666',
-    marginBottom: 30,
     textAlign: 'center',
-    lineHeight: 24,
+    marginBottom: 30,
   },
   inputContainer: {
     marginBottom: 20,
@@ -142,31 +183,30 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#555',
     marginBottom: 8,
-    fontWeight: '500',
+    fontWeight: '600',
   },
   input: {
     height: 50,
     fontSize: 16,
     color: '#333',
-    paddingHorizontal: 15,
+    paddingHorizontal: 20,
     backgroundColor: '#f8f9fa',
-    borderRadius: 10,
+    borderRadius: 12,
     borderWidth: 1,
     borderColor: '#e9ecef',
-    textAlign: 'center',
-    letterSpacing: 5,
   },
   button: {
     backgroundColor: '#0066cc',
+    borderRadius: 12,
     padding: 16,
-    borderRadius: 10,
     alignItems: 'center',
+    justifyContent: 'center',
     marginTop: 20,
-    elevation: 3,
     shadowColor: '#0066cc',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.3,
     shadowRadius: 4,
+    elevation: 5,
   },
   buttonText: {
     color: '#fff',
@@ -177,17 +217,32 @@ const styles = StyleSheet.create({
   errorContainer: {
     backgroundColor: '#ffeeee',
     padding: 15,
-    borderRadius: 10,
+    borderRadius: 12,
     marginBottom: 20,
-    borderLeftWidth: 4,
-    borderLeftColor: '#ff3333',
     flexDirection: 'row',
     alignItems: 'center',
+    borderLeftWidth: 4,
+    borderLeftColor: '#ff3333',
   },
   errorText: {
     color: '#ff3333',
     marginLeft: 10,
     flex: 1,
+    fontWeight: '500',
+  },
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  footerText: {
+    color: '#666',
+    marginRight: 5,
+  },
+  loginLink: {
+    color: '#0066cc',
+    fontWeight: '600',
   },
 });
 
