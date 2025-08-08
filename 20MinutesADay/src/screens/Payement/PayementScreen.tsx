@@ -1,263 +1,172 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, ScrollView, Alert, ActivityIndicator, StyleSheet } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import { ToggleButton, Button } from 'react-native-paper';
+import React, { useState, useRef, useEffect } from 'react';
+import { View, Text, ActivityIndicator, StyleSheet, Modal } from 'react-native';
+import { Button } from 'react-native-paper';
 import { Ionicons } from '@expo/vector-icons';
-
-import { createPayment } from '../../services/mvolaService'; // ✅ Utilisation de createPayment qui est un alias pour processMvolaPayment
+import { WebView } from 'react-native-webview';
 
 interface PayementScreenProps {
   onClose: () => void;
-  onPaymentSuccess: () => void;
+  onPaymentSuccess: (transactionId: string) => void;
+  amount: number; // Montant passé directement depuis l'écran précédent
 }
 
-interface PaymentData {
-  method: 'credit-card' | 'mobile-money';
-  provider: string;
-  amount: string;
-  cardNumber?: string;
-  expiryDate?: string;
-  phoneNumber?: string;
-  date: string;
-}
+const PayementScreen: React.FC<PayementScreenProps> = ({ 
+  onClose, 
+  onPaymentSuccess,
+  amount 
+}) => {
+  const [payementUrl, setPayementUrl] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string>('');
+  const webViewRef = useRef<WebView>(null);
 
-const PayementScreen: React.FC<PayementScreenProps> = ({ onClose, onPaymentSuccess }) => {
-  const [paymentMethod, setPaymentMethod] = useState<'credit-card' | 'mobile-money'>('credit-card');
-  const [paymentProvider, setPaymentProvider] = useState<string>(''); 
-  const [amount, setAmount] = useState<string>(''); 
-  const [cardNumber, setCardNumber] = useState<string>(''); 
-  const [expiryDate, setExpiryDate] = useState<string>(''); 
-  const [cvv, setCvv] = useState<string>(''); 
-  const [phoneNumber, setPhoneNumber] = useState<string>(''); 
-  const [loading, setLoading] = useState<boolean>(false);
+  // Initialisation directe du paiement au montage du composant
+  useEffect(() => {
+    const initializePayment = async () => {
+      try {
+        const response = await fetch('https://votre-api.com/api/payment/init-direct', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            amount: amount,
+            // Autres paramètres nécessaires pour Vanilla Pay
+          }),
+        });
 
-  const handlePayment = async () => {
-    if (!paymentProvider) {
-      Alert.alert('Select Provider', 'Please select a payment provider.');
-      return;
-    }
+        const data = await response.json();
 
-    if (paymentMethod === 'credit-card') {
-      if (cardNumber.length !== 16 || !/^\d+$/.test(cardNumber)) {
-        Alert.alert('Invalid Card Number', 'Please enter a valid 16-digit card number.');
-        return;
+        if (data.success && data.paymentUrl) {
+          setPayementUrl(data.paymentUrl);
+        } else {
+          setError(data.message || 'Échec de l\'initialisation du paiement');
+        }
+      } catch (err) {
+        setError('Erreur de connexion au service de paiement');
+        console.error('Payement initialization error:', err);
+      } finally {
+        setLoading(false);
       }
-      if (!/^\d{2}\/\d{2}$/.test(expiryDate)) {
-        Alert.alert('Invalid Expiry Date', 'Please enter expiration date in MM/YY format.');
-        return;
-      }
-      if (cvv.length !== 3 || !/^\d+$/.test(cvv)) {
-        Alert.alert('Invalid CVV', 'Please enter a valid 3-digit CVV.');
-        return;
-      }
-    } else {
-      if (!amount || isNaN(Number(amount))) {
-        Alert.alert('Invalid Amount', 'Please enter a valid numeric amount.');
-        return;
-      }
-      if (!/^\d{10}$/.test(phoneNumber)) {
-        Alert.alert('Invalid Phone Number', 'Please enter a valid 10-digit phone number.');
-        return;
-      }
-    }
-
-    setLoading(true);
-
-    const paymentData: PaymentData = {
-      method: paymentMethod,
-      provider: paymentProvider,
-      amount: amount || '0',
-      cardNumber: paymentMethod === 'credit-card' ? cardNumber : undefined,
-      expiryDate: paymentMethod === 'credit-card' ? expiryDate : undefined,
-      phoneNumber: paymentMethod === 'mobile-money' ? phoneNumber : undefined,
-      date: new Date().toISOString(),
     };
 
-    try {
-      await createPayment({
-        amount: Number(paymentData.amount),
-        phoneNumber: paymentData.phoneNumber || '',
-        externalId: paymentData.date, // vous pouvez mettre un UUID aussi
-        description: 'Paiement via l\'application',
-        environment: 'sandbox',
-      });
-      Alert.alert('Payment Successful', 'Your payment has been processed successfully.');
-      onPaymentSuccess();
-    } catch (error) {
-      console.error(error);
-      Alert.alert('Payment Failed', 'An error occurred while processing the payment.');
-    } finally {
-      setLoading(false);
+    initializePayment();
+  }, [amount]);
+
+  const handleWebViewNavigation = (navState: any) => {
+    const { url } = navState;
+
+    if (url.includes('/payment/success')) {
+      const transactionId = extractTransactionIdFromUrl(url);
+      onPaymentSuccess(transactionId);
+      onClose();
+    } else if (url.includes('/payment/error')) {
+      setError('Le paiement a échoué. Veuillez réessayer.');
+      onClose();
     }
   };
 
-  const getProviders = () => {
-    return paymentMethod === 'credit-card'
-      ? ['Paypal', 'Stripe']
-      : ['MVola', 'Orange Money', 'Airtel Money'];
+  const extractTransactionIdFromUrl = (url: string): string => {
+    const match = url.match(/transaction=([^&]+)/);
+    return match ? match[1] : '';
   };
 
-  return (
-    <View style={styles.modalContent}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Payment Information</Text>
-        <Ionicons
-          name="close"
-          size={24}
-          color="black"
-          onPress={onClose}
-          style={styles.closeIcon}
-        />
+  if (error) {
+    return (
+      <View style={styles.errorContainer}>
+        <Text style={styles.errorText}>{error}</Text>
+        <Button mode="contained" onPress={onClose}>
+          Fermer
+        </Button>
       </View>
+    );
+  }
 
-      <ToggleButton.Row
-        style={styles.toggleButtonRow}
-        onValueChange={(value) => {
-          setPaymentMethod(value as 'credit-card' | 'mobile-money');
-          setPaymentProvider('');
-        }}
-        value={paymentMethod}
-      >
-        <ToggleButton icon="credit-card" value="credit-card" />
-        <ToggleButton icon="cellphone" value="mobile-money" />
-      </ToggleButton.Row>
-
-      <ScrollView style={styles.formContainer}>
-        <View style={styles.dropdownContainer}>
-          <Text style={styles.label}>Choose Provider</Text>
-          <Picker
-            selectedValue={paymentProvider}
-            onValueChange={(itemValue: string) => setPaymentProvider(itemValue)}
-            style={styles.picker}
-          >
-            <Picker.Item label="-- Select Provider --" value="" />
-            {getProviders().map((provider) => (
-              <Picker.Item key={provider} label={provider} value={provider} />
-            ))}
-          </Picker>
+  return (
+    <Modal visible={true} animationType="slide">
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.title}>Paiement Vanilla Pay</Text>
+          <Ionicons
+            name="close"
+            size={24}
+            color="black"
+            onPress={onClose}
+            style={styles.closeIcon}
+          />
         </View>
 
-        {paymentMethod === 'credit-card' ? (
-          <>
-            <TextInput
-              style={styles.input}
-              placeholder="Card Number"
-              keyboardType="numeric"
-              value={cardNumber}
-              onChangeText={setCardNumber}
-              maxLength={16}
-            />
-            <TextInput
-              style={styles.input}
-              placeholder="Expiry Date (MM/YY)"
-              value={expiryDate}
-              onChangeText={setExpiryDate}
-              maxLength={5}
-            />
-            <TextInput
-              style={styles.input}
-              placeholder="CVV"
-              keyboardType="numeric"
-              value={cvv}
-              onChangeText={setCvv}
-              maxLength={3}
-            />
-          </>
-        ) : (
-          <>
-            <TextInput
-              style={styles.input}
-              placeholder="Phone Number"
-              keyboardType="numeric"
-              value={phoneNumber}
-              onChangeText={setPhoneNumber}
-              maxLength={10}
-            />
-          </>
-        )}
-
-        <TextInput
-          style={styles.input}
-          placeholder="Amount"
-          keyboardType="numeric"
-          value={amount}
-          onChangeText={setAmount}
-        />
-
         {loading ? (
-          <ActivityIndicator size="large" color="#00f" />
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator size="large" color="#0066cc" />
+            <Text style={styles.loadingText}>Initialisation du paiement...</Text>
+          </View>
         ) : (
-           <Button
-        mode="contained"
-        onPress={handlePayment}
-        disabled={!paymentProvider || !amount || loading}
-        style={styles.paymentButton}
-        labelStyle={styles.buttonText} // Ajout pour le style du texte
-      >
-        Pay Now
-      </Button>
+          <WebView
+            ref={webViewRef}
+            source={{ uri: payementUrl }}
+            style={styles.webView}
+            onNavigationStateChange={handleWebViewNavigation}
+            startInLoadingState={true}
+            renderLoading={() => (
+              <View style={styles.loadingContainer}>
+                <ActivityIndicator size="large" color="#0066cc" />
+              </View>
+            )}
+            javaScriptEnabled={true}
+            domStorageEnabled={true}
+            sharedCookiesEnabled={true}
+          />
         )}
-      </ScrollView>
-    </View>
+      </View>
+    </Modal>
   );
 };
 
 const styles = StyleSheet.create({
-  modalContent: {
+  container: {
     flex: 1,
-    padding: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#fff',
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    padding: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   closeIcon: {
     padding: 5,
   },
-  toggleButtonRow: {
-    marginVertical: 10,
+  webView: {
+    flex: 1,
+  },
+  loadingContainer: {
+    flex: 1,
     justifyContent: 'center',
-   
-
-  },
-  formContainer: {
-    marginTop: 10,
-  },
-  dropdownContainer: {
-    marginVertical: 10,
-  },
-  label: {
-    fontSize: 16,
-  },
-  picker: {
-    height: 50,
-    width: '100%',
-  },
-  input: {
-    height: 40,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    marginBottom: 15,
-    paddingHorizontal: 10,
-    borderRadius: 5,
-  },
-  paymentButton: {
-    marginTop: 20,
-    paddingVertical: 10,
-    backgroundColor: '#004e98',
-    borderRadius: 5,
     alignItems: 'center',
   },
-  buttonText: {
-    color: 'white',
+  loadingText: {
+    marginTop: 10,
     fontSize: 16,
-    fontWeight: 'bold',
+    color: '#555',
+  },
+  errorContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  errorText: {
+    fontSize: 18,
+    color: 'red',
+    marginBottom: 20,
+    textAlign: 'center',
   },
 });
 

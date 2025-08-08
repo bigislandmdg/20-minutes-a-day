@@ -1,7 +1,7 @@
 
 export type RootStackParamList = {
   GetStarted: undefined;
-   Register: undefined; 
+  Register: undefined; 
   VerifyCode: { email: string };
   Home: undefined;
   Audio: undefined;
