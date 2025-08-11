@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, ActivityIndicator, StyleSheet, Modal } from 'react-native';
+import { View, Text, ActivityIndicator, StyleSheet, Modal, Alert } from 'react-native';
 import { Button } from 'react-native-paper';
 import { Ionicons } from '@expo/vector-icons';
 import { WebView } from 'react-native-webview';
@@ -7,61 +7,72 @@ import { WebView } from 'react-native-webview';
 interface PayementScreenProps {
   onClose: () => void;
   onPaymentSuccess: (transactionId: string) => void;
-  amount: number; // Montant passé directement depuis l'écran précédent
+  amount: number;
 }
+
 
 const PayementScreen: React.FC<PayementScreenProps> = ({ 
   onClose, 
   onPaymentSuccess,
   amount 
 }) => {
-  const [payementUrl, setPayementUrl] = useState<string>('');
+  const [paymentUrl, setPaymentUrl] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
   const webViewRef = useRef<WebView>(null);
 
-  // Initialisation directe du paiement au montage du composant
   useEffect(() => {
-    const initializePayment = async () => {
-      try {
-        const response = await fetch('https://votre-api.com/api/payment/init-direct', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            amount: amount,
-            // Autres paramètres nécessaires pour Vanilla Pay
-          }),
-        });
+  const initializePayment = async () => {
+    try {
+      setLoading(true);
+      setError('');
 
-        const data = await response.json();
+      // On appelle TON serveur Node.js, pas directement l'API Vanilla
+      const response = await fetch("http://10.0.2.2:3000/create-payment", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          idpanier: Date.now().toString(),
+          montant: amount,
+          nom: 'John Doe',
+          email: 'john@example.com',
+          reference: `REF-${Date.now()}`,
+          unitemonetaire: 'Ar'
+        }),
+      });
 
-        if (data.success && data.paymentUrl) {
-          setPayementUrl(data.paymentUrl);
-        } else {
-          setError(data.message || 'Échec de l\'initialisation du paiement');
-        }
-      } catch (err) {
-        setError('Erreur de connexion au service de paiement');
-        console.error('Payement initialization error:', err);
-      } finally {
-        setLoading(false);
+      const data = await response.json();
+      console.log("Réponse serveur:", data);
+
+      if (data.paymentUrl) {
+        setPaymentUrl(data.paymentUrl);
+      } else {
+        setError(data.error || 'Échec de l\'initialisation du paiement');
       }
-    };
+    } catch (err) {
+      console.error('Erreur init paiement:', err);
+      setError('Erreur de connexion au service de paiement');
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    initializePayment();
-  }, [amount]);
+  initializePayment();
+}, [amount]);
+
 
   const handleWebViewNavigation = (navState: any) => {
     const { url } = navState;
 
     if (url.includes('/payment/success')) {
       const transactionId = extractTransactionIdFromUrl(url);
+      Alert.alert('Paiement réussi', 'Merci pour votre achat !');
       onPaymentSuccess(transactionId);
       onClose();
-    } else if (url.includes('/payment/error')) {
-      setError('Le paiement a échoué. Veuillez réessayer.');
+    } 
+    else if (url.includes('/payment/error') || url.includes('/payment/cancel')) {
+      Alert.alert('Paiement annulé ou échoué', 'Veuillez réessayer.');
+      setPaymentUrl('');
       onClose();
     }
   };
@@ -104,7 +115,7 @@ const PayementScreen: React.FC<PayementScreenProps> = ({
         ) : (
           <WebView
             ref={webViewRef}
-            source={{ uri: payementUrl }}
+            source={{ uri: paymentUrl }}
             style={styles.webView}
             onNavigationStateChange={handleWebViewNavigation}
             startInLoadingState={true}
@@ -124,50 +135,19 @@ const PayementScreen: React.FC<PayementScreenProps> = ({
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
+  container: { flex: 1, backgroundColor: '#fff' },
   header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    flexDirection: 'row', justifyContent: 'space-between',
+    alignItems: 'center', padding: 20,
+    borderBottomWidth: 1, borderBottomColor: '#eee',
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  closeIcon: {
-    padding: 5,
-  },
-  webView: {
-    flex: 1,
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  loadingText: {
-    marginTop: 10,
-    fontSize: 16,
-    color: '#555',
-  },
-  errorContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-  },
-  errorText: {
-    fontSize: 18,
-    color: 'red',
-    marginBottom: 20,
-    textAlign: 'center',
-  },
+  title: { fontSize: 20, fontWeight: 'bold' },
+  closeIcon: { padding: 5 },
+  webView: { flex: 1 },
+  loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  loadingText: { marginTop: 10, fontSize: 16, color: '#555' },
+  errorContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
+  errorText: { fontSize: 18, color: 'red', marginBottom: 20, textAlign: 'center' },
 });
 
 export default PayementScreen;
