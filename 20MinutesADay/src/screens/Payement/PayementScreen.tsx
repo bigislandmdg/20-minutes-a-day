@@ -1,153 +1,220 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, ActivityIndicator, StyleSheet, Modal, Alert } from 'react-native';
-import { Button } from 'react-native-paper';
-import { Ionicons } from '@expo/vector-icons';
-import { WebView } from 'react-native-webview';
+import React, { useState, useRef, useEffect } from "react";
+import { 
+  View, Text, StyleSheet, TextInput, 
+  ActivityIndicator, Alert, Modal, TouchableOpacity 
+} from "react-native";
+import { WebView } from "react-native-webview";
+import { Ionicons } from "@expo/vector-icons";
+import * as Network from "expo-network";
+import { Button } from "react-native-paper";
 
 interface PayementScreenProps {
   onClose: () => void;
   onPaymentSuccess: (transactionId: string) => void;
-  amount: number;
+  initialAmount?: number;
+  customerInfo?: {
+    name: string;
+    email?: string;
+    phone?: string;
+  };
+  reference?: string;
 }
 
-
-const PayementScreen: React.FC<PayementScreenProps> = ({ 
-  onClose, 
+const PayementScreen: React.FC<PayementScreenProps> = ({
+  onClose,
   onPaymentSuccess,
-  amount 
+  initialAmount,
+  customerInfo = { name: "Client", email: "", phone: "" },
+  reference = `REF_${Date.now()}`
 }) => {
-  const [paymentUrl, setPaymentUrl] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string>('');
+  const [formData, setFormData] = useState({
+    amount: initialAmount ? initialAmount.toString() : "",
+    name: customerInfo.name,
+    email: customerInfo.email || "",
+    phone: customerInfo.phone || "",
+  });
+
+  const [paymentUrl, setPaymentUrl] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [ipAddress, setIpAddress] = useState("127.0.0.1");
   const webViewRef = useRef<WebView>(null);
 
-  useEffect(() => {
-  const initializePayment = async () => {
-    try {
-      setLoading(true);
-      setError('');
+  const API_URL = __DEV__ ? "http://10.0.2.2:3000" : "https://votre-api-production.com";
+  const CURRENCY = "MGA";
 
-      // On appelle TON serveur Node.js, pas directement l'API Vanilla
-      const response = await fetch("http://10.0.2.2:3000/create-payment", {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          idpanier: Date.now().toString(),
-          montant: amount,
-          nom: 'John Doe',
-          email: 'john@example.com',
-          reference: `REF-${Date.now()}`,
-          unitemonetaire: 'Ar'
-        }),
+  // 🔹 Récupération IP
+  useEffect(() => {
+    const fetchIp = async () => {
+      try {
+        const ip = await Network.getIpAddressAsync();
+        setIpAddress(ip);
+      } catch {
+        console.warn("Impossible de récupérer l'IP");
+      }
+    };
+    fetchIp();
+  }, []);
+
+  const handleChange = (field: keyof typeof formData, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const validate = () => {
+    if (!formData.name.trim()) return "Nom requis";
+    if (!formData.amount.trim() || isNaN(Number(formData.amount))) return "Montant invalide";
+    if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) return "Email invalide";
+    return null;
+  };
+
+  // 🔹 Initialisation du paiement
+  const initializePayment = async () => {
+    const error = validate();
+    if (error) {
+      Alert.alert("Erreur", error);
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const payload = {
+        unitemonetaire: CURRENCY,
+        adresseip: ipAddress,
+        idpanier: `CMD_${Date.now()}`,
+        montant: parseFloat(formData.amount),
+        nom: formData.name.trim(),
+        email: formData.email.trim(),
+        reference,
+        telephone: formData.phone.trim() || undefined,
+      };
+
+      const response = await fetch(`${API_URL}/create-payment`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
-      console.log("Réponse serveur:", data);
+      if (!response.ok || !data.paymentUrl) throw new Error(data.error || "Échec du paiement");
 
-      if (data.paymentUrl) {
-        setPaymentUrl(data.paymentUrl);
-      } else {
-        setError(data.error || 'Échec de l\'initialisation du paiement');
-      }
-    } catch (err) {
-      console.error('Erreur init paiement:', err);
-      setError('Erreur de connexion au service de paiement');
+      setPaymentUrl(data.paymentUrl);
+    } catch (err: any) {
+      Alert.alert("Erreur paiement", err.message || "Une erreur est survenue");
     } finally {
       setLoading(false);
     }
   };
 
-  initializePayment();
-}, [amount]);
-
-
-  const handleWebViewNavigation = (navState: any) => {
-    const { url } = navState;
-
-    if (url.includes('/payment/success')) {
-      const transactionId = extractTransactionIdFromUrl(url);
-      Alert.alert('Paiement réussi', 'Merci pour votre achat !');
+  // 🔹 Gestion des retours du WebView
+  const handleWebViewNavigation = (navState: { url: string }) => {
+    if (navState.url.includes("/paiement/success")) {
+      const transactionId = new URLSearchParams(navState.url.split("?")[1]).get("transactionId") || "";
       onPaymentSuccess(transactionId);
       onClose();
-    } 
-    else if (url.includes('/payment/error') || url.includes('/payment/cancel')) {
-      Alert.alert('Paiement annulé ou échoué', 'Veuillez réessayer.');
-      setPaymentUrl('');
-      onClose();
+    } else if (navState.url.includes("/paiement/error")) {
+      Alert.alert("Paiement échoué");
+    } else if (navState.url.includes("/paiement/cancel")) {
+      Alert.alert("Paiement annulé");
     }
   };
 
-  const extractTransactionIdFromUrl = (url: string): string => {
-    const match = url.match(/transaction=([^&]+)/);
-    return match ? match[1] : '';
-  };
-
-  if (error) {
+  // 🔹 Affichage WebView après init
+  if (paymentUrl) {
     return (
-      <View style={styles.errorContainer}>
-        <Text style={styles.errorText}>{error}</Text>
-        <Button mode="contained" onPress={onClose}>
-          Fermer
-        </Button>
-      </View>
-    );
-  }
-
-  return (
-    <Modal visible={true} animationType="slide">
-      <View style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.title}>Paiement Vanilla Pay</Text>
-          <Ionicons
-            name="close"
-            size={24}
-            color="black"
-            onPress={onClose}
-            style={styles.closeIcon}
-          />
-        </View>
-
-        {loading ? (
-          <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#0066cc" />
-            <Text style={styles.loadingText}>Initialisation du paiement...</Text>
+      <Modal visible animationType="slide">
+        <View style={styles.container}>
+          <View style={styles.header}>
+            <Text style={styles.title}>Paiement sécurisé</Text>
+            <TouchableOpacity onPress={onClose}>
+              <Ionicons name="close" size={24} color="#333" />
+            </TouchableOpacity>
           </View>
-        ) : (
+
           <WebView
             ref={webViewRef}
             source={{ uri: paymentUrl }}
-            style={styles.webView}
+            style={{ flex: 1 }}
             onNavigationStateChange={handleWebViewNavigation}
-            startInLoadingState={true}
+            startInLoadingState
             renderLoading={() => (
-              <View style={styles.loadingContainer}>
-                <ActivityIndicator size="large" color="#0066cc" />
-              </View>
+              <ActivityIndicator style={{ marginTop: 20 }} size="large" color="#0066cc" />
             )}
-            javaScriptEnabled={true}
-            domStorageEnabled={true}
-            sharedCookiesEnabled={true}
           />
-        )}
+        </View>
+      </Modal>
+    );
+  }
+
+  // 🔹 Affichage formulaire avant init
+  return (
+    <Modal visible animationType="slide">
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.title}>Infos de paiement</Text>
+          <TouchableOpacity onPress={onClose}>
+            <Ionicons name="close" size={24} color="#333" />
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.card}>
+          <TextInput
+            style={styles.input}
+            placeholder="Montant (MGA)"
+            keyboardType="numeric"
+            value={formData.amount}
+            onChangeText={(t) => handleChange("amount", t)}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Nom complet"
+            value={formData.name}
+            onChangeText={(t) => handleChange("name", t)}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Email"
+            keyboardType="email-address"
+            value={formData.email}
+            onChangeText={(t) => handleChange("email", t)}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Téléphone"
+            keyboardType="phone-pad"
+            value={formData.phone}
+            onChangeText={(t) => handleChange("phone", t)}
+          />
+
+          <Button
+            mode="contained"
+            onPress={initializePayment}
+            style={styles.button}
+            loading={loading}
+          >
+            {loading ? "Traitement..." : "Payer avec Vanilla Pay"}
+          </Button>
+        </View>
       </View>
     </Modal>
   );
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff' },
+  container: { flex: 1, backgroundColor: "#f9f9f9" },
   header: {
-    flexDirection: 'row', justifyContent: 'space-between',
-    alignItems: 'center', padding: 20,
-    borderBottomWidth: 1, borderBottomColor: '#eee',
+    flexDirection: "row", justifyContent: "space-between",
+    alignItems: "center", padding: 16, backgroundColor: "#fff",
+    borderBottomWidth: 1, borderBottomColor: "#eee"
   },
-  title: { fontSize: 20, fontWeight: 'bold' },
-  closeIcon: { padding: 5 },
-  webView: { flex: 1 },
-  loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  loadingText: { marginTop: 10, fontSize: 16, color: '#555' },
-  errorContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
-  errorText: { fontSize: 18, color: 'red', marginBottom: 20, textAlign: 'center' },
+  title: { fontSize: 18, fontWeight: "600", color: "#333" },
+  card: {
+    backgroundColor: "#fff", margin: 16, padding: 16,
+    borderRadius: 12, elevation: 3
+  },
+  input: {
+    height: 50, borderWidth: 1, borderColor: "#ddd", borderRadius: 8,
+    paddingHorizontal: 12, marginBottom: 12, backgroundColor: "#fdfdfd"
+  },
+  button: { marginTop: 8, borderRadius: 8, backgroundColor: "#0066cc" }
 });
 
 export default PayementScreen;
